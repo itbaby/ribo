@@ -1,15 +1,17 @@
 <script lang="ts">
+  import "./app.css";
   import { switchLanguage } from "./i18n";
   import { isLoading, _ } from "svelte-i18n";
+  import { Alert } from "flowbite-svelte";
+  import IMenu from './IMenu.svelte';
 </script>
 
-<main>
-  {#if $isLoading}{:else}
-    <a href="/">{$_("index")}</a>
-    <a href={"#"} on:click={() => switchLanguage("zh")}>中文</a>
-    <a href={"#"} on:click={() => switchLanguage("en")}>英文</a>
-  {/if}
-</main>
+{#if $isLoading}{:else}
+  <div class="flex flex-col">
+    <IMenu/>
+    <div class="p-8"></div>
+  </div>
+{/if}
 
 <style>
 </style>
