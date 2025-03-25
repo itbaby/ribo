@@ -4,12 +4,13 @@
   import { isLoading, _ } from "svelte-i18n";
   import { Alert } from "flowbite-svelte";
   import IMenu from './IMenu.svelte';
+  import IFooter from "./IFooter.svelte";
 </script>
 
 {#if $isLoading}{:else}
   <div class="flex flex-col">
     <IMenu/>
-    <div class="p-8"></div>
+    <IFooter/>
   </div>
 {/if}
 
