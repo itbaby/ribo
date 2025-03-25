@@ -1,0 +1,7 @@
+{
+  "greeting": "你好，{name}！",
+  "button": {
+    "toggle": "切换为英文"
+  },
+  "index": "行业"
+}
