@@ -1,3 +1,9 @@
+
+https://svelte-light-carousel.vercel.app/#intro
+npm i svelte-light-carousel
+https://www.npmjs.com/package/svelte-swipe
+https://github.com/SharifClick/svelte-swipe
+https://www.npmjs.com/package/@slidy/svelte
 # Svelte + TS + Vite
 
 This template should help get you started developing with Svelte and TypeScript in Vite.
