@@ -1,4 +1,5 @@
 
+https://aceternity.sveltekit.io/
 https://svelte-light-carousel.vercel.app/#intro
 npm i svelte-light-carousel
 https://www.npmjs.com/package/svelte-swipe
