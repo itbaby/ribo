@@ -1,4 +1,5 @@
 
+https://github.com/sytanta/svelte-lenis
 https://aceternity.sveltekit.io/
 https://svelte-light-carousel.vercel.app/#intro
 npm i svelte-light-carousel
