@@ -1,4 +1,6 @@
+@import url('locomotive-scroll.css');
 @import 'tailwindcss';
+
 
 @plugin 'flowbite/plugin';
 

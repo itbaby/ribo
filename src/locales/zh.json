@@ -1,7 +1,19 @@
 {
   "greeting": "你好，{name}！",
   "button": {
-    "toggle": "切换为英文"
+    "toggle": "切换为英文",
+    "confirm": "确认",
+    "cancel": "取消"
   },
-  "index": "行业"
+  "index": "行业",
+  "menu": {
+    "serve": "服务",
+    "industry": "行业",
+    "creative": "创新",
+    "aboutus": "关于我们",
+    "news": "咨询"
+  },
+  "company": {
+    "name": "大连睿柏咨询服务有限公司"
+  }
 }

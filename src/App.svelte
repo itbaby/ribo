@@ -5,13 +5,12 @@
   import IMenu from "./IMenu.svelte";
   import IFooter from "./IFooter.svelte";
   import ICarousel from "./ICarousel.svelte";
-  import IScroller from "./IScroller.svelte";
 </script>
 
 {#if $isLoading}{:else}
-  <div class="flex flex-col">
+  <div class="flex flex-col"> 
     <IMenu />
-    <IScroller />
+    <ICarousel/>
     <IFooter />
   </div>
 {/if}

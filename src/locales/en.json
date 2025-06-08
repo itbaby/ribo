@@ -1,7 +1,19 @@
 {
   "greeting": "Hello, {name}!",
   "button": {
-    "toggle": "Switch to Chinese"
+    "toggle": "Switch to Chinese",
+    "confirm": "Confirm",
+    "cancel": "Cancel"
   },
-  "index": "Industry"
+  "index": "Industry",
+  "menu": {
+    "serve": "Services",
+    "industry": "Industries", 
+    "creative": "Innovation",
+    "aboutus": "About Us",
+    "news": "News"
+  },
+  "company": {
+    "name": "Dalian Ribo Consulting Services Co., Ltd"
+  }
 }
