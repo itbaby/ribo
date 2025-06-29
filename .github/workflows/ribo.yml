@@ -1,1 +1,8 @@
-name: Ribo Auto Build
+jobs:
+  example_job:
+    runs - on: ubuntu - latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Print a message
+        run: echo "This is a simple GitHub Action."
