@@ -1,0 +1,56 @@
+{
+  "greeting": "こんにちは、{name}！",
+  "button": {
+    "toggle": "英語に切り替え",
+    "confirm": "確認",
+    "cancel": "キャンセル"
+  },
+  "index": "業界",
+  "menu": {
+    "serve": "サービス",
+    "industry": "業界",
+    "creative": "イノベーション",
+    "aboutus": "会社概要",
+    "news": "ニュース",
+    "headhunting": "ヘッドハンティングサービス",
+    "staffing": "人材派遣",
+    "itOutsourcing": "ITアウトソーシング",
+    "marketAnalysis": "市場分析と業界ニュース",
+    "companyCulture": "会社紹介と企業文化",
+    "history": "沿革",
+    "honors": "企業栄誉",
+    "contact": "お問い合わせ"
+  },
+  "company": {
+    "name": "大連睿柏コンサルティングサービス有限公司"
+  },
+  "footer": {
+    "brand": {
+      "name": "睿柏コンサルティングサービス"
+    },
+    "sections": {
+      "business": "ビジネスコンサルティング",
+      "join": "採用情報",
+      "media": "マーケティング＆メディア",
+      "company": "会社情報",
+      "shenzhen": "深セン支店"
+    },
+    "labels": {
+      "email": "メール",
+      "phone": "電話",
+      "address": "住所"
+    },
+    "contacts": {
+      "businessEmail": "davidquan@dlribo.com, bobbyliu@dlribo.com",
+      "businessPhone": "13889451516, 13478706961",
+      "joinEmail": "cindyma@dlribo.com",
+      "joinPhone": "13898419493",
+      "companyPhone": "0411-84113306"
+    },
+    "addresses": {
+      "dalian": "遼寧省大連市中山区人民路15号 国際金融ビル21C",
+      "shenzhen": "深セン市南山区粤海街道高新区社区高新南九道45号西北工業大学三航科技ビル1325"
+    },
+    "copyright": "睿柏コンサルティング"
+  }
+}

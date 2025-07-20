@@ -11,7 +11,15 @@
     "industry": "Industries",
     "creative": "Innovation",
     "aboutus": "About Us",
-    "news": "News"
+    "news": "News",
+    "headhunting": "Headhunting Service",
+    "staffing": "Staffing",
+    "itOutsourcing": "IT Outsourcing",
+    "marketAnalysis": "Market Analysis & Industry News",
+    "companyCulture": "Company Introduction & Culture",
+    "history": "History",
+    "honors": "Honors",
+    "contact": "Contact Us"
   },
   "company": {
     "name": "Dalian Ribo Consulting Services Co., Ltd"

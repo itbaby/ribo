@@ -9,41 +9,52 @@
   } from "flowbite-svelte";
   import { ChevronDownOutline, ArrowRightOutline } from "flowbite-svelte-icons";
   import logo from "./assets/cherry-svgrepo-com.svg";
-  import { _ } from "svelte-i18n";
+  import { _, locale } from "svelte-i18n";
+  let showDropdown = false;
+  function toggleDropdown() {
+    showDropdown = !showDropdown;
+  }
+  function changeLanguage(lang, event) {
+    event.stopPropagation();
+    locale.set(lang);
+    showDropdown = false;
+  }
   let menu = [
-    { name: "About us", href: "/about" },
-    { name: "Blog", href: "/blog" },
-    { name: "Contact us", href: "/contact" },
-    { name: "Library", href: "/library" },
-    { name: "Newsletter", href: "/news" },
-    { name: "Support Center", href: "/support" },
-    { name: "Resources", href: "/resource" },
-    { name: "Playground", href: "/play" },
-    { name: "Terms", href: "/tersm" },
-    { name: "Pro Version", href: "/pro" },
-    { name: "License", href: "/license" },
+    { name: $_("menu.headhunting"), href: "/headhunting" },
+    { name: $_("menu.staffing"), href: "/staffing" },
+    { name: $_("menu.itOutsourcing"), href: "/it-outsourcing" },
+    { name: $_("menu.marketAnalysis"), href: "/market-analysis" },
+    { name: $_("menu.companyCulture"), href: "/company-culture" },
+    { name: $_("menu.history"), href: "/history" },
+    { name: $_("menu.honors"), href: "/honors" },
+    { name: $_("menu.contact"), href: "/contact" }
   ];
   // switchLanguage('en');
 </script>
 
-<Navbar let:hidden let:toggle   class="!bg-transparent dark:!bg-transparent"> 
-<NavBrand href="/" class="text-gray-300 hover:text-gray-200 !bg-transparent dark:!bg-transparent">
+<Navbar let:hidden let:toggle class="!bg-transparent dark:!bg-transparent">
+  <NavBrand
+    href="/"
+    class="text-gray-300 hover:text-gray-200 !bg-transparent dark:!bg-transparent"
+  >
     <img src={logo} class="me-3 h-6 sm:h-9" alt="Flowbite Logo" />
-    <span 
+    <span
       class="self-center whitespace-nowrap text-xl font-semibold dark:text-gray-300"
       >RIBO</span
     >
   </NavBrand>
   <NavHamburger on:click={toggle} />
-  <NavUl {hidden}  >
-    <NavLi href="/" class="text-gray-300 hover:text-gray-200">{$_("menu.industry")}</NavLi>
+  <NavUl {hidden}>
+    <NavLi href="/" class="text-gray-300 hover:text-gray-200"
+      >{$_("menu.industry")}</NavLi
+    >
     <NavLi class="text-gray-300 cursor-pointer ">
       {$_("menu.serve")}<ChevronDownOutline
         class="w-6 h-6 ms-2 text-primary-800 dark:text-gray-300 inline "
       />
     </NavLi>
 
-    <MegaMenu full items={menu} let:item >
+    <MegaMenu full items={menu} let:item>
       <a
         href={item.href}
         class="hover:underline hover:text-primary-600 dark:hover:text-primary-500"
@@ -70,8 +81,27 @@
         </a>
       </div>
     </MegaMenu>
-    <NavLi href="/services" class="text-gray-300 hover:text-gray-200" >{$_('menu.creative')}</NavLi>
-    <NavLi href="/services" class="text-gray-300 hover:text-gray-200">{$_('menu.aboutus')}</NavLi>
-    <NavLi href="/services" class="text-gray-300 hover:text-gray-200">{$_('menu.news')}</NavLi>
+    <NavLi href="/services" class="text-gray-300 hover:text-gray-200"
+      >{$_("menu.creative")}</NavLi
+    >
+    <NavLi href="/services" class="text-gray-300 hover:text-gray-200"
+      >{$_("menu.aboutus")}</NavLi
+    >
+    <NavLi href="/services" class="text-gray-300 hover:text-gray-200"
+      >{$_("menu.news")}</NavLi
+    >
+    <NavLi class="text-gray-300 cursor-pointer relative" on:click={toggleDropdown}>
+      {$locale}
+      <ChevronDownOutline
+        class="w-6 h-6 ms-2 text-primary-800 dark:text-gray-300 inline"
+      />
+      {#if showDropdown}
+        <div class="absolute right-0 bg-white dark:bg-gray-800 shadow-lg rounded-md mt-1 z-50">
+          <a href="#" on:click|preventDefault={(e) => changeLanguage('zh', e)} class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">中文</a>
+          <a href="#" on:click|preventDefault={(e) => changeLanguage('en', e)} class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">English</a>
+          <a href="#" on:click|preventDefault={(e) => changeLanguage('jp', e)} class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">日本語</a>
+        </div>
+      {/if}
+    </NavLi>
   </NavUl>
 </Navbar>

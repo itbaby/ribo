@@ -11,7 +11,15 @@
     "industry": "行业",
     "creative": "创新",
     "aboutus": "关于我们",
-    "news": "咨询"
+    "news": "咨询",
+    "headhunting": "猎头服务",
+    "staffing": "人才派遣",
+    "itOutsourcing": "IT服务外包",
+    "marketAnalysis": "市场分析行业要闻",
+    "companyCulture": "公司介绍企业文化",
+    "history": "发展历程",
+    "honors": "企业荣誉",
+    "contact": "联系我们"
   },
   "company": {
     "name": "大连睿柏咨询服务有限公司"
