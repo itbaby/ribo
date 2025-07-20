@@ -2,7 +2,8 @@
   import { onMount } from "svelte";
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+  import secondary from "./assets/secondary.jpg";
+  import third from "./assets/third.jpg";
   gsap.registerPlugin(ScrollTrigger);
 
   onMount(() => {
@@ -21,22 +22,27 @@
 </script>
 
 <div>
-  <div class="panel flex h-screen items-center justify-center bg-gray-100">
+  <div class="panel flex h-screen items-center justify-center">
     <img
-      src="./assets/annie-spratt-QckxruozjRg-unsplash.jpg"
+      src="https://placehold.co/2400x1200/555555/FFF"
       alt=""
       class="max-h-full max-w-full object-contain"
     />
   </div>
-  <div class="panel flex h-screen items-center justify-center bg-gray-200">
-    <!-- svelte-ignore a11y_img_redundant_alt -->
+  <div
+    class="panel flex h-screen items-center justify-center"
+    style="background-image: url('{secondary}'); background-repeat: no-repeat; background-size: cover;"
+  >
     <img
-      src="https://placehold.co/2400x1200/cccccc/FFF"
+      src="https://placehold.co/2400x1200/555555/FFF"
       alt=""
       class="max-h-full max-w-full object-contain"
     />
   </div>
-  <div class="panel flex h-screen items-center justify-center bg-gray-300">
+  <div
+    class="panel flex h-screen items-center justify-center bg-gray-300"
+    style="background-image: url('{third}'); background-repeat: no-repeat; background-size: cover;"
+  >
     <img
       src="https://placehold.co/2400x1200/555555/FFF"
       alt=""

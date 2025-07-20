@@ -8,9 +8,8 @@
     MegaMenu,
   } from "flowbite-svelte";
   import { ChevronDownOutline, ArrowRightOutline } from "flowbite-svelte-icons";
-  import logo from "./assets/logo.jpg";
+  import logo from "./assets/cherry-svgrepo-com.svg";
   import { _ } from "svelte-i18n";
-  import { switchLanguage } from "./i18n";
   let menu = [
     { name: "About us", href: "/about" },
     { name: "Blog", href: "/blog" },
@@ -27,24 +26,23 @@
   // switchLanguage('en');
 </script>
 
-<Navbar let:hidden let:toggle>
-<!-- 由于事件修饰符（除了 'once'）只能用于 DOM 元素，因此需要在事件处理函数中手动阻止默认行为 -->
-<NavBrand href="/" >
+<Navbar let:hidden let:toggle   class="!bg-transparent dark:!bg-transparent"> 
+<NavBrand href="/" class="text-gray-300 hover:text-gray-200 !bg-transparent dark:!bg-transparent">
     <img src={logo} class="me-3 h-6 sm:h-9" alt="Flowbite Logo" />
     <span 
-      class="self-center whitespace-nowrap text-xl font-semibold dark:text-white"
+      class="self-center whitespace-nowrap text-xl font-semibold dark:text-gray-300"
       >RIBO</span
     >
   </NavBrand>
   <NavHamburger on:click={toggle} />
-  <NavUl {hidden}>
-    <NavLi href="/">{$_("menu.serve")}</NavLi>
-    <NavLi class="cursor-pointer">
-      {$_("menu.industry")}<ChevronDownOutline
-        class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline"
+  <NavUl {hidden}  >
+    <NavLi href="/" class="text-gray-300 hover:text-gray-200">{$_("menu.industry")}</NavLi>
+    <NavLi class="text-gray-300 cursor-pointer ">
+      {$_("menu.serve")}<ChevronDownOutline
+        class="w-6 h-6 ms-2 text-primary-800 dark:text-gray-300 inline "
       />
     </NavLi>
-    <MegaMenu full items={menu} let:item>
+    <MegaMenu full items={menu} let:item >
       <a
         href={item.href}
         class="hover:underline hover:text-primary-600 dark:hover:text-primary-500"
@@ -52,7 +50,7 @@
         {item.name}
       </a>
       <div slot="extra" class="">
-        <h2 class="mt-4 mb-2 font-semibold text-gray-900 dark:text-white">
+        <h2 class="mt-4 mb-2 font-semibold text-gray-900 dark:text-gray-300">
           Our brands
         </h2>
         <p class="mb-2 p-0 text-sm font-light text-gray-500 dark:text-gray-300">
@@ -71,8 +69,9 @@
         </a>
       </div>
     </MegaMenu>
-    <NavLi href="/services">{$_('menu.creative')}</NavLi>
-    <NavLi href="/services">{$_('menu.aboutus')}</NavLi>
-    <NavLi href="/services">{$_('menu.news')}</NavLi>
+    <NavLi href="/services" class="text-gray-300 hover:text-gray-200" >{$_('menu.creative')}</NavLi>
+    <NavLi href="/services" class="text-gray-300 hover:text-gray-200">{$_('menu.aboutus')}</NavLi>
+    <NavLi href="/services" class="text-gray-300 hover:text-gray-200">{$_('menu.news')}</NavLi>
   </NavUl>
 </Navbar>
+
