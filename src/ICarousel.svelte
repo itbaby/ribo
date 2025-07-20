@@ -23,19 +23,23 @@
 <div>
   <div class="panel flex h-screen items-center justify-center bg-gray-100">
     <img
-      src="https://placehold.co/2400x1200/000000/FFF"
+      src="./assets/annie-spratt-QckxruozjRg-unsplash.jpg"
+      alt=""
       class="max-h-full max-w-full object-contain"
     />
   </div>
   <div class="panel flex h-screen items-center justify-center bg-gray-200">
+    <!-- svelte-ignore a11y_img_redundant_alt -->
     <img
       src="https://placehold.co/2400x1200/cccccc/FFF"
+      alt=""
       class="max-h-full max-w-full object-contain"
     />
   </div>
   <div class="panel flex h-screen items-center justify-center bg-gray-300">
     <img
       src="https://placehold.co/2400x1200/555555/FFF"
+      alt=""
       class="max-h-full max-w-full object-contain"
     />
   </div>
