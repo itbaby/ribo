@@ -64,9 +64,16 @@
     ScrollTrigger.create({
       snap: {
         snapTo: 1 / (panels.length - 1),
-        duration: 0.3,
-        ease: "power1.inOut",
+        duration: 0.5,
+        ease: "power2.inOut",
+        direction: "horizontal",
+        pin: true,
+        pinSpacing: false
       },
+      start: "top top",
+      end: "bottom bottom",
+      pin: true,
+      pinSpacing: false
     });
     return () => {
       ScrollTrigger.killAll();
