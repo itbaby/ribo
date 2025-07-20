@@ -15,5 +15,34 @@
   },
   "company": {
     "name": "大连睿柏咨询服务有限公司"
+  },
+  "footer": {
+    "brand": {
+      "name": "睿柏咨询服务"
+    },
+    "sections": {
+      "business": "业务咨询",
+      "join": "加入我们",
+      "media": "市场与媒体",
+      "company": "公司信息",
+      "shenzhen": "深圳分公司"
+    },
+    "labels": {
+      "email": "邮箱",
+      "phone": "电话",
+      "address": "地址"
+    },
+    "contacts": {
+      "businessEmail": "davidquan@dlribo.com, bobbyliu@dlribo.com",
+      "businessPhone": "13889451516, 13478706961",
+      "joinEmail": "cindyma@dlribo.com",
+      "joinPhone": "13898419493",
+      "companyPhone": "0411-84113306"
+    },
+    "addresses": {
+      "dalian": "辽宁省大连市中山区人民路15号 国际金融大厦21C",
+      "shenzhen": "深圳市南山区粤海街道高新区社区高新南九道45号西北工业大学三航科技大厦1325"
+    },
+    "copyright": "睿柏咨询"
   }
 }
