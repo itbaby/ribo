@@ -42,6 +42,7 @@
         class="w-6 h-6 ms-2 text-primary-800 dark:text-gray-300 inline "
       />
     </NavLi>
+
     <MegaMenu full items={menu} let:item >
       <a
         href={item.href}
@@ -74,4 +75,3 @@
     <NavLi href="/services" class="text-gray-300 hover:text-gray-200">{$_('menu.news')}</NavLi>
   </NavUl>
 </Navbar>
-
