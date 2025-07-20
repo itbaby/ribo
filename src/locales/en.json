@@ -8,12 +8,41 @@
   "index": "Industry",
   "menu": {
     "serve": "Services",
-    "industry": "Industries", 
+    "industry": "Industries",
     "creative": "Innovation",
     "aboutus": "About Us",
     "news": "News"
   },
   "company": {
     "name": "Dalian Ribo Consulting Services Co., Ltd"
+  },
+  "footer": {
+    "brand": {
+      "name": "Ribo Consulting Services"
+    },
+    "sections": {
+      "business": "Business Consulting",
+      "join": "Join Us",
+      "media": "Marketing & Media",
+      "company": "Company Info",
+      "shenzhen": "Shenzhen Branch"
+    },
+    "labels": {
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address"
+    },
+    "contacts": {
+      "businessEmail": "davidquan@dlribo.com, bobbyliu@dlribo.com",
+      "businessPhone": "13889451516, 13478706961",
+      "joinEmail": "cindyma@dlribo.com",
+      "joinPhone": "13898419493",
+      "companyPhone": "0411-84113306"
+    },
+    "addresses": {
+      "dalian": "21C, International Finance Building, No.15 Renmin Road, Zhongshan District, Dalian, Liaoning Province",
+      "shenzhen": "1325, Sanhang Technology Building, No.45 Gaoxin South 9th Road, Yuehai Street, Nanshan District, Shenzhen"
+    },
+    "copyright": "Ribo Consulting"
   }
 }
