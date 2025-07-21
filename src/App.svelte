@@ -10,7 +10,9 @@
 
 {#if $isLoading}{:else}
   <div class="flex flex-col" style="background-image: url('{topbg}'); "> 
-    <IMenu />
+    <div class="fixed w-full top-0 z-50">
+      <IMenu />
+    </div>
     <ICarousel/>
     <IFooter />
   </div>
