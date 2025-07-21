@@ -3,7 +3,8 @@
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   import secondary from "./assets/secondary.jpg";
-  import third from "./assets/third.jpg";
+  import earch from "./assets/earth.png";
+  import topbg from "./assets/top.jpg";
   import service from "./assets/service.jpg";
   import { Card, Gallery } from "flowbite-svelte";
 
@@ -59,43 +60,21 @@
     { alt: "ZJ", src: zj },
   ];
 
-  onMount(() => {
-    const panels = gsap.utils.toArray(".panel");
-    ScrollTrigger.create({
-      snap: {
-        snapTo: 1 / (panels.length - 1),
-        duration: 0.5,
-        ease: "power2.inOut"
-      },
-      start: "top top",
-      end: "bottom bottom",
-      pin: true,
-      pinSpacing: false
-    });
-    return () => {
-      ScrollTrigger.killAll();
-    };
-  });
+
 </script>
 
 <div>
-  <div class="panel flex h-screen items-center justify-center">
-    <img
-      src="https://placehold.co/2400x1200/555555/FFF"
-      alt=""
-      class="max-h-full max-w-full object-contain"
-    />
+  <div class="panel flex h-screen items-center justify-center"
+  style="background-image: url('{topbg}'); background-repeat: no-repeat; background-size: cover;"
+  >
+   
   </div>
   <div
     id="headhunting"
     class="panel flex h-screen items-center justify-center"
-    style="background-image: url('{secondary}'); background-repeat: no-repeat; background-size: cover;"
+    style="background-image: url('{earch}'); background-repeat: no-repeat; background-position:center; background-size: 100% auto;"
   >
-    <img
-      src="https://placehold.co/2400x1200/555555/FFF"
-      alt=""
-      class="max-h-full max-w-full object-contain"
-    />
+    
   </div>
 
   <div
