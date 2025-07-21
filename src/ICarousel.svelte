@@ -65,10 +65,7 @@
       snap: {
         snapTo: 1 / (panels.length - 1),
         duration: 0.5,
-        ease: "power2.inOut",
-        direction: "horizontal",
-        pin: true,
-        pinSpacing: false
+        ease: "power2.inOut"
       },
       start: "top top",
       end: "bottom bottom",
@@ -90,6 +87,7 @@
     />
   </div>
   <div
+    id="headhunting"
     class="panel flex h-screen items-center justify-center"
     style="background-image: url('{secondary}'); background-repeat: no-repeat; background-size: cover;"
   >

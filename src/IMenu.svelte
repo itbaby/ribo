@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import {
     Navbar,
     NavBrand,
@@ -10,14 +10,59 @@
   import { ChevronDownOutline, ArrowRightOutline } from "flowbite-svelte-icons";
   import logo from "./assets/cherry-svgrepo-com.svg";
   import { _, locale } from "svelte-i18n";
+  import { gsap } from "gsap";
+  import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  import { onMount } from "svelte";
+  
+  gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+  
   let showDropdown = false;
+  
+  function handleUrlChange() {
+    if (window.location.pathname === '/headhunting') {
+      const section = document.getElementById('headhunting');
+     
+      if (section) {
+      gsap.to(window, {
+        scrollTo: {
+          y: section,
+          autoKill: false
+        },
+        duration: 1,
+        ease: "power2.inOut"
+      });
+      }
+    }
+  }
+  
+  onMount(() => {
+    window.addEventListener('popstate', handleUrlChange);
+    return () => {
+      window.removeEventListener('popstate', handleUrlChange);
+    };
+  });
   function toggleDropdown() {
     showDropdown = !showDropdown;
   }
-  function changeLanguage(lang, event) {
+  function changeLanguage(lang: string, event: MouseEvent) {
     event.stopPropagation();
     locale.set(lang);
     showDropdown = false;
+  }
+  function scrollToSection(event: MouseEvent, sectionId: string) {
+    event.preventDefault();
+    const section = document.getElementById(sectionId);
+    if (section) {
+      gsap.to(window, {
+        scrollTo: {
+          y: section,
+          autoKill: false
+        },
+        duration: 1,
+        ease: "power2.inOut"
+      });
+    }
   }
   let menu = [
     { name: $_("menu.headhunting"), href: "/headhunting" },
@@ -39,16 +84,16 @@
   >
     <img src={logo} class="me-3 h-6 sm:h-9" alt="Flowbite Logo" />
     <span
-      class="self-center whitespace-nowrap text-xl font-semibold dark:text-gray-300"
+      class="self-center whitespace-nowrap text-2xl font-semibold dark:text-gray-300"
       >RIBO</span
     >
   </NavBrand>
   <NavHamburger on:click={toggle} />
   <NavUl {hidden}>
-    <NavLi href="/" class="text-gray-300 hover:text-gray-200"
+    <NavLi href="/" class="text-lg text-gray-300 hover:text-gray-200"
       >{$_("menu.industry")}</NavLi
     >
-    <NavLi class="text-gray-300 cursor-pointer ">
+    <NavLi class="text-lg text-gray-300 cursor-pointer ">
       {$_("menu.serve")}<ChevronDownOutline
         class="w-6 h-6 ms-2 text-primary-800 dark:text-gray-300 inline "
       />
@@ -58,6 +103,7 @@
       <a
         href={item.href}
         class="hover:underline hover:text-primary-600 dark:hover:text-primary-500"
+        on:click|preventDefault={(e) => item.href === '/headhunting' ? scrollToSection(e, 'headhunting') : null}
       >
         {item.name}
       </a>
@@ -81,16 +127,16 @@
         </a>
       </div>
     </MegaMenu>
-    <NavLi href="/services" class="text-gray-300 hover:text-gray-200"
+    <NavLi href="/services" class="text-lg text-gray-300 hover:text-gray-200"
       >{$_("menu.creative")}</NavLi
     >
-    <NavLi href="/services" class="text-gray-300 hover:text-gray-200"
+    <NavLi href="/services" class="text-lg text-gray-300 hover:text-gray-200"
       >{$_("menu.aboutus")}</NavLi
     >
-    <NavLi href="/services" class="text-gray-300 hover:text-gray-200"
+    <NavLi href="/services" class="text-lg text-gray-300 hover:text-gray-200"
       >{$_("menu.news")}</NavLi
     >
-    <NavLi class="text-gray-300 cursor-pointer relative" on:click={toggleDropdown}>
+    <NavLi class="text-lg text-gray-300 cursor-pointer relative" on:click={toggleDropdown}>
       {$locale}
       <ChevronDownOutline
         class="w-6 h-6 ms-2 text-primary-800 dark:text-gray-300 inline"
