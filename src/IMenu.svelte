@@ -74,7 +74,7 @@
       });
     }
   }
-  let menu = [
+  $: menu = [
     { name: $_("menu.headhunting"), href: "/headhunting" },
     { name: $_("menu.staffing"), href: "/staffing" },
     { name: $_("menu.itOutsourcing"), href: "/it-outsourcing" },
