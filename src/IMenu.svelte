@@ -87,21 +87,21 @@
   // switchLanguage('en');
 </script>
 
-<Navbar class="bg-transparent dark:bg-transparent">
-  <NavBrand href="/" class="text-gray-300 hover:text-gray-200 ">
+<Navbar class="bg-gray-900/70 dark:bg-gray-900/70">
+  <NavBrand href="/" class="text-white hover:text-gray-200 ">
     <img src={logo} class="me-3 h-6 sm:h-9" alt="Flowbite Logo" />
     <span
-      class="self-center whitespace-nowrap text-2xl font-semibold dark:text-gray-300"
+      class="self-center whitespace-nowrap text-2xl font-semibold text-white dark:text-white"
       >RIBO</span
     >
   </NavBrand>
 
   <NavUl class="bg-transparent dark:bg-transparent">
-    <NavLi href="/" class="text-lg bg-transparent ">{$_("menu.industry")}</NavLi
+    <NavLi href="/" class="text-lg bg-transparent text-white">{$_("menu.industry")}</NavLi
     >
-    <NavLi class="text-lg  cursor-pointer ">
+    <NavLi class="text-lg  cursor-pointer text-white">
       {$_("menu.serve")}<ChevronDownOutline
-        class="w-6 h-6 ms-2 text-primary-800 dark:text-gray-300 inline "
+        class="w-6 h-6 ms-2 text-white dark:text-white inline "
       />
     </NavLi>
 
@@ -139,11 +139,11 @@
       {/snippet}
     </MegaMenu>
 
-    <NavLi href="/services" class="text-lg ">{$_("menu.creative")}</NavLi>
-    <NavLi href="/services" class="text-lg ">{$_("menu.aboutus")}</NavLi>
-    <NavLi href="/services" class="text-lg ">{$_("menu.news")}</NavLi>
+    <NavLi href="/services" class="text-lg text-white ">{$_("menu.creative")}</NavLi>
+    <NavLi href="/services" class="text-lg text-white">{$_("menu.aboutus")}</NavLi>
+    <NavLi href="/services" class="text-lg text-white">{$_("menu.news")}</NavLi>
     <NavLi
-      class="text-lg text-gray-300 cursor-pointer relative"
+      class="text-lg text-white cursor-pointer relative"
       on:click={toggleDropdown}
     >
       {$locale}
