@@ -24,6 +24,10 @@
   "company": {
     "name": "Dalian Ribo Consulting Services Co., Ltd"
   },
+  "carousel": {
+    "latestNews": "Latest News",
+    "globalClients": "Serving Global Clients"
+  },
   "footer": {
     "brand": {
       "name": "Ribo Consulting Services"

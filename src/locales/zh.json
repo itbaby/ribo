@@ -24,6 +24,10 @@
   "company": {
     "name": "大连睿柏咨询服务有限公司"
   },
+  "carousel": {
+    "latestNews": "最新动态",
+    "globalClients": "服务全球客户"
+  },
   "footer": {
     "brand": {
       "name": "睿柏咨询服务"

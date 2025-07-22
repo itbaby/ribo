@@ -24,6 +24,10 @@
   "company": {
     "name": "大連睿柏コンサルティングサービス有限公司"
   },
+  "carousel": {
+    "latestNews": "最新ニュース",
+    "globalClients": "グローバルクライアントへのサービス"
+  },
   "footer": {
     "brand": {
       "name": "睿柏コンサルティングサービス"

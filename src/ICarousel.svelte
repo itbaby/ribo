@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import { _ } from "svelte-i18n";
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   import secondary from "./assets/secondary.jpg";
@@ -33,6 +34,26 @@
   import yd from "./assets/icons/yd.png";
   import zj from "./assets/icons/zj.png";
   gsap.registerPlugin(ScrollTrigger);
+  const cards = [
+    {
+      title: '睿柏与日本MYK达成合作',
+      description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
+      image: 'https://placehold.co/600x400',
+      href: '/cards'
+    },
+    {
+      title: 'Title 2',
+      description: 'Content description 2',
+      image: 'https://placehold.co/600x400',
+      href: ''
+    },
+    {
+      title: 'Title 3',
+      description: 'Content description 3',
+      image: 'https://placehold.co/600x400',
+      href: ''
+    }
+  ];
   const images = [
     { alt: "Alibaba", src: alibaba },
     { alt: "Alo", src: alo },
@@ -85,49 +106,35 @@
       <!-- First Row with Caption -->
       <div class="w-full px-4 py-8 text-center">
         <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800">
-          最新动态
-        </h2>
+            {$_('carousel.latestNews')}
+          </h2>
       </div>
 
       <!-- Second Row with 3 Columns -->
       <div class="w-full px-4">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8">
-          <!-- Column 1 -->
-          <Card href="/cards" class="p-4 sm:p-6 md:p-8">
-            <h5
-              class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-            >
-              睿柏与日本MYK达成合作
-            </h5>
-            <p
-              class="leading-tight font-normal text-gray-700 dark:text-gray-400"
-            >
-              Here are the biggest enterprise technology acquisitions of 2021 so
-              far, in reverse chronological order.
-            </p>
-          </Card>
-
-          <!-- Column 2 -->
-          <div class="bg-white p-6 rounded-lg shadow-lg">
-            <img
-              src="https://placehold.co/600x400"
-              alt="Column 2"
-              class="w-full h-48 object-cover rounded-lg mb-4"
-            />
-            <h3 class="text-xl font-semibold mb-2">Title 2</h3>
-            <p class="text-gray-600">Content description 2</p>
-          </div>
-
-          <!-- Column 3 -->
-          <div class="bg-white p-6 rounded-lg shadow-lg">
-            <img
-              src="https://placehold.co/600x400"
-              alt="Column 3"
-              class="w-full h-48 object-cover rounded-lg mb-4"
-            />
-            <h3 class="text-xl font-semibold mb-2">Title 3</h3>
-            <p class="text-gray-600">Content description 3</p>
-          </div>
+          {#each cards as card}
+            {#if card.href}
+              <Card href={card.href} class="p-4 sm:p-6 md:p-8">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  {card.title}
+                </h5>
+                <p class="leading-tight font-normal text-gray-700 dark:text-gray-400">
+                  {card.description}
+                </p>
+              </Card>
+            {:else}
+              <div class="bg-white p-6 rounded-lg shadow-lg">
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  class="w-full h-48 object-cover rounded-lg mb-4"
+                />
+                <h3 class="text-xl font-semibold mb-2">{card.title}</h3>
+                <p class="text-gray-600">{card.description}</p>
+              </div>
+            {/if}
+          {/each}
         </div>
       </div>
     </div>
@@ -140,8 +147,8 @@
       <!-- First Row with Caption -->
       <div class="w-full px-4 py-8 text-center">
         <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800">
-          服务全球客户
-        </h2>
+            {$_('carousel.globalClients')}
+          </h2>
       </div>
 
       <!-- Second Row with 3 Columns -->
