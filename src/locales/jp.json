@@ -27,6 +27,16 @@
   "carousel": {
     "latestNews": "最新ニュース",
     "globalClients": "グローバルクライアントへのサービス",
+    "techDrivenFuture": "技術が未来を駆動する",
+    "techDescription": "Riboテクノロジーは、クラウドコンピューティング、AIoT、ブロックチェーンなどの最先端分野に特化しています",
+    "talentPool": "エリート人材プール",
+    "verticalCoverage": "垂直業界カバレッジ",
+    "preciseMatching": "精密マッチングシステム",
+    "expertTeam": "専門家コンサルタントチーム",
+    "fullService": "フルチェーンサービスエコシステム",
+    "executiveSearch": "エグゼクティブサーチ",
+    "staffing": "人材派遣",
+    "itoService": "ITOサービス",
     "items": [
       {
         "title": "睿柏与日本MYK达成合作",

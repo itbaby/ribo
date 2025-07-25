@@ -27,6 +27,16 @@
   "carousel": {
     "latestNews": "Latest News",
     "globalClients": "Serving Global Clients",
+    "techDrivenFuture": "Technology Drives the Future",
+    "techDescription": "Ribo Technology specializes in cutting-edge fields including cloud computing, AIoT, and blockchain",
+    "talentPool": "Elite Talent Pool",
+    "verticalCoverage": "Vertical Industry Coverage",
+    "preciseMatching": "Precise Matching System",
+    "expertTeam": "Expert Consultant Team",
+    "fullService": "Full-chain Service Ecosystem",
+    "executiveSearch": "Executive Search",
+    "staffing": "Staffing",
+    "itoService": "ITO Services",
     "items": [
       {
         "title": "睿柏与日本MYK达成合作",

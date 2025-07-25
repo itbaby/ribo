@@ -99,10 +99,10 @@
           <h1
             class="split text-white text-4xl md:text-5xl font-medium text-uppercase tracking-wider"
           >
-            技术驱动未来
+            {$_("carousel.techDrivenFuture")}
           </h1>
           <h2 class="split text-white text-xl md:text-2xl">
-            旗下睿程科技深耕云计算、AIoT、区块链等前沿领域
+            {$_("carousel.techDescription")}
           </h2>
         </div>
       {/if}
@@ -117,12 +117,12 @@
           <h1
             class="split text-white text-4xl md:text-5xl font-medium text-uppercase tracking-wider"
           >
-            精英人才智库
+            {$_("carousel.talentPool")}
           </h1>
           <ul class="split text-white text-xl md:text-2xl space-y-2">
-            <li>• 垂直领域覆盖</li>
-            <li>• 精准匹配体系</li>
-            <li>• 资深顾问团队</li>
+            <li>• {$_("carousel.verticalCoverage")}</li>
+            <li>• {$_("carousel.preciseMatching")}</li>
+            <li>• {$_("carousel.expertTeam")}</li>
           </ul>
         </div>
       {/if}
@@ -137,12 +137,12 @@
           <h1
             class="split text-white text-4xl md:text-5xl font-medium text-uppercase tracking-wider"
           >
-            全链条服务生态
+            {$_("carousel.fullService")}
           </h1>
           <ul class="split text-white text-xl md:text-2xl space-y-2">
-            <li>• 高端猎头</li>
-            <li>• 人员派遣</li>
-            <li>• ITO服务</li>
+            <li>• {$_("carousel.executiveSearch")}</li>
+            <li>• {$_("carousel.staffing")}</li>
+            <li>• {$_("carousel.itoService")}</li>
           </ul>
         </div>
       {/if}
