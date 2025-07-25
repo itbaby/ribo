@@ -2,41 +2,13 @@
   import { onMount } from "svelte";
   import { fade } from "svelte/transition";
   import { _ } from "svelte-i18n";
-  import { gsap } from "gsap";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
-  import { SplitText } from "gsap/SplitText";
   import secondary from "./assets/secondary.jpg";
   import earch from "./assets/earth.png";
   import topbg from "./assets/top.jpg";
   import service from "./assets/service.jpg";
   import { Card, Gallery } from "flowbite-svelte";
+  import { images } from "./images";
 
-  import alibaba from "./assets/icons/alibaba.png";
-  import alo from "./assets/icons/alo.png";
-  import boya from "./assets/icons/boya.png";
-  import cisco from "./assets/icons/cisco.png";
-  import colt from "./assets/icons/colt.png";
-  import css from "./assets/icons/css.png";
-  import ds from "./assets/icons/ds.png";
-  import fcn from "./assets/icons/fcn.png";
-  import fend from "./assets/icons/fend.png";
-  import fil from "./assets/icons/fil.png";
-  import gen from "./assets/icons/gen.png";
-  import hitachi from "./assets/icons/hitachi.png";
-  import infosys from "./assets/icons/infosys.png";
-  import lenovo from "./assets/icons/lenovo.png";
-  import nissan from "./assets/icons/nissan.png";
-  import ns from "./assets/icons/ns.png";
-  import ntt from "./assets/icons/ntt.png";
-  import qs from "./assets/icons/qs.png";
-  import redbook from "./assets/icons/redbook.png";
-  import tcl from "./assets/icons/tcl.png";
-  import trsassion from "./assets/icons/trsassion.png";
-  import www from "./assets/icons/www.png";
-  import yd from "./assets/icons/yd.png";
-  import zj from "./assets/icons/zj.png";
-  gsap.registerPlugin(ScrollTrigger);
-  gsap.registerPlugin(SplitText);
   let activeIndex = 0;
   $: cards = (
     $_("carousel.items") as unknown as Array<{
@@ -48,32 +20,7 @@
     image: "https://placehold.co/600x400",
     href: "/cards",
   }));
-  const images = [
-    { alt: "Alibaba", src: alibaba },
-    { alt: "Alo", src: alo },
-    { alt: "Boya", src: boya },
-    { alt: "Cisco", src: cisco },
-    { alt: "Colt", src: colt },
-    { alt: "CSS", src: css },
-    { alt: "DS", src: ds },
-    { alt: "FCN", src: fcn },
-    { alt: "Fend", src: fend },
-    { alt: "Fil", src: fil },
-    { alt: "Gen", src: gen },
-    { alt: "Hitachi", src: hitachi },
-    { alt: "Infosys", src: infosys },
-    { alt: "Lenovo", src: lenovo },
-    { alt: "Nissan", src: nissan },
-    { alt: "NS", src: ns },
-    { alt: "NTT", src: ntt },
-    { alt: "QS", src: qs },
-    { alt: "Redbook", src: redbook },
-    { alt: "TCL", src: tcl },
-    { alt: "Trsassion", src: trsassion },
-    { alt: "WWW", src: www },
-    { alt: "YD", src: yd },
-    { alt: "ZJ", src: zj },
-  ];
+  
 
   onMount(() => {
     const interval = setInterval(() => {
@@ -92,7 +39,7 @@
       <!-- 第一个区块 -->
       {#if activeIndex === 0}
         <div
-          class="marquee-item absolute inset-0 flex flex-col gap-4 items-center text-center p-6 w-full"
+          class="marquee-item absolute inset-0 flex flex-col gap-8 items-center justify-center text-center p-6 w-full"
           in:fade={{ duration: 2000 }}
           out:fade={{ duration: 2000 }}
         >
@@ -110,7 +57,7 @@
       <!-- 第二个区块 -->
       {#if activeIndex === 1}
         <div
-          class="marquee-item absolute inset-0 flex flex-col gap-4 items-center text-center p-6 w-full"
+          class="marquee-item absolute inset-0 flex flex-col gap-8 items-center justify-center text-center p-6 w-full"
           in:fade={{ duration: 2000 }}
           out:fade={{ duration: 2000 }}
         >
@@ -119,7 +66,7 @@
           >
             {$_("carousel.talentPool")}
           </h1>
-          <ul class="split text-white text-xl md:text-2xl space-y-2">
+          <ul class="split text-white text-xl md:text-2xl space-y-4">
             <li>• {$_("carousel.verticalCoverage")}</li>
             <li>• {$_("carousel.preciseMatching")}</li>
             <li>• {$_("carousel.expertTeam")}</li>
@@ -130,7 +77,7 @@
       <!-- 第三个区块 -->
       {#if activeIndex === 2}
         <div
-          class="marquee-item absolute inset-0 flex flex-col gap-4 items-center text-center p-6 w-full"
+          class="marquee-item absolute inset-0 flex flex-col gap-8 items-center justify-center text-center p-6 w-full"
           in:fade={{ duration: 2000 }}
           out:fade={{ duration: 2000 }}
         >
