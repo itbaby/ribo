@@ -26,7 +26,21 @@
   },
   "carousel": {
     "latestNews": "Latest News",
-    "globalClients": "Serving Global Clients"
+    "globalClients": "Serving Global Clients",
+    "items": [
+      {
+        "title": "睿柏与日本MYK达成合作",
+        "description": "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
+      },
+      {
+        "title": "Title 2",
+        "description": "Content description 2"
+      },
+      {
+        "title": "Title 3",
+        "description": "Content description 3"
+      }
+    ]
   },
   "footer": {
     "brand": {

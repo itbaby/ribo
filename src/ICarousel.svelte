@@ -1,8 +1,10 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import { fade } from "svelte/transition";
   import { _ } from "svelte-i18n";
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
+  import { SplitText } from "gsap/SplitText";
   import secondary from "./assets/secondary.jpg";
   import earch from "./assets/earth.png";
   import topbg from "./assets/top.jpg";
@@ -34,26 +36,18 @@
   import yd from "./assets/icons/yd.png";
   import zj from "./assets/icons/zj.png";
   gsap.registerPlugin(ScrollTrigger);
-  const cards = [
-    {
-      title: '睿柏与日本MYK达成合作',
-      description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-      image: 'https://placehold.co/600x400',
-      href: '/cards'
-    },
-    {
-      title: 'Title 2',
-      description: 'Content description 2',
-      image: 'https://placehold.co/600x400',
-      href: ''
-    },
-    {
-      title: 'Title 3',
-      description: 'Content description 3',
-      image: 'https://placehold.co/600x400',
-      href: ''
-    }
-  ];
+  gsap.registerPlugin(SplitText);
+  let activeIndex = 0;
+  $: cards = (
+    $_("carousel.items") as unknown as Array<{
+      title: string;
+      description: string;
+    }>
+  ).map((item) => ({
+    ...item,
+    image: "https://placehold.co/600x400",
+    href: "/cards",
+  }));
   const images = [
     { alt: "Alibaba", src: alibaba },
     { alt: "Alo", src: alo },
@@ -81,64 +75,84 @@
     { alt: "ZJ", src: zj },
   ];
 
-
+  onMount(() => {
+    const interval = setInterval(() => {
+      activeIndex = (activeIndex + 1) % 3;
+    }, 4000);
+    return () => clearInterval(interval);
+  });
 </script>
 
 <div>
-  <div class="panel flex h-screen items-center justify-center"
-  style="background-image: url('{topbg}'); background-repeat: no-repeat; background-size: cover;"
+  <div
+    class="panel flex h-screen items-center justify-center"
+    style="background-image: url('{topbg}'); background-repeat: no-repeat; background-size: cover;"
   >
-   
+    <div class="marquee-container relative h-[60vh] w-full py-8">
+      <!-- 第一个区块 -->
+      {#if activeIndex === 0}
+        <div
+          class="marquee-item absolute inset-0 flex flex-col gap-4 items-center text-center p-6 w-full"
+          in:fade={{ duration: 2000 }}
+          out:fade={{ duration: 2000 }}
+        >
+          <h1
+            class="split text-white text-4xl md:text-5xl font-medium text-uppercase tracking-wider"
+          >
+            技术驱动未来
+          </h1>
+          <h2 class="split text-white text-xl md:text-2xl">
+            旗下睿程科技深耕云计算、AIoT、区块链等前沿领域
+          </h2>
+        </div>
+      {/if}
+
+      <!-- 第二个区块 -->
+      {#if activeIndex === 1}
+        <div
+          class="marquee-item absolute inset-0 flex flex-col gap-4 items-center text-center p-6 w-full"
+          in:fade={{ duration: 2000 }}
+          out:fade={{ duration: 2000 }}
+        >
+          <h1
+            class="split text-white text-4xl md:text-5xl font-medium text-uppercase tracking-wider"
+          >
+            精英人才智库
+          </h1>
+          <ul class="split text-white text-xl md:text-2xl space-y-2">
+            <li>• 垂直领域覆盖</li>
+            <li>• 精准匹配体系</li>
+            <li>• 资深顾问团队</li>
+          </ul>
+        </div>
+      {/if}
+
+      <!-- 第三个区块 -->
+      {#if activeIndex === 2}
+        <div
+          class="marquee-item absolute inset-0 flex flex-col gap-4 items-center text-center p-6 w-full"
+          in:fade={{ duration: 2000 }}
+          out:fade={{ duration: 2000 }}
+        >
+          <h1
+            class="split text-white text-4xl md:text-5xl font-medium text-uppercase tracking-wider"
+          >
+            全链条服务生态
+          </h1>
+          <ul class="split text-white text-xl md:text-2xl space-y-2">
+            <li>• 高端猎头</li>
+            <li>• 人员派遣</li>
+            <li>• ITO服务</li>
+          </ul>
+        </div>
+      {/if}
+    </div>
   </div>
   <div
     id="headhunting"
     class="panel flex h-screen items-center justify-center"
     style="background-image: url('{earch}'); background-repeat: no-repeat; background-position:center; background-size: 100% auto;"
-  >
-    
-  </div>
-
-  <div
-    class="panel flex h-screen items-center justify-center bg-gray-300"
-    style="background-image: url('{service}'); background-repeat: no-repeat; background-size: cover;"
-  >
-    <div class="panel flex h-screen items-center justify-center flex-col">
-      <!-- First Row with Caption -->
-      <div class="w-full px-4 py-8 text-center">
-        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800">
-            {$_('carousel.latestNews')}
-          </h2>
-      </div>
-
-      <!-- Second Row with 3 Columns -->
-      <div class="w-full px-4">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8">
-          {#each cards as card}
-            {#if card.href}
-              <Card href={card.href} class="p-4 sm:p-6 md:p-8">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  {card.title}
-                </h5>
-                <p class="leading-tight font-normal text-gray-700 dark:text-gray-400">
-                  {card.description}
-                </p>
-              </Card>
-            {:else}
-              <div class="bg-white p-6 rounded-lg shadow-lg">
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  class="w-full h-48 object-cover rounded-lg mb-4"
-                />
-                <h3 class="text-xl font-semibold mb-2">{card.title}</h3>
-                <p class="text-gray-600">{card.description}</p>
-              </div>
-            {/if}
-          {/each}
-        </div>
-      </div>
-    </div>
-  </div>
+  ></div>
   <div
     class="panel flex h-screen items-center justify-center"
     style="background-image: url('{secondary}'); background-repeat: no-repeat; background-size: cover;"
@@ -147,8 +161,8 @@
       <!-- First Row with Caption -->
       <div class="w-full px-4 py-8 text-center">
         <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800">
-            {$_('carousel.globalClients')}
-          </h2>
+          {$_("carousel.globalClients")}
+        </h2>
       </div>
 
       <!-- Second Row with 3 Columns -->
@@ -157,4 +171,52 @@
       </div>
     </div>
   </div>
+  <div
+    class="panel flex h-screen items-center justify-center bg-gray-300"
+    style="background-image: url('{service}'); background-repeat: no-repeat; background-size: cover;"
+  >
+    <div class="panel flex h-screen items-center justify-center flex-col">
+      <!-- First Row with Caption -->
+      <div class="w-full px-4 py-8 text-center">
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800">
+          {$_("carousel.latestNews")}
+        </h2>
+      </div>
+
+      <!-- Second Row with 3 Columns -->
+      <div class="w-full px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+          {#each cards as card}
+            {#if card.href}
+              <Card href={card.href} class="p-6 sm:p-8 md:p-10">
+                <h5
+                  class="mb-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-white"
+                >
+                  {card.title}
+                </h5>
+                <p
+                  class="text-xl leading-relaxed font-normal text-gray-700 dark:text-gray-400"
+                >
+                  {card.description}
+                </p>
+              </Card>
+            {/if}
+          {/each}
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+<style>
+  .marquee-container {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+  }
+  .marquee-item {
+    min-width: 100%;
+    flex-shrink: 0;
+    transition: opacity 0.2s ease;
+  }
+</style>
