@@ -56,7 +56,6 @@
   }
   function scrollToSection(event: MouseEvent, sectionId: string) {
     event.preventDefault();
-    // Update hash without reloading
     history.pushState({}, '', `#${sectionId}`);
     const section = document.getElementById(sectionId);
     if (section) {
@@ -68,7 +67,6 @@
         duration: 1,
         ease: "power2.inOut",
         onComplete: () => {
-          // Close MegaMenu by updating store
           isMenuOpen.set(false);
         }
       });
@@ -149,22 +147,25 @@
         <div
           class="absolute right-0 bg-white dark:bg-gray-800 shadow-lg rounded-md mt-1 z-50"
         >
+          <!-- svelte-ignore a11y_invalid_attribute -->
           <a
             href="#"
             on:click|preventDefault={(e) => changeLanguage("zh", e)}
-            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+            class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
             >中文</a
           >
+          <!-- svelte-ignore a11y_invalid_attribute -->
           <a
             href="#"
             on:click|preventDefault={(e) => changeLanguage("en", e)}
-            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+            class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
             >English</a
           >
+          <!-- svelte-ignore a11y_invalid_attribute -->
           <a
             href="#"
             on:click|preventDefault={(e) => changeLanguage("jp", e)}
-            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+            class="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
             >日本語</a
           >
         </div>

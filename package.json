@@ -31,6 +31,7 @@
   "dependencies": {
     "@shentohendriks/svelte-smoothscroll": "^0.0.8",
     "@splidejs/svelte-splide": "^0.2.9",
+    "flowbite-svelte-illustrations": "^1.0.4",
     "gsap": "^3.13.0",
     "svelte-i18n": "^4.0.1"
   }
