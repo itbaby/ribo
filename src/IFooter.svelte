@@ -2,11 +2,8 @@
   import {
     Footer,
     FooterCopyright,
-    FooterLinkGroup,
-    FooterLink,
     FooterBrand,
     FooterIcon,
-    Img,
   } from "flowbite-svelte";
   import {
     FacebookSolid,
