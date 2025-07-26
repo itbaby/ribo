@@ -110,10 +110,7 @@
         <a
           href={item.href}
           class="hover:text-primary-600 dark:hover:text-primary-500 hover:underline"
-          on:click|preventDefault={(e) =>
-            item.href === "/headhunting"
-              ? scrollToSection(e, "headhunting")
-              : null}
+         on:click={(e) => scrollToSection(e, "headhunting")}
         >
           {item.name}
         </a>
@@ -140,7 +137,7 @@
     </MegaMenu>
 
     <NavLi href="/services" class="text-lg text-white ">{$_("menu.creative")}</NavLi>
-    <NavLi href="/services" class="text-lg text-white">{$_("menu.aboutus")}</NavLi>
+    <NavLi on:click={(e) => scrollToSection(e, "aboutus")} class="text-lg text-white">{$_("menu.aboutus")}</NavLi>
     <NavLi href="/services" class="text-lg text-white">{$_("menu.news")}</NavLi>
     <NavLi
       class="text-lg text-white cursor-pointer relative"

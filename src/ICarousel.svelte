@@ -5,6 +5,7 @@
   import secondary from "./assets/secondary.jpg";
   import earch from "./assets/earth.png";
   import topbg from "./assets/top.jpg";
+  import output from "./assets/output.jpg";
   import service from "./assets/service.jpg";
   import { Card, Gallery } from "flowbite-svelte";
   import { images } from "./images";
@@ -129,7 +130,6 @@
           {$_("carousel.latestNews")}
         </h2>
       </div>
-
       <!-- Second Row with 3 Columns -->
       <div class="w-full px-4">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
@@ -153,6 +153,11 @@
       </div>
     </div>
   </div>
+    <div
+    id="aboutus"
+    class="panel flex h-screen items-center justify-center"
+    style="background-image: url('{output}'); background-repeat: no-repeat; background-position:center; background-size: auto 100%;"
+  ></div>
 </div>
 
 <style>
