@@ -56,7 +56,7 @@
   }
   function scrollToSection(event: MouseEvent, sectionId: string) {
     event.preventDefault();
-    history.pushState({}, '', `#${sectionId}`);
+    history.pushState({}, "", `#${sectionId}`);
     const section = document.getElementById(sectionId);
     if (section) {
       gsap.to(window, {
@@ -68,7 +68,7 @@
         ease: "power2.inOut",
         onComplete: () => {
           isMenuOpen.set(false);
-        }
+        },
       });
     }
   }
@@ -85,7 +85,7 @@
   // switchLanguage('en');
 </script>
 
-<Navbar class="bg-gray-900/70 dark:bg-gray-900/70">
+<Navbar class="fixed top-0 w-full z-50 bg-gray-900/70 dark:bg-gray-900/70">
   <NavBrand href="/" class="text-white hover:text-gray-200 ">
     <img src={logo} class="me-3 h-6 sm:h-9" alt="Flowbite Logo" />
     <span
@@ -95,7 +95,8 @@
   </NavBrand>
 
   <NavUl class="bg-transparent dark:bg-transparent">
-    <NavLi href="/" class="text-lg bg-transparent text-white">{$_("menu.industry")}</NavLi
+    <NavLi href="/" class="text-lg bg-transparent text-white"
+      >{$_("menu.industry")}</NavLi
     >
     <NavLi class="text-lg  cursor-pointer text-white">
       {$_("menu.serve")}<ChevronDownOutline
@@ -108,7 +109,7 @@
         <a
           href={item.href}
           class="hover:text-primary-600 dark:hover:text-primary-500 hover:underline"
-         on:click={(e) => scrollToSection(e, "headhunting")}
+          on:click={(e) => scrollToSection(e, "headhunting")}
         >
           {item.name}
         </a>
@@ -134,8 +135,13 @@
       {/snippet}
     </MegaMenu>
 
-    <NavLi href="/services" class="text-lg text-white ">{$_("menu.creative")}</NavLi>
-    <NavLi on:click={(e) => scrollToSection(e, "aboutus")} class="text-lg text-white">{$_("menu.aboutus")}</NavLi>
+    <NavLi href="/services" class="text-lg text-white "
+      >{$_("menu.creative")}</NavLi
+    >
+    <NavLi
+      on:click={(e) => scrollToSection(e, "aboutus")}
+      class="text-lg text-white">{$_("menu.aboutus")}</NavLi
+    >
     <NavLi href="/services" class="text-lg text-white">{$_("menu.news")}</NavLi>
     <NavLi
       class="text-lg text-white cursor-pointer relative"
