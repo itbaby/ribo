@@ -2,7 +2,6 @@
   import {
     Footer,
     FooterCopyright,
-    FooterBrand,
     FooterIcon,
   } from "flowbite-svelte";
   import {
@@ -15,7 +14,6 @@
     DiscordSolid,
     TwitterSolid,
   } from "flowbite-svelte-icons";
-  import logo from "./assets/logo.svg";
   import { _ } from "svelte-i18n";
 </script>
 
