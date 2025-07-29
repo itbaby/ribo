@@ -1,12 +1,12 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import gsap from "gsap";
-  import IMenu from "./IMenu.svelte";
+  import IMenu from "./features/IMenu.svelte";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   import LocomotiveScroll from "locomotive-scroll";
   import "locomotive-scroll/dist/locomotive-scroll.css";
-  import Industry from "./Industry.svelte";
-  import IFooter from "./IFooter.svelte";
+  import Industry from "./features/Industry.svelte";
+  import IFooter from "./features/IFooter.svelte";
   
   gsap.registerPlugin(ScrollTrigger);
   onMount(() => {

@@ -9,7 +9,7 @@
   } from "flowbite-svelte";
   import { ChevronDownOutline, ArrowRightOutline } from "flowbite-svelte-icons";
   import { blur, slide, scale } from "svelte/transition";
-  import logo from "./assets/cherry-svgrepo-com.svg";
+  import logo from "../assets/cherry-svgrepo-com.svg";
   import { _, locale } from "svelte-i18n";
   import { gsap } from "gsap";
   import { ScrollToPlugin } from "gsap/ScrollToPlugin";
@@ -123,7 +123,7 @@
           preferences.
         </p>
         <a
-          href="/"
+          href="/public"
           class="text-primary-600 hover:text-primary-600 dark:text-primary-500 dark:hover:text-primary-700 inline-flex items-center text-sm font-medium hover:underline"
         >
           Explore our brands

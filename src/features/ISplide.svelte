@@ -1,11 +1,11 @@
 <script lang="ts">
     import "@splidejs/splide/css";
     import Splide from "@splidejs/splide";
-    import secondary from "./assets/secondary.jpg";
-    import earch from "./assets/earth.png";
-    import topbg from "./assets/top.jpg";
-    import output from "./assets/output.jpg";
-    import service from "./assets/service.jpg";
+    import secondary from "../assets/secondary.jpg";
+    import earch from "../assets/earth.png";
+    import topbg from "../assets/top.jpg";
+    import output from "../assets/output.jpg";
+    import service from "../assets/service.jpg";
     import { onMount } from "svelte";
     onMount(() => {
         new Splide(".splide", { paginationDirection: "ttb" }).mount();

@@ -2,11 +2,11 @@
   import { onMount } from "svelte";
   import { fade } from "svelte/transition";
   import { _ } from "svelte-i18n";
-  import secondary from "./assets/secondary.jpg";
-  import earch from "./assets/earth.png";
-  import topbg from "./assets/top.jpg";
-  import output from "./assets/output.jpg";
-  import service from "./assets/service.jpg";
+  import secondary from "../assets/secondary.jpg";
+  import earch from "../assets/earth.png";
+  import topbg from "../assets/top.jpg";
+  import output from "../assets/output.jpg";
+  import service from "../assets/service.jpg";
   import { Card, Gallery } from "flowbite-svelte";
   import { images } from "./images";
 

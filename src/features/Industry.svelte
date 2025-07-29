@@ -1,6 +1,6 @@
 <script lang="ts">
   import "animate.css/animate.min.css";
-  import topImage from './assets/top.jpg';
+  import topImage from '../assets/top.jpg';
 </script>
 
 <div 
