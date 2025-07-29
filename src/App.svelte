@@ -2,19 +2,14 @@
   import { onMount } from 'svelte';
   import gsap from 'gsap';
   import IMenu from './IMenu.svelte';
-  import { switchLanguage } from "./i18n";
-  import { isLoading, _ } from "svelte-i18n";
+  import { _ } from "svelte-i18n";
   import { ScrollTrigger } from 'gsap/ScrollTrigger';
   import LocomotiveScroll from 'locomotive-scroll';
   import 'locomotive-scroll/dist/locomotive-scroll.css';
   
   gsap.registerPlugin(ScrollTrigger);
 
-  // Wait for i18n to finish loading
-  let i18nReady = false;
-  isLoading.subscribe(loading => {
-    i18nReady = !loading;
-  });
+
 
   onMount(() => {
      const sections = document.querySelectorAll('[data-section]');
@@ -78,9 +73,9 @@
 </script>
 
 <div data-scroll-container>
-  {#if i18nReady}
+
     <IMenu/>
-  {/if}
+
   <section
     data-section
     data-scroll-section
