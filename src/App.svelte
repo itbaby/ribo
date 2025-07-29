@@ -7,6 +7,8 @@
   import "locomotive-scroll/dist/locomotive-scroll.css";
   import Industry from "./features/Industry.svelte";
   import IFooter from "./features/IFooter.svelte";
+  import ICarousel from "./features/ICarousel.svelte";
+  import ICustomers from "./features/ICustomers.svelte";
   
   gsap.registerPlugin(ScrollTrigger);
   onMount(() => {
@@ -57,7 +59,6 @@
           start: "top 80%",
           end: "bottom 20%",
           toggleActions: "play reverse play reverse",
-          markers: true, // For debugging (can remove later)
         },
       });
     });
@@ -71,14 +72,7 @@
 
 <div data-scroll-container>
   <IMenu />
-  <section
-    data-section
-    data-scroll-section
-    class="flex items-center justify-center h-screen bg-rose-200"
-  >
-    <Industry />
-  </section>
-
+  <Industry />
   <section
     data-section
     data-scroll-section
@@ -94,21 +88,9 @@
     <h1 class="text-6xl font-bold">Screen 3</h1>
   </section>
 
-  <section
-          data-section
-          data-scroll-section
-          class="flex items-center justify-center h-screen bg-sky-200"
-  >
-    <h1 class="text-6xl font-bold">Screen 4</h1>
-  </section>
 
-  <section
-    data-section
-    data-scroll-section
-    class="flex items-center justify-center "
-  >
-    <IFooter/>
-  </section>
+  <ICustomers/>
+  <IFooter/>
 </div>
 
 <style>
