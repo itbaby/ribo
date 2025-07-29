@@ -7,6 +7,7 @@
   import "locomotive-scroll/dist/locomotive-scroll.css";
   import Industry from "./features/Industry.svelte";
   import IFooter from "./features/IFooter.svelte";
+  import IAboutUs from "./features/IAboutUs.svelte";
   
   gsap.registerPlugin(ScrollTrigger);
   onMount(() => {
@@ -99,7 +100,7 @@
           data-scroll-section
           class="flex items-center justify-center h-screen bg-sky-200"
   >
-    <h1 class="text-6xl font-bold">Screen 4</h1>
+   <IAboutUs/>
   </section>
 
   <section
