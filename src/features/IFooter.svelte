@@ -16,11 +16,7 @@
   } from "flowbite-svelte-icons";
   import { _ } from "svelte-i18n";
 </script>
-<section
-        data-section
-        data-scroll-section
-        class="flex items-center justify-center "
->
+
 <Footer footerType="socialmedia">
   <div class="mx-auto w-10/12  p-8 py-12 lg:py-16">
     <div class="flex flex-col md:flex-row md:justify-between gap-4">
@@ -110,4 +106,3 @@
     </div>
   </div>
 </Footer>
-</section>
