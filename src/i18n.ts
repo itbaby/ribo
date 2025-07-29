@@ -5,7 +5,7 @@ register('en', () => import('./locales/en.json'));
 register('zh', () => import('./locales/zh.json'));
 register('jp', () => import('./locales/jp.json'));
 // 初始化配置（默认英文）
-init({
+export const i18nInit = init({
   fallbackLocale: 'en',
   initialLocale: 'zh'
 });

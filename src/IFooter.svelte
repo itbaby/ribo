@@ -20,7 +20,7 @@
 </script>
 
 <Footer footerType="socialmedia">
-  <div class="mx-auto max-w-none p-8 py-12 lg:py-16">
+  <div class="mx-auto w-10/12  p-8 py-12 lg:py-16">
     <div class="flex flex-col md:flex-row md:justify-between gap-4">
       <div class="basis-1/4 flex justify-end pr-16">
         <div class="dark:hidden">
