@@ -91,7 +91,15 @@
           data-scroll-section
           class="flex items-center justify-center h-screen bg-sky-200"
   >
-    <h1 class="text-6xl font-bold">Screen 2</h1>
+    <h1 class="text-6xl font-bold">Screen 3</h1>
+  </section>
+
+  <section
+          data-section
+          data-scroll-section
+          class="flex items-center justify-center h-screen bg-sky-200"
+  >
+    <h1 class="text-6xl font-bold">Screen 4</h1>
   </section>
 
   <section
@@ -99,9 +107,7 @@
     data-scroll-section
     class="flex items-center justify-center "
   >
-    <h1 class="text-6xl font-bold">
-      <IFooter/>
-    </h1>
+    <IFooter/>
   </section>
 </div>
 
