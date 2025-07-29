@@ -1,143 +1,112 @@
 <script lang="ts">
-    import {onMount, tick} from "svelte";
+    import { onMount } from "svelte";
+    import { gsap } from "gsap";
 
-    let sliderContainer;
+    let sliderContainer: HTMLElement;
     let currentActiveIndex = 0;
-    let slides = [];
-    let shouldShowButtons = false; // 初始化按钮显示状态
+    let slides: Element[] = [];
+    let shouldShowButtons = false;
 
-    onMount(async () => {
+    onMount(() => {
         if (sliderContainer) {
             slides = Array.from(sliderContainer.querySelectorAll('.slide'));
-            // 强制更新按钮显示状态
             shouldShowButtons = slides.length > 1;
-            console.log('Slides count:', slides.length);
-            console.log('Should show buttons:', shouldShowButtons);
-            await tick(); // 等待DOM更新
-            updateSlideStates();
+            initializeSlides();
         }
     });
 
-    function updateSlideStates() {
-        console.log('updateSlideStates called');
-        const numSlides = slides.length;
-        console.log('Number of slides:', numSlides);
-        console.log('Current active index:', currentActiveIndex);
-        if (numSlides === 0) return;
+    function initializeSlides() {
+        // 设置初始状态
+        slides.forEach((slide: Element, index: number) => {
+            gsap.set(slide, {
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%"
+            });
 
-        for (let i = 0; i < numSlides; i++) {
-            const slide = slides[i];
-            let status = 'hidden';
-            console.log(`Processing slide ${i}`);
-
-            let diff = i - currentActiveIndex;
-            console.log(`Difference for slide ${i}: ${diff}`);
-            if (diff > numSlides / 2) {
-                diff -= numSlides;
-            } else if (diff < -numSlides / 2) {
-                diff += numSlides;
-            }
-            console.log(`Adjusted difference for slide ${i}: ${diff}`);
-
-            if (diff === 0) {
-                status = 'active';
-            } else if (numSlides > 1 && diff === 1) {
-                status = 'next';
-            } else if (numSlides > 2 && diff === -1) {
-                status = 'prev';
-            } else if (numSlides > 3 && diff === 2) {
-                status = 'background-next';
-            } else if (numSlides > 4 && diff === -2) {
-                status = 'background-prev';
-            }
-
-            if (numSlides === 2 && diff === -1) {
-                status = 'next';
-            }
-            if (numSlides === 4 && diff === -2) {
-                status = 'background-next';
-            }
-
-            slide.dataset.status = status;
-
-            // 移除之前的样式类
-            slide.classList.remove('shadow-xl', 'shadow-lg', 'shadow-md');
-            
-            // 添加统一的过渡效果
-            slide.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.5s ease, visibility 0.5s ease';
-            
-            // 移除之前的样式属性
-            slide.style.opacity = '';
-            slide.style.zIndex = '';
-            slide.style.visibility = '';
-
-            // 根据状态应用样式
-            if (status === 'active') {
-                slide.classList.add('shadow-xl');
-                slide.style.transform = 'translateX(0) scale(1)';
-                slide.style.opacity = '1';
-                slide.style.zIndex = '10';
-                slide.style.visibility = 'visible';
-            } else if (status === 'next') {
-                slide.classList.add('shadow-lg');
-                slide.style.transform = 'translateX(100%) scale(0.8)';
-                slide.style.opacity = '0.8';
-                slide.style.zIndex = '5';
-                slide.style.visibility = 'visible';
-            } else if (status === 'prev') {
-                slide.classList.add('shadow-lg');
-                slide.style.transform = 'translateX(-100%) scale(0.8)';
-                slide.style.opacity = '0.8';
-                slide.style.zIndex = '5';
-                slide.style.visibility = 'visible';
-            } else if (status === 'background-next') {
-                slide.classList.add('shadow-md');
-                slide.style.transform = 'translateX(50%) scale(0.6)';
-                slide.style.opacity = '0.6';
-                slide.style.zIndex = '1';
-                slide.style.visibility = 'visible';
-            } else if (status === 'background-prev') {
-                slide.classList.add('shadow-md');
-                slide.style.transform = 'translateX(-50%) scale(0.6)';
-                slide.style.opacity = '0.6';
-                slide.style.zIndex = '1';
-                slide.style.visibility = 'visible';
+            let state;
+            if (index === 0) {
+                state = { x: 0, scale: 1, opacity: 1, zIndex: 10 };
+            } else if (index === 1) {
+                state = { x: "100%", scale: 0.8, opacity: 0.8, zIndex: 5 };
             } else {
-                // hidden状态
-                slide.style.opacity = '0';
-                slide.style.zIndex = '0';
-                slide.style.visibility = 'hidden';
+                state = { x: "-100%", scale: 0.6, opacity: 0.6, zIndex: 1 };
             }
-        }
+
+            gsap.set(slide, state);
+        });
     }
 
     function goToPrev() {
-        console.log('goToPrev called');
-        const numSlides = slides.length;
-        console.log('Number of slides:', numSlides);
-        if (numSlides <= 1) return;
+        if (slides.length <= 1) return;
         
-        console.log('Current active index before:', currentActiveIndex);
-        currentActiveIndex = (currentActiveIndex - 1 + numSlides) % numSlides;
-        console.log('Current active index after:', currentActiveIndex);
-        updateSlideStates();
+        currentActiveIndex = (currentActiveIndex - 1 + slides.length) % slides.length;
+        animateSlides();
     }
 
     function goToNext() {
-        console.log('goToNext called');
-        const numSlides = slides.length;
-        console.log('Number of slides:', numSlides);
-        if (numSlides <= 1) return;
+        if (slides.length <= 1) return;
         
-        console.log('Current active index before:', currentActiveIndex);
-        currentActiveIndex = (currentActiveIndex + 1) % numSlides;
-        console.log('Current active index after:', currentActiveIndex);
-        updateSlideStates();
+        currentActiveIndex = (currentActiveIndex + 1) % slides.length;
+        animateSlides();
+    }
+
+    function animateSlides() {
+        slides.forEach((slide: Element, index: number) => {
+            let diff = index - currentActiveIndex;
+            
+            // 处理循环
+            if (diff > Math.floor(slides.length / 2)) {
+                diff -= slides.length;
+            } else if (diff < -Math.floor(slides.length / 2)) {
+                diff += slides.length;
+            }
+
+            // 根据位置设置动画
+            let animation;
+            if (diff === 0) {
+                // 当前激活的slide
+                animation = { x: 0, scale: 1, opacity: 1, zIndex: 10 };
+            } else if (diff === 1) {
+                // 下一个slide
+                animation = { x: "100%", scale: 0.8, opacity: 0.8, zIndex: 5 };
+            } else if (diff === -1) {
+                // 上一个slide
+                animation = { x: "-100%", scale: 0.8, opacity: 0.8, zIndex: 5 };
+            } else {
+                // 其他slide
+                animation = { x: diff > 0 ? "100%" : "-100%", scale: 0.6, opacity: 0.6, zIndex: 1 };
+            }
+
+            // 执行动画
+            gsap.to(slide, {
+                ...animation,
+                duration: 0.5,
+                ease: "power2.out",
+                onComplete: () => updateShadow(slide, diff)
+            });
+        });
+    }
+
+    function updateShadow(slide: Element, diff: number) {
+        // 移除之前的阴影类
+        slide.classList.remove('shadow-xl', 'shadow-lg', 'shadow-md');
+
+        // 根据位置添加阴影类
+        if (diff === 0) {
+            slide.classList.add('shadow-xl');
+        } else if (Math.abs(diff) === 1) {
+            slide.classList.add('shadow-lg');
+        } else {
+            slide.classList.add('shadow-md');
+        }
     }
 </script>
 
 <div class="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto">
-    <main bind:this={sliderContainer} class="relative w-full h-[400px] sm:h-[380px] md:h-[360px] [perspective:1200px]">
+    <main bind:this={sliderContainer} class="relative w-full h-[400px] sm:h-[380px] md:h-[360px]">
 
         <article class="slide absolute inset-0 flex flex-col justify-between p-6 md:p-8 bg-white rounded-2xl border border-stone-200">
             <div>
@@ -221,7 +190,8 @@
 
     <button 
         title="Previous testimonial" 
-        class="absolute top-1/2 left-[-16px] sm:left-[-24px] md:left-[-30px] transform -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/80 backdrop-blur-sm shadow-md hover:bg-white focus:bg-white flex items-center justify-center text-stone-500 hover:text-stone-700 focus:text-stone-700 focus:outline-none transition-all duration-200"
+        aria-label="Previous testimonial"
+        class="absolute top-1/2 left-[-16px] sm:left-[-24px] md:left-[-30px] -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/80 backdrop-blur-sm shadow-md hover:bg-white focus:bg-white flex items-center justify-center text-stone-500 hover:text-stone-700 focus:text-stone-700 focus:outline-none"
         on:click={goToPrev}
     >
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 sm:w-5 sm:h-5">
@@ -230,7 +200,8 @@
     </button>
     <button 
         title="Next testimonial" 
-        class="absolute top-1/2 right-[-16px] sm:right-[-24px] md:right-[-30px] transform -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/80 backdrop-blur-sm shadow-md hover:bg-white focus:bg-white flex items-center justify-center text-stone-500 hover:text-stone-700 focus:text-stone-700 focus:outline-none transition-all duration-200"
+        aria-label="Next testimonial"
+        class="absolute top-1/2 right-[-16px] sm:right-[-24px] md:right-[-30px] -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/80 backdrop-blur-sm shadow-md hover:bg-white focus:bg-white flex items-center justify-center text-stone-500 hover:text-stone-700 focus:text-stone-700 focus:outline-none"
         on:click={goToNext}
     >
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 sm:w-5 sm:h-5">
