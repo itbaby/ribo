@@ -15,11 +15,9 @@ async function initializeApp() {
     initialLocale: 'zh'
   });
 
-  const app = mount(App, {
+  return mount(App, {
     target: document.getElementById('app')!,
-  })
-
-  return app;
+  });
 }
 
 export default initializeApp();
