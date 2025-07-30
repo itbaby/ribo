@@ -243,16 +243,14 @@
   }
 
   &.active {
+    cursor: default;
+
     .image {
       top: 0;
       left: 0;
       height: 100%;
       width: 100%;
     }
-  }
-
-  &.active {
-    cursor: default;
 
     .overlay {
       width: 25%;
@@ -316,48 +314,6 @@
 
       &:before {
         transform: rotate(-45deg) translateX(0px);
-      }
-    }
-  }
-
-  &.anim-in {
-    transition-delay: 0.5s;
-
-    .image {
-      top: -20%;
-      left: -140%;
-      height: 140%;
-      width: 140%;
-      animation: img-anim-in 1.2s forwards;
-    }
-  }
-
-  &.anim-out {
-    flex: 0;
-    cursor: default;
-    transition-delay: 0.5s;
-
-    .image {
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      animation: img-anim-out 1.2s forwards;
-    }
-  }
-
-  @for $i from 1 through 4 {
-    &:nth-of-type(#{$i}) {
-      &.anim-in {
-        .image {
-          animation-delay: $i * 0.2s;
-        }
-      }
-
-      &.anim-out {
-        .image {
-          animation-delay: $i * 0.2s;
-        }
       }
     }
   }
@@ -513,7 +469,7 @@
     }
   }
 
-  &:hover:not(.active):not(.anim-out) {
+  &:hover:not(.active) {
     .image {
       transform: scale(1.1);
     }
@@ -530,26 +486,6 @@
         height: 100%;
       }
     }
-  }
-}
-
-#codepen-link {
-  position: absolute;
-  right: 15px;
-  bottom: 15px;
-  height: 40px;
-  width: 40px;
-  z-index: 10;
-  border-radius: 50%;
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/544318/logo.jpg");
-  background-position: center center;
-  background-size: cover;
-  opacity: 0.7;
-  transition: all 0.25s;
-
-  &:hover {
-    opacity: 1;
-    box-shadow: 0 2px 6px #0f0f0f;
   }
 }
 
