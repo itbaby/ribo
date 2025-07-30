@@ -53,6 +53,31 @@
 
   let activeSlide: number | null = null;
   let lastViewedSlide: number | null = null;
+  
+  // 通用动画配置
+  const animConfig = {
+    duration: 1,
+    ease: 'power2.out'
+  };
+
+  // 获取幻灯片元素及其内容元素
+  function getSlideElements(index?: number) {
+    const slideElements = document.querySelectorAll('.slide');
+    if (index === undefined) return { slideElements };
+    
+    const currentSlide = slideElements[index];
+    const content = currentSlide.querySelector('.content');
+    
+    return {
+      slideElements,
+      currentSlide,
+      otherSlides: Array.from(slideElements).filter((_, i) => i !== index),
+      overlay: currentSlide.querySelector('.overlay'),
+      title: content?.querySelector('.title'),
+      cityInfo: content?.querySelector('.city-info'),
+      emblem: content?.querySelector('.emblem')
+    };
+  }
 
   function openSlide(index: number) {
     if (activeSlide === index || activeSlide !== null) return;
@@ -60,61 +85,43 @@
     lastViewedSlide = activeSlide;
     activeSlide = index;
     
-    // Animate to active state
-    const slideElements = document.querySelectorAll('.slide');
-    const currentSlide = slideElements[index];
-    const otherSlides = Array.from(slideElements).filter((_, i) => i !== index);
+    const elements = getSlideElements(index);
     
-    gsap.to(currentSlide, {
-      flex: 4,
-      duration: 1,
-      ease: 'power2.out'
-    });
+    // 幻灯片大小动画
+    if (elements.currentSlide) {
+      gsap.to(elements.currentSlide, { flex: 4, ...animConfig });
+    }
     
-    gsap.to(otherSlides, {
-      flex: 0.5,
-      duration: 1,
-      ease: 'power2.out'
-    });
+    if (elements.otherSlides) {
+      gsap.to(elements.otherSlides, { flex: 0.5, ...animConfig });
+    }
 
-    // Animate content with null checks
-    const content = currentSlide.querySelector('.content');
-    const overlay = currentSlide.querySelector('.overlay');
-    const title = content?.querySelector('.title');
-    const cityInfo = content?.querySelector('.city-info');
-    const emblem = content?.querySelector('.emblem');
-    
-    if (overlay) {
-      // Start from 100% and animate to 25%
-      gsap.set(overlay, { width: '100%' });
-      gsap.to(overlay, {
+    // 内容元素动画
+    if (elements.overlay) {
+      gsap.set(elements.overlay, { width: '100%' });
+      gsap.to(elements.overlay, {
         width: '25%',
         duration: 1.25,
         delay: 1.75,
-        ease: 'power2.out'
+        ease: animConfig.ease
       });
     }
 
-    if (title) {
-      gsap.fromTo(title, 
-        { opacity: 0, y: -30 },
-        { opacity: 1, y: 0, duration: 1, delay: 1.25, ease: 'power2.out' }
-      );
-    }
-
-    if (cityInfo) {
-      gsap.fromTo(cityInfo,
-        { opacity: 0, x: -20 },
-        { opacity: 1, x: 0, duration: 0.8, delay: 1.5, ease: 'power2.out' }
-      );
-    }
-
-    if (emblem) {
-      gsap.fromTo(emblem,
-        { opacity: 0, y: 50 },
-        { opacity: 0.8, y: 100, duration: 0.8, delay: 1.75, ease: 'power2.out' }
-      );
-    }
+    // 使用数组和循环简化元素动画
+    const animations = [
+      { el: elements.title, props: { from: { opacity: 0, y: -30 }, to: { opacity: 1, y: 0, delay: 1.25 } } },
+      { el: elements.cityInfo, props: { from: { opacity: 0, x: -20 }, to: { opacity: 1, x: 0, duration: 0.8, delay: 1.5 } } },
+      { el: elements.emblem, props: { from: { opacity: 0, y: 50 }, to: { opacity: 0.8, y: 100, duration: 0.8, delay: 1.75 } } }
+    ];
+    
+    animations.forEach(({ el, props }) => {
+      if (el) {
+        gsap.fromTo(el, 
+          props.from, 
+          { ...props.to, ease: animConfig.ease, duration: props.to.duration || animConfig.duration }
+        );
+      }
+    });
   }
 
   function closeSlide(index: number) {
@@ -123,41 +130,41 @@
     lastViewedSlide = activeSlide;
     activeSlide = null;
     
-    const slideElements = document.querySelectorAll('.slide');
+    const { slideElements } = getSlideElements();
     
-    gsap.to(slideElements, {
-      flex: 1,
-      duration: 1,
-      ease: 'power2.out'
-    });
+    // 重置所有幻灯片大小
+    gsap.to(slideElements, { flex: 1, ...animConfig });
 
-    // Reset content animations - restore all elements to initial state
+    // 重置内容元素状态
     slideElements.forEach((slide, idx) => {
       const content = slide.querySelector('.content');
-      const overlay = slide.querySelector('.overlay');
-      const title = content?.querySelector('.title');
-      const cityInfo = content?.querySelector('.city-info');
-      const emblem = content?.querySelector('.emblem');
+      const elements = {
+        overlay: slide.querySelector('.overlay'),
+        title: content?.querySelector('.title'),
+        cityInfo: content?.querySelector('.city-info'),
+        emblem: content?.querySelector('.emblem')
+      };
       
-      if (idx === index) {
-        // Restore the closing slide's overlay to 100% width for hover effect
-        if (overlay) {
-          gsap.to(overlay, { width: '100%', duration: 0.5, ease: 'power2.out' });
-        }
+      // 仅为关闭的幻灯片恢复覆盖层宽度
+      if (idx === index && elements.overlay) {
+        gsap.to(elements.overlay, { 
+          width: '100%', 
+          duration: 0.5, 
+          ease: animConfig.ease 
+        });
       }
       
-      // Reset all content elements to CSS initial state (not hidden)
-      // Let CSS handle hover states, don't force opacity to 0
-      if (title) gsap.set(title, { clearProps: 'all' });
-      if (cityInfo) gsap.set(cityInfo, { clearProps: 'all' });
-      if (emblem) gsap.set(emblem, { clearProps: 'all' });
+      // 重置所有内容元素的CSS属性
+      if (elements.title) gsap.set(elements.title, { clearProps: 'all' });
+      if (elements.cityInfo) gsap.set(elements.cityInfo, { clearProps: 'all' });
+      if (elements.emblem) gsap.set(elements.emblem, { clearProps: 'all' });
     });
   }
 
   onMount(() => {
-    // Initial setup
-    const slides = document.querySelectorAll('.slide');
-    gsap.set(slides, { flex: 1 });
+    // 初始化幻灯片
+    const { slideElements } = getSlideElements();
+    gsap.set(slideElements, { flex: 1 });
   });
 </script>
 
