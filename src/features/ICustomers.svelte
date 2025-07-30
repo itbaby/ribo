@@ -1,21 +1,9 @@
 <script lang="ts">
   import { onMount, onDestroy } from 'svelte';
   
-  const imagePaths = [
-    'https://images.unsplash.com/photo-1608687087357-845abfade367?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2Njc1NTk3NzE&ixlib=rb-4.0.3&q=80&w=400',
-    'https://images.unsplash.com/photo-1604818640599-71bda0165d53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2Njc1NTk3NzE&ixlib=rb-4.0.3&q=80&w=400',
-    'https://images.unsplash.com/photo-1574357278720-2809ce8065db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2Njc1NTk3NzE&ixlib=rb-4.0.3&q=80&w=400',
-    'https://images.unsplash.com/photo-1602136773736-34d445b989cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2Njc1NTk3NzE&ixlib=rb-4.0.3&q=80&w=400',
-    'https://images.unsplash.com/photo-1501769752-a59efa2298ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2Njc1NTk3NzE&ixlib=rb-4.0.3&q=80&w=400',
-    'https://images.unsplash.com/photo-1558961166-9c584702dcb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2Njc1NTk3NzE&ixlib=rb-4.0.3&q=80&w=400',
-    'https://images.unsplash.com/photo-1571182160015-2169f6e1aa5f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2Njc1NTk3NzE&ixlib=rb-4.0.3&q=80&w=400',
-    'https://images.unsplash.com/photo-1555852224-2a3e675fc47e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2Njc1NTk3NzE&ixlib=rb-4.0.3&q=80&w=400',
-    'https://images.unsplash.com/photo-1620215175664-cb9a6f5b6103?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2Njc1NTk4NzE&ixlib=rb-4.0.3&q=80&w=400',
-    'https://images.unsplash.com/photo-1539606328118-80c679838702?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2Njc1NTk4NzE&ixlib=rb-4.0.3&q=80&w=400',
-    'https://images.unsplash.com/photo-1574357278720-2809ce8065db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2Njc1NTk4NzE&ixlib=rb-4.0.3&q=80&w=400',
-    'https://images.unsplash.com/photo-1574357265250-10c88f63ebfd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2Njc1NTk4NzE&ixlib=rb-4.0.3&q=80&w=400',
-    'https://images.unsplash.com/photo-1536901766856-5d45744cd180?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2Njc1NTk5MjA&ixlib=rb-4.0.3&q=80&w=400'
-  ];
+  import { images } from './images';
+  
+  const imagePaths = images.map(img => img.src);
 
   let canvas: HTMLCanvasElement;
   let ctx: CanvasRenderingContext2D;
@@ -64,8 +52,8 @@
   }
 
   class Shape {
-    x: number;
-    y: number;
+    x: number = 0;
+    y: number = 0;
     xIndex: number;
     yIndex: number;
     index: number;
@@ -76,8 +64,8 @@
     ratio: number = 0;
     displayed: boolean = true;
     ctx: CanvasRenderingContext2D;
-    xRadian: number;
-    yRadian: number;
+    xRadian: number = 0;
+    yRadian: number = 0;
 
     constructor(params: any) {
       this.ctx = params.c;
@@ -150,9 +138,9 @@
     shapes: Shape[] = [];
     width: number;
     height: number;
-    radius: number;
+    radius: number = 0;
     numberOfShape: number = 16;
-    size: number;
+    size: number = 0;
     focus = { x: 0, y: 0, s: 0 };
     touchInfos = {
       mouse: { x: 0, y: 0 },
