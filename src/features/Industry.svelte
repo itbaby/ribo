@@ -62,8 +62,11 @@
       <div class="slider__back"></div>
     </div>
     <div class="slider__inner">
+    
       <div class="slider__content">
         <h1>Slide <br> One</h1>
+      
+        <!-- svelte-ignore a11y_click_events_have_key_events -->
         <a class="go-to-next" on:click={nextSlide}>next</a>
       </div>
     </div>
@@ -73,8 +76,10 @@
       <div class="slider__back"></div>
     </div>
     <div class="slider__inner">
+    
       <div class="slider__content">
         <h1>Slide <br> Two</h1>
+      
         <a class="go-to-next" on:click={nextSlide}>next</a>
       </div>
     </div>

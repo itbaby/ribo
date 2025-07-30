@@ -9,49 +9,46 @@
   import IFooter from "./features/IFooter.svelte";
   import IAboutUs from "./features/IAboutUs.svelte";
   import ICustomers from "./features/ICustomers.svelte";
-    import ISponsor from "./features/ISponsor.svelte";
-    import IIntro from "./features/IIntro.svelte";
-  
+  import ISponsor from "./features/ISponsor.svelte";
+  import IIntro from "./features/IIntro.svelte";
+
   gsap.registerPlugin(ScrollTrigger);
   onMount(() => {
     const sections = document.querySelectorAll("[data-section]");
-    // Initialize locomotive scroll
+    // 初始化滚动和动画
     const locoScroll = new LocomotiveScroll({
       el: document.querySelector("[data-scroll-container]") as HTMLElement,
       smooth: true,
-      lerp: 0.25, // Increased for smoother transitions
-      inertia: 0.8, // Added inertia effect
+      lerp: 0.25,
+      inertia: 0.8,
       getDirection: true,
-      multiplier: 0.8, // Reduced for more controlled speed
+      multiplier: 0.8,
       class: "is-reveal",
-      smoothMobile: true, // Enable smooth scrolling on mobile
+      smoothMobile: true,
     });
 
-    // Update ScrollTrigger when locomotive updates
-    document.addEventListener("scroll", () => {
-      ScrollTrigger.update();
-    });
-
-    // Sync ScrollTrigger with locomotive
+    // 同步 ScrollTrigger 和 LocomotiveScroll
+    document.addEventListener("scroll", ScrollTrigger.update);
+    
     ScrollTrigger.scrollerProxy("[data-scroll-container]", {
       scrollTop(value) {
         return arguments.length
           ? locoScroll.scrollTo(value, { duration: 0, disableLerp: true })
           : locoScroll.scroll.y;
       },
-      getBoundingClientRect() {
-        return {
-          top: 0,
-          left: 0,
-          width: window.innerWidth,
-          height: window.innerHeight,
-        };
-      },
+      getBoundingClientRect: () => ({
+        top: 0,
+        left: 0,
+        width: window.innerWidth,
+        height: window.innerHeight,
+      }),
     });
 
-    // Refresh ScrollTrigger
+    // 刷新并设置动画
     ScrollTrigger.refresh();
-    sections.forEach((sec) => {
+    
+    // 为每个部分添加动画
+    sections.forEach(sec =>
       gsap.to(sec, {
         opacity: 1,
         duration: 1.5,
@@ -61,14 +58,15 @@
           start: "top 80%",
           end: "bottom 20%",
           toggleActions: "play reverse play reverse",
-          markers: true, // For debugging (can remove later)
+          markers: true,
         },
-      });
-    });
-    // Clean up
+      })
+    );
+    
+    // 清理函数
     return () => {
       locoScroll.destroy();
-      ScrollTrigger.getAll().forEach((t) => t.kill());
+      ScrollTrigger.getAll().forEach(t => t.kill());
     };
   });
 </script>
@@ -83,14 +81,13 @@
     <Industry />
   </section>
 
-    <section
+  <section
     data-section
     data-scroll-section
     class="flex items-center justify-center h-screen p-20 bg-cover bg-center"
     style="background-image: url('./src/assets/istockphoto-898069582-2048x2048.jpg')"
   >
-
-   <IIntro/>
+    <IIntro />
   </section>
 
   <section
@@ -99,33 +96,32 @@
     class="flex items-center justify-center p-20 bg-cover bg-center"
     style="background-image: url('./src/assets/istockphoto-898069582-2048x2048.jpg')"
   >
-
-   <ICustomers/>
+    <ICustomers />
   </section>
   <section
-          data-section
-          data-scroll-section
-          class="flex items-center justify-center p-20 bg-cover bg-center"
-          style="background-image: url('./src/assets/pexels-ryutaro-5220028.jpg')"
+    data-section
+    data-scroll-section
+    class="flex items-center justify-center p-20 bg-cover bg-center"
+    style="background-image: url('./src/assets/pexels-ryutaro-5220028.jpg')"
   >
-    <ISponsor/>
-  </section>
-
-  <section
-          data-section
-          data-scroll-section
-          class="flex items-center justify-center p-40 bg-cover bg-center"
-           style="background-image: url('./src/assets/istockphoto-913936644-1024x1024.jpg')"
-  >
-   <IAboutUs/>
+    <ISponsor />
   </section>
 
   <section
     data-section
     data-scroll-section
-    class="flex items-center justify-center "
+    class="flex items-center justify-center p-40 bg-cover bg-center"
+    style="background-image: url('./src/assets/istockphoto-913936644-1024x1024.jpg')"
   >
-    <IFooter/>
+    <IAboutUs />
+  </section>
+
+  <section
+    data-section
+    data-scroll-section
+    class="flex items-center justify-center"
+  >
+    <IFooter />
   </section>
 </div>
 
