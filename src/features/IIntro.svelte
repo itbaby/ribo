@@ -85,6 +85,8 @@
     const emblem = content?.querySelector('.emblem');
     
     if (overlay) {
+      // Start from 100% and animate to 25%
+      gsap.set(overlay, { width: '100%' });
       gsap.to(overlay, {
         width: '25%',
         duration: 1.25,
@@ -129,18 +131,26 @@
       ease: 'power2.out'
     });
 
-    // Reset content animations with null checks
-    slideElements.forEach(slide => {
+    // Reset content animations - restore all elements to initial state
+    slideElements.forEach((slide, idx) => {
       const content = slide.querySelector('.content');
       const overlay = slide.querySelector('.overlay');
       const title = content?.querySelector('.title');
       const cityInfo = content?.querySelector('.city-info');
       const emblem = content?.querySelector('.emblem');
       
-      if (overlay) gsap.to(overlay, { width: 0, duration: 0.5 });
-      if (title) gsap.to(title, { opacity: 0, y: 0, duration: 0.3 });
-      if (cityInfo) gsap.to(cityInfo, { opacity: 0, x: 0, duration: 0.3 });
-      if (emblem) gsap.to(emblem, { opacity: 0, y: 0, duration: 0.3 });
+      if (idx === index) {
+        // Restore the closing slide's overlay to 100% width for hover effect
+        if (overlay) {
+          gsap.to(overlay, { width: '100%', duration: 0.5, ease: 'power2.out' });
+        }
+      }
+      
+      // Reset all content elements to CSS initial state (not hidden)
+      // Let CSS handle hover states, don't force opacity to 0
+      if (title) gsap.set(title, { clearProps: 'all' });
+      if (cityInfo) gsap.set(cityInfo, { clearProps: 'all' });
+      if (emblem) gsap.set(emblem, { clearProps: 'all' });
     });
   }
 
