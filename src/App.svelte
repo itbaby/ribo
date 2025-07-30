@@ -9,6 +9,8 @@
   import IFooter from "./features/IFooter.svelte";
   import IAboutUs from "./features/IAboutUs.svelte";
   import ICustomers from "./features/ICustomers.svelte";
+    import ISponsor from "./features/ISponsor.svelte";
+    import IIntro from "./features/IIntro.svelte";
   
   gsap.registerPlugin(ScrollTrigger);
   onMount(() => {
@@ -81,10 +83,21 @@
     <Industry />
   </section>
 
+    <section
+    data-section
+    data-scroll-section
+    class="flex items-center justify-center h-screen p-20 bg-cover bg-center"
+    style="background-image: url('./src/assets/istockphoto-898069582-2048x2048.jpg')"
+  >
+
+   <IIntro/>
+  </section>
+
   <section
     data-section
     data-scroll-section
-    class="flex items-center justify-center h-screen bg-sky-200"
+    class="flex items-center justify-center p-20 bg-cover bg-center"
+    style="background-image: url('./src/assets/istockphoto-898069582-2048x2048.jpg')"
   >
 
    <ICustomers/>
@@ -92,15 +105,17 @@
   <section
           data-section
           data-scroll-section
-          class="flex items-center justify-center h-screen bg-sky-200"
+          class="flex items-center justify-center p-20 bg-cover bg-center"
+          style="background-image: url('./src/assets/pexels-ryutaro-5220028.jpg')"
   >
-    <h1 class="text-6xl font-bold">Screen 3</h1>
+    <ISponsor/>
   </section>
 
   <section
           data-section
           data-scroll-section
-          class="flex items-center justify-center h-screen bg-sky-200"
+          class="flex items-center justify-center p-40 bg-cover bg-center"
+           style="background-image: url('./src/assets/istockphoto-913936644-1024x1024.jpg')"
   >
    <IAboutUs/>
   </section>

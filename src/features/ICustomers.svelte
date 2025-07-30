@@ -1,8 +1,6 @@
 <script lang="ts">
   import { onMount, onDestroy } from 'svelte';
-  
   import { images } from './images';
-  
   const imagePaths = images.map(img => img.src);
 
   let canvas: HTMLCanvasElement;
@@ -393,7 +391,6 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    background: #01012a;
   }
 
   .gallery-canvas {
