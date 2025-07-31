@@ -1,10 +1,10 @@
 <script lang="ts">
     import { onMount } from "svelte";
-    import { _, locale} from "svelte-i18n";
-    
+    import { _, locale } from "svelte-i18n";
+
     function changeLanguage(lang: string) {
         locale.set(lang);
-        localStorage.setItem('preferred_language', lang);
+        localStorage.setItem("preferred_language", lang);
     }
 
     let isDropdownOpen = false;
@@ -89,6 +89,7 @@
                 class="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse"
             >
                 <li>
+                    <!-- svelte-ignore a11y_invalid_attribute -->
                     <a
                         href="#"
                         class="block py-2 px-3 text-lg text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
@@ -122,6 +123,7 @@
                     </button>
                 </li>
                 <li>
+                    <!-- svelte-ignore a11y_invalid_attribute -->
                     <a
                         href="#"
                         class="block py-2 px-3 text-lg text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
@@ -129,6 +131,7 @@
                     >
                 </li>
                 <li>
+                    <!-- svelte-ignore a11y_invalid_attribute -->
                     <a
                         href="#"
                         class="block py-2 px-3 text-lg text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
@@ -136,32 +139,41 @@
                     >
                 </li>
                 <li>
+                    <!-- svelte-ignore a11y_invalid_attribute -->
                     <a
                         href="#"
                         class="block py-2 px-3 text-lg text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
                         >{$_("menu.investorRelations")}</a
                     >
-                </li>
-                <li>
-                    <a
-                        href="#"
-                        class="block py-2 px-3 text-lg text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
-                        >{$_("menu.investorRelations")}</a
-                    >
-                </li>
+                </li>               
                 <li>
                     <div
-                        class="block py-2 px-3 text-lg text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 flex flex-col sm:flex-row item-left"
+                        class=" py-2 px-3 text-lg text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 flex flex-col sm:flex-row item-left"
                     >
-                        <span class="font-bold text-black-700 cursor-pointer hover:text-blue-600 transition-colors" on:click={() => changeLanguage('en')}>En</span>
+                        <!-- svelte-ignore a11y_no_static_element_interactions -->
+                        <!-- svelte-ignore a11y_click_events_have_key_events -->
+                        <span
+                            class="font-bold text-black-700 cursor-pointer hover:text-blue-600 transition-colors"
+                            on:click={() => changeLanguage("en")}>En</span
+                        >
                         <span class="text-gray-500 mx-1 hidden sm:inline"
                             >|</span
                         >
-                        <span class="font-bold text-black-700 cursor-pointer hover:text-blue-600 transition-colors" on:click={() => changeLanguage('zh')}>中</span>
+                        <!-- svelte-ignore a11y_no_static_element_interactions -->
+                        <!-- svelte-ignore a11y_click_events_have_key_events -->
+                        <span
+                            class="font-bold text-black-700 cursor-pointer hover:text-blue-600 transition-colors"
+                            on:click={() => changeLanguage("zh")}>中</span
+                        >
                         <span class="text-gray-500 mx-1 hidden sm:inline"
                             >|</span
                         >
-                        <span class="font-bold text-black-700 cursor-pointer hover:text-blue-600 transition-colors" on:click={() => changeLanguage('jp')}>あ</span>
+                        <!-- svelte-ignore a11y_no_static_element_interactions -->
+                        <!-- svelte-ignore a11y_click_events_have_key_events -->
+                        <span
+                            class="font-bold text-black-700 cursor-pointer hover:text-blue-600 transition-colors"
+                            on:click={() => changeLanguage("jp")}>あ</span
+                        >
                     </div>
                 </li>
             </ul>
@@ -178,6 +190,7 @@
         >
             <ul aria-labelledby="mega-menu-full-dropdown-button">
                 <li>
+                    <!-- svelte-ignore a11y_invalid_attribute -->
                     <a
                         href="#"
                         class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
@@ -190,6 +203,7 @@
                     </a>
                 </li>
                 <li>
+                    <!-- svelte-ignore a11y_invalid_attribute -->
                     <a
                         href="#"
                         class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
@@ -202,6 +216,7 @@
                     </a>
                 </li>
                 <li>
+                    <!-- svelte-ignore a11y_invalid_attribute -->
                     <a
                         href="#"
                         class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
@@ -216,6 +231,7 @@
             </ul>
             <ul>
                 <li>
+                    <!-- svelte-ignore a11y_invalid_attribute -->
                     <a
                         href="#"
                         class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
@@ -228,6 +244,7 @@
                     </a>
                 </li>
                 <li>
+                    <!-- svelte-ignore a11y_invalid_attribute -->
                     <a
                         href="#"
                         class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
@@ -240,6 +257,7 @@
                     </a>
                 </li>
                 <li>
+                    <!-- svelte-ignore a11y_invalid_attribute -->
                     <a
                         href="#"
                         class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
@@ -254,6 +272,7 @@
             </ul>
             <ul class="hidden md:block">
                 <li>
+                    <!-- svelte-ignore a11y_invalid_attribute -->
                     <a
                         href="#"
                         class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
@@ -266,6 +285,7 @@
                     </a>
                 </li>
                 <li>
+                    <!-- svelte-ignore a11y_invalid_attribute -->
                     <a
                         href="#"
                         class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
@@ -278,6 +298,7 @@
                     </a>
                 </li>
                 <li>
+                    <!-- svelte-ignore a11y_invalid_attribute -->
                     <a
                         href="#"
                         class="block p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"

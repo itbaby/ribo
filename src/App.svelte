@@ -3,6 +3,7 @@
   import CMenu from "./features/CMenu.svelte";
   import CDefault from "./features/CDefault.svelte";
   import CIndustry from "./features/CIndustry.svelte";
+    import CFooter from "./features/CFooter.svelte";
 </script>
 
 <Router>
@@ -13,4 +14,5 @@
   <Route path="/industry" let:params>
     <CIndustry />
   </Route>
+  <CFooter/>
 </Router>
