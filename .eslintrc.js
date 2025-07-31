@@ -19,7 +19,19 @@ module.exports = {
     "quotes": ["error", "single"],
     "semi": ["error", "never"],
     "object-curly-spacing": ["error", "never"],
-    "space-before-function-paren": ["error", "never"]
+    "space-before-function-paren": ["error", "never"],
+    "vue/html-closing-bracket-newline": ["error", {
+      "singleline": "never",
+      "multiline": "never"
+    }],
+    "vue/max-attributes-per-line": ["error", {
+      "singleline": {
+        "max": 240
+      },
+      "multiline": {
+        "max": 1
+      }
+    }]
   },
   overrides: [
     {
