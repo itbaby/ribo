@@ -1,6 +1,7 @@
 @import url('config/locomotive-scroll.css');
 @import 'tailwindcss';
 @import 'aos/dist/aos.css';
+@import 'flag-icons/css/flag-icons.min.css';
 
 @theme {
   --color-primary-50: #eff6ff;

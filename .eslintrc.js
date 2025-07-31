@@ -41,7 +41,7 @@ module.exports = {
         // Disable all accessibility rules
         'svelte/a11y-click-events-have-key-events': 'off',
         'svelte/a11y-no-onchange': 'off',
-        'svelte/a11y_invalid_attribute':'off',
+        'svelte/a11y-invalid-attribute': 'off',
         'svelte/a11y-label-has-associated-control': 'off',
         'svelte/a11y-img-redundant-alt': 'off',
         'svelte/a11y-missing-attribute': 'off',
