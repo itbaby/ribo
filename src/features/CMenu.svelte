@@ -1,14 +1,12 @@
 <script lang="ts">
     import { onMount } from "svelte";
-    import { _, locale } from "svelte-i18n";
-    import { Label, Select } from "flowbite-svelte";
-    let selected: string = "";
+    import { _, locale} from "svelte-i18n";
+    
+    function changeLanguage(lang: string) {
+        locale.set(lang);
+        localStorage.setItem('preferred_language', lang);
+    }
 
-    let countries: { value: string; name: string }[] = [
-        { value: "us", name: "United States" },
-        { value: "ca", name: "Canada" },
-        { value: "fr", name: "France" },
-    ];
     let isDropdownOpen = false;
     let isMobileMenuOpen = false;
 
@@ -152,16 +150,19 @@
                     >
                 </li>
                 <li>
-                    <a
-                        href="#"
-                        class="block py-2 px-3 text-lg text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                    <div
+                        class="block py-2 px-3 text-lg text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700 flex flex-col sm:flex-row item-left"
                     >
-                        <span class="font-bold text-black-700">En</span>
-                        <span class="text-gray-500 mx-1">|</span>
-                        <span class="font-bold text-black-700">中</span>
-                        <span class="text-gray-500 mx-1">|</span>
-                        <span class="font-bold text-black-700">あ</span>
-                    </a>
+                        <span class="font-bold text-black-700 cursor-pointer hover:text-blue-600 transition-colors" on:click={() => changeLanguage('en')}>En</span>
+                        <span class="text-gray-500 mx-1 hidden sm:inline"
+                            >|</span
+                        >
+                        <span class="font-bold text-black-700 cursor-pointer hover:text-blue-600 transition-colors" on:click={() => changeLanguage('zh')}>中</span>
+                        <span class="text-gray-500 mx-1 hidden sm:inline"
+                            >|</span
+                        >
+                        <span class="font-bold text-black-700 cursor-pointer hover:text-blue-600 transition-colors" on:click={() => changeLanguage('jp')}>あ</span>
+                    </div>
                 </li>
             </ul>
         </div>
