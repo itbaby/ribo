@@ -4,7 +4,11 @@
   let isMobileMenuOpen = false;
   let selectedLanguage = "中文 (CN)";
   let selectedFlag = "fi-cn";
-
+  let languages = {
+    'fi-us': "en",
+    'fi-jp': "jp",
+    'fi-cn': "zh"
+  };
   function toggleLanguageDropdown() {
     isLanguageDropdownOpen = !isLanguageDropdownOpen;
   }
@@ -24,6 +28,7 @@
   function selectLanguage(language: string, flag: string) {
     selectedLanguage = language;
     selectedFlag = flag;
+    locale.set(languages[flag as keyof typeof languages]);
     closeLanguageDropdown();
   }
 </script>
