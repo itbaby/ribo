@@ -86,32 +86,68 @@
     activeSlide = index;
     
     const elements = getSlideElements(index);
+    const isMobile = window.innerWidth <= 768;
     
     // 幻灯片大小动画
     if (elements.currentSlide) {
-      gsap.to(elements.currentSlide, { flex: 4, ...animConfig });
+      if (isMobile) {
+        gsap.to(elements.currentSlide, { height: '70vh', ...animConfig });
+      } else {
+        gsap.to(elements.currentSlide, { flex: 4, ...animConfig });
+      }
     }
     
     if (elements.otherSlides) {
-      gsap.to(elements.otherSlides, { flex: 0.5, ...animConfig });
+      if (isMobile) {
+        gsap.to(elements.otherSlides, { height: '10vh', ...animConfig });
+      } else {
+        gsap.to(elements.otherSlides, { flex: 0.5, ...animConfig });
+      }
     }
 
     // 内容元素动画
     if (elements.overlay) {
-      gsap.set(elements.overlay, { width: '100%' });
-      gsap.to(elements.overlay, {
-        width: '25%',
-        duration: 1.25,
-        delay: 1.75,
-        ease: animConfig.ease
-      });
+      const isMobile = window.innerWidth <= 768;
+      
+      if (isMobile) {
+        gsap.set(elements.overlay, { width: '100%', height: '100%' });
+        gsap.to(elements.overlay, {
+          height: '25%',
+          duration: 1.25,
+          delay: 1.75,
+          ease: animConfig.ease
+        });
+      } else {
+        gsap.set(elements.overlay, { width: '100%' });
+        gsap.to(elements.overlay, {
+          width: '25%',
+          duration: 1.25,
+          delay: 1.75,
+          ease: animConfig.ease
+        });
+      }
     }
 
     // 使用数组和循环简化元素动画
     const animations = [
-      { el: elements.title, props: { from: { opacity: 0, y: -30 }, to: { opacity: 1, y: 0, delay: 1.25 } } },
+      { el: elements.title, props: {
+        from: { opacity: 0, x: -30 },
+        to: {
+          opacity: 1,
+          x: 0,
+          delay: 1.25
+        }
+      } },
       { el: elements.cityInfo, props: { from: { opacity: 0, x: -20 }, to: { opacity: 1, x: 0, duration: 0.8, delay: 1.5 } } },
-      { el: elements.emblem, props: { from: { opacity: 0, y: 50 }, to: { opacity: 0.8, y: 100, duration: 0.8, delay: 1.75 } } }
+      { el: elements.emblem, props: {
+        from: { opacity: 0, y: 50 },
+        to: {
+          opacity: 0.8,
+          y: window.innerWidth <= 768 ? 0 : 100,
+          duration: 0.8,
+          delay: 1.75
+        }
+      } }
     ];
     
     animations.forEach(({ el, props }) => {
@@ -131,9 +167,14 @@
     activeSlide = null;
     
     const { slideElements } = getSlideElements();
+    const isMobile = window.innerWidth <= 768;
     
     // 重置所有幻灯片大小
-    gsap.to(slideElements, { flex: 1, ...animConfig });
+    if (isMobile) {
+      gsap.to(slideElements, { height: '25vh', minHeight: '200px', ...animConfig });
+    } else {
+      gsap.to(slideElements, { flex: 1, ...animConfig });
+    }
 
     // 重置内容元素状态
     slideElements.forEach((slide, idx) => {
@@ -147,11 +188,22 @@
       
       // 仅为关闭的幻灯片恢复覆盖层宽度
       if (idx === index && elements.overlay) {
-        gsap.to(elements.overlay, { 
-          width: '100%', 
-          duration: 0.5, 
-          ease: animConfig.ease 
-        });
+        const isMobile = window.innerWidth <= 768;
+        
+        if (isMobile) {
+          gsap.to(elements.overlay, {
+            width: '100%',
+            height: '100%',
+            duration: 0.5,
+            ease: animConfig.ease
+          });
+        } else {
+          gsap.to(elements.overlay, {
+            width: '100%',
+            duration: 0.5,
+            ease: animConfig.ease
+          });
+        }
       }
       
       // 重置所有内容元素的CSS属性
@@ -164,14 +216,39 @@
   onMount(() => {
     // 初始化幻灯片
     const { slideElements } = getSlideElements();
-    gsap.set(slideElements, { flex: 1 });
+    const isMobile = window.innerWidth <= 768;
+    
+    if (isMobile) {
+      gsap.set(slideElements, { height: '25vh', minHeight: '200px' });
+    } else {
+      gsap.set(slideElements, { flex: 1 });
+    }
+    
+    // 监听窗口大小变化
+    const handleResize = () => {
+      const newIsMobile = window.innerWidth <= 768;
+      
+      if (activeSlide === null) {
+        if (newIsMobile) {
+          gsap.set(slideElements, { height: '25vh', minHeight: '200px', clearProps: 'flex' });
+        } else {
+          gsap.set(slideElements, { flex: 1, clearProps: 'height,minHeight' });
+        }
+      }
+    };
+    
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   });
 </script>
 
-<div id="container" class="h-screen">
+<div id="container" class="h-screen flex-col md:flex-row">
   {#each slides as slide, index}
-    <div 
-      class="slide flex items-center justify-center h-screen"
+    <div
+      class="slide flex items-center justify-center h-screen md:h-screen"
       class:active={activeSlide === index}
       class:last-viewed={lastViewedSlide === index}
       on:keydown={(e) => e.key === 'Enter' || e.key === ' ' ? openSlide(index) : null}
@@ -203,6 +280,12 @@
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  #container {
+    flex-direction: column;
+  }
+}
+
 .slide {
   position: relative;
   flex: 1;
@@ -210,6 +293,12 @@
   overflow: hidden;
   cursor: pointer;
   transition: all 1.0s;
+  
+  @media (max-width: 768px) {
+    height: 25vh;
+    min-height: 200px;
+    width: 100%;
+  }
 
   &.last-viewed {
     .btn-close {
@@ -257,6 +346,11 @@
       background-size: 100% 100%;
       transition: all 1.25s;
       transition-delay: 1.75s;
+      
+      @media (max-width: 768px) {
+        width: 100%;
+        height: 25%;
+      }
     }
 
     .content {
@@ -265,6 +359,14 @@
       left: 0;
       height: 100%;
       width: 100%;
+      
+      @media (max-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 20px;
+      }
 
       .title {
         width: 25%;
@@ -272,6 +374,17 @@
         transform: translateY(30px);
         transition: all 1s;
         transition-delay: 1.25s;
+        
+        @media (max-width: 768px) {
+          width: 100%;
+          text-align: left;
+          padding-left: 20px;
+          transform: translate(-30px, 0px);
+        }
+        
+        &:before {
+          display: none;
+        }
 
         &:after {
           height: 100%;
@@ -404,6 +517,16 @@
       background-position: center center;
       background-repeat: no-repeat;
       background-size: auto 100%;
+      
+      @media (max-width: 768px) {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        margin: 0;
+        align-self: center;
+        flex-shrink: 0;
+        transform: translateY(0);
+      }
     }
 
     .city-info {
@@ -418,6 +541,18 @@
       opacity: 0;
       transition: all 1s;
       transition-delay: 2s;
+      
+      @media (max-width: 768px) {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        width: calc(100% - 120px);
+        padding: 15px;
+        margin: 0 0 0 20px;
+        background-image: linear-gradient(90deg, rgba(20, 20, 20, 0), rgba(20, 20, 20, 0.7));
+        text-align: left;
+        align-self: center;
+      }
 
       li {
         position: relative;
