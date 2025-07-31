@@ -14,6 +14,13 @@ module.exports = {
     es2017: true,
     node: true
   },
+  rules: {
+    "indent": ["error", 2],
+    "quotes": ["error", "single"],
+    "semi": ["error", "never"],
+    "object-curly-spacing": ["error", "never"],
+    "space-before-function-paren": ["error", "never"]
+  },
   overrides: [
     {
       files: ['*.svelte'],
