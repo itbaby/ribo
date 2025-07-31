@@ -46,6 +46,7 @@
     "embla-carousel-wheel-gestures": "^8.0.2",
     "flowbite-svelte-illustrations": "^1.0.4",
     "gsap": "^3.13.0",
-    "svelte-i18n": "^4.0.1"
+    "svelte-i18n": "^4.0.1",
+    "svelte-routing": "^2.13.0"
   }
 }
