@@ -51,7 +51,9 @@
   });
 </script>
 
-<nav class="bg-white border-gray-200 dark:bg-gray-900 fixed top-0 left-0 right-0 z-999">
+<nav
+  class="bg-gray-900 text-white border-none dark:bg-gray-900 fixed top-0 left-0 right-0 z-999"
+>
   <div
     class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
   >
@@ -78,7 +80,7 @@
         <button
           type="button"
           on:click={toggleLanguageDropdown}
-          class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 dark:text-white rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
+          class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm bg-gray-900 text-white cursor-pointer"
           aria-expanded={isLanguageDropdownOpen}
           aria-haspopup="true"
         >
@@ -89,7 +91,7 @@
         <!-- Language Dropdown Menu -->
         {#if isLanguageDropdownOpen}
           <div
-            class="absolute right-0 z-50 my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700"
+            class="absolute right-0 z-50 my-4 text-base text-white list-none bg-gray-900 divide-y divide-gray-100 shadow-sm"
             id="language-dropdown-menu"
             role="menu"
           >
@@ -97,7 +99,7 @@
               <li>
                 <a
                   href="#"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                  class="block px-4 py-2 text-sm bg-gray-900 text-white hover:bg-gray-800"
                   role="menuitem"
                   on:click={() => selectLanguage("English", "fi-us")}
                 >
@@ -111,7 +113,7 @@
               <li>
                 <a
                   href="#"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                  class="block px-4 py-2 text-sm bg-gray-900 text-white hover:bg-gray-800"
                   role="menuitem"
                   on:click={() => selectLanguage("にほんご", "fi-jp")}
                 >
@@ -124,13 +126,13 @@
               <li>
                 <a
                   href="#"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                  class="block px-4 py-2 text-sm bg-gray-900 text-white hover:bg-gray-800"
                   role="menuitem"
-                  on:click={() => selectLanguage("中文", "fi-cn")}
+                  on:click={() => selectLanguage("中文 (CN)", "fi-cn")}
                 >
                   <div class="inline-flex items-center">
                     <span class="fi fi-cn fis me-2"></span>
-                    中文
+                    中文 (CN)
                   </div>
                 </a>
               </li>
@@ -143,7 +145,7 @@
       <button
         type="button"
         on:click={toggleMobileMenu}
-        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
         aria-controls="navbar-language"
         aria-expanded={isMobileMenuOpen}
       >
@@ -192,40 +194,32 @@
       id="navbar-language"
     >
       <ul
-        class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+        class="flex flex-col font-medium p-4 md:p-0 mt-4 border-0 bg-gray-900 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0"
       >
         <li>
           <a
             href="/industry"
-            class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+            class="block py-2 px-5 text-white bg-gray-900"
             aria-current="page">{$_("menu.industry")}</a
           >
         </li>
         <li>
-          <a
-            href="/serve"
-            class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+          <a href="/serve" class="block py-2 px-5 text-white bg-gray-900"
             >{$_("menu.serve")}</a
           >
         </li>
         <li>
-          <a
-            href="/innovation"
-            class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+          <a href="/innovation" class="block py-2 px-5 text-white bg-gray-900"
             >{$_("menu.creative")}</a
           >
         </li>
         <li>
-          <a
-            href="/aboutus"
-            class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+          <a href="/aboutus" class="block py-2 px-5 text-white bg-gray-900"
             >{$_("menu.aboutus")}</a
           >
         </li>
         <li>
-          <a
-            href="/contact"
-            class="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+          <a href="/contact" class="block py-2 px-5 text-white bg-gray-900"
             >{$_("menu.contact")}</a
           >
         </li>
