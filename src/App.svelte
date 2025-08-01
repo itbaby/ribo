@@ -20,7 +20,6 @@
   </Route>
   <Route path="/innovation" let:params>
     <CInnovation />
-
   </Route>
   <Route path="/serve" let:params>
     <CServe />
