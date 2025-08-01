@@ -7,6 +7,7 @@
   import CServe from "./features/CServe.svelte";
   import CAboutUs from "./features/CAboutUs.svelte";
   import CContact from "./features/CContact.svelte";
+  import CInnovation from "./features/CInnovation.svelte";
 </script>
 
 <Router>
@@ -16,6 +17,10 @@
   </Route>
   <Route path="/industry" let:params>
     <CIndustry />
+  </Route>
+  <Route path="/innovation" let:params>
+    <CInnovation />
+
   </Route>
   <Route path="/serve" let:params>
     <CServe />
