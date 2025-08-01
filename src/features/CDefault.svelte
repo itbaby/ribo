@@ -11,7 +11,6 @@
             <h1 class="text-white text-5xl animate-pulse">Section 1</h1>
         </FullpageSection>
         <FullpageSection class="h-screen">
-            
             <CFooter />
         </FullpageSection>
     </Fullpage>
