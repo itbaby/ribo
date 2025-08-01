@@ -1,13 +1,14 @@
 <script lang="ts">
+  import { onMount } from "svelte";
   import { _, locale } from "svelte-i18n";
   let isLanguageDropdownOpen = false;
   let isMobileMenuOpen = false;
   let selectedLanguage = "中文 (CN)";
   let selectedFlag = "fi-cn";
   let languages = {
-    'fi-us': "en",
-    'fi-jp': "jp",
-    'fi-cn': "zh"
+    "fi-us": "en",
+    "fi-jp": "jp",
+    "fi-cn": "zh",
   };
   function toggleLanguageDropdown() {
     isLanguageDropdownOpen = !isLanguageDropdownOpen;
@@ -25,12 +26,29 @@
     isMobileMenuOpen = false;
   }
 
+  function loadSavedLanguage() {
+    const savedLanguage = localStorage.getItem("selectedLanguage");
+    const savedFlag = localStorage.getItem("selectedFlag");
+
+    if (savedLanguage && savedFlag) {
+      selectedLanguage = savedLanguage;
+      selectedFlag = savedFlag;
+      locale.set(languages[savedFlag as keyof typeof languages]);
+    }
+  }
+
   function selectLanguage(language: string, flag: string) {
     selectedLanguage = language;
     selectedFlag = flag;
     locale.set(languages[flag as keyof typeof languages]);
+    localStorage.setItem("selectedLanguage", language);
+    localStorage.setItem("selectedFlag", flag);
     closeLanguageDropdown();
   }
+
+  onMount(() => {
+    loadSavedLanguage();
+  });
 </script>
 
 <nav class="bg-white border-gray-200 dark:bg-gray-900">
@@ -81,7 +99,7 @@
                   href="#"
                   class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
                   role="menuitem"
-                  on:click={() => selectLanguage('English', 'fi-us')}
+                  on:click={() => selectLanguage("English", "fi-us")}
                 >
                   <div class="inline-flex items-center">
                     <span class="fi fi-us fis me-2"></span>
@@ -95,7 +113,7 @@
                   href="#"
                   class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
                   role="menuitem"
-                  on:click={() => selectLanguage('にほんご', 'fi-jp')}
+                  on:click={() => selectLanguage("にほんご", "fi-jp")}
                 >
                   <div class="inline-flex items-center">
                     <span class="fi fi-jp fis me-2"></span>
@@ -108,7 +126,7 @@
                   href="#"
                   class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
                   role="menuitem"
-                  on:click={() => selectLanguage('中文', 'fi-cn')}
+                  on:click={() => selectLanguage("中文", "fi-cn")}
                 >
                   <div class="inline-flex items-center">
                     <span class="fi fi-cn fis me-2"></span>

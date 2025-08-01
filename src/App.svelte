@@ -3,7 +3,10 @@
   import CMenu from "./features/CMenu.svelte";
   import CDefault from "./features/CDefault.svelte";
   import CIndustry from "./features/CIndustry.svelte";
-    import CFooter from "./features/CFooter.svelte";
+  import CFooter from "./features/CFooter.svelte";
+  import CServe from "./features/CServe.svelte";
+  import CAboutUs from "./features/CAboutUs.svelte";
+  import CContact from "./features/CContact.svelte";
 </script>
 
 <Router>
@@ -14,5 +17,14 @@
   <Route path="/industry" let:params>
     <CIndustry />
   </Route>
-  <CFooter/>
+  <Route path="/serve" let:params>
+    <CServe />
+  </Route>
+  <Route path="/aboutus" let:params>
+    <CAboutUs />
+  </Route>
+  <Route path="/contact" let:params>
+    <CContact />
+  </Route>
+  <CFooter />
 </Router>
