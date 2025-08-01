@@ -82,6 +82,19 @@
       "dalian": "辽宁省大连市中山区人民路15号 国际金融大厦21C",
       "shenzhen": "深圳市南山区粤海街道高新区社区高新南九道45号西北工业大学三航科技大厦1325"
     },
-    "copyright": "睿柏咨询"
+    "copyright": "睿柏咨询",
+    "social": "社交网络",
+    "placeholderText": "Bacon ipsum dolor amet short ribs pig sausage prosciutto chicken spare ribs salami.",
+    "faq": "常见问题",
+    "privacyPolicy": "隐私政策",
+    "termsConditions": "条款与条件",
+    "contactInfo": {
+      "title": "联系我们",
+      "phone1": "联系电话1:",
+      "phone2": "联系电话2:",
+      "joinUs": "加入我们:",
+      "marketingMedia": "市场",
+      "businessConsulting": "业务咨询:"
+    }
   }
 }

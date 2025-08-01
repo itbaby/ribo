@@ -82,6 +82,19 @@
       "dalian": "遼寧省大連市中山区人民路15号 国際金融ビル21C",
       "shenzhen": "深セン市南山区粤海街道高新区社区高新南九道45号西北工業大学三航科技ビル1325"
     },
-    "copyright": "睿柏コンサルティング"
+    "copyright": "睿柏コンサルティング",
+    "social": "ソーシャルネットワーク",
+    "placeholderText": "Bacon ipsum dolor amet short ribs pig sausage prosciutto chicken spare ribs salami.",
+    "faq": "よくある質問",
+    "privacyPolicy": "プライバシーポリシー",
+    "termsConditions": "利用規約",
+    "contactInfo": {
+      "title": "お問い合わせ",
+      "phone1": "電話番号1:",
+      "phone2": "電話番号2:",
+      "joinUs": "私たちに参加:",
+      "marketingMedia": "マーケティング",
+      "businessConsulting": "ビジネスコンサルティング:" 
+    }
   }
 }

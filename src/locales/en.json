@@ -82,6 +82,19 @@
       "dalian": "21C, International Finance Building, No.15 Renmin Road, Zhongshan District, Dalian, Liaoning Province",
       "shenzhen": "1325, Sanhang Technology Building, No.45 Gaoxin South 9th Road, Yuehai Street, Nanshan District, Shenzhen"
     },
-    "copyright": "Ribo Consulting"
+    "copyright": "Ribo Consulting",
+    "social": "Social",
+    "placeholderText": "Bacon ipsum dolor amet short ribs pig sausage prosciutto chicken spare ribs salami.",
+    "faq": "F.A.Q",
+    "privacyPolicy": "Privacy Policy",
+    "termsConditions": "Terms & Conditions",
+    "contactInfo": {
+      "title": "Contact Us",
+      "phone1": "Phone 1:",
+      "phone2": "Phone 2:",
+      "joinUs": "Join Us:",
+      "marketingMedia": "Marketing",
+      "businessConsulting": "Business :" 
+    }
   }
 }

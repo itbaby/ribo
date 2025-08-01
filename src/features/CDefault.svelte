@@ -8,7 +8,7 @@
         "fi-jp": "jp",
         "fi-cn": "zh",
     };
-    locale.set(languages[savedFlag as keyof typeof languages]);
+    locale.set(languages[savedFlag as keyof typeof languages] || 'zh');
 </script>
 
 <div class="flex items-center justify-center w-screen h-screen">
