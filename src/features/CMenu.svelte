@@ -22,10 +22,6 @@
     isLanguageDropdownOpen = false;
   }
 
-  function closeMobileMenu() {
-    isMobileMenuOpen = false;
-  }
-
   function loadSavedLanguage() {
     const savedLanguage = localStorage.getItem("selectedLanguage");
     const savedFlag = localStorage.getItem("selectedFlag");
