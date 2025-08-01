@@ -16,19 +16,33 @@
     <CDefault />
   </Route>
   <Route path="/industry" let:params>
-    <CIndustry />
+    <div class="pt-16">
+      <CIndustry />
+    </div>
+    <CFooter />
   </Route>
   <Route path="/innovation" let:params>
-    <CInnovation />
+    <div class="pt-16">
+      <CInnovation />
+    </div>
+    <CFooter />
   </Route>
   <Route path="/serve" let:params>
-    <CServe />
+    <div class="pt-16">
+      <CServe />
+    </div>
+    <CFooter />
   </Route>
   <Route path="/aboutus" let:params>
-    <CAboutUs />
+    <div class="pt-16">
+      <CAboutUs />
+    </div>
+    <CFooter />
   </Route>
   <Route path="/contact" let:params>
-    <CContact />
+    <div class="pt-16">
+      <CContact />
+    </div>
+    <CFooter />
   </Route>
-  <CFooter />
 </Router>

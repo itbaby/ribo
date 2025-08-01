@@ -51,7 +51,7 @@
   });
 </script>
 
-<nav class="bg-white border-gray-200 dark:bg-gray-900">
+<nav class="bg-white border-gray-200 dark:bg-gray-900 fixed top-0 left-0 right-0 z-999">
   <div
     class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
   >
