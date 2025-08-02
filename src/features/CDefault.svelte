@@ -7,7 +7,6 @@
     import { _, locale } from "svelte-i18n";
     import CText from "./CText.svelte";
     import ISponsor from "./ISponsor.svelte";
-    import CSCustomer from "./CSCustomer.svelte";
 
     let languages = {
         "fi-us": "en",
@@ -97,7 +96,7 @@
     <section
         data-section
         data-scroll-section
-        class="flex items-center justify-center h-screen bg-cover bg-center md:w-full"
+        class="flex items-center justify-center h-screen bg-cover bg-center md:w-full 0"
         style="background-image: url('/src/assets/aboutus.jpg')"
     >
         <CText />
@@ -109,12 +108,12 @@
         style="background-image: url('/src/assets/earth.png')"
     >
         <div
-            class="text-white lg:text-4xl lg:font-bold animate-pulse md:text-lg text-center"
+            class="text-white  w-10/12 mx-auto text-2xl animate-pulse md:text-4xl text-center"
         >
             {$_("cserve.headline")}
         </div>
         <h2
-            class="text-white lg:text-2xl animate-pulse md:text-sm mt-20 text-center"
+            class="text-white w-10/12 mx-auto lg:text-2xl animate-pulsemd:text-3xl mt-20 text-center"
         >
             {$_("cserve.subhead")}
         </h2>
@@ -123,19 +122,16 @@
     <section
         data-section
         data-scroll-section
-        class="flex flex-col items-center bg-gray-900 justify-center h-[35vh]"
+        class="flex flex-col items-center bg-gray-900 justify-center h-[45vh]"
     >
         <CScroller />
     </section>
-
     <section
         data-section
         data-scroll-section
         class="flex flex-col text-white bg-gray-700 items-center justify-center h-[65vh]"
     >
         <h1 class="mb-[4vh] text-2xl md:text-4xl">{$_('serviceGlobalClients')}</h1>
-       
-    
         <ISponsor />
     </section>
 </div>
