@@ -1,172 +1,178 @@
-<div class="container mx-auto w-full overflow-hidden relative">
-    <div
-        class="carousel-items flex items-center justify-center"
-        style="width: fit-content; animation: carouselAnim 10s infinite alternate linear;"
-    >
-        <div
-            class="carousel-focus flex items-center flex-col relative bg-gray-900 mx-5 my-10 px-4 py-3 rounded-lg shadow-lg"
-            style="width: 270px;"
-        >
-            <!-- <button class="absolute top-0 right-0 bg-teal-400 rounded-full px-1 py-0 font-bold text-lg">+</button> -->
-            <span class="text-white font-bold text-xl mb-3">Sup3r-Us3r</span>
-            <img
-                class="h-16 w-16 rounded-full shadow-2xl"
-                src="https://pbs.twimg.com/profile_images/830533062807191552/TbkWKnnv_400x400.jpg"
-                alt="Img"
-            />
-            <p class="mt-3 text-white text-center">
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                quibusdam!"
-            </p>
-        </div>
-
-        <div
-            class="carousel-focus flex items-center flex-col relative bg-gray-900 mx-5 my-10 px-4 py-3 rounded-lg shadow-lg"
-            style="width: 270px;"
-        >
-            <!-- <button class="absolute top-0 right-0 bg-teal-400 rounded-full px-1 py-0 font-bold text-lg">+</button> -->
-            <p class="text-teal-400 font-bold text-xl mb-3">Sup3r-Us3r</p>
-            <img
-                class="h-16 w-16 rounded-full shadow-2xl"
-                src="https://pbs.twimg.com/profile_images/830533062807191552/TbkWKnnv_400x400.jpg"
-                alt="Img"
-            />
-            <p class="mt-3 text-white text-center">
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                quibusdam!"
-            </p>
-        </div>
-
-        <div
-            class="carousel-focus flex items-center flex-col relative bg-gray-900 mx-5 my-10 px-4 py-3 rounded-lg shadow-lg"
-            style="width: 270px;"
-        >
-            <!-- <button class="absolute top-0 right-0 bg-teal-400 rounded-full px-1 py-0 font-bold text-lg">+</button> -->
-            <p class="text-teal-400 font-bold text-xl mb-3">Sup3r-Us3r</p>
-            <img
-                class="h-16 w-16 rounded-full shadow-2xl"
-                src="https://pbs.twimg.com/profile_images/830533062807191552/TbkWKnnv_400x400.jpg"
-                alt="Img"
-            />
-            <p class="mt-3 text-white text-center">
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                quibusdam!"
-            </p>
-        </div>
-
-        <div
-            class="carousel-focus flex items-center flex-col relative bg-gray-900 mx-5 my-10 px-4 py-3 rounded-lg shadow-lg"
-            style="width: 270px;"
-        >
-            <!-- <button class="absolute top-0 right-0 bg-teal-400 rounded-full px-1 py-0 font-bold text-lg">+</button> -->
-            <p class="text-teal-400 font-bold text-xl mb-3">Sup3r-Us3r</p>
-            <img
-                class="h-16 w-16 rounded-full shadow-2xl"
-                src="https://pbs.twimg.com/profile_images/830533062807191552/TbkWKnnv_400x400.jpg"
-                alt="Img"
-            />
-            <p class="mt-3 text-white text-center">
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                quibusdam!"
-            </p>
-        </div>
-
-        <div
-            class="carousel-focus flex items-center flex-col relative bg-gray-900 mx-5 my-10 px-4 py-3 rounded-lg shadow-lg"
-            style="width: 270px;"
-        >
-            <!-- <button class="absolute top-0 right-0 bg-teal-400 rounded-full px-1 py-0 font-bold text-lg">+</button> -->
-            <p class="text-teal-400 font-bold text-xl mb-3">Sup3r-Us3r</p>
-            <img
-                class="h-16 w-16 rounded-full shadow-2xl"
-                src="https://pbs.twimg.com/profile_images/830533062807191552/TbkWKnnv_400x400.jpg"
-                alt="Img"
-            />
-            <p class="mt-3 text-white text-center">
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                quibusdam!"
-            </p>
-        </div>
-
-        <div
-            class="carousel-focus flex items-center flex-col relative bg-gray-900 mx-5 my-10 px-4 py-3 rounded-lg shadow-lg"
-            style="width: 270px;"
-        >
-            <!-- <button class="absolute top-0 right-0 bg-teal-400 rounded-full px-1 py-0 font-bold text-lg">+</button> -->
-            <p class="text-teal-400 font-bold text-xl mb-3">Sup3r-Us3r</p>
-            <img
-                class="h-16 w-16 rounded-full shadow-2xl"
-                src="https://pbs.twimg.com/profile_images/830533062807191552/TbkWKnnv_400x400.jpg"
-                alt="Img"
-            />
-            <p class="mt-3 text-white text-center">
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                quibusdam!"
-            </p>
-        </div>
-
-        <div
-            class="carousel-focus flex items-center flex-col relative bg-gray-900 mx-5 my-10 px-4 py-3 rounded-lg shadow-lg"
-            style="width: 270px;"
-        >
-            <!-- <button class="absolute top-0 right-0 bg-teal-400 rounded-full px-1 py-0 font-bold text-lg">+</button> -->
-            <p class="text-teal-400 font-bold text-xl mb-3">Sup3r-Us3r</p>
-            <img
-                class="h-16 w-16 rounded-full shadow-2xl"
-                src="https://pbs.twimg.com/profile_images/830533062807191552/TbkWKnnv_400x400.jpg"
-                alt="Img"
-            />
-            <p class="mt-3 text-white text-center">
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                quibusdam!"
-            </p>
-        </div>
-
-        <div
-            class="carousel-focus flex items-center flex-col relative bg-gray-900 mx-5 my-10 px-4 py-3 rounded-lg shadow-lg"
-            style="width: 270px;"
-        >
-            <!-- <button class="absolute top-0 right-0 bg-teal-400 rounded-full px-1 py-0 font-bold text-lg">+</button> -->
-            <p class="text-teal-400 font-bold text-xl mb-3">Sup3r-Us3r</p>
-            <img
-                class="h-16 w-16 rounded-full shadow-2xl"
-                src="https://pbs.twimg.com/profile_images/830533062807191552/TbkWKnnv_400x400.jpg"
-                alt="Img"
-            />
-            <p class="mt-3 text-white text-center">
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                quibusdam!"
-            </p>
-        </div>
+<div class="wrapper">
+  <div class="carousel">
+    <div class="carousel__item">
+      <div class="carousel__item-head">🐳</div>
+      <div class="carousel__item-body">
+        <p class="title">spouting whale</p>
+        <p>Unicode: U+1F433</p>
+      </div>
     </div>
+    <div class="carousel__item">
+      <div class="carousel__item-head">🐋</div>
+      <div class="carousel__item-body">
+        <p class="title">whale</p>
+        <p>Unicode: U+1F40B</p>
+      </div>
+    </div>
+    <div class="carousel__item">
+      <div class="carousel__item-head">🐬</div>
+      <div class="carousel__item-body">
+        <p class="title">dolphin</p>
+        <p>Unicode: U+1F42C</p>
+      </div>
+    </div>
+    <div class="carousel__item">
+      <div class="carousel__item-head">🐟</div>
+      <div class="carousel__item-body">
+        <p class="title">fish</p>
+        <p>Unicode: U+1F41F</p>
+      </div>
+    </div>
+    <div class="carousel__item">
+      <div class="carousel__item-head">🐠</div>
+      <div class="carousel__item-body">
+        <p class="title">tropical fish</p>
+        <p>Unicode: U+1F420</p>
+      </div>
+    </div>
+    <div class="carousel__item">
+      <div class="carousel__item-head">🐡</div>
+      <div class="carousel__item-body">
+        <p class="title">blowfish</p>
+        <p>Unicode: U+1F421</p>
+      </div>
+    </div>
+    <div class="carousel__item">
+      <div class="carousel__item-head">🦈</div>
+      <div class="carousel__item-body">
+        <p class="title">shark</p>
+        <p>Unicode: U+1F988</p>
+      </div>
+    </div>
+    <div class="carousel__item">
+      <div class="carousel__item-head">🐙</div>
+      <div class="carousel__item-body">
+        <p class="title">octopus</p>
+        <p>Unicode: U+1F419</p>
+      </div>
+    </div>
+    <div class="carousel__item">
+      <div class="carousel__item-head">🐚</div>
+      <div class="carousel__item-body">
+        <p class="title">spiral shell</p>
+        <p>Unicode: U+1F41A</p>
+      </div>
+    </div>
+  </div>
 </div>
 
-<style>
-    @keyframes carouselAnim {
-        from {
-            transform: translate(0, 0);
-        }
-        to {
-            transform: translate(calc(-100% + (6 * 300px)));
-        }
-    }
+<style lang="scss">
+  @import "tailwindcss";
+  $animation-timing: 27s;
+  $carousel-items: 9;
+  $animation-delay-fraction: calc($animation-timing / $carousel-items);
+  $animation-steps-fraction: calc(100 / $carousel-items);
+  $slide-change-timing: 3;
+  .wrapper {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 
-    @media only screen and (max-width: 768px) {
-        .container .carousel-items {
-            animation: carouselAnim 60s infinite alternate linear;
-        }
-        @keyframes carouselAnim {
-            from {
-                transform: translate(0, 0);
-            }
-            to {
-                transform: translate(calc(-100% + (5 * 300px)));
-            }
-        }
-    }
+  .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 
-    .carousel-focus:hover {
-        transition: all 0.8s;
-        transform: scale(1.1);
+  .carousel__item {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    padding: 0 12px;
+    opacity: 0;
+    filter: drop-shadow(0 2px 2px #555);
+    will-change: transform, opacity;
+    animation: carousel-animate-vertical $animation-timing linear infinite;
+  }
+
+  @for $i from 1 through ($carousel-items - 1) {
+    .carousel__item:nth-child(#{$i}) {
+      animation-delay: calc(#{$animation-delay-fraction} * #{$i - 2});
     }
+  }
+
+  .carousel__item:last-child {
+    animation-delay: calc(-#{$animation-delay-fraction} * 2);
+  }
+
+  .carousel__item-head {
+    border-radius: 50%;
+    background-color:var(--color-gray-900);
+    width: 90px;
+    height: 90px;
+    padding: 14px;
+    position: relative;
+    margin-right: -45px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+  }
+
+  .carousel__item-body {
+    width: 100%;
+    background-color: var(--color-gray-400);
+    border-radius: 8px;
+    padding: 16px 20px 16px 70px;
+  }
+
+  .title {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  @keyframes carousel-animate-vertical {
+    0% {
+      transform: translateY(100%) scale(0.5);
+      opacity: 0;
+      visibility: hidden;
+    }
+    #{$slide-change-timing}%,
+    #{$animation-steps-fraction}% {
+      transform: translateY(100%) scale(0.7);
+      opacity: 0.4;
+      visibility: visible;
+    }
+    #{$animation-steps-fraction + $slide-change-timing}%,
+    #{$animation-steps-fraction * 2}% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+      visibility: visible;
+    }
+    #{($animation-steps-fraction * 2) + $slide-change-timing}%,
+    #{$animation-steps-fraction * 3}% {
+      transform: translateY(-100%) scale(0.7);
+      opacity: 0.4;
+      visibility: visible;
+    }
+    #{($animation-steps-fraction * 3) + $slide-change-timing}% {
+      transform: translateY(-100%) scale(0.5);
+      opacity: 0;
+      visibility: visible;
+    }
+    100% {
+      transform: translateY(-100%) scale(0.5);
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
 </style>

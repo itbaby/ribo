@@ -3,12 +3,8 @@
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   import LocomotiveScroll from "locomotive-scroll";
-  import ISponsor from "./ISponsor.svelte";
-  import ISplide from "./ISplide.svelte";
-  import ICustomers from "./ICustomers.svelte";
-  import ICarousel from "./ICarousel.svelte";
-  import IAboutUs from "./IAboutUs.svelte";
-    import CScroller from "./CScroller.svelte";
+  import CScroller from "./CScroller.svelte";
+  import { _ } from "svelte-i18n";
   gsap.registerPlugin(ScrollTrigger);
   onMount(() => {
     const scrollContainer = document.querySelector(
@@ -76,25 +72,31 @@
   });
 </script>
 
-<div data-scroll-container class="bg-gray-900 bg-cover bg-center " style="background-image: url('/src/assets/earth.png')">
+<div
+  data-scroll-container
+  class="bg-gray-900 bg-cover bg-center flex flex-col justify-center justify-around"
+  style="background-image: url('/src/assets/earth.png')"
+>
   <section
     data-section
     data-scroll-section
-    class="flex flex-col items-center justify-center h-[60vh] "
-    
+    class=" w-10/12 mx-auto flex flex-col items-center justify-center mt-[10vh] h-[30vh]"
   >
-    <h1 class="text-white text-5xl animate-pulse">
-      以大连为立足点，以上海、深圳为支撑，以成就客户为中心，提供一站式人才服务
-    </h1>
-    <h2 class="text-white text-3xl mt-20">
-      以客户为中心，提供一站式人才服务
+    <div
+      class="text-white lg:text-4xl lg:font-bold animate-pulse md:text-lg text-center"
+    >
+      {$_("cserve.headline")}
+    </div>
+    <h2
+      class="text-white lg:text-2xl animate-pulse md:text-sm mt-20 text-center"
+    >
+      {$_("cserve.subhead")}
     </h2>
-    
   </section>
   <section
     data-section
     data-scroll-section
-    class="flex flex-col  items-center h-[40vh] "
+    class="flex flex-col items-center justify-center h-[35vh]"
   >
     <CScroller />
   </section>
