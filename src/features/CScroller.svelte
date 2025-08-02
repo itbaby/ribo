@@ -128,16 +128,22 @@
   .carousel__item-head {
     border-radius: 50%;
     background-color:var(--color-white);
-    width: 90px;
-    height: 90px;
-    padding: 14px;
+    width: 120px;
+    height: 120px;
+    padding: 4px;
     position: relative;
-    margin-right: -45px;
+    margin-right: -60px;
     flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 50px;
+    overflow: hidden;
+  }
+  .carousel__item-head img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   .carousel__item-body {
