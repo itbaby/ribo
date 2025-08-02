@@ -36,14 +36,9 @@
     "talentDescription": "垂直领域覆盖、精准匹配体系、资深顾问团队",
     "fullService": "全链条服务生态",
     "serviceDescription": "高端猎头、人员派遣、ITO服务",
-    "techDescription": "旗下睿程科技深耕云计算、AIoT、区块链等前沿领域",
-    "talentPool": "精英人才智库",
-    "talentDescription": "• 垂直领域覆盖 • 精准匹配体系 • 资深顾问团队",
     "verticalCoverage": "垂直领域覆盖",
     "preciseMatching": "精准匹配体系",
     "expertTeam": "资深顾问团队",
-    "fullService": "全链条服务生态",
-    "serviceDescription": "• 高端猎头 • 人员派遣 • ITO服务",
     "executiveSearch": "高端猎头",
     "staffing": "人员派遣",
     "itoService": "ITO服务",
@@ -102,6 +97,7 @@
     "headline": "以大连为立足点，以上海、深圳为支撑，以成就客户为中心，提供一站式人才服务",
     "subhead": "以客户为中心，提供一站式人才服务"
   },
+  "serviceGlobalClients": "服务全球客户",
   "footer": {
     "brand": {
       "name": "睿柏咨询服务"

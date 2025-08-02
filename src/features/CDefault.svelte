@@ -5,8 +5,9 @@
     import LocomotiveScroll from "locomotive-scroll";
     import CScroller from "./CScroller.svelte";
     import { _, locale } from "svelte-i18n";
-    import CDynamic from "./CDynamic.svelte";
     import CText from "./CText.svelte";
+    import ISponsor from "./ISponsor.svelte";
+    import CSCustomer from "./CSCustomer.svelte";
 
     let languages = {
         "fi-us": "en",
@@ -118,12 +119,24 @@
             {$_("cserve.subhead")}
         </h2>
     </section>
+
     <section
         data-section
         data-scroll-section
-        class="flex flex-col items-center justify-center h-[35vh]"
+        class="flex flex-col items-center bg-gray-900 justify-center h-[35vh]"
     >
         <CScroller />
+    </section>
+
+    <section
+        data-section
+        data-scroll-section
+        class="flex flex-col text-white bg-gray-700 items-center justify-center h-[65vh]"
+    >
+        <h1 class="mb-[4vh] text-2xl md:text-4xl">{$_('serviceGlobalClients')}</h1>
+       
+    
+        <ISponsor />
     </section>
 </div>
 
