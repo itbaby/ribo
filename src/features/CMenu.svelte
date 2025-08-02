@@ -270,17 +270,17 @@
             <ul class="py-2 text-sm md:py-2">
               <li>
                 <a href="#" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
-                  >猎头服务</a
+                  >{$_("menu.headhunting")}</a
                 >
               </li>
               <li>
                 <a href="#" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
-                  >人才派遣</a
+                  >{$_("menu.staffing")}</a
                 >
               </li>
               <li>
                 <a href="#" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
-                  >IT服务外包</a
+                  >{$_("menu.itOutsourcing")}</a
                 >
               </li>
             </ul>
@@ -317,12 +317,12 @@
             <ul class="py-2 text-sm md:py-2">
               <li>
                 <a href="#" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
-                  >市场分析</a
+                  >{$_("menu.marketAnalysis")}</a
                 >
               </li>
               <li>
                 <a href="#" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
-                  >行业要闻</a
+                  >{$_("menu.industryNews")}</a
                 >
               </li>
             </ul>
@@ -360,27 +360,27 @@
             <ul class="py-2 text-sm md:py-2">
               <li>
                 <a href="#" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
-                  >公司介绍</a
+                  >{$_("menu.companyIntroduction")}</a
                 >
               </li>
               <li>
                 <a href="#" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
-                  >企业文化</a
+                  >{$_("menu.companyCulture")}</a
                 >
               </li>
               <li>
                 <a href="#" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
-                  >发展历程</a
+                  >{$_("menu.history")}</a
                 >
               </li>
               <li>
                 <a href="#" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
-                  >企业荣誉</a
+                  >{$_("menu.honors")}</a
                 >
               </li>
               <li>
                 <a href="#" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
-                  >联系我们</a
+                  >{$_("menu.contact")}</a
                 >
               </li>
             </ul>
