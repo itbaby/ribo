@@ -1,91 +1,131 @@
 <script lang="ts">
-    import { Fullpage, FullpageSection } from "svelte-fullpage";
+    import { onMount } from "svelte";
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+    import LocomotiveScroll from "locomotive-scroll";
+    import CScroller from "./CScroller.svelte";
     import { _, locale } from "svelte-i18n";
-    import CFooter from "./CFooter.svelte";
-    const savedFlag = localStorage.getItem("selectedFlag");
+    import CDynamic from "./CDynamic.svelte";
+    import CText from "./CText.svelte";
+
     let languages = {
         "fi-us": "en",
         "fi-jp": "jp",
         "fi-cn": "zh",
     };
-    locale.set(languages[savedFlag as keyof typeof languages] || 'zh');
+    locale.set(
+        languages[
+            localStorage.getItem("selectedFlag") as keyof typeof languages
+        ] || "zh",
+    );
+
+    gsap.registerPlugin(ScrollTrigger);
+    onMount(() => {
+        const scrollContainer = document.querySelector(
+            "[data-scroll-container]",
+        ) as HTMLElement;
+        const sections = document.querySelectorAll("[data-section]");
+
+        const locoScroll = new LocomotiveScroll({
+            el: scrollContainer,
+            smooth: true,
+            lerp: 0.25,
+            inertia: 0.8,
+            getDirection: true,
+            multiplier: 0.8,
+            class: "is-reveal",
+            smoothMobile: true,
+        });
+        document.addEventListener("scroll", ScrollTrigger.update);
+        ScrollTrigger.scrollerProxy("[data-scroll-container]", {
+            scrollTop(value) {
+                return arguments.length
+                    ? locoScroll.scrollTo(value, {
+                          duration: 0,
+                          disableLerp: true,
+                      })
+                    : locoScroll.scroll.y;
+            },
+            getBoundingClientRect: () => ({
+                top: 0,
+                left: 0,
+                width: window.innerWidth,
+                height: window.innerHeight,
+            }),
+        });
+
+        // 刷新并设置动画
+        ScrollTrigger.refresh();
+
+        // 为每个部分添加动画
+        sections.forEach((sec) => {
+            // 使用GSAP实现类似AOS zoom-in的效果
+            gsap.fromTo(
+                sec,
+                {
+                    opacity: 0,
+                    scale: 0.8,
+                },
+                {
+                    opacity: 1,
+                    scale: 1,
+                    duration: 1.5,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: sec,
+                        start: "top 90%",
+                        end: "bottom 10%",
+                        toggleActions: "play reverse play reverse",
+                        markers: false,
+                    },
+                },
+            );
+        });
+
+        return () => {
+            locoScroll.destroy();
+            ScrollTrigger.getAll().forEach((t) => t.kill());
+        };
+    });
 </script>
 
-<div class="flex items-center justify-center w-screen h-screen">
-    <Fullpage>
-        <FullpageSection
-            class="h-screen flex items-center justify-center"
-            style="background: url('/src/assets/aboutus.jpg') no-repeat center center; background-size: cover;"
+<div
+    data-scroll-container
+    class="bg-gray-900 flex flex-col justify-center justify-around"
+>
+    <section
+        data-section
+        data-scroll-section
+        class="flex items-center justify-center h-screen bg-cover bg-center md:w-full"
+        style="background-image: url('/src/assets/aboutus.jpg')"
+    >
+        <CText />
+    </section>
+    <section
+        data-section
+        data-scroll-section
+        class="w-full mx-auto bg-cover bg-center flex flex-col items-center justify-center h-[40vh]"
+        style="background-image: url('/src/assets/earth.png')"
+    >
+        <div
+            class="text-white lg:text-4xl lg:font-bold animate-pulse md:text-lg text-center"
         >
-            <div
-                class="relative w-10/12 h-80 overflow-hidden flex justify-center"
-            >
-                <div
-                    class="slider__word flex flex-col justify-center items-center"
-                >
-                    <h1 class="text-5xl mb-10">
-                        {$_("carousel.techDrivenFuture")}
-                    </h1>
-                    <h5>{$_("carousel.techDescription")}</h5>
-                </div>
-                <div
-                    class="slider__word flex flex-col justify-center items-center"
-                >
-                    <h1 class="text-5xl mb-10">{$_("carousel.talentPool")}</h1>
-                    <h5>{$_("carousel.talentDescription")}</h5>
-                </div>
-                <div
-                    class="slider__word flex flex-col justify-center items-center"
-                >
-                    <h1 class="text-5xl mb-10">{$_("carousel.fullService")}</h1>
-                    <h5>{$_("carousel.serviceDescription")}</h5>
-                </div>
-            </div>
-        </FullpageSection>
-        <FullpageSection class="h-screen">
-            <CFooter />
-        </FullpageSection>
-    </Fullpage>
+            {$_("cserve.headline")}
+        </div>
+        <h2
+            class="text-white lg:text-2xl animate-pulse md:text-sm mt-20 text-center"
+        >
+            {$_("cserve.subhead")}
+        </h2>
+    </section>
+    <section
+        data-section
+        data-scroll-section
+        class="flex flex-col items-center justify-center h-[35vh]"
+    >
+        <CScroller />
+    </section>
 </div>
 
 <style>
-    .slider__word {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        transform: translateY(100%);
-        animation: slide 12s linear infinite;
-        color: #f5f5f5;
-    }
-
-    .slider__word:nth-child(2) {
-        animation-delay: 4s;
-    }
-
-    .slider__word:nth-child(3) {
-        animation-delay: 8s;
-    }
-
-    @keyframes slide {
-        0% {
-            transform: translateY(100%);
-            opacity: 0.1;
-        }
-        15% {
-            transform: translateY(0);
-            opacity: 1;
-        }
-        30% {
-            transform: translateY(0);
-            opacity: 1;
-        }
-        45% {
-            transform: translateY(-100%);
-            opacity: 1;
-        }
-        100% {
-            transform: translateY(-100%);
-            opacity: 0.1;
-        }
-    }
 </style>

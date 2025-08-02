@@ -4,7 +4,18 @@
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   import LocomotiveScroll from "locomotive-scroll";
   import CScroller from "./CScroller.svelte";
-  import { _ } from "svelte-i18n";
+  import { _, locale } from "svelte-i18n";
+
+  let languages = {
+    "fi-us": "en",
+    "fi-jp": "jp",
+    "fi-cn": "zh",
+  };
+  locale.set(
+    languages[localStorage.getItem("selectedFlag") as keyof typeof languages] ||
+      "zh",
+  );
+
   gsap.registerPlugin(ScrollTrigger);
   onMount(() => {
     const scrollContainer = document.querySelector(

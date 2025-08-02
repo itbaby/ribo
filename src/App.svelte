@@ -13,7 +13,10 @@
 <Router>
   <CMenu />
   <Route path="/" let:params>
-    <CDefault />
+    <div class="pt-16">
+      <CDefault />
+    </div>
+    <CFooter />
   </Route>
   <Route path="/industry" let:params>
     <div class="pt-16">
