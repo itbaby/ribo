@@ -263,23 +263,23 @@
           </button>
           <div
             id="serve-dropdown"
-            class="absolute z-10 w-full bg-gray-800 md:w-[14/12] {isServeDropdownOpen
+            class="md:absolute md:z-10 w-full bg-gray-800 md:w-auto {isServeDropdownOpen
               ? 'block'
               : 'hidden'}"
           >
-            <ul class="py-2 text-sm">
+            <ul class="py-2 text-sm md:py-2">
               <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-800"
+                <a href="#" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
                   >猎头服务</a
                 >
               </li>
               <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-800"
+                <a href="#" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
                   >人才派遣</a
                 >
               </li>
               <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-800"
+                <a href="#" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
                   >IT服务外包</a
                 >
               </li>
@@ -310,18 +310,18 @@
             </svg>
           </button>
           <div
-            class="absolute z-10 w-full bg-gray-800 md:w-[14/12] {isCreativeDropdownOpen
+            class="md:absolute md:z-10 w-full bg-gray-800 md:w-auto {isCreativeDropdownOpen
               ? 'block'
               : 'hidden'}"
           >
-            <ul class="py-2 text-sm">
+            <ul class="py-2 text-sm md:py-2">
               <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-800"
+                <a href="#" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
                   >市场分析</a
                 >
               </li>
               <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-800"
+                <a href="#" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
                   >行业要闻</a
                 >
               </li>
@@ -353,33 +353,33 @@
             </svg>
           </button>
           <div
-            class="absolute z-10 w-full bg-gray-800 md:w-[14/12] {isAboutusDropdownOpen
+            class="md:absolute md:z-10 w-full bg-gray-800 md:w-auto {isAboutusDropdownOpen
               ? 'block'
               : 'hidden'}"
           >
-            <ul class="py-2 text-sm">
+            <ul class="py-2 text-sm md:py-2">
               <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-800"
+                <a href="#" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
                   >公司介绍</a
                 >
               </li>
               <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-800"
+                <a href="#" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
                   >企业文化</a
                 >
               </li>
               <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-800"
+                <a href="#" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
                   >发展历程</a
                 >
               </li>
               <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-800"
+                <a href="#" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
                   >企业荣誉</a
                 >
               </li>
               <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-800"
+                <a href="#" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
                   >联系我们</a
                 >
               </li>
