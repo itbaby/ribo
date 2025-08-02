@@ -53,7 +53,43 @@
         "title": "Title 3",
         "description": "Content description 3"
       }
-    ]
+    ],
+    "alibaba": {
+      "title": "Alibaba",
+      "description": "Chinese multinational technology company specializing in e-commerce"
+    },
+    "alo": {
+      "title": "Alo",
+      "description": "American yoga and wellness lifestyle brand"
+    },
+    "cisco": {
+      "title": "Cisco",
+      "description": "Multinational technology conglomerate specializing in networking hardware"
+    },
+    "colt": {
+      "title": "Colt",
+      "description": "British multinational telecommunications company"
+    },
+    "fcn": {
+      "title": "FCN",
+      "description": "Financial Crimes Network - anti-money laundering compliance solutions"
+    },
+    "fil": {
+      "title": "FIL",
+      "description": "Fidelity International - global asset management company"
+    },
+    "hitachi": {
+      "title": "Hitachi",
+      "description": "Japanese multinational conglomerate company"
+    },
+    "lenovo": {
+      "title": "Lenovo",
+      "description": "Chinese multinational technology company specializing in computers"
+    },
+    "tcl": {
+      "title": "TCL",
+      "description": "Chinese electronics company specializing in TVs and displays"
+    }
   },
   "cserve": {
     "headline": "[TRANSLATION NEEDED] Based in Dalian, supported by Shanghai and Shenzhen, centered on customer success, providing one-stop talent services",

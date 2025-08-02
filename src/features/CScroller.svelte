@@ -8,6 +8,7 @@
   import hitachi from '../assets/icons-trans/hitachi.png';
   import lenovo from '../assets/icons-trans/lenovo.png';
   import tcl from '../assets/icons-trans/tcl.png';
+  import { _ } from "svelte-i18n";
 </script>
 
 <div class="wrapper">
@@ -15,64 +16,64 @@
     <div class="carousel__item">
       <div class="carousel__item-head"><img src={alibaba} alt="alibaba" /></div>
       <div class="carousel__item-body">
-        <p class="title">spouting whale</p>
-        <p>Unicode: U+1F433</p>
+        <p class="title">{$_("carousel.alibaba.title")}</p>
+        <p>{$_("carousel.alibaba.description")}</p>
       </div>
     </div>
     <div class="carousel__item">
       <div class="carousel__item-head"><img src={alo} alt="alo" /></div>
       <div class="carousel__item-body">
-        <p class="title">whale</p>
-        <p>Unicode: U+1F40B</p>
+        <p class="title">{$_("carousel.alo.title")}</p>
+        <p>{$_("carousel.alo.description")}</p>
       </div>
     </div>
     <div class="carousel__item">
       <div class="carousel__item-head"><img src={cisco} alt="cisco" /></div>
       <div class="carousel__item-body">
-        <p class="title">dolphin</p>
-        <p>Unicode: U+1F42C</p>
+        <p class="title">{$_("carousel.cisco.title")}</p>
+        <p>{$_("carousel.cisco.description")}</p>
       </div>
     </div>
     <div class="carousel__item">
       <div class="carousel__item-head"><img src={colt} alt="colt" /></div>
       <div class="carousel__item-body">
-        <p class="title">fish</p>
-        <p>Unicode: U+1F41F</p>
+        <p class="title">{$_("carousel.colt.title")}</p>
+        <p>{$_("carousel.colt.description")}</p>
       </div>
     </div>
     <div class="carousel__item">
       <div class="carousel__item-head"><img src={fcn} alt="fcn" /></div>
       <div class="carousel__item-body">
-        <p class="title">tropical fish</p>
-        <p>Unicode: U+1F420</p>
+        <p class="title">{$_("carousel.fcn.title")}</p>
+        <p>{$_("carousel.fcn.description")}</p>
       </div>
     </div>
     <div class="carousel__item">
       <div class="carousel__item-head"><img src={fil} alt="fil" /></div>
       <div class="carousel__item-body">
-        <p class="title">blowfish</p>
-        <p>Unicode: U+1F421</p>
+        <p class="title">{$_("carousel.fil.title")}</p>
+        <p>{$_("carousel.fil.description")}</p>
       </div>
     </div>
     <div class="carousel__item">
       <div class="carousel__item-head"><img src={hitachi} alt="hitachi" /></div>
       <div class="carousel__item-body">
-        <p class="title">shark</p>
-        <p>Unicode: U+1F988</p>
+        <p class="title">{$_("carousel.hitachi.title")}</p>
+        <p>{$_("carousel.hitachi.description")}</p>
       </div>
     </div>
     <div class="carousel__item">
       <div class="carousel__item-head"><img src={lenovo} alt="lenovo" /></div>
       <div class="carousel__item-body">
-        <p class="title">octopus</p>
-        <p>Unicode: U+1F419</p>
+        <p class="title">{$_("carousel.lenovo.title")}</p>
+        <p>{$_("carousel.lenovo.description")}</p>
       </div>
     </div>
     <div class="carousel__item">
       <div class="carousel__item-head"><img src={tcl} alt="tcl" /></div>
       <div class="carousel__item-body">
-        <p class="title">spiral shell</p>
-        <p>Unicode: U+1F41A</p>
+        <p class="title">{$_("carousel.tcl.title")}</p>
+        <p>{$_("carousel.tcl.description")}</p>
       </div>
     </div>
   </div>

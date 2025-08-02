@@ -53,7 +53,43 @@
         "title": "Title 3",
         "description": "Content description 3"
       }
-    ]
+    ],
+    "alibaba": {
+      "title": "アリババ",
+      "description": "中国の多国籍テクノロジー企業、電子商取引に特化"
+    },
+    "alo": {
+      "title": "Alo",
+      "description": "アメリカのヨガとウェルネスライフスタイルブランド"
+    },
+    "cisco": {
+      "title": "シスコ",
+      "description": "多国籍テクノロジーコングロマリット、ネットワークハードウェアに特化"
+    },
+    "colt": {
+      "title": "Colt",
+      "description": "英国の多国籍通信会社"
+    },
+    "fcn": {
+      "title": "FCN",
+      "description": "金融犯罪ネットワーク - マネーロンダリング対策コンプライアンスソリューション"
+    },
+    "fil": {
+      "title": "FIL",
+      "description": "フィデリティ・インターナショナル - グローバル資産運用会社"
+    },
+    "hitachi": {
+      "title": "日立",
+      "description": "日本の多国籍コングロマリット企業"
+    },
+    "lenovo": {
+      "title": "レノボ",
+      "description": "中国の多国籍テクノロジー企業、コンピュータに特化"
+    },
+    "tcl": {
+      "title": "TCL",
+      "description": "中国の電子機器会社、テレビとディスプレイに特化"
+    }
   },
   "cserve": {
     "headline": "[翻訳が必要] 大連を拠点とし、上海と深センに支えられ、顧客の成功を中心としたワンストップ人材サービスを提供",
