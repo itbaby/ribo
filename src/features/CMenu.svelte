@@ -3,6 +3,9 @@
   import { _, locale } from "svelte-i18n";
   let isLanguageDropdownOpen = false;
   let isMobileMenuOpen = false;
+  let isServeDropdownOpen = false;
+  let isCreativeDropdownOpen = false;
+  let isAboutusDropdownOpen = false;
   let selectedLanguage = "中文 (CN)";
   let selectedFlag = "fi-cn";
   let languages = {
@@ -16,6 +19,36 @@
 
   function toggleMobileMenu() {
     isMobileMenuOpen = !isMobileMenuOpen;
+  }
+
+  function toggleServeDropdown() {
+    isServeDropdownOpen = !isServeDropdownOpen;
+    if (isServeDropdownOpen) {
+      isCreativeDropdownOpen = false;
+      isAboutusDropdownOpen = false;
+    }
+  }
+
+  function toggleCreativeDropdown() {
+    isCreativeDropdownOpen = !isCreativeDropdownOpen;
+    if (isCreativeDropdownOpen) {
+      isServeDropdownOpen = false;
+      isAboutusDropdownOpen = false;
+    }
+  }
+
+  function toggleAboutusDropdown() {
+    isAboutusDropdownOpen = !isAboutusDropdownOpen;
+    if (isAboutusDropdownOpen) {
+      isServeDropdownOpen = false;
+      isCreativeDropdownOpen = false;
+    }
+  }
+
+  function closeAllDropdowns() {
+    isServeDropdownOpen = false;
+    isCreativeDropdownOpen = false;
+    isAboutusDropdownOpen = false;
   }
 
   function closeLanguageDropdown() {
@@ -47,8 +80,11 @@
   });
 </script>
 
+<!-- svelte-ignore a11y_click_events_have_key_events -->
+<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 <nav
   class="bg-gray-900 text-white border-none dark:bg-gray-900 fixed top-0 left-0 right-0 z-999"
+  on:click|self={closeAllDropdowns}
 >
   <div
     class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
@@ -93,6 +129,7 @@
           >
             <ul class="py-2 font-medium">
               <li>
+                <!-- svelte-ignore a11y_invalid_attribute -->
                 <a
                   href="#"
                   class="block px-4 py-2 text-sm bg-gray-900 text-white hover:bg-gray-800"
@@ -107,6 +144,7 @@
               </li>
 
               <li>
+                <!-- svelte-ignore a11y_invalid_attribute -->
                 <a
                   href="#"
                   class="block px-4 py-2 text-sm bg-gray-900 text-white hover:bg-gray-800"
@@ -120,6 +158,7 @@
                 </a>
               </li>
               <li>
+                <!-- svelte-ignore a11y_invalid_attribute -->
                 <a
                   href="#"
                   class="block px-4 py-2 text-sm bg-gray-900 text-white hover:bg-gray-800"
@@ -184,8 +223,8 @@
 
     <!-- Mobile Menu -->
     <div
-      class="items-center justify-between w-full md:flex md:w-auto md:order-1 {isMobileMenuOpen
-        ? 'block'
+      class="items-center justify-between w-full md:flex md:w-auto md:order-1 mobile-menu-container {isMobileMenuOpen
+        ? 'block open'
         : 'hidden'}"
       id="navbar-language"
     >
@@ -199,20 +238,153 @@
             aria-current="page">{$_("menu.industry")}</a
           >
         </li>
-        <li>
-          <a href="/serve" class="block py-2 px-5 text-white bg-gray-900"
-            >{$_("menu.serve")}</a
+        <li class="relative">
+          <button
+            on:click={toggleServeDropdown}
+            class="flex items-center justify-between w-full py-2 px-5 text-white bg-gray-900 hover:bg-gray-800"
+            aria-expanded={isServeDropdownOpen}
           >
+            {$_("menu.serve")}
+            <svg
+              class="w-2.5 h-2.5 ms-3 transition-transform duration-200 {isServeDropdownOpen ? 'rotate-180' : ''}"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 10 6"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 4 4 4-4"
+              />
+            </svg>
+          </button>
+          <div
+            id="serve-dropdown"
+            class="absolute z-10 w-full bg-gray-800 md:w-[14/12] {isServeDropdownOpen
+              ? 'block'
+              : 'hidden'}"
+          >
+            <ul class="py-2 text-sm">
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-800"
+                  >猎头服务</a
+                >
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-800"
+                  >人才派遣</a
+                >
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-800"
+                  >IT服务外包</a
+                >
+              </li>
+            </ul>
+          </div>
         </li>
-        <li>
-          <a href="/innovation" class="block py-2 px-5 text-white bg-gray-900"
-            >{$_("menu.creative")}</a
+        <li class="relative">
+          <button
+            on:click={toggleCreativeDropdown}
+            class="flex items-center justify-between w-full py-2 px-5 text-white bg-gray-900 hover:bg-gray-800"
+            aria-expanded={isCreativeDropdownOpen}
           >
+            {$_("menu.creative")}
+            <svg
+              class="w-2.5 h-2.5 ms-3 transition-transform duration-200 {isCreativeDropdownOpen ? 'rotate-180' : ''}"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 10 6"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 4 4 4-4"
+              />
+            </svg>
+          </button>
+          <div
+            class="absolute z-10 w-full bg-gray-800 md:w-[14/12] {isCreativeDropdownOpen
+              ? 'block'
+              : 'hidden'}"
+          >
+            <ul class="py-2 text-sm">
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-800"
+                  >市场分析</a
+                >
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-800"
+                  >行业要闻</a
+                >
+              </li>
+            </ul>
+          </div>
         </li>
-        <li>
-          <a href="/aboutus" class="block py-2 px-5 text-white bg-gray-900"
-            >{$_("menu.aboutus")}</a
+        <li class="relative">
+          <button
+            id="aboutus-dropdown-button"
+            on:click={toggleAboutusDropdown}
+            class="flex items-center justify-between w-full py-2 px-5 text-white bg-gray-900 hover:bg-gray-800"
+            aria-expanded={isAboutusDropdownOpen}
           >
+            {$_("menu.aboutus")}
+            <svg
+              class="w-2.5 h-2.5 ms-3 transition-transform duration-200 {isAboutusDropdownOpen ? 'rotate-180' : ''}"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 10 6"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 4 4 4-4"
+              />
+            </svg>
+          </button>
+          <div
+            class="absolute z-10 w-full bg-gray-800 md:w-[14/12] {isAboutusDropdownOpen
+              ? 'block'
+              : 'hidden'}"
+          >
+            <ul class="py-2 text-sm">
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-800"
+                  >公司介绍</a
+                >
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-800"
+                  >企业文化</a
+                >
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-800"
+                  >发展历程</a
+                >
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-800"
+                  >企业荣誉</a
+                >
+              </li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-800"
+                  >联系我们</a
+                >
+              </li>
+            </ul>
+          </div>
         </li>
         <li>
           <a href="/contact" class="block py-2 px-5 text-white bg-gray-900"
@@ -225,5 +397,15 @@
 </nav>
 
 <style>
-  /* Add any additional styles if needed */
+  .mobile-menu-container {
+    transition: margin-top 0.3s ease;
+  }
+  @media (max-width: 768px) {
+    .mobile-menu-container {
+      margin-top: 0;
+    }
+    .mobile-menu-container.open {
+      margin-top: 1rem;
+    }
+  }
 </style>
