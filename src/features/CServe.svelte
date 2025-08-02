@@ -8,6 +8,7 @@
   import ICustomers from "./ICustomers.svelte";
   import ICarousel from "./ICarousel.svelte";
   import IAboutUs from "./IAboutUs.svelte";
+    import CScroller from "./CScroller.svelte";
   gsap.registerPlugin(ScrollTrigger);
   onMount(() => {
     const scrollContainer = document.querySelector(
@@ -95,7 +96,7 @@
     data-scroll-section
     class="flex flex-col  items-center h-[40vh] "
   >
-    <IAboutUs />
+    <CScroller />
   </section>
 </div>
 
