@@ -32,6 +32,7 @@
     "swiper": "^11.2.10",
     "tailwind-merge": "^3.0.2",
     "tailwindcss": "^4.1.11",
+    "terser": "^5.43.1",
     "typescript": "~5.8.2",
     "vite": "5.4.12",
     "wowjs": "^1.1.3"

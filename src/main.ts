@@ -9,6 +9,11 @@ register('en', () => import('./locales/en.json'));
 register('zh', () => import('./locales/zh.json'));
 register('jp', () => import('./locales/jp.json'));
 
-await Promise.all([ init({ fallbackLocale: 'en', initialLocale: 'zh' }), initAOS() ]);
-const app = mount(App, { target: document.getElementById('app')! });
+async function initializeApp() {
+  await Promise.all([ init({ fallbackLocale: 'en', initialLocale: 'zh' }), initAOS() ]);
+  const app = mount(App, { target: document.getElementById('app')! });
+  return app;
+}
+
+const app = initializeApp();
 export default app;
