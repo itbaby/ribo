@@ -83,7 +83,7 @@
 <!-- svelte-ignore a11y_click_events_have_key_events -->
 <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 <nav
-  class="bg-gray-900 text-white border-none dark:bg-gray-900 fixed top-0 left-0 right-0 z-999"
+  class="bg-gray-900 w-[100vw] text-white border-none dark:bg-gray-900 fixed top-0 left-0 right-0 z-999"
   on:click|self={closeAllDropdowns}
 >
   <div

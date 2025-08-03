@@ -31,18 +31,4 @@
   --color-primary-950: #172554;
 }
 
-/* 添加移动设备适配样式 */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .nav-menu {
-    width: 100%;
-    padding: 1rem;
-  }
-  .nav-link {
-    padding: 0.5rem 0;
-    font-size: 1.2rem;
-  }
-}
+

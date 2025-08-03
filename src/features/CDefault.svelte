@@ -90,7 +90,7 @@
   });
 </script>
 
-<div class="bg-gray-700">
+<div class="bg-gray-700 w-[100vw] overflow-hidden">
   <div data-scroll-container class="bg-gray-900 flex flex-col justify-around">
     <section
       data-section
