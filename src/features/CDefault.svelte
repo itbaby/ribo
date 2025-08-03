@@ -1,4 +1,5 @@
 <script lang="ts">
+
     import { onMount } from "svelte";
     import { gsap } from "gsap";
     import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -6,7 +7,7 @@
     import CScroller from "./CScroller.svelte";
     import { _, locale } from "svelte-i18n";
     import CText from "./CText.svelte";
-    import ISponsor from "./ISponsor.svelte";
+    import CSponsor from "./CSponsor.svelte";
 
     let languages = {
         "fi-us": "en",
@@ -132,7 +133,14 @@
         class="flex flex-col text-white bg-gray-700 items-center justify-center h-auto pb-20 pt-20"
     >
         <h1 class="mb-[4vh] text-2xl md:text-4xl">{$_('serviceGlobalClients')}</h1>
-        <ISponsor />
+        <CSponsor />
+    </section>
+    <section
+        data-section
+        data-scroll-section
+        class="flex flex-col items-center bg-gray-900 justify-center h-screen"
+    >
+       
     </section>
 </div>
 
