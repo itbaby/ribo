@@ -8,6 +8,7 @@
   import CAboutUs from "./features/CAboutUs.svelte";
   import CContact from "./features/CContact.svelte";
   import CInnovation from "./features/CInnovation.svelte";
+  import CHiring from "./features/CHiring.svelte";
 </script>
 
 <Router>
@@ -16,7 +17,12 @@
     <div class="pt-16">
       <CDefault />
     </div>
-    
+  </Route>
+  <Route path="/hiring" let:params>
+    <div class="pt-16">
+      <CHiring />
+    </div>
+    <CFooter bgClass="bg-gray-800" />
   </Route>
   <Route path="/industry" let:params>
     <div class="pt-16">
