@@ -116,7 +116,7 @@
 >
   <main
     bind:this={sliderContainer}
-    class="relative w-full h-[70vh] sm:h-[65vh] md:h-[45vh]"
+    class="relative w-full h-[75vh] sm:h-[65vh] md:h-[45vh]"
   >
     <article
       class="slide absolute inset-0 flex flex-col justify-between p-6 md:p-8 bg-gray-900 rounded-2xl border border-gray-500"

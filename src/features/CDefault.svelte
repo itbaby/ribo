@@ -104,7 +104,7 @@
     <section
       data-section
       data-scroll-section
-      class="w-full mx-auto bg-cover bg-center flex flex-col items-center justify-center h-[40vh]"
+      class="w-full mx-auto bg-cover bg-center flex flex-col items-center justify-center h-[80vh] py-40"
       style="background-image: url('/src/assets/earth.png')"
     >
       <div
@@ -113,19 +113,14 @@
         {$_("cserve.headline")}
       </div>
       <h2
-        class="text-white w-10/12 mx-auto lg:text-2xl animate-pulsemd:text-3xl mt-20 text-center"
+        class="text-white w-10/12 mx-auto lg:text-2xl animate-pulsemd:text-3xl mt-20 text-center mb-40"
       >
         {$_("cserve.subhead")}
       </h2>
+       <CScroller />
     </section>
 
-    <section
-      data-section
-      data-scroll-section
-      class="flex flex-col items-center bg-gray-900 justify-center h-[45vh]"
-    >
-      <CScroller />
-    </section>
+   
 
     <section
       data-section
