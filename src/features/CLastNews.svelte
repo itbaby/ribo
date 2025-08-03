@@ -116,7 +116,7 @@
 >
   <main
     bind:this={sliderContainer}
-    class="relative w-full h-[55vh] sm:h-[65vh] md:h-[45vh]"
+    class="relative w-full h-[70vh] sm:h-[65vh] md:h-[45vh]"
   >
     <article
       class="slide absolute inset-0 flex flex-col justify-between p-6 md:p-8 bg-gray-900 rounded-2xl border border-gray-500"
@@ -276,3 +276,20 @@
     </svg>
   </button>
 </div>
+
+<style>
+  @media (max-width: 640px) {
+    .slide {
+      padding: 1rem;
+    }
+    
+    .slide blockquote {
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+    
+    .slide .flex.items-center {
+      padding: 0.5rem;
+    }
+  }
+</style>
