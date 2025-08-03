@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { gsap } from "gsap";
-   import { _, locale } from "svelte-i18n";
+  import { _, locale } from "svelte-i18n";
   let sliderContainer: HTMLElement;
   let currentActiveIndex = 0;
   let slides: Element[] = [];
@@ -22,8 +22,8 @@
         position: "absolute",
         top: 0,
         left: 0,
-        width: "100%",
-        height: "100%",
+        width: "80%",
+        height: "75%",
       });
 
       let state;
@@ -112,14 +112,14 @@
 </script>
 
 <div
-  class="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto "
+  class="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto"
 >
   <main
     bind:this={sliderContainer}
     class="relative w-full h-[55vh] sm:h-[65vh] md:h-[45vh]"
   >
     <article
-      class="slide absolute inset-0 flex flex-col justify-between p-6 md:p-8 bg-gray-900 rounded-2xl border"
+      class="slide absolute inset-0 flex flex-col justify-between p-6 md:p-8 bg-gray-900 rounded-2xl border border-white/50 w-[80%] mx-auto"
     >
       <div>
         <blockquote
@@ -135,14 +135,16 @@
           class="w-10 h-10 rounded-full mr-3 shrink-0"
         />
         <div>
-          <p class="font-semibold text-white text-sm">{$_("lastNews.news1.title")}</p>
+          <p class="font-semibold text-white text-sm">
+            {$_("lastNews.news1.title")}
+          </p>
           <p class="text-xs text-white">{$_("lastNews.news1.position")}</p>
         </div>
       </div>
     </article>
 
     <article
-      class="slide absolute inset-0 flex flex-col justify-between p-6 md:p-8 bg-gray-900 rounded-2xl border bg-gray-400"
+      class="slide absolute inset-0 flex flex-col justify-between p-6 md:p-8 bg-gray-900 rounded-2xl border border-white/50 w-[80%] mx-auto"
     >
       <div>
         <blockquote
@@ -158,14 +160,16 @@
           class="w-10 h-10 rounded-full mr-3 shrink-0"
         />
         <div>
-          <p class="font-semibold text-white text-sm">{$_("lastNews.news2.title")}</p>
+          <p class="font-semibold text-white text-sm">
+            {$_("lastNews.news2.title")}
+          </p>
           <p class="text-xs text-white">{$_("lastNews.news2.position")}</p>
         </div>
       </div>
     </article>
 
     <article
-      class="slide absolute inset-0 flex flex-col justify-between p-6 md:p-8 bg-gray-900 rounded-2xl border bg-gray-400"
+      class="slide absolute inset-0 flex flex-col justify-between p-6 md:p-8 bg-gray-900 rounded-2xl border border-white/50 bg-gray-400 w-[80%] mx-auto"
     >
       <div>
         <blockquote
@@ -181,14 +185,16 @@
           class="w-10 h-10 rounded-full mr-3 shrink-0"
         />
         <div>
-          <p class="font-semibold text-white text-sm">{$_("lastNews.news3.title")}</p>
+          <p class="font-semibold text-white text-sm">
+            {$_("lastNews.news3.title")}
+          </p>
           <p class="text-xs text-white">{$_("lastNews.news3.position")}</p>
         </div>
       </div>
     </article>
 
     <article
-      class="slide absolute inset-0 flex flex-col justify-between p-6 md:p-8 bg-gray-900 rounded-2xl border bg-gray-400"
+      class="slide absolute inset-0 flex flex-col justify-between p-6 md:p-8 bg-gray-900 rounded-2xl border border-white/50 bg-gray-400 w-[80%] mx-auto"
     >
       <div>
         <blockquote
@@ -204,13 +210,15 @@
           class="w-10 h-10 rounded-full mr-3 shrink-0"
         />
         <div>
-          <p class="font-semibold text-white text-sm">{$_("lastNews.news4.title")}</p>
+          <p class="font-semibold text-white text-sm">
+            {$_("lastNews.news4.title")}
+          </p>
           <p class="text-xs text-white">{$_("lastNews.news4.position")}</p>
         </div>
       </div>
     </article>
     <article
-      class="slide absolute inset-0 flex flex-col justify-between p-6 md:p-8 bg-gray-900 rounded-2xl border bg-gray-400"
+      class="slide absolute inset-0 flex flex-col justify-between p-6 md:p-8 bg-gray-900 rounded-2xl border border-white/50 bg-gray-400 w-[80%] mx-auto"
     >
       <div>
         <blockquote
@@ -226,7 +234,9 @@
           class="w-10 h-10 rounded-full mr-3 shrink-0"
         />
         <div>
-          <p class="font-semibold text-white text-sm">{$_("lastNews.news5.title")}</p>
+          <p class="font-semibold text-white text-sm">
+            {$_("lastNews.news5.title")}
+          </p>
           <p class="text-xs text-white">{$_("lastNews.news5.position")}</p>
         </div>
       </div>
@@ -236,7 +246,7 @@
   <button
     title="Previous testimonial"
     aria-label="Previous testimonial"
-    class="absolute top-1/2 left-[-16px] sm:left-[-24px] md:left-[-30px] -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-900 backdrop-blur-sm shadow-md hover:bg-gray-700 focus:bg-gray-700 flex items-center justify-center text-white/80 hover:text-white/80 focus:text-white/80 focus:outline-none"
+    class="absolute top-1/2 left-[-16px] sm:left-[-24px] md:left-[-30px] -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-900 backdrop-blur-sm shadow-md hover:bg-gray-700 focus:bg-gray-700 flex items-center justify-center text-white/80 hover:text-white/80 focus:text-white/80 focus:outline-none border border-white/50"
     on:click={goToPrev}
   >
     <svg
@@ -257,7 +267,7 @@
   <button
     title="Next testimonial"
     aria-label="Next testimonial"
-    class="absolute top-1/2 right-[-16px] sm:right-[-24px] md:right-[-30px] -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-900 backdrop-blur-sm shadow-md hover:bg-gray-700 focus:bg-gray-700 flex items-center justify-center text-white/80 hover:text-white/80 focus:text-white/80 focus:outline-none"
+    class="absolute top-1/2 right-[-16px] sm:right-[-24px] md:right-[-30px] -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-900 backdrop-blur-sm shadow-md hover:bg-gray-700 focus:bg-gray-700 flex items-center justify-center text-white/80 hover:text-white/80 focus:text-white/80 focus:outline-none border border-white/50"
     on:click={goToNext}
   >
     <svg
