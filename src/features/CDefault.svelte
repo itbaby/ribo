@@ -7,6 +7,7 @@
   import { _, locale } from "svelte-i18n";
   import CText from "./CText.svelte";
   import CSponsor from "./CSponsor.svelte";
+  import CLastNews from "./CLastNews.svelte";
 
   let languages = {
     "fi-us": "en",
@@ -122,6 +123,15 @@
   >
     <CScroller />
   </section>
+  
+  <section
+    data-section
+    data-scroll-section
+    class="flex flex-col items-center bg-gray-800 justify-center  h-[75vh]"
+  >
+    <h1 class="mb-[4vh] text-2xl md:text-4xl text-white">{$_("carousel.latestNews")}</h1>
+    <CLastNews />
+  </section>
   <section
     data-section
     data-scroll-section
@@ -130,11 +140,6 @@
     <h1 class="mb-[4vh] text-2xl md:text-4xl">{$_("serviceGlobalClients")}</h1>
     <CSponsor />
   </section>
-  <section
-    data-section
-    data-scroll-section
-    class="flex flex-col items-center bg-gray-900 justify-center h-screen"
-  ></section>
 </div>
 
 <style>
