@@ -123,7 +123,7 @@
         <!-- Language Dropdown Menu -->
         {#if isLanguageDropdownOpen}
           <div
-            class="absolute right-0 z-50 my-4 text-base text-white list-none bg-gray-900 divide-y divide-gray-100 shadow-sm"
+            class="absolute right-0 z-50 my-4 text-base text-white list-none bg-gray-900 divide-y divide-gray-100 shadow-sm min-w-[120px]"
             id="language-dropdown-menu"
             role="menu"
           >
@@ -132,7 +132,7 @@
                 <!-- svelte-ignore a11y_invalid_attribute -->
                 <a
                   href="#"
-                  class="block px-4 py-2 text-sm bg-gray-900 text-white hover:bg-gray-800"
+                  class="block px-4 py-2 text-sm bg-gray-900 text-white hover:bg-gray-800 whitespace-nowrap"
                   role="menuitem"
                   on:click={() => selectLanguage("English", "fi-us")}
                 >
@@ -147,7 +147,7 @@
                 <!-- svelte-ignore a11y_invalid_attribute -->
                 <a
                   href="#"
-                  class="block px-4 py-2 text-sm bg-gray-900 text-white hover:bg-gray-800"
+                  class="block px-4 py-2 text-sm bg-gray-900 text-white hover:bg-gray-800 whitespace-nowrap"
                   role="menuitem"
                   on:click={() => selectLanguage("にほんご", "fi-jp")}
                 >
@@ -161,7 +161,7 @@
                 <!-- svelte-ignore a11y_invalid_attribute -->
                 <a
                   href="#"
-                  class="block px-4 py-2 text-sm bg-gray-900 text-white hover:bg-gray-800"
+                  class="block px-4 py-2 text-sm bg-gray-900 text-white hover:bg-gray-800 whitespace-nowrap"
                   role="menuitem"
                   on:click={() => selectLanguage("中文 (CN)", "fi-cn")}
                 >
