@@ -119,7 +119,7 @@
     class="relative w-full h-[55vh] sm:h-[65vh] md:h-[45vh]"
   >
     <article
-      class="slide absolute inset-0 flex flex-col justify-between p-6 md:p-8 bg-gray-900 rounded-2xl border"
+      class="slide absolute inset-0 flex flex-col justify-between p-6 md:p-8 bg-gray-900 rounded-2xl border border-gray-500"
     >
       <div>
         <blockquote
@@ -142,7 +142,7 @@
     </article>
 
     <article
-      class="slide absolute inset-0 flex flex-col justify-between p-6 md:p-8 bg-gray-900 rounded-2xl border bg-gray-400"
+      class="slide absolute inset-0 flex flex-col justify-between p-6 md:p-8 bg-gray-900 rounded-2xl border border-gray-500 "
     >
       <div>
         <blockquote
@@ -165,7 +165,7 @@
     </article>
 
     <article
-      class="slide absolute inset-0 flex flex-col justify-between p-6 md:p-8 bg-gray-900 rounded-2xl border bg-gray-400"
+      class="slide absolute inset-0 flex flex-col justify-between p-6 md:p-8 bg-gray-900 rounded-2xl border border-gray-500 "
     >
       <div>
         <blockquote
@@ -188,7 +188,7 @@
     </article>
 
     <article
-      class="slide absolute inset-0 flex flex-col justify-between p-6 md:p-8 bg-gray-900 rounded-2xl border bg-gray-400"
+      class="slide absolute inset-0 flex flex-col justify-between p-6 md:p-8 bg-gray-900 rounded-2xl border border-gray-500 "
     >
       <div>
         <blockquote
@@ -210,7 +210,7 @@
       </div>
     </article>
     <article
-      class="slide absolute inset-0 flex flex-col justify-between p-6 md:p-8 bg-gray-900 rounded-2xl border bg-gray-400"
+      class="slide absolute inset-0 flex flex-col justify-between p-6 md:p-8 bg-gray-900 rounded-2xl border border-gray-500 "
     >
       <div>
         <blockquote
@@ -236,7 +236,7 @@
   <button
     title="Previous testimonial"
     aria-label="Previous testimonial"
-    class="absolute top-1/2 left-[-16px] sm:left-[-24px] md:left-[-30px] -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-900 backdrop-blur-sm shadow-md hover:bg-gray-700 focus:bg-gray-700 flex items-center justify-center text-white/80 hover:text-white/80 focus:text-white/80 focus:outline-none"
+    class="absolute border border-gray-500 top-1/2 left-[-16px] sm:left-[-24px] md:left-[-30px] -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-900 backdrop-blur-sm shadow-md hover:bg-gray-700 focus:bg-gray-700 flex items-center justify-center text-white/80 hover:text-white/80 focus:text-white/80 focus:outline-none "
     on:click={goToPrev}
   >
     <svg
@@ -257,7 +257,7 @@
   <button
     title="Next testimonial"
     aria-label="Next testimonial"
-    class="absolute top-1/2 right-[-16px] sm:right-[-24px] md:right-[-30px] -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-900 backdrop-blur-sm shadow-md hover:bg-gray-700 focus:bg-gray-700 flex items-center justify-center text-white/80 hover:text-white/80 focus:text-white/80 focus:outline-none"
+    class="absolute border border-gray-500 top-1/2 right-[-16px] sm:right-[-24px] md:right-[-30px] -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-900 backdrop-blur-sm shadow-md hover:bg-gray-700 focus:bg-gray-700 flex items-center justify-center text-white/80 hover:text-white/80 focus:text-white/80 focus:outline-none"
     on:click={goToNext}
   >
     <svg
