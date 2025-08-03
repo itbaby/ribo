@@ -10,17 +10,28 @@
 
 <style>
   .gallery {
-    --s: calc((80vw - 5*var(--g)) / 6); /* calculate size based on full viewport width */
-    --g: 16px;  /* increased gap for full screen layout */
-    --f: 1.2;  /* control the scale factor */
+    --s: calc((100vw - 3*var(--g)) / 4); /* 4 columns on mobile */
+    --g: 12px;  /* gap */
+    --f: 1.2;  /* scale factor */
     
     display: grid;
     gap: var(--g);
-    width: 80vw;
-    aspect-ratio: 3/2;
-    grid-template-columns: repeat(6, auto);
-    padding: 0 calc(var(--g) / 2); /* add small padding to prevent edge overflow */
+    width: 100vw;
+    max-height: 90vh;
+    aspect-ratio: 1/1; /* Even further increased height on mobile */
+    grid-template-columns: repeat(4, auto);
+    padding: 0 calc(var(--g) / 2);
     box-sizing: border-box;
+  }
+
+  @media (min-width: 768px) {
+    .gallery {
+      --s: calc((60vw - 7*var(--g)) / 8); /* 8 columns on desktop */
+      --g: 16px;  /* increased gap for full screen layout */
+      width: 60vw;
+      aspect-ratio: 3/2; /* Original aspect ratio on desktop */
+      grid-template-columns: repeat(8, auto);
+    }
   }
 
   .gallery > img {

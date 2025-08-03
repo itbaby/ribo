@@ -91,7 +91,7 @@
 
 <div
     data-scroll-container
-    class="bg-gray-900 flex flex-col justify-center justify-around"
+    class="bg-gray-900 flex flex-col justify-around"
 >
     <section
         data-section
@@ -129,7 +129,7 @@
     <section
         data-section
         data-scroll-section
-        class="flex flex-col text-white bg-gray-700 items-center justify-center h-[65vh]"
+        class="flex flex-col text-white bg-gray-700 items-center justify-center h-auto pb-20 pt-20"
     >
         <h1 class="mb-[4vh] text-2xl md:text-4xl">{$_('serviceGlobalClients')}</h1>
         <ISponsor />
