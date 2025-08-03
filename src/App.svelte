@@ -16,7 +16,7 @@
     <div class="pt-16">
       <CDefault />
     </div>
-    <CFooter />
+    
   </Route>
   <Route path="/industry" let:params>
     <div class="pt-16">

@@ -7,6 +7,7 @@
   import { _, locale } from "svelte-i18n";
   import CText from "./CText.svelte";
   import CSponsor from "./CSponsor.svelte";
+  import CFooter from "./CFooter.svelte";
   import CLastNews from "./CLastNews.svelte";
 
   let languages = {
@@ -89,60 +90,66 @@
   });
 </script>
 
-<div data-scroll-container class="bg-gray-900 flex flex-col justify-around">
-  <section
-    data-section
-    data-scroll-section
-    class="flex items-center justify-center h-screen bg-cover bg-center md:w-full 0"
-    style="background-image: url('/src/assets/aboutus.jpg')"
-  >
-    <CText />
-  </section>
-
-  <section
-    data-section
-    data-scroll-section
-    class="w-full mx-auto bg-cover bg-center flex flex-col items-center justify-center h-[40vh]"
-    style="background-image: url('/src/assets/earth.png')"
-  >
-    <div
-      class="text-white w-10/12 mx-auto text-2xl animate-pulse md:text-4xl text-center"
+<div class="bg-gray-700">
+  <div data-scroll-container class="bg-gray-900 flex flex-col justify-around">
+    <section
+      data-section
+      data-scroll-section
+      class="flex items-center justify-center h-screen bg-cover bg-center md:w-full 0"
+      style="background-image: url('/src/assets/aboutus.jpg')"
     >
-      {$_("cserve.headline")}
-    </div>
-    <h2
-      class="text-white w-10/12 mx-auto lg:text-2xl animate-pulsemd:text-3xl mt-20 text-center"
+      <CText />
+    </section>
+
+    <section
+      data-section
+      data-scroll-section
+      class="w-full mx-auto bg-cover bg-center flex flex-col items-center justify-center h-[40vh]"
+      style="background-image: url('/src/assets/earth.png')"
     >
-      {$_("cserve.subhead")}
-    </h2>
-  </section>
+      <div
+        class="text-white w-10/12 mx-auto text-2xl animate-pulse md:text-4xl text-center"
+      >
+        {$_("cserve.headline")}
+      </div>
+      <h2
+        class="text-white w-10/12 mx-auto lg:text-2xl animate-pulsemd:text-3xl mt-20 text-center"
+      >
+        {$_("cserve.subhead")}
+      </h2>
+    </section>
 
-  <section
-    data-section
-    data-scroll-section
-    class="flex flex-col items-center bg-gray-900 justify-center h-[45vh]"
-  >
-    <CScroller />
-  </section>
+    <section
+      data-section
+      data-scroll-section
+      class="flex flex-col items-center bg-gray-900 justify-center h-[45vh]"
+    >
+      <CScroller />
+    </section>
 
-  <section
-    data-section
-    data-scroll-section
-    class="flex flex-col text-white bg-gray-700 items-center justify-center h-auto pb-20 pt-20"
-  >
-    <h1 class="mb-[4vh] text-2xl md:text-4xl">{$_("serviceGlobalClients")}</h1>
-    <CSponsor />
-  </section>
-  <section
-    data-section
-    data-scroll-section
-    class="flex flex-col items-center justify-center h-[75vh]"
-  >
-    <h1 class="mb-[4vh] text-2xl md:text-4xl text-white">
-      {$_("carousel.latestNews")}
-    </h1>
-    <CLastNews />
-  </section>
+    <section
+      data-section
+      data-scroll-section
+      class="flex flex-col text-white bg-gray-700 items-center justify-center h-auto pb-20 pt-20"
+    >
+      <h1 class="mb-[4vh] text-2xl md:text-4xl">
+        {$_("serviceGlobalClients")}
+      </h1>
+      <CSponsor />
+    </section>
+    <section
+      data-section
+      data-scroll-section
+      class="flex flex-col items-center justify-center h-[75vh]"
+    >
+      <h1 class="mb-[4vh] text-2xl md:text-4xl text-white">
+        {$_("carousel.latestNews")}
+      </h1>
+      <CLastNews />
+    </section>
+  </div>
+
+  <CFooter bgClass="bg-gray-800" />
 </div>
 
 <style>

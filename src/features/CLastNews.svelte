@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { gsap } from "gsap";
-
+   import { _, locale } from "svelte-i18n";
   let sliderContainer: HTMLElement;
   let currentActiveIndex = 0;
   let slides: Element[] = [];
@@ -112,7 +112,7 @@
 </script>
 
 <div
-  class="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto"
+  class="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto "
 >
   <main
     bind:this={sliderContainer}
@@ -125,10 +125,7 @@
         <blockquote
           class="text-sm md:text-base text-white mb-4 md:mb-6 leading-relaxed"
         >
-          "睿柏与日本百年材料企业 MYK
-          株式会社正式签署战略协议，双方将在淮北共建零碳联合实验室，利用 MYK
-          世界领先的低能耗聚合技术，把睿柏高纯电子级溶剂产品碳排放削减 40 %
-          以上，并面向全球新能源汽车及半导体客户推出可循环包装树脂，首批订单已进入日产与特斯拉供应链，标志着中国绿色高端化工材料首次大规模反向输出日本核心市场。"
+          {$_("lastNews.news1.content")}
         </blockquote>
       </div>
       <div class="flex items-center mt-6 p-2 bg-gray-700 rounded-2xl">
@@ -138,8 +135,8 @@
           class="w-10 h-10 rounded-full mr-3 shrink-0"
         />
         <div>
-          <p class="font-semibold text-white text-sm">睿柏与日本MYK达成合作</p>
-          <p class="text-xs text-white">发布于: 2025-08-02 9:32</p>
+          <p class="font-semibold text-white text-sm">{$_("lastNews.news1.title")}</p>
+          <p class="text-xs text-white">{$_("lastNews.news1.position")}</p>
         </div>
       </div>
     </article>
@@ -151,7 +148,7 @@
         <blockquote
           class="text-sm md:text-base text-white mb-4 md:mb-6 leading-relaxed"
         >
-          "睿柏咨询与FIL人力外包服务达成战略合作：睿柏将依托13年人力资源及软件外包经验，为FIL提供涵盖招聘、派遣、薪酬、合规风控的一站式人力解决方案，助力FIL快速搭建弹性技术团队，降低用工成本30%以上，并同步导入数字化考勤与绩效系统，实现项目人力动态可视化管理，共同加速FIL全球业务扩张。"
+          {$_("lastNews.news2.content")}
         </blockquote>
       </div>
       <div class="flex items-center mt-6 p-2 bg-gray-700 rounded-2xl">
@@ -161,8 +158,8 @@
           class="w-10 h-10 rounded-full mr-3 shrink-0"
         />
         <div>
-          <p class="font-semibold text-white text-sm">睿柏与FIL人力外包服务</p>
-          <p class="text-xs text-white">发布于: 2025-06-12 9:32</p>
+          <p class="font-semibold text-white text-sm">{$_("lastNews.news2.title")}</p>
+          <p class="text-xs text-white">{$_("lastNews.news2.position")}</p>
         </div>
       </div>
     </article>
@@ -174,7 +171,7 @@
         <blockquote
           class="text-sm md:text-base text-white mb-4 md:mb-6 leading-relaxed"
         >
-          "睿柏数据携手阿里云，于近日举办“云原生实时数仓”技术分享会。双方围绕PolarDB-X分布式架构、内存计算加速及AI增强分析展开深度交流，并现场演示秒级扩缩容、TB级即席查询等场景。睿柏RapidsDB与PolarDB完成生态对接，为企业提供一站式实时数据智能方案，共推云上创新。"
+          {$_("lastNews.news3.content")}
         </blockquote>
       </div>
       <div class="flex items-center mt-6 p-2 bg-gray-700 rounded-2xl">
@@ -184,10 +181,8 @@
           class="w-10 h-10 rounded-full mr-3 shrink-0"
         />
         <div>
-          <p class="font-semibold text-white text-sm">
-            睿柏与Alibaba技术分享会
-          </p>
-          <p class="text-xs text-white">发布于: 2025-06-12 9:32</p>
+          <p class="font-semibold text-white text-sm">{$_("lastNews.news3.title")}</p>
+          <p class="text-xs text-white">{$_("lastNews.news3.position")}</p>
         </div>
       </div>
     </article>
@@ -199,9 +194,7 @@
         <blockquote
           class="text-sm md:text-base text-white mb-4 md:mb-6 leading-relaxed"
         >
-          "We needed a solution that could grow with us. The scalability and
-          customization options are impressive. Our portfolio finally reflects
-          the quality of our work, thanks to this fantastic tool."
+          {$_("lastNews.news4.content")}
         </blockquote>
       </div>
       <div class="flex items-center mt-6 p-2 bg-gray-700 rounded-2xl">
@@ -211,8 +204,8 @@
           class="w-10 h-10 rounded-full mr-3 shrink-0"
         />
         <div>
-          <p class="font-semibold text-white text-sm">James Wilson</p>
-          <p class="text-xs text-white">Operations Director</p>
+          <p class="font-semibold text-white text-sm">{$_("lastNews.news4.title")}</p>
+          <p class="text-xs text-white">{$_("lastNews.news4.position")}</p>
         </div>
       </div>
     </article>
@@ -223,9 +216,7 @@
         <blockquote
           class="text-sm md:text-base text-white mb-4 md:mb-6 leading-relaxed"
         >
-          "The mobile responsiveness is seamless, which is crucial in today's
-          market. Our clients love how easy it is to browse our projects on any
-          device. It's been a significant upgrade for our online presence."
+          {$_("lastNews.news5.content")}
         </blockquote>
       </div>
       <div class="flex items-center mt-6 p-2 bg-gray-700 rounded-2xl">
@@ -235,8 +226,8 @@
           class="w-10 h-10 rounded-full mr-3 shrink-0"
         />
         <div>
-          <p class="font-semibold text-white text-sm">Emily Clark</p>
-          <p class="text-xs text-white">Sales Executive</p>
+          <p class="font-semibold text-white text-sm">{$_("lastNews.news5.title")}</p>
+          <p class="text-xs text-white">{$_("lastNews.news5.position")}</p>
         </div>
       </div>
     </article>

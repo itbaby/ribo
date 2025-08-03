@@ -97,6 +97,38 @@
     "headline": "以大连为立足点，以上海、深圳为支撑，以成就客户为中心，提供一站式人才服务",
     "subhead": "以客户为中心，提供一站式人才服务"
   },
+  "lastNews": {
+    "news1": {
+      "title": "睿柏与日本MYK达成合作",
+      "content": "睿柏与日本百年材料企业 MYK 株式会社正式签署战略协议，双方将在淮北共建零碳联合实验室，利用 MYK 世界领先的低能耗聚合技术，把睿柏高纯电子级溶剂产品碳排放削减 40 % 以上，并面向全球新能源汽车及半导体客户推出可循环包装树脂，首批订单已进入日产与特斯拉供应链，标志着中国绿色高端化工材料首次大规模反向输出日本核心市场。",
+      "author": "Sarah Johnson",
+      "position": "发布于: 2025-08-02 9:32"
+    },
+    "news2": {
+      "title": "睿柏与FIL人力外包服务",
+      "content": "睿柏咨询与FIL人力外包服务达成战略合作：睿柏将依托13年人力资源及软件外包经验，为FIL提供涵盖招聘、派遣、薪酬、合规风控的一站式人力解决方案，助力FIL快速搭建弹性技术团队，降低用工成本30%以上，并同步导入数字化考勤与绩效系统，实现项目人力动态可视化管理，共同加速FIL全球业务扩张。",
+      "author": "Michael Brown",
+      "position": "发布于: 2025-06-12 9:32"
+    },
+    "news3": {
+      "title": "睿柏与Alibaba技术分享会",
+      "content": "睿柏数据携手阿里云，于近日举办\"云原生实时数仓\"技术分享会。双方围绕PolarDB-X分布式架构、内存计算加速及AI增强分析展开深度交流，并现场演示秒级扩缩容、TB级即席查询等场景。睿柏RapidsDB与PolarDB完成生态对接，为企业提供一站式实时数据智能方案，共推云上创新。",
+      "author": "Linda Davis",
+      "position": "发布于: 2025-06-12 9:32"
+    },
+    "news4": {
+      "title": "James Wilson",
+      "content": "We needed a solution that could grow with us. The scalability and customization options are impressive. Our portfolio finally reflects the quality of our work, thanks to this fantastic tool.",
+      "author": "James Wilson",
+      "position": "Operations Director"
+    },
+    "news5": {
+      "title": "Emily Clark",
+      "content": "The mobile responsiveness is seamless, which is crucial in today's market. Our clients love how easy it is to browse our projects on any device. It's been a significant upgrade for our online presence.",
+      "author": "Emily Clark",
+      "position": "Sales Executive"
+    }
+  },
   "serviceGlobalClients": "服务全球客户",
   "footer": {
     "brand": {

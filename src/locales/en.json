@@ -97,6 +97,38 @@
     "headline": "[TRANSLATION NEEDED] Based in Dalian, supported by Shanghai and Shenzhen, centered on customer success, providing one-stop talent services",
     "subhead": "[TRANSLATION NEEDED] Customer-centric, providing one-stop talent services"
   },
+  "lastNews": {
+    "news1": {
+      "title": "Ribo Partners with Japanese MYK",
+      "content": "Ribo has officially signed a strategic agreement with MYK, a century-old Japanese materials company. Both parties will jointly build a zero-carbon laboratory in Huaibei, utilizing MYK's world-leading low-energy polymerization technology to reduce carbon emissions of Ribo's high-purity electronic-grade solvent products by over 40%. They will also launch recyclable packaging resins for global new energy vehicles and semiconductor customers, with the first orders already entering Nissan and Tesla's supply chains. This marks the first large-scale reverse export of Chinese green high-end chemical materials to Japan's core market.",
+      "author": "Sarah Johnson",
+      "position": "Published on: 2025-08-02 9:32"
+    },
+    "news2": {
+      "title": "Ribo Partners with FIL Staffing Services",
+      "content": "Ribo Consulting has entered a strategic partnership with FIL staffing services. Leveraging 13 years of experience in human resources and software outsourcing, Ribo will provide FIL with a one-stop human resources solution covering recruitment, dispatch, compensation, and compliance risk control. This will help FIL quickly build flexible technical teams, reduce labor costs by over 30%, and simultaneously implement digital attendance and performance systems for dynamic visualization management of project personnel, jointly accelerating FIL's global business expansion.",
+      "author": "Michael Brown",
+      "position": "Published on: 2025-06-12 9:32"
+    },
+    "news3": {
+      "title": "Ribo Data Technical Sharing with Alibaba Cloud",
+      "content": "Ribo Data recently held a technical sharing session on \"Cloud-Native Real-Time Data Warehouse\" with Alibaba Cloud. Both parties conducted in-depth exchanges around PolarDB-X distributed architecture, in-memory computing acceleration, and AI-enhanced analytics, demonstrating scenarios such as second-level scaling and TB-level ad-hoc queries. Ribo's RapidsDB has completed ecosystem integration with PolarDB, providing enterprises with a one-stop real-time data intelligence solution and jointly promoting cloud innovation.",
+      "author": "Linda Davis",
+      "position": "Published on: 2025-06-12 9:32"
+    },
+    "news4": {
+      "title": "James Wilson",
+      "content": "We needed a solution that could grow with us. The scalability and customization options are impressive. Our portfolio finally reflects the quality of our work, thanks to this fantastic tool.",
+      "author": "James Wilson",
+      "position": "Operations Director"
+    },
+    "news5": {
+      "title": "Emily Clark",
+      "content": "The mobile responsiveness is seamless, which is crucial in today's market. Our clients love how easy it is to browse our projects on any device. It's been a significant upgrade for our online presence.",
+      "author": "Emily Clark",
+      "position": "Sales Executive"
+    }
+  },
   "serviceGlobalClients": "Serving Global Clients",
   "footer": {
     "brand": {

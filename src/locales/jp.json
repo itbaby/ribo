@@ -97,6 +97,38 @@
     "headline": "[翻訳が必要] 大連を拠点とし、上海と深センに支えられ、顧客の成功を中心としたワンストップ人材サービスを提供",
     "subhead": "[翻訳が必要] 顧客中心のワンストップ人材サービスを提供"
   },
+  "lastNews": {
+    "news1": {
+      "title": "睿柏と日本のMYKが提携",
+      "content": "睿柏は、日本の老舗材料企業MYK株式会社と正式に戦略協定を締結しました。両社は淮北にゼロカーボン合同実験室を建設し、MYKの世界最先端の低エネルギー消費ポリマー化技術を活用して、睿柏の高純度電子級溶剤製品の炭素排出量を40%以上削減します。また、グローバルな新エネルギー自動車および半導体顧客向けにリサイクル可能な包装樹脂を展開し、初回の受注はすでに日産とテスラのサプライチェーンに進入しています。これは中国のグリーンハイエンド化学材料が日本の主要市場へ大規模に逆輸出された初めての事例です。",
+      "author": "Sarah Johnson",
+      "position": "公開日: 2025-08-02 9:32"
+    },
+    "news2": {
+      "title": "睿柏とFIL人材アウトソーシングサービスの戦略提携",
+      "content": "睿柏コンサルティングは、FIL人材アウトソーシングサービスとの戦略的パートナーシップを締結しました。13年の人材資源およびソフトウェアアウトソーシング経験を活かし、睿柏はFILに採用、派遣、給与、コンプライアンスリスク管理を網羅するワンストップ人材ソリューションを提供し、FILが柔軟な技術チームを迅速に構築し、人件費を30%以上削減できるよう支援します。同時に、デジタル勤怠およびパフォーマンスシステムを導入し、プロジェクト人材の動的な可視化管理を実現し、FILのグローバル事業拡大を共同で加速します。",
+      "author": "Michael Brown",
+      "position": "公開日: 2025-06-12 9:32"
+    },
+    "news3": {
+      "title": "睿柏データとアリババクラウドの技術共有会",
+      "content": "睿柏データは最近、アリババクラウドとの\"クラウドネイティブリアルタイムデータウェアハウス\"に関する技術共有会を開催しました。両社はPolarDB-X分散アーキテクチャ、インメモリコンピューティング高速化、AI強化分析について深く交流し、秒単位のスケーリング、TB級アドホッククエリなどのシナリオを現場でデモンストレーションしました。睿柏のRapidsDBはPolarDBとのエコシステム統合を完了し、企業にワンストップのリアルタイムデータインテリジェンスソリューションを提供し、クラウド上のイノベーションを共同推進します。",
+      "author": "Linda Davis",
+      "position": "公開日: 2025-06-12 9:32"
+    },
+    "news4": {
+      "title": "James Wilson",
+      "content": "We needed a solution that could grow with us. The scalability and customization options are impressive. Our portfolio finally reflects the quality of our work, thanks to this fantastic tool.",
+      "author": "James Wilson",
+      "position": "Operations Director"
+    },
+    "news5": {
+      "title": "Emily Clark",
+      "content": "The mobile responsiveness is seamless, which is crucial in today's market. Our clients love how easy it is to browse our projects on any device. It's been a significant upgrade for our online presence.",
+      "author": "Emily Clark",
+      "position": "Sales Executive"
+    }
+  },
   "serviceGlobalClients": "グローバルクライアントへのサービス",
   "footer": {
     "brand": {
