@@ -9,8 +9,6 @@
   import CSponsor from "./CSponsor.svelte";
   import CFooter from "./CFooter.svelte";
   import CLastNews from "./CLastNews.svelte";
-  import earth from "../assets/earth.png";
-  import aboutus from "../assets/aboutus.jpg";
 
   let languages = {
     "fi-us": "en",
@@ -98,7 +96,7 @@
       data-section
       data-scroll-section
       class="flex items-center justify-center h-screen bg-cover bg-center md:w-full 0"
-      style="background-image: url('{aboutus}')"
+      style="background-image: url('/src/assets/aboutus.jpg')"
     >
       <CText />
     </section>
@@ -107,7 +105,7 @@
       data-section
       data-scroll-section
       class="w-full mx-auto bg-cover bg-center flex flex-col items-center justify-center h-[80vh] py-40"
-      style="background-image: url('{earth}')"
+      style="background-image: url('/src/assets/earth.png')"
     >
       <div
         class="text-white w-10/12 mx-auto text-2xl animate-pulse md:text-4xl text-center"
