@@ -80,7 +80,6 @@
 </div>
 
 <style lang="scss">
-  @import "tailwindcss";
   $animation-timing: 27s;
   $carousel-items: 9;
   $animation-delay-fraction: calc($animation-timing / $carousel-items);
