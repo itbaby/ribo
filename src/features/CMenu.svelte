@@ -359,7 +359,7 @@
           >
             <ul class="py-2 text-sm md:py-2 whitespace-nowrap">
               <li>
-                <a href="#" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
+                <a href="/intro" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
                   >{$_("menu.companyIntroduction")}</a
                 >
               </li>

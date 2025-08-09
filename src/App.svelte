@@ -9,6 +9,7 @@
   import CContact from "./features/CContact.svelte";
   import CInnovation from "./features/CInnovation.svelte";
   import CHiring from "./features/CHiring.svelte";
+    import CIntro from "./features/CIntro.svelte";
 </script>
 
 <Router>
@@ -51,6 +52,12 @@
   <Route path="/contact" let:params>
     <div class="pt-16">
       <CContact />
+    </div>
+    <CFooter />
+  </Route>
+   <Route path="/intro" let:params>
+    <div class="pt-16">
+      <CIntro />
     </div>
     <CFooter />
   </Route>
