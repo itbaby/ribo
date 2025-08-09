@@ -21,3 +21,10 @@ Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
 Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
 
+功能	工具/模块	说明	
+主题提示符	Oh-My-Posh	提供 Git 状态、路径、执行时间等丰富信息	
+图标支持	Terminal-Icons	为文件/目录添加图标	
+语法高亮 & 自动补全	PSReadLine	类似 zsh 的历史预测、Tab 补全	
+Git 状态提示	posh-git	Git 分支、状态、自动补全	
+快速跳转目录	ZLocation	类似 autojump 或 zsh-z	
+字体支持	Nerd Fonts（如 MesloLGM NF）	显示图标不方块	
