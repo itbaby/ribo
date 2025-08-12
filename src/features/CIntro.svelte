@@ -1,85 +1,93 @@
+<script>
+  import prue_dark from '../assets/prue_dark.jpg';
+</script>
+
 <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
-  <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80" alt="" class="absolute inset-0 -z-10 size-full object-cover object-right md:object-center" />
-  <div aria-hidden="true" class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl">
-    <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" class="aspect-1097/845 w-274.25 bg-linear-to-tr from-[#ff4694] to-[#776fff] opacity-20"></div>
-  </div>
-  <div aria-hidden="true" class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:-top-112 sm:ml-16 sm:translate-x-0 sm:transform-gpu">
-    <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" class="aspect-1097/845 w-274.25 bg-linear-to-tr from-[#ff4694] to-[#776fff] opacity-20"></div>
-  </div>
+  <img src="{prue_dark}" alt="" class="absolute inset-0 -z-10 size-full object-cover object-right md:object-center" />
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-2xl lg:mx-0">
-      <h2 class="text-5xl font-semibold tracking-tight text-white sm:text-7xl">Work with us</h2>
-      <p class="mt-8 text-lg font-medium text-pretty text-gray-300 sm:text-xl/8">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat.</p>
-    </div>
-    <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-      <div class="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-white sm:grid-cols-2 md:flex lg:gap-x-10">
-        <a href="#">Open roles <span aria-hidden="true">&rarr;</span></a>
-        <a href="#">Internship program <span aria-hidden="true">&rarr;</span></a>
-        <a href="#">Our values <span aria-hidden="true">&rarr;</span></a>
-        <a href="#">Meet our leadership <span aria-hidden="true">&rarr;</span></a>
-      </div>
-      <dl class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
-        <div class="flex flex-col-reverse gap-1">
-          <dt class="text-base/7 text-gray-300">Offices worldwide</dt>
-          <dd class="text-4xl font-semibold tracking-tight text-white">12</dd>
-        </div>
-        <div class="flex flex-col-reverse gap-1">
-          <dt class="text-base/7 text-gray-300">Full-time colleagues</dt>
-          <dd class="text-4xl font-semibold tracking-tight text-white">300+</dd>
-        </div>
-        <div class="flex flex-col-reverse gap-1">
-          <dt class="text-base/7 text-gray-300">Hours per week</dt>
-          <dd class="text-4xl font-semibold tracking-tight text-white">40</dd>
-        </div>
-        <div class="flex flex-col-reverse gap-1">
-          <dt class="text-base/7 text-gray-300">Paid time off</dt>
-          <dd class="text-4xl font-semibold tracking-tight text-white">Unlimited</dd>
-        </div>
-      </dl>
+      <h2 class="text-5xl font-semibold tracking-tight text-white sm:text-7xl">公司介绍</h2>
+      <p class="mt-8 text-lg font-medium text-pretty text-gray-300 sm:text-xl/8">
+        睿柏咨询成立于2011年，作为综合性人才生态服务商，我们以"连接全球智慧，赋能人才价值"为使命，构建了覆盖人力资源服务、数字化转型解决方案及业务流程外包的三大战略板块。
+      </p>
+      <p class="mt-4 text-lg font-medium text-pretty text-gray-300 sm:text-xl/8">
+        旗下睿柏咨询与睿程科技双核驱动，已为全球10+国家地区的60余家企业提供专业服务，累计输送高端人才超10,000人次。
+      </p>
     </div>
   </div>
 </div>
+
 <div class="overflow-hidden bg-gray-900 py-24 sm:py-32">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+    <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+      <!-- Resource Integration -->
       <div class="lg:pt-4 lg:pr-8">
         <div class="lg:max-w-lg">
-          <h2 class="text-base/7 font-semibold text-indigo-400">Deploy faster</h2>
-          <p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl">A better workflow</p>
-          <p class="mt-6 text-lg/8 text-gray-300">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</p>
-          <dl class="mt-10 max-w-xl space-y-8 text-base/7 text-gray-400 lg:max-w-none">
-            <div class="relative pl-9">
-              <dt class="inline font-semibold text-white">
-                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="absolute top-1 left-1 size-5 text-indigo-400">
-                  <path d="M5.5 17a4.5 4.5 0 0 1-1.44-8.765 4.5 4.5 0 0 1 8.302-3.046 3.5 3.5 0 0 1 4.504 4.272A4 4 0 0 1 15 17H5.5Zm3.75-2.75a.75.75 0 0 0 1.5 0V9.66l1.95 2.1a.75.75 0 1 0 1.1-1.02l-3.25-3.5a.75.75 0 0 0-1.1 0l-3.25 3.5a.75.75 0 1 0 1.1 1.02l1.95-2.1v4.59Z" clip-rule="evenodd" fill-rule="evenodd" />
-                </svg>
-                Push to deploy.
-              </dt>
-              <dd class="inline">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</dd>
-            </div>
-            <div class="relative pl-9">
-              <dt class="inline font-semibold text-white">
-                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="absolute top-1 left-1 size-5 text-indigo-400">
-                  <path d="M10 1a4.5 4.5 0 0 0-4.5 4.5V9H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-.5V5.5A4.5 4.5 0 0 0 10 1Zm3 8V5.5a3 3 0 1 0-6 0V9h6Z" clip-rule="evenodd" fill-rule="evenodd" />
-                </svg>
-                SSL certificates.
-              </dt>
-              <dd class="inline">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.</dd>
-            </div>
-            <div class="relative pl-9">
-              <dt class="inline font-semibold text-white">
-                <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="absolute top-1 left-1 size-5 text-indigo-400">
-                  <path d="M4.632 3.533A2 2 0 0 1 6.577 2h6.846a2 2 0 0 1 1.945 1.533l1.976 8.234A3.489 3.489 0 0 0 16 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234Z" />
-                  <path d="M4 13a2 2 0 1 0 0 4h12a2 2 0 1 0 0-4H4Zm11.24 2a.75.75 0 0 1 .75-.75H16a.75.75 0 0 1 .75.75v.01a.75.75 0 0 1-.75.75h-.01a.75.75 0 0 1-.75-.75V15Zm-2.25-.75a.75.75 0 0 0-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 0 0 .75-.75V15a.75.75 0 0 0-.75-.75h-.01Z" clip-rule="evenodd" fill-rule="evenodd" />
-                </svg>
-                Database backups.
-              </dt>
-              <dd class="inline">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</dd>
-            </div>
-          </dl>
+          <h2 class="text-base/7 font-semibold text-indigo-400">资源整合</h2>
+          <p class="mt-2 text-2xl font-semibold tracking-tight text-pretty text-white sm:text-3xl">Resource Integration</p>
+          <p class="mt-4 text-lg/8 text-gray-300">构建全球人才生态网络</p>
+          <ul class="mt-6 space-y-4 text-base/7 text-gray-400">
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>建立跨行业、跨地域的人才供应链</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>搭建政府、企业、高校三方合作平台</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>搭建全球人才节点</span>
+            </li>
+          </ul>
         </div>
       </div>
-      <img width="2432" height="1442" src="https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png" alt="Product screenshot" class="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-white/10 sm:w-228 md:-ml-4 lg:-ml-0" />
+
+      <!-- Intelligent Empowerment -->
+      <div class="lg:pt-4 lg:pr-8">
+        <div class="lg:max-w-lg">
+          <h2 class="text-base/7 font-semibold text-indigo-400">智能赋能</h2>
+          <p class="mt-2 text-2xl font-semibold tracking-tight text-pretty text-white sm:text-3xl">Intelligent Empowerment</p>
+          <p class="mt-4 text-lg/8 text-gray-300">用科技重塑人力资源价值</p>
+          <ul class="mt-6 space-y-4 text-base/7 text-gray-400">
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>AI驱动的人才匹配与预测系统</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>区块链技术实现简历溯源与背调</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>大数据生成行业核心报告</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Boundary Breaking -->
+      <div class="lg:pt-4 lg:pr-8">
+        <div class="lg:max-w-lg">
+          <h2 class="text-base/7 font-semibold text-indigo-400">边界突破</h2>
+          <p class="mt-2 text-2xl font-semibold tracking-tight text-pretty text-white sm:text-3xl">Boundary Breaking</p>
+          <p class="mt-4 text-lg/8 text-gray-300">打破传统人力资源服务局限</p>
+          <ul class="mt-6 space-y-4 text-base/7 text-gray-400">
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>开创「人才派遣+技术咨询」复合服务模式</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>构建跨国人才自由流动解决方案</span>
+            </li>
+            <li class="flex items-start">
+              <span class="mr-2">•</span>
+              <span>打破壁垒争做新领域开拓者</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -10,6 +10,7 @@
   import CInnovation from "./features/CInnovation.svelte";
   import CHiring from "./features/CHiring.svelte";
     import CIntro from "./features/CIntro.svelte";
+  import COutSource from "./features/COutSource.svelte";
 </script>
 
 <Router>
@@ -58,6 +59,12 @@
    <Route path="/intro" let:params>
     <div class="pt-16">
       <CIntro />
+    </div>
+    <CFooter />
+  </Route>
+   <Route path="/outsourcing" let:params>
+    <div class="pt-16">
+      <COutSource />
     </div>
     <CFooter />
   </Route>
