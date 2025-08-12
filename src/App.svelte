@@ -9,8 +9,9 @@
   import CContact from "./features/CContact.svelte";
   import CInnovation from "./features/CInnovation.svelte";
   import CHiring from "./features/CHiring.svelte";
-    import CIntro from "./features/CIntro.svelte";
-  import COutSource from "./features/COutSource.svelte";
+  import CIntro from "./features/CIntro.svelte";
+  import CResources from "./features/CResources.svelte";
+  import COutSourcing from "./features/COutSourcing.svelte";
 </script>
 
 <Router>
@@ -56,15 +57,22 @@
     </div>
     <CFooter />
   </Route>
-   <Route path="/intro" let:params>
+  <Route path="/intro" let:params>
     <div class="pt-16">
       <CIntro />
     </div>
     <CFooter />
   </Route>
-   <Route path="/outsourcing" let:params>
+  <Route path="/resources" let:params>
     <div class="pt-16">
-      <COutSource />
+      <CResources />
+    </div>
+    <CFooter />
+  </Route>
+    <Route path="/outsourcing" let:params>
+
+    <div class="pt-16">
+      <COutSourcing />
     </div>
     <CFooter />
   </Route>
