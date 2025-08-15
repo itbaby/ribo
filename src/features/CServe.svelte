@@ -85,7 +85,7 @@
 
 <div
   data-scroll-container
-  class="bg-gray-900 bg-cover bg-center flex flex-col justify-center justify-around"
+  class="bg-gray-900 bg-cover bg-center flex flex-col justify-center "
   style="background-image: url('/src/assets/earth.png')"
 >
   <section

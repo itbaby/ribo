@@ -88,7 +88,7 @@
             data-aos="fade-up"
             data-aos-delay="{category.id * 100}"
           >
-            <div class="text-4xl mb-4">{category.icon}</div>
+            <div class="text-5xl mb-4 transition-transform duration-300 hover:scale-110">{category.icon}</div>
             <h3 class="text-xl font-bold mb-3 text-blue-400">{category.title}</h3>
             <p class="text-gray-300">{category.description}</p>
           </div>

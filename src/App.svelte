@@ -12,6 +12,7 @@
   import CIntro from "./features/CIntro.svelte";
   import CResources from "./features/CResources.svelte";
   import COutSourcing from "./features/COutSourcing.svelte";
+  import CTechCategory from "./features/CTechCategory.svelte";
 </script>
 
 <Router>
@@ -73,6 +74,12 @@
 
     <div class="pt-16">
       <COutSourcing />
+    </div>
+    <CFooter />
+  </Route>
+  <Route path="/tech-category" let:params>
+    <div class="pt-16 bg-gray-800">
+      <CTechCategory />
     </div>
     <CFooter />
   </Route>
