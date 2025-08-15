@@ -180,5 +180,123 @@
       "marketingMedia": "Marketing",
       "businessConsulting": "Business :" 
     }
+  },
+  "resources": {
+    "hero": {
+      "title": "Staffing Services",
+      "subtitle": "We provide professional staffing solutions to quickly match the best-fit talent for your enterprise and drive business growth",
+      "button": "Learn More"
+    },
+    "categories": {
+      "title": "Our Service Categories",
+      "items": [
+        {
+          "title": "Technical Talent Dispatch",
+          "description": "Providing various technical talents for enterprises, including development, testing, and operations",
+          "icon": "💻"
+        },
+        {
+          "title": "Project Outsourcing Services",
+          "description": "Undertaking various IT project developments, offering end-to-end services from requirement analysis to launch and operations",
+          "icon": "📦"
+        },
+        {
+          "title": "Human Resources Consulting",
+          "description": "Providing consulting services such as HR planning, recruitment strategy, and compensation system design",
+          "icon": "📊"
+        },
+        {
+          "title": "Corporate Training Services",
+          "description": "Customizing various technical and management training courses for enterprises",
+          "icon": "🧠"
+        }
+      ]
+    },
+    "services": {
+      "title": "Detailed Service Offerings",
+      "items": [
+        {
+          "title": "Software Development Talent Dispatch",
+          "description": "Providing frontend, backend, and full-stack development talents to meet project demands"
+        },
+        {
+          "title": "Testing and Quality Assurance",
+          "description": "Providing professional testing talents to ensure product quality and user experience"
+        },
+        {
+          "title": "IT Operations Support",
+          "description": "Providing services such as server management, network maintenance, and security protection"
+        },
+        {
+          "title": "Digital Transformation Consulting",
+          "description": "Helping enterprises formulate digital transformation strategies and optimize business processes"
+        }
+      ]
+    },
+    "process": {
+      "title": "End-to-End Dispatch Process",
+      "steps": [
+        {
+          "title": "Needs Assessment",
+          "description": "Enterprise research, job profiling, and customized recruitment plans"
+        },
+        {
+          "title": "Intelligent Screening",
+          "description": "Talent granularity model, tag-based big data model, and resume traceability"
+        },
+        {
+          "title": "Compliance Management",
+          "description": "Complete contract system, embedded labor laws, and compliant payroll/social security handling"
+        },
+        {
+          "title": "Onboarding Management",
+          "description": "Pre-employment training, customized onboarding kits, and client corporate culture handbook"
+        },
+        {
+          "title": "On-the-Job Management",
+          "description": "Quarterly talent feedback mechanism and crisis response channel"
+        },
+        {
+          "title": "Offboarding Management",
+          "description": "Resignation early warning, contract expiration/renewal operations, and client data decommissioning"
+        }
+      ]
+    },
+    "training": {
+      "title": "Training System for Dispatched Personnel",
+      "levels": [
+        {
+          "title": "Foundation - Pre-employment Bootcamp",
+          "items": [
+            "Mandatory courses on industry compliance",
+            "Client-specific knowledge base",
+            "Cross-cultural communication salons"
+          ]
+        },
+        {
+          "title": "Intermediate - On-the-Job Improvement",
+          "items": [
+            "Mandatory courses on data security and workplace anti-discrimination",
+            "One-on-one guidance from senior experts",
+            "Annual skill upgrade subsidies"
+          ]
+        },
+        {
+          "title": "Advanced - Specialized Breakthrough",
+          "items": [
+            "Leadership acceleration program for high-potential dispatched personnel",
+            "Retention plan with flexible role transitions for high-skilled talents"
+          ]
+        }
+      ]
+    },
+    "caseStudy": {
+      "title": "Client Case Study",
+      "case": {
+        "title": "A Foreign Asset Management Company",
+        "description": "Commissioned by a foreign asset management company, we efficiently completed the targeted dispatch of 120 IT engineers across the Asia-Pacific region within a 3-month cycle, achieving a 99% training pass rate. At the initial phase of the project, our team engaged deeply with the client to clarify specific job requirements in areas such as cloud computing, software development, and system maintenance across regional branches in the Asia-Pacific. We simultaneously formulated a three-dimensional screening standard covering technical capability, language proficiency, and cross-cultural collaboration, and precisely identified over 200 candidates from the global talent pool to enter the reserved pipeline. During the 4-week pre-employment training phase, we designed a customized curriculum based on the regional technical architecture features, including core modules such as microservices architecture practice, multi-language development environment adaptation, and regional data compliance standards, while introducing a real-time online assessment system for staged capability calibration."
+      },
+      "button": "View More Cases"
+    }
   }
 }
