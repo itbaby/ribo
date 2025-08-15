@@ -1,8 +1,9 @@
 <script>
-  import { onMount } from 'svelte';
+  import { onMount, onDestroy } from 'svelte';
   import { gsap } from 'gsap';
 
   let activeTab = 1;
+  let interval;
 
   // @ts-ignore
   function switchTab(tabNumber) {
@@ -34,6 +35,18 @@
     if(initialTabContent) {
       gsap.set(initialTabContent, { opacity: 1 });
     }
+
+    interval = setInterval(() => {
+      let nextTab = activeTab + 1;
+      if (nextTab > 3) {
+        nextTab = 1;
+      }
+      switchTab(nextTab);
+    }, 3000);
+  });
+
+  onDestroy(() => {
+    clearInterval(interval);
   });
 </script>
 
