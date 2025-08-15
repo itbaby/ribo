@@ -33,7 +33,7 @@
 
 <div>
   <div
-    class="panel flex h-screen items-center justify-center"
+    class="panel"
     style="background-image: url('{topbg}'); background-repeat: no-repeat; background-size: cover;"
   >
     <div class="marquee-container relative h-[60vh] w-full py-8">
@@ -45,11 +45,11 @@
           out:fade={{ duration: 2000 }}
         >
           <h1
-            class="split text-white text-4xl md:text-5xl font-medium text-uppercase tracking-wider"
+            class="split text-4xl md:text-5xl font-medium text-uppercase tracking-wider"
           >
             {$_("carousel.techDrivenFuture")}
           </h1>
-          <h2 class="split text-white text-xl md:text-2xl">
+          <h2 class="split text-xl md:text-2xl">
             {$_("carousel.techDescription")}
           </h2>
         </div>
@@ -63,11 +63,11 @@
           out:fade={{ duration: 2000 }}
         >
           <h1
-            class="split text-white text-4xl md:text-5xl font-medium text-uppercase tracking-wider"
+            class="split text-4xl md:text-5xl font-medium text-uppercase tracking-wider"
           >
             {$_("carousel.talentPool")}
           </h1>
-          <ul class="split text-white text-xl md:text-2xl space-y-4">
+          <ul class="split text-xl md:text-2xl space-y-4">
             <li>• {$_("carousel.verticalCoverage")}</li>
             <li>• {$_("carousel.preciseMatching")}</li>
             <li>• {$_("carousel.expertTeam")}</li>
@@ -83,11 +83,11 @@
           out:fade={{ duration: 2000 }}
         >
           <h1
-            class="split text-white text-4xl md:text-5xl font-medium text-uppercase tracking-wider"
+            class="split text-4xl md:text-5xl font-medium text-uppercase tracking-wider"
           >
             {$_("carousel.fullService")}
           </h1>
-          <ul class="split text-white text-xl md:text-2xl space-y-2">
+          <ul class="split text-xl md:text-2xl space-y-2">
             <li>• {$_("carousel.executiveSearch")}</li>
             <li>• {$_("carousel.staffing")}</li>
             <li>• {$_("carousel.itoService")}</li>
@@ -98,14 +98,14 @@
   </div>
   <div
     id="headhunting"
-    class="panel flex h-screen items-center justify-center"
+    class="panel"
     style="background-image: url('{earch}'); background-repeat: no-repeat; background-position:center; background-size: 100% auto;"
   ></div>
   <div
-    class="panel flex h-screen items-center justify-center"
+    class="panel"
     style="background-image: url('{secondary}'); background-repeat: no-repeat; background-size: cover;"
   >
-    <div class="panel flex h-screen items-center justify-center flex-col">
+    <div class="panel flex-col">
       <!-- First Row with Caption -->
       <div class="w-full px-4 py-8 text-center">
         <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800">
@@ -120,10 +120,10 @@
     </div>
   </div>
   <div
-    class="panel flex h-screen items-center justify-center bg-gray-300"
+    class="panel bg-gray-300"
     style="background-image: url('{service}'); background-repeat: no-repeat; background-size: cover;"
   >
-    <div class="panel flex h-screen items-center justify-center flex-col">
+    <div class="panel flex-col">
       <!-- First Row with Caption -->
       <div class="w-full px-4 py-8 text-center">
         <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800">

@@ -182,7 +182,7 @@
   <!-- Services Section -->
   <section id="services" class="py-20 bg-gray-900 relative">
     <div class="container mx-auto px-4">
-      <div class="text-center mb-16 animate-on-scroll opacity-0 translate-y-20">
+      <div class="text-center mb-16 animate-on-scroll">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">服务范围</h2>
         <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
         <p class="text-gray-400 max-w-2xl mx-auto">
@@ -192,7 +192,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {#each services as service, index}
-          <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-500/50 transition-all group animate-on-scroll opacity-0 translate-y-20" style="transition-delay: {index * 100}ms">
+          <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-500/50 transition-all group animate-on-scroll">
             <div class="w-14 h-14 bg-gray-700 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-600 transition-colors">
               <span class="text-2xl">{service.icon}</span>
             </div>
@@ -204,7 +204,7 @@
 
       <!-- Coverage Areas -->
       <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6 animate-on-scroll opacity-0 translate-y-20">
+        <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6 animate-on-scroll">
           <h3 class="text-xl font-semibold mb-4 flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -223,7 +223,7 @@
           </ul>
         </div>
 
-        <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6 animate-on-scroll opacity-0 translate-y-20" style="transition-delay: 100ms">
+        <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6 animate-on-scroll">
           <h3 class="text-xl font-semibold mb-4 flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -233,7 +233,7 @@
           <p class="text-gray-300">全球10+国家地区，本地化服务团队支持</p>
         </div>
 
-        <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6 animate-on-scroll opacity-0 translate-y-20" style="transition-delay: 200ms">
+        <div class="bg-gray-800/50 border border-gray-700 rounded-xl p-6 animate-on-scroll">
           <h3 class="text-xl font-semibold mb-4 flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -253,7 +253,7 @@
     <div class="absolute bottom-0 left-0 w-1/4 h-1/2 bg-purple-900/10 rounded-tr-full"></div>
 
     <div class="container mx-auto px-4 relative z-10">
-      <div class="text-center mb-16 animate-on-scroll opacity-0 translate-y-20">
+      <div class="text-center mb-16 animate-on-scroll">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">核心优势</h2>
         <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
         <p class="text-gray-400 max-w-2xl mx-auto">
@@ -263,7 +263,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {#each advantages as advantage, index}
-          <div class={`rounded-xl p-6 overflow-hidden group animate-on-scroll opacity-0 translate-y-20 ${index === 2 ? 'md:col-span-2 lg:col-span-1' : ''}`} style="transition-delay: {index * 100}ms">
+          <div class={`rounded-xl p-6 overflow-hidden group animate-on-scroll ${index === 2 ? 'md:col-span-2 lg:col-span-1' : ''}"}>
             <div class="absolute inset-0 bg-gradient-to-br {advantage.color} opacity-10 group-hover:opacity-20 transition-opacity"></div>
             <div class="relative z-10">
               <h3 class="text-xl font-semibold mb-3">{advantage.title}</h3>
@@ -291,7 +291,7 @@
         <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-gray-700 transform -translate-x-1/2"></div>
 
         {#each processSteps as step, index}
-          <div class={`flex flex-col md:flex-row items-center mb-12 animate-on-scroll opacity-0 translate-y-20 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`} style="transition-delay: {index * 150}ms">
+          <div class={`flex flex-col md:flex-row items-center mb-12 animate-on-scroll ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}"}>
             <!-- Timeline Dot -->
             <div class="hidden md:flex absolute left-1/2 w-6 h-6 rounded-full bg-blue-500 transform -translate-x-1/2 z-10"></div>
 
@@ -326,7 +326,7 @@
     </div>
 
     <div class="container mx-auto px-4 relative z-10">
-      <div class="max-w-4xl mx-auto bg-gradient-to-br from-blue-900/40 to-purple-900/40 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-blue-500/20 animate-on-scroll opacity-0 translate-y-20">
+      <div class="max-w-4xl mx-auto bg-gradient-to-br from-blue-900/40 to-purple-900/40 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-blue-500/20 animate-on-scroll">
         <div class="text-center mb-8">
           <h2 class="text-3xl md:text-4xl font-bold mb-4">准备好开始了吗？</h2>
           <p class="text-gray-300 text-lg">
@@ -438,7 +438,5 @@
   }
 
   .animate-on-scroll {
-    opacity: 0;
-    transform: translateY(50px);
   }
 </style>
