@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
   import { onMount } from 'svelte';
   import { initAOS } from '../config/aos-config';
   import { _ } from 'svelte-i18n';

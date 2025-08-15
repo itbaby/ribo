@@ -72,7 +72,7 @@
   </Route>
     <Route path="/outsourcing" let:params>
 
-    <div class="pt-16">
+    <div class="pt-16 bg-gray-900">
       <COutSourcing />
     </div>
     <CFooter />
