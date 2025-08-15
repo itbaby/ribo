@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import gsap from 'gsap';
 
-	let activeTab = 1;
+	let activeTab = $state(1);
 	let imageContainers: HTMLDivElement[] = [];
 
 	const tabs = [

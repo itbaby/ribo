@@ -1,6 +1,6 @@
 <script lang="ts">
   import { _ } from "svelte-i18n";
-  export let bgClass: string = "bg-gray-900";
+  let { bgClass = "bg-gray-900" } = $props();
 </script>
 
 <div class="w-full {bgClass}">

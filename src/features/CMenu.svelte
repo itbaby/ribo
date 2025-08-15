@@ -1,13 +1,13 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { _, locale } from "svelte-i18n";
-  let isLanguageDropdownOpen = false;
-  let isMobileMenuOpen = false;
-  let isServeDropdownOpen = false;
-  let isCreativeDropdownOpen = false;
-  let isAboutusDropdownOpen = false;
-  let selectedLanguage = "中文 (CN)";
-  let selectedFlag = "fi-cn";
+  let isLanguageDropdownOpen = $state(false);
+  let isMobileMenuOpen = $state(false);
+  let isServeDropdownOpen = $state(false);
+  let isCreativeDropdownOpen = $state(false);
+  let isAboutusDropdownOpen = $state(false);
+  let selectedLanguage = $state("中文 (CN)");
+  let selectedFlag = $state("fi-cn");
   let languages = {
     "fi-us": "en",
     "fi-jp": "jp",
