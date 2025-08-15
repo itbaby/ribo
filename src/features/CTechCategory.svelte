@@ -59,6 +59,7 @@
 </script>
 
 <!-- Features -->
+ <!-- svelte-ignore a11y_img_redundant_alt -->
 <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
 	<div class="relative p-6 md:p-16">
 		<!-- Grid -->
@@ -134,6 +135,7 @@
 					<div>
 						{#each tabs as tab, i}
 							<div bind:this={imageContainers[i]}>
+								
 								<img
 									class="shadow-xl hover:bg-gray-900 rounded-xl dark:shadow-gray-900/20"
 									src={tab.image}
