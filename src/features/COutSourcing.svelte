@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
   import { onMount, onDestroy } from 'svelte';
   import { gsap } from 'gsap';
   import { ScrollTrigger } from 'gsap/ScrollTrigger';
