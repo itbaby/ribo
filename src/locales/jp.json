@@ -1,5 +1,4 @@
 {
-  "greeting": "こんにちは、{name}！",
   "button": {
     "toggle": "英語に切り替え",
     "confirm": "確認",
@@ -22,8 +21,6 @@
     "history": "沿革",
     "honors": "企業栄誉",
     "contact": "お問い合わせ",
-    "investorRelations": "投資家関係",
-    "index": "業界",
     "serviceGlobalClients": "グローバルクライアントへのサービス"
   },
   "company": {
@@ -44,20 +41,7 @@
     "executiveSearch": "エグゼクティブサーチ",
     "staffing": "人材派遣",
     "itoService": "ITOサービス",
-    "items": [
-      {
-        "title": "睿柏与日本MYK达成合作",
-        "description": "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
-      },
-      {
-        "title": "Title 2",
-        "description": "Content description 2"
-      },
-      {
-        "title": "Title 3",
-        "description": "Content description 3"
-      }
-    ],
+
     "alibaba": {
       "title": "アリババ",
       "description": "中国の多国籍テクノロジー企業、電子商取引に特化"

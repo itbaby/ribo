@@ -1,5 +1,4 @@
 {
-  "greeting": "Hello, {name}!",
   "button": {
     "toggle": "Switch to Chinese",
     "confirm": "Confirm",
@@ -22,8 +21,6 @@
     "history": "History",
     "honors": "Honors",
     "contact": "Contact Us",
-    "investorRelations": "Investor Relations",
-    "index": "Industry",
     "serviceGlobalClients": "Serving Global Clients"
   },
   "company": {
@@ -44,20 +41,7 @@
     "executiveSearch": "Executive Search",
     "staffing": "Staffing",
     "itoService": "ITO Services",
-    "items": [
-      {
-        "title": "睿柏与日本MYK达成合作",
-        "description": "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
-      },
-      {
-        "title": "Title 2",
-        "description": "Content description 2"
-      },
-      {
-        "title": "Title 3",
-        "description": "Content description 3"
-      }
-    ],
+
     "alibaba": {
       "title": "Alibaba",
       "description": "Chinese multinational technology company specializing in e-commerce"

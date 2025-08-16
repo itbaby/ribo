@@ -1,5 +1,4 @@
 {
-  "greeting": "你好，{name}！",
   "button": {
     "toggle": "切换为英文",
     "confirm": "确认",
@@ -22,10 +21,9 @@
     "history": "发展历程",
     "honors": "企业荣誉",
     "contact": "联系我们",
-    "investorRelations": "投资者关系",
-    "index": "行业",
     "serviceGlobalClients": "服务全球客户"
   },
+
   "company": {
     "name": "大连睿柏咨询服务有限公司"
   },
@@ -44,20 +42,7 @@
     "executiveSearch": "高端猎头",
     "staffing": "人员派遣",
     "itoService": "ITO服务",
-    "items": [
-      {
-        "title": "睿柏与日本MYK达成合作",
-        "description": "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
-      },
-      {
-        "title": "Title 2",
-        "description": "Content description 2"
-      },
-      {
-        "title": "Title 3",
-        "description": "Content description 3"
-      }
-    ],
+
     "alibaba": {
       "title": "阿里巴巴",
       "description": "中国跨国科技公司，专注于电子商务"
