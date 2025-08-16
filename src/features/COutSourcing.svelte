@@ -233,12 +233,12 @@
 
 <!-- IT外包服务 Hexagon Grid -->
 <div class="max-w-[85rem] px-4 py-16 sm:px-6 lg:px-8 lg:py-20 mx-auto bg-gray-900 text-white">
-  <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="800">
+  <div class="text-center mb-16">
     <h2 class="text-3xl font-bold mb-4 text-white sm:text-4xl md:text-5xl">IT外包服务</h2>
     <p class="text-lg text-gray-300 max-w-3xl mx-auto">睿伯旗下技术团队睿诚科技提供专业ITO服务，以完善交付体系为客户提供技术支持</p>
   </div>
   <!-- Hexagon Grid -->
-  <div class="flex flex-wrap justify-center gap-6 md:gap-8 max-w-6xl mx-auto" style="min-height: 200px;">
+  <div class="flex flex-wrap justify-center gap-6 md:gap-8 max-w-6xl mx-auto" style="min-height: 300px;">
     {#each itServices as service, index}
       <div 
         class="hexagon relative {service.color} w-32 h-32 md:w-40 md:h-40 flex items-center justify-center text-white transition-all duration-300 shadow-lg overflow-visible"
