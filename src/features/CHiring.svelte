@@ -1,6 +1,7 @@
 <script>
   import { _, locale } from "svelte-i18n";
   import screenshot from "../assets/2454678.png";
+  import serviceAdvantagesImage from "../assets/services.jpg";
 </script>
 
 <div class="overflow-hidden bg-gray-900 py-24 sm:py-32">
@@ -80,6 +81,60 @@
     </div>
   </div>
 </div>
+
+
+<div class="bg-gray-900 py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="text-center">
+            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">{$_('cadvantages.title')}</h2>
+        </div>
+        <div class="mt-20 grid grid-cols-1 lg:grid-cols-3 gap-x-8 gap-y-16 items-center">
+            <!-- Left Column -->
+            <div class="flex flex-col gap-y-12">
+                {#each $_('cadvantages.left') as item, i}
+                    <div class="text-right" data-aos="fade-right" data-aos-delay={i * 100}>
+                        <div class="flex justify-end items-center gap-x-4">
+                            <div>
+                                <h3 class="text-lg font-semibold text-white">{item.title}</h3>
+                                <p class="mt-1 text-gray-400">{item.description}</p>
+                            </div>
+                             <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-indigo-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v18h16.5V3H3.75zM9 9h6.75M9 12h6.75m-6.75 3h6.75" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                {/each}
+            </div>
+
+            <!-- Center Image -->
+            <div data-aos="zoom-in">
+                <img src={serviceAdvantagesImage} alt="Service Advantages" class="w-96 h-96 rounded-full shadow-2xl mx-auto object-cover">
+            </div>
+
+            <!-- Right Column -->
+            <div class="flex flex-col gap-y-12">
+                {#each $_('cadvantages.right') as item, i}
+                    <div class="text-left" data-aos="fade-left" data-aos-delay={i * 100}>
+                        <div class="flex items-center gap-x-4">
+                            <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-indigo-500">
+                               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-white">{item.title}</h3>
+                                <p class="mt-1 text-gray-400">{item.description}</p>
+                            </div>
+                        </div>
+                    </div>
+                {/each}
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <style lang="scss">
 </style>

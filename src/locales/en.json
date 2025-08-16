@@ -106,6 +106,29 @@
     "smartTalent": "Smart Talent Mapping",
     "smartTalentDesc": "Through our independently developed smart talent mapping system, the team can access over 2.6 million quality talents in the Asia-Pacific region, combined with deep industry insights (focusing on internet technology, financial technology, and intelligent manufacturing). Customer NPS satisfaction has consistently remained above 94 in the past three years."
   },
+  "cadvantages": {
+    "title": "Service Advantages",
+    "left": [
+      {
+        "title": "Job Requirement Analysis",
+        "description": "Job requirement confirmation, Client company research, Follow up on requirement changes"
+      },
+      {
+        "title": "Quality Delivery",
+        "description": "Talent gathering, Talent tracking, Control talent matching degree"
+      }
+    ],
+    "right": [
+      {
+        "title": "Multi-dimensional Talent Control",
+        "description": "Comprehensive interview evaluation, Talent stability control, Skill improvement assessment"
+      },
+      {
+        "title": "Reasonable Resource Allocation",
+        "description": "Resource assessment, Dynamic optimization, Flexible configuration"
+      }
+    ]
+  },
   "lastNews": {
     "news1": {
       "title": "Ribo Partners with Japanese MYK",

@@ -3,6 +3,9 @@
   import { gsap } from 'gsap';
 
   let activeTab = 1;
+  /**
+     * @type {number | undefined}
+     */
   let interval;
 
   // @ts-ignore
@@ -42,7 +45,7 @@
         nextTab = 1;
       }
       switchTab(nextTab);
-    }, 3000);
+    }, 5000);
   });
 
   onDestroy(() => {
