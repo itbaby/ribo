@@ -1,55 +1,90 @@
 
-https://github.com/sytanta/svelte-lenis
-https://aceternity.sveltekit.io/
-https://svelte-light-carousel.vercel.app/#intro
-npm i svelte-light-carousel
-https://www.npmjs.com/package/svelte-swipe
-https://github.com/SharifClick/svelte-swipe
-https://www.npmjs.com/package/@slidy/svelte
-# Svelte + TS + Vite
+# Ribo Corporate Website
 
-This template should help get you started developing with Svelte and TypeScript in Vite.
+A modern, multilingual corporate website for Dalian Ribo Consulting Services Co., Ltd. Built with Svelte, TypeScript, and Vite.
+
+## Project Overview
+
+This website showcases Ribo's services in executive search, staffing, and IT outsourcing with a focus on technology-driven solutions. The site features smooth animations, multilingual support, and a responsive design.
+
+## Features
+
+- **Multilingual Support**: English, Japanese, and Chinese language options
+- **Smooth Scrolling**: Implemented with Locomotive Scroll
+- **Modern Animations**: Powered by GSAP and AOS
+- **Responsive Design**: Built with Tailwind CSS and Flowbite components
+- **Component-Based Architecture**: Leveraging Svelte's efficient reactivity system
+
+## Technology Stack
+
+- **Frontend Framework**: Svelte 5
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **Animations**: GSAP, Locomotive Scroll, AOS
+- **Routing**: svelte-routing
+- **Internationalization**: svelte-i18n
+- **TypeScript**: For type safety and better developer experience
 
 ## Recommended IDE Setup
 
 [VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
 
-## Need an official Svelte framework?
+## Installation
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+```bash
+# Clone the repository
+git clone [repository-url]
+cd ribo
 
-## Technical considerations
+# Install dependencies
+npm install
 
-**Why use this over SvelteKit?**
-
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
-
-This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
-
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
-
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
-
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
-
-**Why include `.vscode/extensions.json`?**
-
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
-
-**Why enable `allowJs` in the TS template?**
-
-While `allowJs: false` would indeed prevent the use of `.js` files in the project, it does not prevent the use of JavaScript syntax in `.svelte` files. In addition, it would force `checkJs: false`, bringing the worst of both worlds: not being able to guarantee the entire codebase is TypeScript, and also having worse typechecking for the existing JavaScript. In addition, there are valid use cases in which a mixed codebase may be relevant.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```ts
-// store.ts
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
+# Start development server
+npm run dev
 ```
+
+## Development
+
+```bash
+# Start development server with hot module replacement
+npm run dev
+
+# Type checking
+npm run check
+```
+
+## Building for Production
+
+```bash
+# Build for production
+npm run build
+
+# Preview production build locally
+npm run preview
+```
+
+## Project Structure
+
+- `src/features/` - Main components for each page/section
+- `src/assets/` - Static assets (images, icons)
+- `src/locales/` - Internationalization files
+- `src/config/` - Configuration files for libraries
+
+## Internationalization
+
+The website supports multiple languages:
+- English
+- Japanese
+- Chinese
+
+Language files are located in `src/locales/` directory.
+
+## Animation Libraries
+
+- **Locomotive Scroll**: For smooth scrolling effects
+- **GSAP**: For advanced animations
+- **AOS**: For scroll-triggered animations
+
+## License
+
+Proprietary - All rights reserved by Dalian Ribo Consulting Services Co., Ltd.
