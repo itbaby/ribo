@@ -6,7 +6,7 @@
   import serviceAdvantagesImage from "../assets/services.jpg";
 </script>
 
-<div class="overflow-hidden bg-gray-900 py-24 sm:py-32">
+<div class="overflow-hidden bg-gray-800 py-24 sm:py-32">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div
       class="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
@@ -110,6 +110,17 @@
     </div>
 </div>
 
+<section class="bg-gray-700 dark:bg-gray-900" >
+    <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+        <div class="mr-auto place-self-center lg:col-span-7" data-aos="zoom-in" data-aos-delay="200">
+            <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-4xl xl:text-5xl text-white">{$_("chiring.foreignInvestmentCase.title")}</h1>
+            <p class="max-w-2xl mb-6 font-light text-gray-400 lg:mb-8 md:text-lg lg:text-xl ">{$_("chiring.foreignInvestmentCase.description")}</p>
+        </div>
+        <div class="hidden lg:mt-0 lg:col-span-5 lg:flex" data-aos="zoom-in" data-aos-delay="400">
+            <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png" alt="mockup">
+        </div>                
+    </div>
+</section>
 
 <style lang="scss">
 </style>
