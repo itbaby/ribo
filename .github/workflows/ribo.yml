@@ -3,25 +3,17 @@ name: Ribo CI/CD
 on:
   push:
     branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
   workflow_dispatch:
 
 jobs:
-  example_job:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out repository code
-        uses: actions/checkout@v4
-      - name: Print a message
-        run: echo "This is a simple GitHub Action."
-
-  build:
+  build-and-release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        
+        with:
+          fetch-depth: 0
+          
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -29,17 +21,20 @@ jobs:
           cache: 'npm'
           
       - name: Install dependencies
-        run: npm install
+        run: npm ci
         
       - name: Build project
         run: npm run build
+        
+      - name: Get version from package.json
+        id: version
+        uses: martinbeentjes/npm-get-version-action@v1.3.0
         
       - name: Create and push tag
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          TAG_NAME="v$(date +'%Y%m%d-%H%M%S')"
-          git tag $TAG_NAME
-          git push origin $TAG_NAME
+          git tag -a v${{ steps.version.outputs.current-version }} -m "Release v${{ steps.version.outputs.current-version }}"
+          git push origin v${{ steps.version.outputs.current-version }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
