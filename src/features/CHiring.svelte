@@ -2,8 +2,56 @@
 // @ts-nocheck
 
   import { _, locale } from "svelte-i18n";
+  import { onMount } from "svelte";
+  import { gsap } from "gsap";
   import screenshot from "../assets/2454678.png";
   import serviceAdvantagesImage from "../assets/services.jpg";
+
+  let serviceImage;
+
+  // Hover effects for the service image
+  function handleMouseEnter() {
+    if (serviceImage) {
+      gsap.to(serviceImage, {
+        scale: 1.1,
+        duration: 0.3,
+        ease: "power2.out"
+      });
+    }
+  }
+
+  function handleMouseLeave() {
+    if (serviceImage) {
+      gsap.to(serviceImage, {
+        scale: 1.05,
+        duration: 0.3,
+        ease: "power2.out"
+      });
+    }
+  }
+
+  onMount(() => {
+    // Add subtle floating animation to the service advantages image
+    if (serviceImage) {
+      // Gentle floating effect
+      gsap.to(serviceImage, {
+        y: -15,
+        duration: 3,
+        repeat: -1,
+        yoyo: true,
+        ease: "power2.inOut"
+      });
+      
+      // Subtle breathing/scaling effect
+      gsap.to(serviceImage, {
+        scale: 1.05,
+        duration: 4,
+        repeat: -1,
+        yoyo: true,
+        ease: "power2.inOut"
+      });
+    }
+  });
 </script>
 
 <div class="overflow-hidden bg-gray-800 py-24 sm:py-32">
@@ -87,7 +135,14 @@
 
             <!-- Center Image -->
             <div data-aos="zoom-in">
-                <img src={serviceAdvantagesImage} alt="Service Advantages" class="w-96 h-96 rounded-full shadow-2xl mx-auto object-cover">
+                <img 
+                  bind:this={serviceImage} 
+                  src={serviceAdvantagesImage} 
+                  alt="Service Advantages" 
+                  class="w-96 h-96 rounded-full shadow-2xl mx-auto object-cover cursor-pointer transition-shadow duration-300 hover:shadow-3xl" 
+                  on:mouseenter={handleMouseEnter}
+                  on:mouseleave={handleMouseLeave}
+                >
             </div>
 
             <!-- Right Column -->
