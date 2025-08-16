@@ -5,7 +5,7 @@
     "confirm": "Confirm",
     "cancel": "Cancel"
   },
-  "index": "Industry",
+
   "menu": {
     "serve": "Services",
     "industry": "Industries",
@@ -22,7 +22,9 @@
     "history": "History",
     "honors": "Honors",
     "contact": "Contact Us",
-    "investorRelations": "Investor Relations"
+    "investorRelations": "Investor Relations",
+    "index": "Industry",
+    "serviceGlobalClients": "Serving Global Clients"
   },
   "company": {
     "name": "Dalian Ribo Consulting Services Co., Ltd"
@@ -161,7 +163,7 @@
       "position": "Sales Executive"
     }
   },
-  "serviceGlobalClients": "Serving Global Clients",
+
   "footer": {
     "brand": {
       "name": "Ribo Consulting Services"

@@ -128,7 +128,7 @@
       class="flex flex-col text-white bg-gray-700 items-center justify-center h-auto pb-20 pt-20"
     >
       <h1 class="mb-[4vh] text-2xl md:text-4xl">
-        {$_("serviceGlobalClients")}
+        {$_("menu.serviceGlobalClients")}
       </h1>
       <CSponsor />
     </section>

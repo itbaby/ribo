@@ -5,7 +5,7 @@
     "confirm": "確認",
     "cancel": "キャンセル"
   },
-  "index": "業界",
+
   "menu": {
     "serve": "サービス",
     "industry": "業界",
@@ -22,7 +22,9 @@
     "history": "沿革",
     "honors": "企業栄誉",
     "contact": "お問い合わせ",
-    "investorRelations": "投資家関係"
+    "investorRelations": "投資家関係",
+    "index": "業界",
+    "serviceGlobalClients": "グローバルクライアントへのサービス"
   },
   "company": {
     "name": "大連睿柏コンサルティングサービス有限公司"
@@ -161,7 +163,7 @@
       "position": "Sales Executive"
     }
   },
-  "serviceGlobalClients": "グローバルクライアントへのサービス",
+
   "footer": {
     "brand": {
       "name": "睿柏コンサルティングサービス"

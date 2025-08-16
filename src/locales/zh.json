@@ -5,7 +5,7 @@
     "confirm": "确认",
     "cancel": "取消"
   },
-  "index": "行业",
+
   "menu": {
     "serve": "服务",
     "industry": "行业",
@@ -22,7 +22,9 @@
     "history": "发展历程",
     "honors": "企业荣誉",
     "contact": "联系我们",
-    "investorRelations": "投资者关系"
+    "investorRelations": "投资者关系",
+    "index": "行业",
+    "serviceGlobalClients": "服务全球客户"
   },
   "company": {
     "name": "大连睿柏咨询服务有限公司"
@@ -161,7 +163,7 @@
       "position": "Sales Executive"
     }
   },
-  "serviceGlobalClients": "服务全球客户",
+
   "footer": {
     "brand": {
       "name": "睿柏咨询服务"
