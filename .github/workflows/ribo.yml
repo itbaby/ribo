@@ -38,3 +38,19 @@ jobs:
           git push origin v${{ steps.version.outputs.current-version }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Create GitHub Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ steps.version.outputs.current-version }}
+          release_name: Release v${{ steps.version.outputs.current-version }}
+          draft: false
+          prerelease: false
+          body: |
+            ## Release v${{ steps.version.outputs.current-version }}
+            
+            ### Changes in this release
+            - See commit history for details
