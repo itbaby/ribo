@@ -13,6 +13,7 @@
   import CResources from "./features/CResources.svelte";
   import COutSourcing from "./features/COutSourcing.svelte";
   import CTechCategory from "./features/CTechCategory.svelte";
+  import CCulture from "./features/CCulture.svelte";
 </script>
 
 <Router>
@@ -70,17 +71,21 @@
     </div>
     <CFooter />
   </Route>
-    <Route path="/outsourcing" let:params>
-
+  <Route path="/outsourcing" let:params>
     <div class="pt-16 bg-gray-900">
       <COutSourcing />
     </div>
     <CFooter bgClass="bg-gray-800" />
-
   </Route>
   <Route path="/tech-category" let:params>
     <div class="pt-16 bg-gray-800">
       <CTechCategory />
+    </div>
+    <CFooter />
+  </Route>
+  <Route path="/culture" let:params>
+    <div class="pt-16 bg-gray-900">
+      <CCulture />
     </div>
     <CFooter />
   </Route>
