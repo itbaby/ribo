@@ -269,11 +269,9 @@
     <div class="flex flex-col justify-between p-6 border border-gray-700 rounded-lg shadow-lg bg-gray-800 hover:bg-gray-750 transition-all duration-300">
       <div>
          <div class="flex flex-col items-center mb-4">
-           <div class="flex items-center justify-center w-16 h-16 mb-3 rounded-full bg-blue-100">
-             <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-             </svg>
-           </div>
+           <div class="flex items-center justify-center mb-3">
+              <i class="ri-award-fill text-6xl text-blue-400"></i>
+            </div>
            <h6 class="text-xl font-bold leading-6 text-white text-center">专业能力</h6>
          </div>
          <div class="grid grid-cols-2 gap-x-4 text-base text-gray-300 space-y-1">
@@ -297,10 +295,8 @@
     <div class="flex flex-col justify-between p-6 border border-gray-700 rounded-lg shadow-lg bg-gray-800 hover:bg-gray-750 transition-all duration-300">
       <div>
          <div class="flex flex-col items-center mb-4">
-           <div class="flex items-center justify-center w-16 h-16 mb-3 rounded-full bg-green-100">
-             <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-             </svg>
+           <div class="flex items-center justify-center mb-3">
+             <i class="ri-team-fill text-6xl text-green-400"></i>
            </div>
            <h6 class="text-xl font-bold leading-6 text-white text-center">资源支持</h6>
          </div>
@@ -325,10 +321,8 @@
     <div class="flex flex-col justify-between p-6 border border-gray-700 rounded-lg shadow-lg bg-gray-800 hover:bg-gray-750 transition-all duration-300">
       <div>
          <div class="flex flex-col items-center mb-4">
-           <div class="flex items-center justify-center w-16 h-16 mb-3 rounded-full bg-purple-100">
-             <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-             </svg>
+           <div class="flex items-center justify-center mb-3">
+             <i class="ri-code-s-slash-fill text-6xl text-purple-400"></i>
            </div>
            <h6 class="text-xl font-bold leading-6 text-white text-center">技术能力</h6>
          </div>
@@ -355,10 +349,8 @@
     <div class="flex flex-col justify-between p-6 border border-gray-700 rounded-lg shadow-lg bg-gray-800 hover:bg-gray-750 transition-all duration-300">
       <div>
          <div class="flex flex-col items-center mb-4">
-           <div class="flex items-center justify-center w-16 h-16 mb-3 rounded-full bg-orange-100">
-             <svg class="w-10 h-10 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-             </svg>
+           <div class="flex items-center justify-center mb-3">
+             <i class="ri-building-4-fill text-6xl text-orange-400"></i>
            </div>
            <h6 class="text-xl font-bold leading-6 text-white text-center">专注行业</h6>
          </div>
@@ -383,10 +375,8 @@
     <div class="flex flex-col justify-between p-6 border border-gray-700 rounded-lg shadow-lg bg-gray-800 hover:bg-gray-750 transition-all duration-300">
       <div>
          <div class="flex flex-col items-center mb-4">
-           <div class="flex items-center justify-center w-16 h-16 mb-3 rounded-full bg-teal-100">
-             <svg class="w-10 h-10 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-             </svg>
+           <div class="flex items-center justify-center mb-3">
+             <i class="ri-global-fill text-6xl text-teal-400"></i>
            </div>
            <h6 class="text-xl font-bold leading-6 text-white text-center">服务市场</h6>
          </div>

@@ -75,7 +75,8 @@
     <div class="pt-16 bg-gray-900">
       <COutSourcing />
     </div>
-    <CFooter />
+    <CFooter bgClass="bg-gray-800" />
+
   </Route>
   <Route path="/tech-category" let:params>
     <div class="pt-16 bg-gray-800">
