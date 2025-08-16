@@ -1,8 +1,12 @@
 <script>
   import { onMount, onDestroy } from 'svelte';
   import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
   import { initAOS } from '../config/aos-config';
   import { _ } from 'svelte-i18n';
+
+  // Register ScrollTrigger plugin
+  gsap.registerPlugin(ScrollTrigger);
 
   let activeTab = 1;
   /**
@@ -55,9 +59,33 @@
       switchTab(nextTab);
     }, 5000);
 
-    // 六边形悬停动画
+    // 六边形滚动动画 - 当可见时执行zoom-in动画
     const hexagons = document.querySelectorAll('.hexagon');
-    hexagons.forEach(hex => {
+    hexagons.forEach((hex, index) => {
+      // 设置初始状态
+      gsap.set(hex, {
+        scale: 0.5,
+        opacity: 0,
+        y: 50
+      });
+      
+      // 创建ScrollTrigger动画
+      gsap.to(hex, {
+        scale: 1,
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "back.out(1.7)",
+        scrollTrigger: {
+          trigger: hex,
+          start: "top 85%",
+          end: "bottom 15%",
+          toggleActions: "play none none reverse"
+        },
+        delay: index * 0.1 // 添加交错延迟效果
+      });
+      
+      // 保留悬停效果
       hex.addEventListener('mouseenter', () => {
         gsap.to(hex, {
           y: -10,
@@ -80,6 +108,8 @@
 
   onDestroy(() => {
     clearInterval(interval);
+    // 清理ScrollTrigger实例
+    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
   });
 </script>
 
