@@ -1,12 +1,66 @@
 <script>
   import { onMount, onDestroy } from 'svelte';
   import { gsap } from 'gsap';
+  import { initAOS } from '../config/aos-config';
+  import { _ } from 'svelte-i18n';
 
   let activeTab = 1;
   /**
      * @type {number | undefined}
      */
   let interval;
+
+  // IT外包服务数据
+  const itServices = [
+    {
+      title: '金融科技',
+      icon: '<path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"/><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"/><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"/><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/>',
+      color: 'bg-blue-500',
+      delay: 100
+    },
+    {
+      title: '物联网/5G',
+      icon: '<path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/>',
+      color: 'bg-gray-700',
+      delay: 200
+    },
+    {
+      title: '研发/开发',
+      icon: '<path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/>',
+      color: 'bg-gray-700',
+      delay: 300
+    },
+    {
+      title: 'AI/大数据',
+      icon: '<path d="M12 2v8"/><path d="m4.93 10.93 1.41 1.41"/><path d="M2 18h2"/><path d="M20 18h2"/><path d="m19.07 10.93-1.41 1.41"/><path d="M22 22H2"/><path d="m16 6-4-4-4 4"/><path d="M16 18a4 4 0 0 0-8 0"/>',
+      color: 'bg-blue-500',
+      delay: 400
+    },
+    {
+      title: '云服务',
+      icon: '<path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>',
+      color: 'bg-gray-700',
+      delay: 500
+    },
+    {
+      title: '元宇宙/游戏',
+      icon: '<path d="M2 8a3 3 0 0 1 3-3h14a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3z"/><path d="M6 12h12"/><path d="M8 16v-8"/><path d="M16 16v-8"/><path d="M12 12v-4"/>',
+      color: 'bg-blue-500',
+      delay: 600
+    },
+    {
+      title: '产品全球化',
+      icon: '<circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/>',
+      color: 'bg-gray-700',
+      delay: 700
+    },
+    {
+      title: '测试/运维',
+      icon: '<path d="M2 12h20"/><path d="M12 2v20"/><path d="m4.93 4.93 14.14 14.14"/><path d="m19.07 4.93-14.14 14.14"/>',
+      color: 'bg-blue-500',
+      delay: 800
+    }
+  ];
 
   // @ts-ignore
   function switchTab(tabNumber) {
@@ -25,8 +79,11 @@
     }});
   }
 
-  onMount(() => {
-    // Set initial state
+  onMount(async () => {
+    // 初始化AOS动画
+    await initAOS();
+    
+    // Set initial state for tabs
     for (let i = 2; i <= 3; i++) {
       const tabContent = document.getElementById(`tabs-with-card-${i}`);
       if (tabContent) {
@@ -46,6 +103,28 @@
       }
       switchTab(nextTab);
     }, 5000);
+
+    // 六边形悬停动画
+    const hexagons = document.querySelectorAll('.hexagon');
+    hexagons.forEach(hex => {
+      hex.addEventListener('mouseenter', () => {
+        gsap.to(hex, {
+          y: -10,
+          scale: 1.05,
+          boxShadow: '0 10px 20px rgba(0,0,0,0.2)',
+          duration: 0.3
+        });
+      });
+      
+      hex.addEventListener('mouseleave', () => {
+        gsap.to(hex, {
+          y: 0,
+          scale: 1,
+          boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+          duration: 0.3
+        });
+      });
+    });
   });
 
   onDestroy(() => {
@@ -151,3 +230,61 @@
   </div>
 </div>
 <!-- End Features -->
+
+<!-- IT外包服务 Hexagon Grid -->
+<div class="max-w-[85rem] px-4 py-16 sm:px-6 lg:px-8 lg:py-20 mx-auto bg-gray-900 text-white">
+  <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="800">
+    <h2 class="text-3xl font-bold mb-4 text-white sm:text-4xl md:text-5xl">IT外包服务</h2>
+    <p class="text-lg text-gray-300 max-w-3xl mx-auto">睿伯旗下技术团队睿诚科技提供专业ITO服务，以完善交付体系为客户提供技术支持</p>
+  </div>
+  <!-- Hexagon Grid -->
+  <div class="flex flex-wrap justify-center gap-6 md:gap-8 max-w-6xl mx-auto" style="min-height: 200px;">
+    {#each itServices as service, index}
+      <div 
+        class="hexagon relative {service.color} w-32 h-32 md:w-40 md:h-40 flex items-center justify-center text-white transition-all duration-300 shadow-lg overflow-visible"
+      >
+        <div class="flex flex-col items-center justify-center p-4 text-center">
+          <svg class="w-10 h-10 mb-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            {@html service.icon}
+          </svg>
+          <span class="text-sm font-medium">{service.title}</span>
+        </div>
+      </div>
+    {/each}
+  </div>
+</div>
+<!-- End IT外包服务 Hexagon Grid -->
+
+<style>
+  /* 六边形样式 */
+  .hexagon {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 128px;
+    min-width: 128px;
+  }
+  
+  .hexagon:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Ensure SVG icons are visible */
+  .hexagon svg {
+    position: relative;
+    z-index: 2;
+    display: block;
+  }
+
+  /* Ensure text is visible */
+  .hexagon span {
+    position: relative;
+    z-index: 2;
+    display: block;
+  }
+</style>
