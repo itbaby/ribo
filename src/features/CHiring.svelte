@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
   import { _, locale } from "svelte-i18n";
   import screenshot from "../assets/2454678.png";
   import serviceAdvantagesImage from "../assets/services.jpg";
@@ -27,42 +29,16 @@
           >
             <div class="relative pl-9">
               <dt class="inline font-semibold text-white">
-                <svg
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  data-slot="icon"
-                  aria-hidden="true"
-                  class="absolute top-1 left-1 size-5 text-indigo-400"
-                >
-                  <path
-                    d="M5.5 17a4.5 4.5 0 0 1-1.44-8.765 4.5 4.5 0 0 1 8.302-3.046 3.5 3.5 0 0 1 4.504 4.272A4 4 0 0 1 15 17H5.5Zm3.75-2.75a.75.75 0 0 0 1.5 0V9.66l1.95 2.1a.75.75 0 1 0 1.1-1.02l-3.25-3.5a.75.75 0 0 0-1.1 0l-3.25 3.5a.75.75 0 1 0 1.1 1.02l1.95-2.1v4.59Z"
-                    clip-rule="evenodd"
-                    fill-rule="evenodd"
-                  />
-                </svg>
+                <i class="ri-upload-cloud-2-line text-indigo-400 text-2xl"></i>
                 {$_("chiring.seniorTeam")}
-              </dt>
               <dd class="inline">
                 {$_("chiring.seniorTeamDesc")}
               </dd>
             </div>
             <div class="relative pl-9">
               <dt class="inline font-semibold text-white">
-                <svg
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  data-slot="icon"
-                  aria-hidden="true"
-                  class="absolute top-1 left-1 size-5 text-indigo-400"
-                >
-                  <path
-                    d="M10 1a4.5 4.5 0 0 0-4.5 5.5V9H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-.5V5.5A4.5 4.5 0 0 0 10 1Zm3 8V5.5a3 3 0 1 0-6 0V9h6Z"
-                    clip-rule="evenodd"
-                    fill-rule="evenodd"
-                  />
-                </svg>
+                <i class="ri-lock-password-line text-indigo-400 text-2xl"></i>
                 {$_("chiring.smartTalent")}
-              </dt>
               <dd class="inline">
                 {$_("chiring.smartTalentDesc")}
               </dd>
@@ -98,10 +74,8 @@
                                 <h3 class="text-lg font-semibold text-white">{item.title}</h3>
                                 <p class="mt-1 text-gray-400">{item.description}</p>
                             </div>
-                             <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-indigo-500">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
-                                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v18h16.5V3H3.75zM9 9h6.75M9 12h6.75m-6.75 3h6.75" />
-                                </svg>
+                             <div class="flex h-12 w-18 items-center justify-center rounded-lg bg-indigo-500">
+                                <i class="ri-file-search-line text-white text-2xl"></i>
                             </div>
                         </div>
                     </div>
@@ -118,10 +92,8 @@
                 {#each $_('cadvantages.right') as item, i}
                     <div class="text-left" data-aos="fade-left" data-aos-delay={i * 100}>
                         <div class="flex items-center gap-x-4">
-                            <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-indigo-500">
-                               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
-                                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                                </svg>
+                            <div class="flex h-12 w-18 items-center justify-center rounded-lg bg-indigo-500">
+                               <i class="ri-user-search-line text-white text-2xl"></i>
                             </div>
                             <div>
                                 <h3 class="text-lg font-semibold text-white">{item.title}</h3>
