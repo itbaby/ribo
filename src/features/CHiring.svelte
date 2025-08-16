@@ -11,34 +11,37 @@
     <div
       class="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
     >
-      <div class="lg:pt-4 lg:pr-8">
+      <div class="lg:pt-4 lg:pr-8" data-aos="fade-right" data-aos-duration="1000">
         <div class="lg:max-w-lg">
-          <h2 class="text-base/7 font-semibold text-indigo-400">
+          <h2 class="text-base/7 font-semibold text-indigo-400" data-aos="zoom-in" data-aos-delay="100">
             {$_("chiring.hireSoFaster")}
           </h2>
           <p
             class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl"
+            data-aos="zoom-in" data-aos-delay="200"
           >
             {$_("chiring.headline")}
           </p>
-          <p class="mt-6 text-lg/8 text-gray-300">
+          <p class="mt-6 text-lg/8 text-gray-300" data-aos="zoom-in" data-aos-delay="300">
             {$_("chiring.description")}
           </p>
           <dl
             class="mt-10 max-w-xl space-y-8 text-base/7 text-gray-400 lg:max-w-none"
           >
-            <div class="relative pl-9">
+            <div class="relative pl-9" data-aos="zoom-in" data-aos-delay="400">
               <dt class="inline font-semibold text-white">
                 <i class="ri-upload-cloud-2-line text-indigo-400 text-2xl"></i>
                 {$_("chiring.seniorTeam")}
+              </dt>
               <dd class="inline">
                 {$_("chiring.seniorTeamDesc")}
               </dd>
             </div>
-            <div class="relative pl-9">
+            <div class="relative pl-9" data-aos="zoom-in" data-aos-delay="500">
               <dt class="inline font-semibold text-white">
                 <i class="ri-lock-password-line text-indigo-400 text-2xl"></i>
                 {$_("chiring.smartTalent")}
+              </dt>
               <dd class="inline">
                 {$_("chiring.smartTalentDesc")}
               </dd>
