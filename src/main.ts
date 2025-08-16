@@ -4,6 +4,7 @@ import { initAOS } from './config/aos-config';
 import App from './App.svelte';
 import { init, register, locale } from 'svelte-i18n';
 import 'flowbite';
+import 'remixicon/fonts/remixicon.css';
 
 register('en', () => import('./locales/en.json'));
 register('zh', () => import('./locales/zh.json'));
