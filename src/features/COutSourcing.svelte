@@ -241,7 +241,7 @@
   <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
     <div>
       <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-        Brand new
+        {$_('itOutsourcingDetails.brandNew')}
       </p>
     </div>
     <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-white sm:text-4xl md:mx-auto">
@@ -256,11 +256,11 @@
         </svg>
         <span class="relative">CN</span>
       </span>
-      服务-IT外包业务
+      {$_('itOutsourcingDetails.title').replace('CN', '')}
 
     </h2>
     <p class="text-base text-white md:text-lg">
-      专业的IT外包服务，让您的企业在数字化转型中保持领先优势。我们提供全方位的技术解决方案，从软件开发到系统维护，助力您的业务高效运营，降低成本，提升竞争力。
+      {$_('itOutsourcingDetails.description')}
     </p>
   </div>
   <!-- First row with 3 cards -->
@@ -272,20 +272,20 @@
            <div class="flex items-center justify-center mb-3">
               <i class="ri-award-fill text-6xl text-blue-400"></i>
             </div>
-           <h6 class="text-xl font-bold leading-6 text-white text-center">专业能力</h6>
+           <h6 class="text-xl font-bold leading-6 text-white text-center">{$_('itOutsourcingDetails.professionalCapabilities.title')}</h6>
          </div>
          <div class="grid grid-cols-2 gap-x-4 text-base text-gray-300 space-y-1">
            <div class="space-y-1">
-             <p class="flex items-center"><i class="ri-user-add-line text-blue-400 mr-2"></i>招聘交付</p>
-             <p class="flex items-center"><i class="ri-code-s-slash-line text-blue-400 mr-2"></i>技术研发</p>
-             <p class="flex items-center"><i class="ri-lightbulb-line text-blue-400 mr-2"></i>解决方案</p>
-             <p class="flex items-center"><i class="ri-speed-up-line text-blue-400 mr-2"></i>运营效率</p>
+             <p class="flex items-center"><i class="ri-user-add-line text-blue-400 mr-2"></i>{$_('itOutsourcingDetails.professionalCapabilities.items.0')}</p>
+             <p class="flex items-center"><i class="ri-code-s-slash-line text-blue-400 mr-2"></i>{$_('itOutsourcingDetails.professionalCapabilities.items.1')}</p>
+             <p class="flex items-center"><i class="ri-lightbulb-line text-blue-400 mr-2"></i>{$_('itOutsourcingDetails.professionalCapabilities.items.2')}</p>
+             <p class="flex items-center"><i class="ri-speed-up-line text-blue-400 mr-2"></i>{$_('itOutsourcingDetails.professionalCapabilities.items.3')}</p>
            </div>
            <div class="space-y-1">
-             <p class="flex items-center"><i class="ri-graduation-cap-line text-blue-400 mr-2"></i>培训提升</p>
-             <p class="flex items-center"><i class="ri-rocket-line text-blue-400 mr-2"></i>战略创新</p>
-             <p class="flex items-center"><i class="ri-heart-line text-blue-400 mr-2"></i>员工关怀</p>
-             <p class="flex items-center"><i class="ri-book-line text-blue-400 mr-2"></i>知识储备</p>
+             <p class="flex items-center"><i class="ri-graduation-cap-line text-blue-400 mr-2"></i>{$_('itOutsourcingDetails.professionalCapabilities.items.4')}</p>
+             <p class="flex items-center"><i class="ri-rocket-line text-blue-400 mr-2"></i>{$_('itOutsourcingDetails.professionalCapabilities.items.5')}</p>
+             <p class="flex items-center"><i class="ri-heart-line text-blue-400 mr-2"></i>{$_('itOutsourcingDetails.professionalCapabilities.items.6')}</p>
+             <p class="flex items-center"><i class="ri-book-line text-blue-400 mr-2"></i>{$_('itOutsourcingDetails.professionalCapabilities.items.7')}</p>
            </div>
          </div>
       </div>
@@ -298,20 +298,20 @@
            <div class="flex items-center justify-center mb-3">
              <i class="ri-team-fill text-6xl text-green-400"></i>
            </div>
-           <h6 class="text-xl font-bold leading-6 text-white text-center">资源支持</h6>
+           <h6 class="text-xl font-bold leading-6 text-white text-center">{$_('itOutsourcingDetails.resourceSupport.title')}</h6>
          </div>
          <div class="grid grid-cols-2 gap-x-4 text-base text-gray-300 space-y-1">
            <div class="space-y-1">
-             <p class="flex items-center"><i class="ri-team-line text-green-400 mr-2"></i>研发团队</p>
-             <p class="flex items-center"><i class="ri-bug-line text-green-400 mr-2"></i>质量测试团队</p>
-             <p class="flex items-center"><i class="ri-palette-line text-green-400 mr-2"></i>用户体验设计</p>
-             <p class="flex items-center"><i class="ri-shield-check-line text-green-400 mr-2"></i>风险控制团队</p>
+             <p class="flex items-center"><i class="ri-team-line text-green-400 mr-2"></i>{$_('itOutsourcingDetails.resourceSupport.items.0')}</p>
+             <p class="flex items-center"><i class="ri-bug-line text-green-400 mr-2"></i>{$_('itOutsourcingDetails.resourceSupport.items.1')}</p>
+             <p class="flex items-center"><i class="ri-palette-line text-green-400 mr-2"></i>{$_('itOutsourcingDetails.resourceSupport.items.2')}</p>
+             <p class="flex items-center"><i class="ri-shield-check-line text-green-400 mr-2"></i>{$_('itOutsourcingDetails.resourceSupport.items.3')}</p>
            </div>
            <div class="space-y-1">
-             <p class="flex items-center"><i class="ri-user-search-line text-green-400 mr-2"></i>招聘团队</p>
-             <p class="flex items-center"><i class="ri-compass-3-line text-green-400 mr-2"></i>敏捷教练</p>
-             <p class="flex items-center"><i class="ri-settings-3-line text-green-400 mr-2"></i>运营维护团队</p>
-             <p class="flex items-center"><i class="ri-megaphone-line text-green-400 mr-2"></i>市场营销团队</p>
+             <p class="flex items-center"><i class="ri-user-search-line text-green-400 mr-2"></i>{$_('itOutsourcingDetails.resourceSupport.items.4')}</p>
+             <p class="flex items-center"><i class="ri-compass-3-line text-green-400 mr-2"></i>{$_('itOutsourcingDetails.resourceSupport.items.5')}</p>
+             <p class="flex items-center"><i class="ri-settings-3-line text-green-400 mr-2"></i>{$_('itOutsourcingDetails.resourceSupport.items.6')}</p>
+             <p class="flex items-center"><i class="ri-megaphone-line text-green-400 mr-2"></i>{$_('itOutsourcingDetails.resourceSupport.items.7')}</p>
            </div>
          </div>
       </div>
@@ -324,19 +324,19 @@
            <div class="flex items-center justify-center mb-3">
              <i class="ri-code-s-slash-fill text-6xl text-purple-400"></i>
            </div>
-           <h6 class="text-xl font-bold leading-6 text-white text-center">技术能力</h6>
+           <h6 class="text-xl font-bold leading-6 text-white text-center">{$_('itOutsourcingDetails.technicalCapabilities.title')}</h6>
          </div>
          <div class="grid grid-cols-2 gap-x-4 text-base text-gray-300 space-y-1">
            <div class="space-y-1">
-             <p class="flex items-center"><i class="ri-global-line text-purple-400 mr-2"></i>网页开发</p>
-             <p class="flex items-center"><i class="ri-stack-line text-purple-400 mr-2"></i>全栈开发</p>
-             <p class="flex items-center"><i class="ri-code-line text-purple-400 mr-2"></i>前/后端开发</p>
-             <p class="flex items-center"><i class="ri-building-line text-purple-400 mr-2"></i>架构</p>
+             <p class="flex items-center"><i class="ri-global-line text-purple-400 mr-2"></i>{$_('itOutsourcingDetails.technicalCapabilities.items.0')}</p>
+             <p class="flex items-center"><i class="ri-stack-line text-purple-400 mr-2"></i>{$_('itOutsourcingDetails.technicalCapabilities.items.1')}</p>
+             <p class="flex items-center"><i class="ri-code-line text-purple-400 mr-2"></i>{$_('itOutsourcingDetails.technicalCapabilities.items.2')}</p>
+             <p class="flex items-center"><i class="ri-building-line text-purple-400 mr-2"></i>{$_('itOutsourcingDetails.technicalCapabilities.items.3')}</p>
            </div>
            <div class="space-y-1">
-             <p class="flex items-center"><i class="ri-cloud-line text-purple-400 mr-2"></i>云开发</p>
-             <p class="flex items-center"><i class="ri-smartphone-line text-purple-400 mr-2"></i>手机端开发</p>
-             <p class="flex items-center"><i class="ri-database-2-line text-purple-400 mr-2"></i>数据开发</p>
+             <p class="flex items-center"><i class="ri-cloud-line text-purple-400 mr-2"></i>{$_('itOutsourcingDetails.technicalCapabilities.items.4')}</p>
+             <p class="flex items-center"><i class="ri-smartphone-line text-purple-400 mr-2"></i>{$_('itOutsourcingDetails.technicalCapabilities.items.5')}</p>
+             <p class="flex items-center"><i class="ri-database-2-line text-purple-400 mr-2"></i>{$_('itOutsourcingDetails.technicalCapabilities.items.6')}</p>
            </div>
          </div>
       </div>
@@ -352,20 +352,20 @@
            <div class="flex items-center justify-center mb-3">
              <i class="ri-building-4-fill text-6xl text-orange-400"></i>
            </div>
-           <h6 class="text-xl font-bold leading-6 text-white text-center">专注行业</h6>
+           <h6 class="text-xl font-bold leading-6 text-white text-center">{$_('itOutsourcingDetails.focusIndustries.title')}</h6>
          </div>
          <div class="grid grid-cols-2 gap-x-4 text-base text-gray-300 space-y-1">
            <div class="space-y-1">
-             <p class="flex items-center"><i class="ri-bank-line text-orange-400 mr-2"></i>金融行业</p>
-             <p class="flex items-center"><i class="ri-factory-line text-orange-400 mr-2"></i>智能制造</p>
-             <p class="flex items-center"><i class="ri-gamepad-line text-orange-400 mr-2"></i>游戏开发</p>
-             <p class="flex items-center"><i class="ri-building-4-line text-orange-400 mr-2"></i>智能产业园</p>
+             <p class="flex items-center"><i class="ri-bank-line text-orange-400 mr-2"></i>{$_('itOutsourcingDetails.focusIndustries.items.0')}</p>
+             <p class="flex items-center"><i class="ri-building-3-line text-orange-400 mr-2"></i>{$_('itOutsourcingDetails.focusIndustries.items.1')}</p>
+             <p class="flex items-center"><i class="ri-gamepad-line text-orange-400 mr-2"></i>{$_('itOutsourcingDetails.focusIndustries.items.2')}</p>
+             <p class="flex items-center"><i class="ri-building-4-line text-orange-400 mr-2"></i>{$_('itOutsourcingDetails.focusIndustries.items.3')}</p>
            </div>
            <div class="space-y-1">
-             <p class="flex items-center"><i class="ri-shopping-cart-line text-orange-400 mr-2"></i>电子商务</p>
-             <p class="flex items-center"><i class="ri-building-2-line text-orange-400 mr-2"></i>房地产/物业</p>
-             <p class="flex items-center"><i class="ri-health-book-line text-orange-400 mr-2"></i>智能医疗</p>
-             <p class="flex items-center"><i class="ri-global-line text-orange-400 mr-2"></i>互联网</p>
+             <p class="flex items-center"><i class="ri-shopping-cart-line text-orange-400 mr-2"></i>{$_('itOutsourcingDetails.focusIndustries.items.4')}</p>
+             <p class="flex items-center"><i class="ri-building-2-line text-orange-400 mr-2"></i>{$_('itOutsourcingDetails.focusIndustries.items.5')}</p>
+             <p class="flex items-center"><i class="ri-health-book-line text-orange-400 mr-2"></i>{$_('itOutsourcingDetails.focusIndustries.items.6')}</p>
+             <p class="flex items-center"><i class="ri-global-line text-orange-400 mr-2"></i>{$_('itOutsourcingDetails.focusIndustries.items.7')}</p>
            </div>
          </div>
       </div>
@@ -378,18 +378,18 @@
            <div class="flex items-center justify-center mb-3">
              <i class="ri-global-fill text-6xl text-teal-400"></i>
            </div>
-           <h6 class="text-xl font-bold leading-6 text-white text-center">服务市场</h6>
+           <h6 class="text-xl font-bold leading-6 text-white text-center">{$_('itOutsourcingDetails.serviceMarkets.title')}</h6>
          </div>
          <div class="grid grid-cols-2 gap-x-4 text-base text-gray-300 space-y-1">
            <div class="space-y-1">
-             <p class="flex items-center"><i class="ri-map-pin-line text-teal-400 mr-2"></i>国内一线城市</p>
-             <p class="flex items-center"><i class="ri-map-pin-line text-teal-400 mr-2"></i>国内二三线城市</p>
-             <p class="flex items-center"><i class="ri-global-line text-teal-400 mr-2"></i>日本　美国　香港</p>
+             <p class="flex items-center"><i class="ri-map-pin-line text-teal-400 mr-2"></i>{$_('itOutsourcingDetails.serviceMarkets.items.0')}</p>
+             <p class="flex items-center"><i class="ri-map-pin-line text-teal-400 mr-2"></i>{$_('itOutsourcingDetails.serviceMarkets.items.1')}</p>
+             <p class="flex items-center"><i class="ri-global-line text-teal-400 mr-2"></i>{$_('itOutsourcingDetails.serviceMarkets.items.2')}</p>
            </div>
            <div class="space-y-1">
-             <p class="flex items-center"><i class="ri-global-line text-teal-400 mr-2"></i>韩国　欧洲　新加坡</p>
-             <p class="flex items-center"><i class="ri-government-line text-teal-400 mr-2"></i>政府机关</p>
-             <p class="flex items-center"><i class="ri-school-line text-teal-400 mr-2"></i>高校</p>
+             <p class="flex items-center"><i class="ri-global-line text-teal-400 mr-2"></i>{$_('itOutsourcingDetails.serviceMarkets.items.3')}</p>
+             <p class="flex items-center"><i class="ri-government-line text-teal-400 mr-2"></i>{$_('itOutsourcingDetails.serviceMarkets.items.4')}</p>
+             <p class="flex items-center"><i class="ri-school-line text-teal-400 mr-2"></i>{$_('itOutsourcingDetails.serviceMarkets.items.5')}</p>
            </div>
          </div>
       </div>

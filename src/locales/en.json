@@ -248,6 +248,73 @@
       }
     ]
   },
+  "itOutsourcingDetails": {
+    "brandNew": "Brand new",
+    "title": "CN Services - IT Outsourcing Business",
+    "description": "Professional IT outsourcing services that keep your enterprise ahead in digital transformation. We provide comprehensive technical solutions, from software development to system maintenance, helping your business operate efficiently, reduce costs, and enhance competitiveness.",
+    "professionalCapabilities": {
+      "title": "Professional Capabilities",
+      "items": [
+        "Recruitment & Delivery",
+        "Technical R&D",
+        "Solutions",
+        "Operational Efficiency",
+        "Training & Development",
+        "Strategic Innovation",
+        "Employee Care",
+        "Knowledge Base"
+      ]
+    },
+    "resourceSupport": {
+      "title": "Resource Support",
+      "items": [
+        "R&D Team",
+        "Quality Testing Team",
+        "User Experience Design",
+        "Risk Control Team",
+        "Recruitment Team",
+        "Agile Coach",
+        "Operations & Maintenance Team",
+        "Marketing Team"
+      ]
+    },
+    "technicalCapabilities": {
+      "title": "Technical Capabilities",
+      "items": [
+        "Web Development",
+        "Full-Stack Development",
+        "Frontend/Backend Development",
+        "Architecture",
+        "Cloud Development",
+        "Mobile Development",
+        "Data Development"
+      ]
+    },
+    "focusIndustries": {
+      "title": "Focus Industries",
+      "items": [
+        "Financial Industry",
+        "Smart Manufacturing",
+        "Game Development",
+        "Smart Industrial Parks",
+        "E-commerce",
+        "Real Estate/Property",
+        "Smart Healthcare",
+        "Internet"
+      ]
+    },
+    "serviceMarkets": {
+      "title": "Service Markets",
+      "items": [
+        "Domestic Tier-1 Cities",
+        "Domestic Tier-2&3 Cities",
+        "Japan, USA, Hong Kong",
+        "Korea, Europe, Singapore",
+        "Government Agencies",
+        "Universities"
+      ]
+    }
+  },
   "resources": {
     "hero": {
       "title": "Staffing Services",
