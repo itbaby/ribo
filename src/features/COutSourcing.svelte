@@ -237,7 +237,175 @@
   </div>
 </div>
 <!-- End IT外包服务 Hexagon Grid -->
+<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 bg-gray-900">
+  <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+    <div>
+      <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
+        Brand new
+      </p>
+    </div>
+    <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-white sm:text-4xl md:mx-auto">
+      <span class="relative inline-block">
+        <svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
+          <defs>
+            <pattern id="18302e52-9e2a-4c8e-9550-0cbb21b38e55" x="0" y="0" width=".135" height=".30">
+              <circle cx="1" cy="1" r=".7"></circle>
+            </pattern>
+          </defs>
+          <rect fill="url(#18302e52-9e2a-4c8e-9550-0cbb21b38e55)" width="52" height="24"></rect>
+        </svg>
+        <span class="relative">CN</span>
+      </span>
+      服务-IT外包业务
 
+    </h2>
+    <p class="text-base text-white md:text-lg">
+      专业的IT外包服务，让您的企业在数字化转型中保持领先优势。我们提供全方位的技术解决方案，从软件开发到系统维护，助力您的业务高效运营，降低成本，提升竞争力。
+    </p>
+  </div>
+  <!-- First row with 3 cards -->
+  <div class="grid gap-6 mb-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+    <!-- 专业能力 -->
+    <div class="flex flex-col justify-between p-6 border border-gray-700 rounded-lg shadow-lg bg-gray-800 hover:bg-gray-750 transition-all duration-300">
+      <div>
+         <div class="flex flex-col items-center mb-4">
+           <div class="flex items-center justify-center w-16 h-16 mb-3 rounded-full bg-blue-100">
+             <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+             </svg>
+           </div>
+           <h6 class="text-xl font-bold leading-6 text-white text-center">专业能力</h6>
+         </div>
+         <div class="grid grid-cols-2 gap-x-4 text-base text-gray-300 space-y-1">
+           <div class="space-y-1">
+             <p class="flex items-center"><i class="ri-user-add-line text-blue-400 mr-2"></i>招聘交付</p>
+             <p class="flex items-center"><i class="ri-code-s-slash-line text-blue-400 mr-2"></i>技术研发</p>
+             <p class="flex items-center"><i class="ri-lightbulb-line text-blue-400 mr-2"></i>解决方案</p>
+             <p class="flex items-center"><i class="ri-speed-up-line text-blue-400 mr-2"></i>运营效率</p>
+           </div>
+           <div class="space-y-1">
+             <p class="flex items-center"><i class="ri-graduation-cap-line text-blue-400 mr-2"></i>培训提升</p>
+             <p class="flex items-center"><i class="ri-rocket-line text-blue-400 mr-2"></i>战略创新</p>
+             <p class="flex items-center"><i class="ri-heart-line text-blue-400 mr-2"></i>员工关怀</p>
+             <p class="flex items-center"><i class="ri-book-line text-blue-400 mr-2"></i>知识储备</p>
+           </div>
+         </div>
+      </div>
+    </div>
+
+    <!-- 资源支持 -->
+    <div class="flex flex-col justify-between p-6 border border-gray-700 rounded-lg shadow-lg bg-gray-800 hover:bg-gray-750 transition-all duration-300">
+      <div>
+         <div class="flex flex-col items-center mb-4">
+           <div class="flex items-center justify-center w-16 h-16 mb-3 rounded-full bg-green-100">
+             <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+             </svg>
+           </div>
+           <h6 class="text-xl font-bold leading-6 text-white text-center">资源支持</h6>
+         </div>
+         <div class="grid grid-cols-2 gap-x-4 text-base text-gray-300 space-y-1">
+           <div class="space-y-1">
+             <p class="flex items-center"><i class="ri-team-line text-green-400 mr-2"></i>研发团队</p>
+             <p class="flex items-center"><i class="ri-bug-line text-green-400 mr-2"></i>质量测试团队</p>
+             <p class="flex items-center"><i class="ri-palette-line text-green-400 mr-2"></i>用户体验设计</p>
+             <p class="flex items-center"><i class="ri-shield-check-line text-green-400 mr-2"></i>风险控制团队</p>
+           </div>
+           <div class="space-y-1">
+             <p class="flex items-center"><i class="ri-user-search-line text-green-400 mr-2"></i>招聘团队</p>
+             <p class="flex items-center"><i class="ri-compass-3-line text-green-400 mr-2"></i>敏捷教练</p>
+             <p class="flex items-center"><i class="ri-settings-3-line text-green-400 mr-2"></i>运营维护团队</p>
+             <p class="flex items-center"><i class="ri-megaphone-line text-green-400 mr-2"></i>市场营销团队</p>
+           </div>
+         </div>
+      </div>
+    </div>
+
+    <!-- 技术能力 -->
+    <div class="flex flex-col justify-between p-6 border border-gray-700 rounded-lg shadow-lg bg-gray-800 hover:bg-gray-750 transition-all duration-300">
+      <div>
+         <div class="flex flex-col items-center mb-4">
+           <div class="flex items-center justify-center w-16 h-16 mb-3 rounded-full bg-purple-100">
+             <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+             </svg>
+           </div>
+           <h6 class="text-xl font-bold leading-6 text-white text-center">技术能力</h6>
+         </div>
+         <div class="grid grid-cols-2 gap-x-4 text-base text-gray-300 space-y-1">
+           <div class="space-y-1">
+             <p class="flex items-center"><i class="ri-global-line text-purple-400 mr-2"></i>网页开发</p>
+             <p class="flex items-center"><i class="ri-stack-line text-purple-400 mr-2"></i>全栈开发</p>
+             <p class="flex items-center"><i class="ri-code-line text-purple-400 mr-2"></i>前/后端开发</p>
+             <p class="flex items-center"><i class="ri-building-line text-purple-400 mr-2"></i>架构</p>
+           </div>
+           <div class="space-y-1">
+             <p class="flex items-center"><i class="ri-cloud-line text-purple-400 mr-2"></i>云开发</p>
+             <p class="flex items-center"><i class="ri-smartphone-line text-purple-400 mr-2"></i>手机端开发</p>
+             <p class="flex items-center"><i class="ri-database-2-line text-purple-400 mr-2"></i>数据开发</p>
+           </div>
+         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Second row with 2 cards centered -->
+  <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 max-w-4xl mx-auto">
+    <!-- 专注行业 -->
+    <div class="flex flex-col justify-between p-6 border border-gray-700 rounded-lg shadow-lg bg-gray-800 hover:bg-gray-750 transition-all duration-300">
+      <div>
+         <div class="flex flex-col items-center mb-4">
+           <div class="flex items-center justify-center w-16 h-16 mb-3 rounded-full bg-orange-100">
+             <svg class="w-10 h-10 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+             </svg>
+           </div>
+           <h6 class="text-xl font-bold leading-6 text-white text-center">专注行业</h6>
+         </div>
+         <div class="grid grid-cols-2 gap-x-4 text-base text-gray-300 space-y-1">
+           <div class="space-y-1">
+             <p class="flex items-center"><i class="ri-bank-line text-orange-400 mr-2"></i>金融行业</p>
+             <p class="flex items-center"><i class="ri-factory-line text-orange-400 mr-2"></i>智能制造</p>
+             <p class="flex items-center"><i class="ri-gamepad-line text-orange-400 mr-2"></i>游戏开发</p>
+             <p class="flex items-center"><i class="ri-building-4-line text-orange-400 mr-2"></i>智能产业园</p>
+           </div>
+           <div class="space-y-1">
+             <p class="flex items-center"><i class="ri-shopping-cart-line text-orange-400 mr-2"></i>电子商务</p>
+             <p class="flex items-center"><i class="ri-building-2-line text-orange-400 mr-2"></i>房地产/物业</p>
+             <p class="flex items-center"><i class="ri-health-book-line text-orange-400 mr-2"></i>智能医疗</p>
+             <p class="flex items-center"><i class="ri-global-line text-orange-400 mr-2"></i>互联网</p>
+           </div>
+         </div>
+      </div>
+    </div>
+
+    <!-- 服务市场 -->
+    <div class="flex flex-col justify-between p-6 border border-gray-700 rounded-lg shadow-lg bg-gray-800 hover:bg-gray-750 transition-all duration-300">
+      <div>
+         <div class="flex flex-col items-center mb-4">
+           <div class="flex items-center justify-center w-16 h-16 mb-3 rounded-full bg-teal-100">
+             <svg class="w-10 h-10 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+             </svg>
+           </div>
+           <h6 class="text-xl font-bold leading-6 text-white text-center">服务市场</h6>
+         </div>
+         <div class="grid grid-cols-2 gap-x-4 text-base text-gray-300 space-y-1">
+           <div class="space-y-1">
+             <p class="flex items-center"><i class="ri-map-pin-line text-teal-400 mr-2"></i>国内一线城市</p>
+             <p class="flex items-center"><i class="ri-map-pin-line text-teal-400 mr-2"></i>国内二三线城市</p>
+             <p class="flex items-center"><i class="ri-global-line text-teal-400 mr-2"></i>日本　美国　香港</p>
+           </div>
+           <div class="space-y-1">
+             <p class="flex items-center"><i class="ri-global-line text-teal-400 mr-2"></i>韩国　欧洲　新加坡</p>
+             <p class="flex items-center"><i class="ri-government-line text-teal-400 mr-2"></i>政府机关</p>
+             <p class="flex items-center"><i class="ri-school-line text-teal-400 mr-2"></i>高校</p>
+           </div>
+         </div>
+      </div>
+    </div>
+  </div>
+</div>
 <style>
   /* 六边形样式 */
   .hexagon {
