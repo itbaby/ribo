@@ -35,6 +35,77 @@
     '/src/assets/third.jpg',
     '/src/assets/idea-2.jpg'
   ];
+
+  // 根据分类标题返回对应的 Remix Icon 类名
+  function getRemixIcon(title) {
+    const iconMap = {
+      'Technical Talent Dispatch': 'ri-code-s-slash-line',
+      'Project Outsourcing Services': 'ri-box-3-line',
+      'Human Resources Consulting': 'ri-bar-chart-line',
+      'Corporate Training Services': 'ri-brain-line',
+      // 中文标题映射
+      '技术人才派遣': 'ri-code-s-slash-line',
+      '项目外包服务': 'ri-box-3-line', 
+      '人力资源咨询': 'ri-bar-chart-line',
+      '企业培训服务': 'ri-brain-line',
+      // 日文标题映射
+      '技術人材派遣': 'ri-code-s-slash-line',
+      'プロジェクトアウトソーシングサービス': 'ri-box-3-line',
+      '人事コンサルティング': 'ri-bar-chart-line',
+      '企業研修サービス': 'ri-brain-line'
+    };
+    return iconMap[title] || 'ri-service-line';
+  }
+
+  // 根据索引返回不同的颜色主题 - 适配深色主题
+  function getCardTheme(index) {
+    const themes = [
+      {
+        bg: 'bg-gray-800 border border-blue-500/20',
+        hover: 'hover:bg-gray-700 hover:border-blue-400/40',
+        icon: 'text-blue-400',
+        title: 'text-blue-300',
+        shadow: 'hover:shadow-lg hover:shadow-blue-500/10'
+      },
+      {
+        bg: 'bg-gray-800 border border-purple-500/20',
+        hover: 'hover:bg-gray-700 hover:border-purple-400/40',
+        icon: 'text-purple-400',
+        title: 'text-purple-300',
+        shadow: 'hover:shadow-lg hover:shadow-purple-500/10'
+      },
+      {
+        bg: 'bg-gray-800 border border-emerald-500/20',
+        hover: 'hover:bg-gray-700 hover:border-emerald-400/40',
+        icon: 'text-emerald-400',
+        title: 'text-emerald-300',
+        shadow: 'hover:shadow-lg hover:shadow-emerald-500/10'
+      },
+      {
+        bg: 'bg-gray-800 border border-amber-500/20',
+        hover: 'hover:bg-gray-700 hover:border-amber-400/40',
+        icon: 'text-amber-400',
+        title: 'text-amber-300',
+        shadow: 'hover:shadow-lg hover:shadow-amber-500/10'
+      }
+    ];
+    return themes[index % themes.length];
+  }
+
+  // 根据索引返回不同的标题颜色 - 适配深色主题
+  function getStepTitleColor(index) {
+    const colors = [
+      'text-blue-300',
+      'text-purple-300', 
+      'text-emerald-300',
+      'text-amber-300',
+      'text-rose-300',
+      'text-cyan-300',
+      'text-indigo-300',
+      'text-pink-300'
+    ];
+    return colors[index % colors.length];
+  }
 </script>
 
 <div class="min-h-screen bg-gray-900 text-gray-100">
@@ -73,14 +144,17 @@
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {#each categories as category, i (i)}
+          {@const theme = getCardTheme(i)}
           <div
-            class="bg-gray-700 rounded-xl p-8 transition-all duration-300 hover:bg-gray-600 hover:shadow-lg hover:shadow-blue-900/20"
+            class="{theme.bg} {theme.hover} rounded-xl p-8 transition-all duration-300 {theme.shadow} transform hover:-translate-y-1"
             data-aos="fade-up"
             data-aos-delay={(i + 1) * 100}
           >
-            <div class="text-5xl mb-4 transition-transform duration-300 hover:scale-110">{category.icon}</div>
-            <h3 class="text-xl font-bold mb-3 text-blue-400">{category.title}</h3>
-            <p class="text-gray-300">{category.description}</p>
+            <div class="text-5xl mb-4 transition-transform duration-300 hover:scale-110">
+              <i class="{getRemixIcon(category.title)} {theme.icon}"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 {theme.title}">{category.title}</h3>
+            <p class="text-gray-200 opacity-90">{category.description}</p>
           </div>
         {/each}
       </div>
@@ -145,11 +219,11 @@
           {#each processSteps as step, index (index)}
             <div class={`flex flex-col md:flex-row items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`} data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'} data-aos-delay={index * 100}>
               <!-- 时间点 -->
-              <div class="hidden md:flex absolute left-1/2 w-6 h-6 rounded-full bg-blue-500 border-4 border-gray-800 transform -translate-x-1/2 z-10"></div>
+              <div class="hidden md:flex absolute left-1/2 w-6 h-6 rounded-full bg-slate-400 border-4 border-gray-900 transform -translate-x-1/2 z-10"></div>
               <div class="md:w-1/2 px-8 md:px-16">
-                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-blue-900/30 transition-all duration-300">
-                  <h3 class="text-2xl font-bold mb-3 text-blue-400">{step.title}</h3>
-                  <p class="text-gray-300">{step.description}</p>
+                <div class="bg-gray-800 border border-slate-500/20 p-6 rounded-xl shadow-lg hover:shadow-slate-500/20 hover:border-slate-400/30 transition-all duration-300">
+                  <h3 class="text-2xl font-bold mb-3 {getStepTitleColor(index)}">{step.title}</h3>
+                  <p class="text-gray-400">{step.description}</p>
                 </div>
               </div>
               <div class="md:w-1/2"></div>
