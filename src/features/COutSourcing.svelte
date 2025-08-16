@@ -753,7 +753,7 @@
   <!-- First row with 3 cards -->
   <div class="grid gap-6 mb-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 animated-cards-container">
     <!-- 专业能力 -->
-    <div class="animated-card professional-capabilities-card flex flex-col justify-between p-6 border border-gray-700 rounded-lg shadow-lg bg-gray-800 hover:bg-gray-750 transition-all duration-300 overflow-hidden relative">
+    <div class="animated-card professional-capabilities-card flex flex-col justify-between p-6 border border-gray-700 rounded-lg shadow-lg transition-all duration-300 overflow-hidden relative">
       <div class="card-glow absolute inset-0 bg-gradient-to-r from-blue-400/10 to-transparent opacity-0 rounded-lg"></div>
       <div class="relative z-10">
          <div class="flex flex-col items-center mb-4">
@@ -780,7 +780,7 @@
     </div>
 
     <!-- 资源支持 -->
-    <div class="animated-card resource-support-card flex flex-col justify-between p-6 border border-gray-700 rounded-lg shadow-lg bg-gray-800 hover:bg-gray-750 transition-all duration-300 overflow-hidden relative">
+    <div class="animated-card resource-support-card flex flex-col justify-between p-6 border border-gray-700 rounded-lg shadow-lg transition-all duration-300 overflow-hidden relative">
       <div class="card-glow absolute inset-0 bg-gradient-to-r from-green-400/10 to-transparent opacity-0 rounded-lg"></div>
       <div class="relative z-10">
          <div class="flex flex-col items-center mb-4">
@@ -807,7 +807,7 @@
     </div>
 
     <!-- 技术能力 -->
-    <div class="animated-card technical-capabilities-card flex flex-col justify-between p-6 border border-gray-700 rounded-lg shadow-lg bg-gray-800 hover:bg-gray-750 transition-all duration-300 overflow-hidden relative">
+    <div class="animated-card technical-capabilities-card flex flex-col justify-between p-6 border border-gray-700 rounded-lg shadow-lg transition-all duration-300 overflow-hidden relative">
       <div class="card-glow absolute inset-0 bg-gradient-to-r from-purple-400/10 to-transparent opacity-0 rounded-lg"></div>
       <div class="relative z-10">
          <div class="flex flex-col items-center mb-4">
@@ -836,7 +836,7 @@
   <!-- Second row with 2 cards centered -->
   <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 max-w-4xl mx-auto animated-cards-container">
     <!-- 专注行业 -->
-    <div class="animated-card focus-industries-card flex flex-col justify-between p-6 border border-gray-700 rounded-lg shadow-lg bg-gray-800 hover:bg-gray-750 transition-all duration-300 overflow-hidden relative">
+    <div class="animated-card focus-industries-card flex flex-col justify-between p-6 border border-gray-700 rounded-lg shadow-lg transition-all duration-300 overflow-hidden relative">
       <div class="card-glow absolute inset-0 bg-gradient-to-r from-orange-400/10 to-transparent opacity-0 rounded-lg"></div>
       <div class="relative z-10">
          <div class="flex flex-col items-center mb-4">
@@ -863,7 +863,7 @@
     </div>
 
     <!-- 服务市场 -->
-    <div class="animated-card service-markets-card flex flex-col justify-between p-6 border border-gray-700 rounded-lg shadow-lg bg-gray-800 hover:bg-gray-750 transition-all duration-300 overflow-hidden relative">
+    <div class="animated-card service-markets-card flex flex-col justify-between p-6 border border-gray-700 rounded-lg shadow-lg transition-all duration-300 overflow-hidden relative">
       <div class="card-glow absolute inset-0 bg-gradient-to-r from-teal-400/10 to-transparent opacity-0 rounded-lg"></div>
       <div class="relative z-10">
          <div class="flex flex-col items-center mb-4">
