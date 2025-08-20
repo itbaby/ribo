@@ -76,12 +76,12 @@
   });
 </script>
 
-<div class="bg-gray-50 py-24 sm:py-32">
+<div class="bg-gray-800 py-24 sm:py-32">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="text-center">
-      <p class="text-base font-semibold leading-7 text-gray-600">Get to Know Us</p>
-      <h2 class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">Transforming Ideas into Digital Reality</h2>
+      <p class="text-base font-semibold leading-7 text-white">Get to Know Us</p>
+      <h2 class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">Transforming Ideas into Digital Reality</h2>
     </div>
     <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
       <div
@@ -163,8 +163,9 @@
     <!-- 标题和统计数据部分 -->
     <div class="mt-20">
       <div class="text-left mb-12">
-        <p class="text-base font-semibold text-gray-600 mb-4">About Our Company</p>
-        <h2 class="text-4xl font-bold tracking-tight text-gray-900 mb-8">
+        <p class="text-base font-semibold text-white mb-4">About Our Company</p>
+        <h2 class="text-4xl font-bold tracking-tight text-yellow-400 mb-8">
+
           Innovative Influencer Marketing<br>
           to Boost Your Business
         </h2>
@@ -173,15 +174,15 @@
         <div class="flex flex-wrap gap-8 mb-12">
           <div class="text-center">
             <div class="text-3xl font-bold text-blue-600 mb-2">10k+</div>
-            <div class="text-sm text-gray-600">Deal with Clients</div>
+            <div class="text-sm text-white">Deal with Clients</div>
           </div>
           <div class="text-center">
             <div class="text-3xl font-bold text-blue-600 mb-2">1.5k+</div>
-            <div class="text-sm text-gray-600">Team Members</div>
+            <div class="text-sm text-white">Team Members</div>
           </div>
           <div class="text-center">
             <div class="text-3xl font-bold text-blue-600 mb-2">24.1k+</div>
-            <div class="text-sm text-gray-600">Completed Project</div>
+            <div class="text-sm text-white">Completed Project</div>
           </div>
         </div>
       </div>
@@ -218,11 +219,12 @@
         <!-- 左侧内容 -->
         <div class="lg:w-1/2">
           <p class="text-base font-semibold text-purple-600 mb-4">WHO WE ARE</p>
-          <h2 class="text-4xl font-bold tracking-tight text-gray-900 mb-6">
+          <h2 class="text-4xl font-bold tracking-tight text-purple-600 mb-6">
+
             Bringing You Flavors That<br>
             Delight
           </h2>
-          <p class="text-lg leading-8 text-gray-600 mb-8">
+          <p class="text-lg leading-8 text-white mb-8">
             Experience a culinary journey like no other with our menu, where every dish is crafted to delight your senses. We're dedicated to bringing you flavors that excite, with fresh ingredients and authentic recipes that leave a lasting impression.
           </p>
           
@@ -230,19 +232,19 @@
           <div class="grid grid-cols-2 gap-6 mb-8">
             <div class="text-left">
               <div class="text-3xl font-bold text-purple-600 mb-1">90%</div>
-              <div class="text-sm text-gray-600">Repeat Customer</div>
+              <div class="text-sm text-white">Repeat Customer</div>
             </div>
             <div class="text-left">
               <div class="text-3xl font-bold text-purple-600 mb-1">94%</div>
-              <div class="text-sm text-gray-600">Freshness & Quality</div>
+              <div class="text-sm text-white">Freshness & Quality</div>
             </div>
             <div class="text-left">
               <div class="text-3xl font-bold text-purple-600 mb-1">20 min</div>
-              <div class="text-sm text-gray-600">Min. Delivery Time</div>
+              <div class="text-sm text-white">Min. Delivery Time</div>
             </div>
             <div class="text-left">
               <div class="text-3xl font-bold text-purple-600 mb-1">500+</div>
-              <div class="text-sm text-gray-600">Positive Review</div>
+              <div class="text-sm text-white">Positive Review</div>
             </div>
           </div>
           
