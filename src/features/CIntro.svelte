@@ -84,37 +84,75 @@
       <h2 class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">Transforming Ideas into Digital Reality</h2>
     </div>
     <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-      
-      <div class="bg-green-200 p-6 rounded-3xl flex flex-col justify-center items-center text-center aspect-[4/3] lg:aspect-auto">
+      <div
+        class="bg-green-200 p-6 rounded-3xl flex flex-col justify-center items-center text-center aspect-[4/3] lg:aspect-auto"
+        data-aos="fade-up"
+      >
         <p class="text-lg font-medium text-gray-800">Satisfied Customer</p>
         <p class="mt-2 text-5xl font-bold text-gray-900">50.2K+</p>
       </div>
-
-      <div class="rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-auto">
-        <img src="{meetingRoom}" alt="Meeting Room" class="w-full h-full object-cover">
+  
+      <div
+        class="rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-auto"
+        data-aos="fade-down"
+      >
+        <img
+          src={meetingRoom}
+          alt="Meeting Room"
+          class="w-full h-full object-cover"
+        />
       </div>
-
-      <div class="rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-auto">
-        <img src="{presentation}" alt="Presentation" class="w-full h-full object-cover">
+  
+      <div
+        class="rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-auto"
+        data-aos="fade-right"
+      >
+        <img
+          src={presentation}
+          alt="Presentation"
+          class="w-full h-full object-cover"
+        />
       </div>
-
-      <div class="rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-auto">
-        <img src="{teamWorking}" alt="Team Working" class="w-full h-full object-cover">
+  
+      <div
+        class="rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-auto"
+        data-aos="fade-left"
+      >
+        <img
+          src={teamWorking}
+          alt="Team Working"
+          class="w-full h-full object-cover"
+        />
       </div>
-
-      <div class="rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-auto">
-        <img src="{womenWorking}" alt="Women Working" class="w-full h-full object-cover">
+  
+      <div
+        class="rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-auto"
+        data-aos="fade-up-right"
+      >
+        <img
+          src={womenWorking}
+          alt="Women Working"
+          class="w-full h-full object-cover"
+        />
       </div>
-
-      <div class="bg-pink-100 p-6 rounded-3xl col-span-1 sm:col-span-2 lg:col-span-2 aspect-[2/1] lg:aspect-auto">
+  
+      <div
+        class="bg-pink-100 p-6 rounded-3xl col-span-1 sm:col-span-2 lg:col-span-2 aspect-[2/1] lg:aspect-auto"
+        data-aos="fade-up-left"
+      >
         <h3 class="text-2xl font-bold text-gray-900">The Journey of Our Digital Evolution and Growth</h3>
         <p class="mt-4 text-gray-700">
           Our story is one of continuous innovation and transformation, evolving from a small agency into a leader in digital solutions. Through dedication and creativity, we've grown to meet the changing needs of our clients, delivering impactful results.
         </p>
       </div>
-
-      <div class="rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-auto">
-        <img src="{groupLooking}" alt="Group Looking at Laptop" class="w-full h-full object-cover">
+  
+      <div
+        class="rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-auto"
+        data-aos="zoom-in"
+      >
+        <img
+          src={groupLooking}
+          alt="Group Looking at Laptop" class="w-full h-full object-cover">
       </div>
       
     
