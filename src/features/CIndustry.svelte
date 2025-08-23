@@ -1,11 +1,11 @@
-<script>
+<script lang="ts">
   import { onMount } from 'svelte';
   import { gsap } from 'gsap';
   import AOS from 'aos';
   import 'aos/dist/aos.css';
 
   let currentIndustryIndex = 0;
-  let intervalId;
+  let intervalId: number | undefined;
 
   const industryCategories = [
     {
@@ -59,7 +59,7 @@
     },
   ];
 
-  function changeIndustry(index) {
+  function changeIndustry(index: number) {
       if (index === currentIndustryIndex) return;
       
       gsap.to([".main-title", ".main-description"], {
@@ -76,7 +76,7 @@
       });
   }
 
-  function selectIndustry(index) {
+  function selectIndustry(index: number) {
     changeIndustry(index);
     resetAutoPlay();
   }
@@ -106,7 +106,11 @@
 
     startAutoPlay();
 
-    return () => clearInterval(intervalId);
+    return () => {
+      if (intervalId) {
+        clearInterval(intervalId);
+      }
+    };
   });
 </script>
 
