@@ -9,65 +9,53 @@
 
   const industryCategories = [
     {
-      name: '金融',
-      icon: 'ri-bank-fill',
-      bg: '/src/assets/service.jpg',
-      title: '法本信息助力某新能源车企提升智能网联化能力',
-      description: '法本信息为某互联网造车新势力车企提供汽车控制系统CAN总线模块、通信模块等项目的开发，从而帮助客户实现人脸识别和情绪识别功能，使得对应不同用户和不同状态，系统可自动调整座椅、音乐、氛围灯、空调等，极大的提升了用户的驾驶体验。通过双方深度软件合作，大幅提升该客户全车交互智能化研发效率，节约了项目研发成本，加快了新车型上市时间。'
-    },
-    {
       name: '汽车',
       icon: 'ri-car-fill',
-      bg: '/src/assets/riccardo-annandale-7e2pe9wjL9M-unsplash.jpg',
-      title: '汽车行业解决方案',
-      description: '提供智能驾驶、车联网、车载信息娱乐系统等解决方案，助力汽车制造商实现创新技术研发和产品升级。'
+      bg: '/src/assets/automotive.jpg',
+      title: '为某新能源汽车企业构建人才梯队',
+      description: '睿柏聚焦新能源汽车行业发展需求，为某头部新能源汽车企业定向招聘电池研发、智能驾驶、整车设计等核心领域专业人才。依托多年行业招聘经验与优质人才储备，我们通过精准岗位画像匹配、多维度人才评估及全流程招聘服务，高效构建企业研发人才梯队。助力企业快速补充创新型技术力量，加速新能源汽车核心技术研发进程，抢占行业技术升级与市场拓展先机，以专业人才供给赋能企业战略目标高效落地。'
     },
     {
       name: '互联网',
       icon: 'ri-global-fill',
-      bg: '/src/assets/milad-fakurian-seA-FPPXL-M-unsplash.jpg',
-      title: '互联网平台服务',
-      description: '为互联网企业提供大数据、云计算、人工智能等技术支持，优化用户体验，提升平台运营效率。'
+      bg: '/src/assets/internet.jpg',
+      title: '为某互联网头部企业输送核心技术人员',
+      description: '作为专注科技领域的人力资源解决方案提供商，睿柏深度洞察互联网行业技术迭代与业务拓展需求，为某领先互联网企业定制化招募软件开发、数据算法、产品运营、网络安全等核心岗位人才。凭借对互联网岗位能力模型的精准解构、海量技术人才库储备及敏捷招聘响应机制，我们通过技术能力图谱匹配、场景化面试评估与全周期人才服务，高效搭建企业数字化人才矩阵。'
     },
     {
-      name: '运营商',
-      icon: 'ri-phone-fill',
-      bg: '/src/assets/milad-fakurian-wNsHBf_bTBo-unsplash.jpg',
-      title: '电信运营商服务',
-      description: '提供5G网络建设、边缘计算、物联网等技术服务，助力运营商构建高效、智能的通信网络。'
+      name: '金融',
+      icon: 'ri-bank-fill',
+      bg: '/src/assets/finance.jpg',
+      title: '助力某银行快速响应金融科技融合等行业变革',
+      description: '睿柏精准把握金融行业监管升级与业务创新需求，为某知名金融机构定向猎聘风险管理、投资银行、合规审计、金融科技（FinTech）等核心岗位精英。此次合作聚焦于助力客户快速响应资管新规、金融科技融合等行业变革，通过复合型人才引入优化组织能力结构，加速财富管理、跨境资本运作等创新业务落地，以专业化人才配置助力企业筑牢风险防控屏障、提升资产配置效率，在监管趋严与市场竞争中夯实核心竞争力。'
     },
     {
       name: '通信',
       icon: 'ri-wireless-charging-fill',
-      bg: '/src/assets/scott-graham-OQMZwNd3ThU-unsplash.jpg',
-      title: '通信技术研发',
-      description: '专注于下一代通信技术研发，包括光通信、卫星通信、量子通信等，推动通信行业发展。'
-    },
-    {
-      name: '高科技',
-      icon: 'ri-flask-fill',
-      bg: '/src/assets/jeffrey-blum-7-gaPkhIgqs-unsplash.jpg',
-      title: '高科技产业创新',
-      description: '在高科技领域提供前沿技术研发和解决方案，涵盖人工智能、区块链、生物科技等。'
-    },
-    {
-      name: '能源',
-      icon: 'ri-lightbulb-fill',
-      bg: '/src/assets/richard-horvath-cPccYbPrF-A-unsplash.jpg',
-      title: '新能源解决方案',
-      description: '致力于新能源技术开发与应用，提供智能电网、储能系统、清洁能源管理等一体化解决方案。'
-    },
+      bg: '/src/assets/communication.jpg',
+      title: '与某头部国企通信公司达成战略人才合作',
+      description: '我司深度对接国家 “新基建” 战略与通信行业数字化转型需求，与某头部国企通信公司达成战略人才合作，定向招募 5G/6G 技术研发等核心领域骨干人才。此次合作致力于助力客户加速 5G/6G 网络部署进程、强化信息基础设施安全屏障、推动智慧城市与行业数字化解决方案落地，以专业化人才供给支撑国企在 “数字中国” 建设中的主力军作用，助力客户在新基建浪潮中巩固技术领先地位，实现战略布局与人才储备的双向赋能。'
+    }
   ];
 
   function changeIndustry(index: number) {
       if (index === currentIndustryIndex) return;
       
+      // 先淡出文本内容
       gsap.to([".main-title", ".main-description"], {
           opacity: 0,
           y: 20,
           duration: 0.3,
           onComplete: () => {
               currentIndustryIndex = index;
+              
+              // 淡入新背景图片
+              gsap.fromTo(".bg-image", 
+                  { opacity: 0 },
+                  { opacity: 1, duration: 0.8 }
+              );
+              
+              // 淡入新文本内容
               gsap.fromTo([".main-title", ".main-description"], 
                   { opacity: 0, y: -20 },
                   { opacity: 1, y: 0, duration: 0.5, delay: 0.2 }
@@ -116,7 +104,7 @@
 
 <div class="relative h-[90vh] overflow-hidden">
   <!-- Background Image -->
-  <div class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000" style="background-image: url('{industryCategories[currentIndustryIndex].bg}');"></div>
+  <div class="bg-image absolute inset-0 bg-cover bg-center" style="background-image: url('{industryCategories[currentIndustryIndex].bg}');"></div>
 
   <!-- Overlay -->
   <div class="absolute inset-0 bg-black opacity-50"></div>
@@ -138,7 +126,7 @@
 
   <!-- Bottom Industry Categories -->
   <div class="absolute bottom-0 left-0 right-0 z-20 p-4 md:p-8">
-    <div class="industry-cards grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 mt-8 w-full max-w-6xl mx-auto px-4 md:px-0">
+    <div class="industry-cards grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 w-full max-w-6xl mx-auto px-4 md:px-0">
             {#each industryCategories as category, i}
                 <div
                     class="flex flex-col items-center justify-center p-4 rounded-lg cursor-pointer transition-all duration-300 ease-in-out h-32 shadow-lg hover:shadow-xl transform hover:-translate-y-1 backdrop-blur-md border text-white {currentIndustryIndex === i ? 'bg-blue-700/50 border-sky-300' : 'bg-black/20 border-white/10'}"
