@@ -22,37 +22,43 @@
       title: $_('cintro.services.0.title'),
       description: $_('cintro.services.0.description'),
       image: aboutus,
+      image2: meetingRoom,
     },
     {
       title: $_('cintro.services.1.title'),
       description: $_('cintro.services.1.description'),
       image: tech,
+      image2: presentation,
     },
     {
       title: $_('cintro.services.2.title'),
       description: $_('cintro.services.2.description'),
       image: talent,
+      image2: teamWorking,
     },
     {
       title: $_('cintro.services.3.title'),
       description: $_('cintro.services.3.description'),
       image: eco,
+      image2: womenWorking,
     },
   ]);
 
-  let currentImage = $state(services[0].image);
+  let currentImage1 = $derived(services[0].image);
+  let currentImage2 = $derived(services[0].image2);
 
   function animateContent(index: number): void {
     gsap.fromTo(".fade-in", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.1 });
   }
 
-  function changeImage(newImage: string, index: number): void {
-    if (currentImage !== newImage) {
+  function changeImage(newImage1: string, newImage2: string, index: number): void {
+    if (currentImage1 !== newImage1 || currentImage2 !== newImage2) {
       gsap.to(".animated-img", { 
         opacity: 0, 
         duration: 0.5, 
         onComplete: () => {
-          currentImage = newImage;
+          currentImage1 = newImage1;
+          currentImage2 = newImage2;
           selectedIndex = index;
           gsap.fromTo(".animated-img", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.5 });
           animateContent(index);
@@ -63,11 +69,11 @@
 
   function nextService(): void {
     const nextIndex = (selectedIndex + 1) % services.length;
-    changeImage(services[nextIndex].image, nextIndex);
+    changeImage(services[nextIndex].image, services[nextIndex].image2, nextIndex);
   }
 
-  function handleClick(image: string, index: number): void {
-    changeImage(image, index);
+  function handleClick(image1: string, image2: string, index: number): void {
+    changeImage(image1, image2, index);
     if (intervalId) clearInterval(intervalId);
     intervalId = setInterval(nextService, 5000);
   }
@@ -218,37 +224,54 @@
         <div class="text-center">
           <h2 class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">{$t('cintro.title')}</h2>
         </div>
-        <!-- 主要内容区域 -->
-        <div class="flex flex-col mt-20 lg:flex-row gap-8 lg:items-stretch">
-          <!-- 左侧图片 -->
-          <div class="lg:w-1/2 flex">
-            <img
-              class="w-full h-auto lg:h-full rounded-lg object-cover animated-img"
-              src="{currentImage}"
-              alt="公司业务领域"
-              style="min-height: 400px;"
-            />
+        <!-- 主要内容区域 - 改进布局 -->
+        <div class="flex flex-col mt-16 lg:flex-row gap-10 lg:items-start">
+          <!-- 左侧图片区域 - 优化布局 -->
+          <div class="lg:w-1/2 flex flex-col gap-6 relative">
+            <div 
+              class="w-full h-64 lg:h-80 rounded-2xl overflow-hidden shadow-2xl transform transition-all duration-700 hover:scale-105 animated-img group"
+              style="animation: floatUp 3s ease-in-out infinite alternate;"
+            >
+              <img
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                src={currentImage1}
+                alt="公司业务领域"
+              />
+            </div>
+            <div 
+              class="w-full h-64 lg:h-80 rounded-2xl overflow-hidden shadow-2xl transform transition-all duration-700 hover:scale-105 animated-img group"
+              style="animation: floatDown 3s ease-in-out infinite alternate 0.5s;"
+            >
+              <img
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                src={currentImage2}
+                alt="公司业务领域"
+              />
+            </div>
           </div>
       
-          <!-- 右侧服务卡片 -->
+          <!-- 右侧服务卡片 - 优化布局 -->
           <div class="lg:w-1/2 flex flex-col gap-6">
-            <!-- Ad Campaign Strategies -->
             {#each services as service, index}
               <div
                 class="{selectedIndex === index
-                  ? 'bg-blue-100'
-                  : 'bg-gray-100'} p-6 rounded-lg flex-1 flex flex-col cursor-pointer fade-in text-card"
-                onclick={() => handleClick(service.image, index)}
-                onkeydown={(e) => e.key === 'Enter' && handleClick(service.image, index)}
+                  ? 'bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-500 shadow-lg'
+                  : 'bg-white border-l-4 border-transparent'} p-6 rounded-xl flex-1 flex flex-col cursor-pointer fade-in text-card transition-all duration-300 hover:shadow-md hover:scale-[1.02]"
+                onclick={() => handleClick(service.image, service.image2, index)}
+                onkeydown={(e) => e.key === 'Enter' && handleClick(service.image, service.image2, index)}
                 role="button"
                 tabindex="0"
               >
                 <h3 class="text-xl font-semibold text-gray-900 mb-3">
                   {service.title}
                 </h3>
-                <p class="text-base text-gray-700 mb-4 flex-1">
+                <p class="text-base text-gray-700 mb-4 flex-1 leading-relaxed">
                   {@html service.description}
                 </p>
+                <div class="flex items-center text-sm text-blue-600 font-medium">
+                  <span class="mr-2">→</span>
+                  <span>{selectedIndex === index ? '当前选中' : '了解更多'}</span>
+                </div>
               </div>
             {/each}
           </div>
@@ -260,9 +283,36 @@
 </div>
 <style>
   .animated-img {
-    transition: all 0.5s ease;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .image-card {
     cursor: pointer;
+  }
+  
+  @keyframes floatUp {
+    0% {
+      transform: translateY(0) rotate(-1deg);
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+    }
+    100% {
+      transform: translateY(-8px) rotate(1deg);
+      box-shadow: 0 30px 50px -12px rgba(59, 130, 246, 0.25);
+    }
+  }
+  
+  @keyframes floatDown {
+    0% {
+      transform: translateY(0) rotate(1deg);
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+    }
+    100% {
+      transform: translateY(8px) rotate(-1deg);
+      box-shadow: 0 30px 50px -12px rgba(16, 185, 129, 0.25);
+    }
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 </style>
