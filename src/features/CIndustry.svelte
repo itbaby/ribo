@@ -119,9 +119,7 @@
       <p class="main-description text-base md:text-lg mb-8" data-aos="fade-up" data-aos-delay="200">
         {industryCategories[currentIndustryIndex].description}
       </p>
-      <button class="action-button bg-gray-900 hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-full transition duration-300" data-aos="fade-up" data-aos-delay="400">
-        了解详情 >
-      </button>
+      
     </div>
   </div>
 
