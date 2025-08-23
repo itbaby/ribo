@@ -17,7 +17,7 @@
   let selectedIndex = $state(0);
   let intervalId: number | undefined;
 
-  const services = [
+  const services = $derived([
     {
       title: $_('cintro.services.0.title'),
       description: $_('cintro.services.0.description'),
@@ -38,7 +38,7 @@
       description: $_('cintro.services.3.description'),
       image: eco,
     },
-  ];
+  ]);
 
   let currentImage = $state(services[0].image);
 
