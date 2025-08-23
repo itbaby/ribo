@@ -103,7 +103,23 @@
       "name": "Communications",
       "title": "Establish a strategic talent cooperation with a leading state-owned telecommunications company",
       "description": "Our company has deeply aligned with the national \"New Infrastructure\" strategy and the digital transformation needs of the telecommunications industry, establishing a strategic talent cooperation with a leading state-owned telecommunications company to target the recruitment of key talents in core fields such as 5G/6G technology R&D. This collaboration is dedicated to assisting clients in accelerating the 5G/6G network deployment process, strengthening the security barrier of information infrastructure, and promoting the implementation of smart city and industry digital solutions. Through professional talent supply, we support the state-owned enterprise's leading role in the construction of \"Digital China\", helping clients consolidate their technological leadership in the wave of new infrastructure and achieve mutual empowerment between strategic layout and talent reserve."
+    },
+    "ecommerce": {
+      "name": "E-commerce & Consumer Goods",
+      "title": "Help a leading e-commerce enterprise achieve user scale and GMV growth targets",
+      "description": "Ribo closely follows the trend of e-commerce omni-channel integration and has reached a talent cooperation with a leading enterprise, targeting recruitment for core positions such as omni-channel operations, user growth, livestreaming operations, cross-border compliance, and intelligent supply chain. Relying on business scenario deconstruction and massive talent reserves, we quickly build teams with both traffic thinking and practical experience for clients through precise matching systems and scenario-based interview mechanisms. The cooperation focuses on breaking through traffic bottlenecks, improving cross-border efficiency, and optimizing supply chain response, empowering clients with the dual wheels of \"talent + scenario\" to help them consolidate their leading position in livestreaming e-commerce, cross-border trade, and other tracks, achieving user scale and GMV growth targets."
+    },
+    "newenergy": {
+      "name": "New Energy",
+      "title": "Help a large group implement an industry-leading new energy centralized control platform",
+      "description": "A large group focusing on strategic breakthroughs in the new energy industry plans to implement an industry-leading new energy centralized control platform. This system will achieve full-dimensional real-time monitoring, intelligent scheduling, and full life cycle management of the group's new energy assets across all plants and stations, deeply empowering the group's digital transformation, intelligent upgrading, and refined management capabilities in the new energy field. This deployment aims to help the group build an industry-leading new energy intelligent management system, accelerate green and low-carbon technology innovation and industrial upgrading, and provide core momentum support for the implementation of \"dual carbon\" goals."
+    },
+    "semiconductor": {
+      "name": "Semiconductor",
+      "title": "Hard Technology Human Capital Empowerment",
+      "description": "As a human capital service provider focusing on hard technology fields, Ribo deeply anchors the technical barriers and industrial chain coordination needs of the semiconductor industry, and has reached a strategic talent cooperation with a core semiconductor enterprise. This cooperation focuses on helping clients accelerate the advanced process R&D process, improve wafer yield control level, and break through the bottleneck of key equipment localization, supporting enterprises in building core technical barriers in chip autonomy, supply chain security, and global semiconductor competition pattern with professional talent supply, promoting the efficient implementation of the \"China Chip\" industrial upgrading goal."
     }
+  
   },
   "chiring": {
     "hireSoFaster": "Hire so faster",
