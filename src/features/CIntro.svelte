@@ -4,8 +4,6 @@
   import { Elastic } from 'gsap';
   gsap.registerPlugin(Elastic);
   import aboutus from '../assets/tech_company.jpg';
-  import service from '../assets/service.jpg';
-  import scott from '../assets/scott-graham-OQMZwNd3ThU-unsplash.jpg';
   import meetingRoom from '../assets/annie-spratt-QckxruozjRg-unsplash.jpg';
   import presentation from '../assets/jeffrey-blum-7-gaPkhIgqs-unsplash.jpg';
   import teamWorking from '../assets/riccardo-annandale-7e2pe9wjL9M-unsplash.jpg';
