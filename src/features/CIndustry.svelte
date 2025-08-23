@@ -59,15 +59,33 @@
     },
   ];
 
+  function changeIndustry(index) {
+      if (index === currentIndustryIndex) return;
+      
+      gsap.to([".main-title", ".main-description"], {
+          opacity: 0,
+          y: 20,
+          duration: 0.3,
+          onComplete: () => {
+              currentIndustryIndex = index;
+              gsap.fromTo([".main-title", ".main-description"], 
+                  { opacity: 0, y: -20 },
+                  { opacity: 1, y: 0, duration: 0.5, delay: 0.2 }
+              );
+          }
+      });
+  }
+
   function selectIndustry(index) {
-    currentIndustryIndex = index;
+    changeIndustry(index);
     resetAutoPlay();
   }
 
   function startAutoPlay() {
     intervalId = setInterval(() => {
-      currentIndustryIndex = (currentIndustryIndex + 1) % industryCategories.length;
-    }, 5000); // 每5秒切换一次
+      const nextIndex = (currentIndustryIndex + 1) % industryCategories.length;
+      changeIndustry(nextIndex);
+    }, 5000);
   }
 
   function resetAutoPlay() {
