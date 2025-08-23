@@ -119,13 +119,13 @@
     <div class="industry-cards grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 mt-8 w-full max-w-6xl mx-auto px-4 md:px-0">
             {#each industryCategories as category, i}
                 <div
-                    class="flex flex-col items-center justify-center p-4 rounded-lg cursor-pointer transition-all duration-300 ease-in-out h-32 shadow-lg hover:shadow-xl transform hover:-translate-y-1 {currentIndustryIndex === i ? 'bg-blue-600 text-white' : 'bg-gray-600 bg-opacity-30 text-gray-200'}"
+                    class="flex flex-col items-center justify-center p-4 rounded-lg cursor-pointer transition-all duration-300 ease-in-out h-32 shadow-lg hover:shadow-xl transform hover:-translate-y-1 backdrop-blur-md border text-white {currentIndustryIndex === i ? 'bg-blue-700/50 border-sky-300' : 'bg-black/20 border-white/10'}"
                     on:click={() => selectIndustry(i)}
                     on:keydown={(e) => { if (e.key === 'Enter' || e.key === ' ') selectIndustry(i); }}
                     role="button"
                     tabindex="0"
                 >
-                    <i class="{category.icon} text-5xl mb-2 filter brightness-0 invert"></i>
+                    <i class="{category.icon} text-5xl mb-2"></i>
                     <span class="text-sm text-center font-semibold">{category.name}</span>
                 </div>
             {/each}
