@@ -83,6 +83,28 @@
     "headline": "[TRANSLATION NEEDED] Based in Dalian, supported by Shanghai and Shenzhen, centered on customer success, providing one-stop talent services",
     "subhead": "[TRANSLATION NEEDED] Customer-centric, providing one-stop talent services"
   },
+  "industry": {
+    "automotive": {
+      "name": "Automotive",
+      "title": "Building Talent Pipeline for a New Energy Vehicle Enterprise",
+      "description": "Ribo focuses on the development needs of the new energy vehicle industry, recruiting professional talents in core areas such as battery R&D, intelligent driving, and vehicle design for a leading new energy vehicle enterprise. Leveraging years of industry recruitment experience and high-quality talent reserves, we efficiently build corporate R&D talent pipelines through precise job profile matching, multi-dimensional talent assessment, and full-process recruitment services. We help enterprises quickly supplement innovative technical forces, accelerate the R&D process of core technologies for new energy vehicles, seize opportunities for industry technology upgrades and market expansion, and enable the efficient implementation of corporate strategic goals through professional talent supply."
+    },
+    "internet": {
+      "name": "Internet",
+      "title": "Delivering Core Technical Personnel for a Leading Internet Enterprise",
+      "description": "As a human resources solution provider focused on the technology field, Ribo deeply understands the technology iteration and business expansion needs of the internet industry, customizing recruitment of core position talents such as software development, data algorithms, product operations, and network security for a leading internet enterprise. With precise deconstruction of internet position capability models, massive technical talent pool reserves, and agile recruitment response mechanisms, we efficiently build corporate digital talent matrices through technical capability map matching, scenario-based interview assessments, and full-cycle talent services."
+    },
+    "finance": {
+      "name": "Finance",
+      "title": "Helping a Bank Quickly Respond to Industry Changes such as Financial Technology Integration",
+      "description": "Ribo accurately grasps the regulatory upgrades and business innovation needs of the financial industry, headhunting elites for core positions such as risk management, investment banking, compliance auditing, and financial technology (FinTech) for a well-known financial institution. This collaboration focuses on helping clients quickly respond to industry changes such as new asset management regulations and financial technology integration, optimizing organizational capability structures through the introduction of compound talents, accelerating the implementation of innovative businesses such as wealth management and cross-border capital operations, helping enterprises build solid risk prevention and control barriers and improve asset allocation efficiency through professional talent configuration, and consolidating core competitiveness in the face of stricter regulation and market competition."
+    },
+    "communication": {
+      "name": "Communication",
+      "title": "Strategic Talent Cooperation with a Leading State-owned Communication Company",
+      "description": "Our company deeply connects with the national \"New Infrastructure\" strategy and the digital transformation needs of the communication industry, reaching a strategic talent cooperation with a leading state-owned communication company, targeting the recruitment of backbone talents in core areas such as 5G/6G technology R&D. This cooperation is dedicated to helping clients accelerate the 5G/6G network deployment process, strengthen information infrastructure security barriers, promote the implementation of smart city and industry digital solutions, support the role of state-owned enterprises as the main force in the construction of \"Digital China\" through professional talent supply, and help clients consolidate their leading technological position in the new infrastructure wave, achieving two-way empowerment of strategic layout and talent reserve."
+    }
+  },
   "chiring": {
     "hireSoFaster": "Hire so faster",
     "headline": "Headhunting Service",
