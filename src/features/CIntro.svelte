@@ -1,6 +1,8 @@
 <script lang="ts">
   import { onMount, onDestroy } from 'svelte';
   import { gsap } from 'gsap';
+  import { Elastic } from 'gsap';
+  gsap.registerPlugin(Elastic);
   import aboutus from '../assets/tech_company.jpg';
   import service from '../assets/service.jpg';
   import scott from '../assets/scott-graham-OQMZwNd3ThU-unsplash.jpg';
@@ -81,6 +83,50 @@
     animateContent(0);
   });
 
+  onMount(() => {
+    const cards = document.querySelectorAll('.image-card');
+    cards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        gsap.to(card, {
+          scale: 1.1,
+          duration: 0.5,
+          ease: "power2.out"
+        });
+      });
+      card.addEventListener('mouseleave', () => {
+        gsap.to(card, {
+          scale: 1,
+          duration: 0.5,
+          ease: "power2.out"
+        });
+      });
+    });
+  });
+
+  onMount(() => {
+    const textCards = document.querySelectorAll('.text-card');
+    textCards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        const originalBg = getComputedStyle(card).backgroundColor;
+        const textElements = card.querySelectorAll('p, h3');
+        const originalColors = Array.from(textElements).map(el => getComputedStyle(el).color);
+        const mainTextColor = originalColors[0] || '#000000'; // Fallback to black if no text elements
+        gsap.to(card, { backgroundColor: mainTextColor, duration: 0.3 });
+        textElements.forEach((el) => {
+          gsap.to(el, { color: originalBg, duration: 0.3 });
+        });
+        const leaveListener = () => {
+          gsap.to(card, { backgroundColor: originalBg, duration: 0.3 });
+          textElements.forEach((el, i) => {
+            gsap.to(el, { color: originalColors[i], duration: 0.3 });
+          });
+          card.removeEventListener('mouseleave', leaveListener);
+        };
+        card.addEventListener('mouseleave', leaveListener);
+      });
+    });
+  });
+
   onDestroy(() => {
     if (intervalId) clearInterval(intervalId);
   });
@@ -95,7 +141,7 @@
     </div>
     <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
       <div
-        class="bg-green-200 p-6 rounded-3xl flex flex-col justify-center items-center text-center aspect-[4/3] lg:aspect-auto"
+        class="bg-green-200 p-6 rounded-3xl flex flex-col justify-center items-center text-center aspect-[4/3] lg:aspect-auto text-card"
         data-aos="fade-up"
       >
         <p class="text-lg font-medium text-gray-800">{$t('satisfiedCustomer')}</p>
@@ -103,7 +149,7 @@
       </div>
   
       <div
-        class="rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-auto"
+        class="image-card rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-auto"
         data-aos="fade-down"
       >
         <img
@@ -114,7 +160,7 @@
       </div>
   
       <div
-        class="rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-auto"
+        class="image-card rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-auto"
         data-aos="fade-right"
       >
         <img
@@ -125,7 +171,7 @@
       </div>
   
       <div
-        class="rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-auto"
+        class="image-card rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-auto"
         data-aos="fade-left"
       >
         <img
@@ -136,7 +182,7 @@
       </div>
   
       <div
-        class="rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-auto"
+        class="image-card rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-auto"
         data-aos="fade-up-right"
       >
         <img
@@ -147,7 +193,7 @@
       </div>
   
       <div
-        class="bg-pink-100 p-6 rounded-3xl col-span-1 sm:col-span-2 lg:col-span-2 aspect-[2/1] lg:aspect-auto"
+        class="bg-pink-100 p-6 rounded-3xl col-span-1 sm:col-span-2 lg:col-span-2 aspect-[2/1] lg:aspect-auto text-card"
         data-aos="fade-up-left"
       >
         <h3 class="text-2xl font-bold text-gray-900">{$t('journey.title')}</h3>
@@ -157,7 +203,7 @@
       </div>
   
       <div
-        class="rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-auto"
+        class="image-card rounded-3xl overflow-hidden aspect-[4/3] lg:aspect-auto"
         data-aos="zoom-in"
       >
         <img
@@ -197,7 +243,7 @@
               <div
                 class="{selectedIndex === index
                   ? 'bg-blue-100'
-                  : 'bg-gray-100'} p-6 rounded-lg flex-1 flex flex-col cursor-pointer fade-in"
+                  : 'bg-gray-100'} p-6 rounded-lg flex-1 flex flex-col cursor-pointer fade-in text-card"
                 onclick={() => handleClick(service.image, index)}
                 onkeydown={(e) => e.key === 'Enter' && handleClick(service.image, index)}
                 role="button"
@@ -221,5 +267,8 @@
 <style>
   .animated-img {
     transition: all 0.5s ease;
+  }
+  .image-card {
+    cursor: pointer;
   }
 </style>
