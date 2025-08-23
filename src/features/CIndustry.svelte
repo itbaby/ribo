@@ -12,7 +12,7 @@
         {
             name: $_("industry.automotive.name"),
             icon: "ri-car-fill",
-            bg: "/src/assets/automotive.jpg",
+            bg: "/src/assets/automotive-new.jpg",
             title: $_("industry.automotive.title"),
             description: $_("industry.automotive.description"),
         },
@@ -40,21 +40,21 @@
         {
             name: $_("industry.ecommerce.name"),
             icon: "ri-shopping-cart-fill",
-            bg: "/src/assets/internet.jpg", // 复用现有图片，后续可替换为专用图片
+            bg: "/src/assets/ecommerce-new.jpg",
             title: $_("industry.ecommerce.title"),
             description: $_("industry.ecommerce.description"),
         },
         {
             name: $_("industry.newenergy.name"),
             icon: "ri-flashlight-fill",
-            bg: "/src/assets/automotive.jpg", // 复用现有图片，后续可替换为专用图片
+            bg: "/src/assets/newenergy-pro.jpg",
             title: $_("industry.newenergy.title"),
             description: $_("industry.newenergy.description"),
         },
         {
             name: $_("industry.semiconductor.name"),
             icon: "ri-cpu-fill",
-            bg: "/src/assets/finance.jpg", // 复用现有图片，后续可替换为专用图片
+            bg: "/src/assets/semiconductor-pro.jpg",
             title: $_("industry.semiconductor.title"),
             description: $_("industry.semiconductor.description"),
         },
