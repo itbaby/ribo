@@ -1,6 +1,4 @@
-<script>
-  // @ts-ignore
-  import prue_dark from '../assets/prue_dark.jpg';
+<script lang="ts">
   import aboutus from '../assets/aboutus.jpg';
   import service from '../assets/service.jpg';
   import scott from '../assets/scott-graham-OQMZwNd3ThU-unsplash.jpg';
@@ -14,8 +12,7 @@
 
   let currentImage = aboutus;
   let selectedIndex = 0;
-  // @ts-ignore
-  let intervalId;
+  let intervalId: number | undefined;
 
   const services = [
     {
@@ -35,33 +32,33 @@
     }
   ];
 
-  // @ts-ignore
-  function animateContent(index) {
+  function animateContent(index: number): void {
     gsap.fromTo(".fade-in", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.1 });
   }
 
-  // @ts-ignore
-  function changeImage(newImage, index) {
+  function changeImage(newImage: string, index: number): void {
     if (currentImage !== newImage) {
-      gsap.to(".animated-img", { opacity: 0, duration: 0.5, onComplete: () => {
-        currentImage = newImage;
-        selectedIndex = index;
-        gsap.fromTo(".animated-img", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.5 });
-        animateContent(index);
-      }});
+      gsap.to(".animated-img", { 
+        opacity: 0, 
+        duration: 0.5, 
+        onComplete: () => {
+          currentImage = newImage;
+          selectedIndex = index;
+          gsap.fromTo(".animated-img", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.5 });
+          animateContent(index);
+        }
+      });
     }
   }
 
-  function nextService() {
+  function nextService(): void {
     const nextIndex = (selectedIndex + 1) % services.length;
     changeImage(services[nextIndex].image, nextIndex);
   }
 
-  // @ts-ignore
-  function handleClick(image, index) {
+  function handleClick(image: string, index: number): void {
     changeImage(image, index);
-    // @ts-ignore
-    clearInterval(intervalId);
+    if (intervalId) clearInterval(intervalId);
     intervalId = setInterval(nextService, 5000);
   }
 
@@ -71,8 +68,7 @@
   });
 
   onDestroy(() => {
-    // @ts-ignore
-    clearInterval(intervalId);
+    if (intervalId) clearInterval(intervalId);
   });
 </script>
 
@@ -160,32 +156,31 @@
     </div>
   </div>
 
-    <!-- 标题和统计数据部分 -->
-    <div class="mt-20">
-      <div class="text-left mb-12">
-        <p class="text-base font-semibold text-white mb-4">About Our Company</p>
-        <h2 class="text-4xl font-bold tracking-tight text-yellow-400 mb-8">
-
-          Innovative Influencer Marketing<br>
-          to Boost Your Business
-        </h2>
-        
-        <!-- 统计数据 -->
-        <div class="flex flex-wrap gap-8 mb-12">
-          <div class="text-center">
-            <div class="text-3xl font-bold text-blue-600 mb-2">10k+</div>
-            <div class="text-sm text-white">Deal with Clients</div>
-          </div>
-          <div class="text-center">
-            <div class="text-3xl font-bold text-blue-600 mb-2">1.5k+</div>
-            <div class="text-sm text-white">Team Members</div>
-          </div>
-          <div class="text-center">
-            <div class="text-3xl font-bold text-blue-600 mb-2">24.1k+</div>
-            <div class="text-sm text-white">Completed Project</div>
-          </div>
+  <!-- Main Content Section -->
+  <div class="mt-20">
+    <div class="text-left mb-12">
+      <p class="text-base font-semibold text-white mb-4">About Our Company</p>
+      <h2 class="text-4xl font-bold tracking-tight text-blue-400 mb-8">
+        Digital Transformation Solutions<br>
+        for Modern Enterprises
+      </h2>
+      
+      <!-- Statistics -->
+      <div class="flex flex-wrap gap-8 mb-12">
+        <div class="text-center">
+          <div class="text-3xl font-bold text-blue-400 mb-2">500+</div>
+          <div class="text-sm text-gray-300">Enterprise Clients</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-blue-400 mb-2">150+</div>
+          <div class="text-sm text-gray-300">Expert Team</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-blue-400 mb-2">1000+</div>
+          <div class="text-sm text-gray-300">Projects Delivered</div>
         </div>
       </div>
+    </div>
       
       <!-- 主要内容区域 -->
        <div class="flex flex-col lg:flex-row gap-8 lg:items-stretch">
@@ -213,60 +208,59 @@
       </div>
     </div>
     
-    <!-- 新增美食section -->
-    <div class="mt-32">
-      <div class="flex flex-col lg:flex-row gap-12 lg:items-center">
-        <!-- 左侧内容 -->
-        <div class="lg:w-1/2">
-          <p class="text-base font-semibold text-purple-600 mb-4">WHO WE ARE</p>
-          <h2 class="text-4xl font-bold tracking-tight text-purple-600 mb-6">
-
-            Bringing You Flavors That<br>
-            Delight
-          </h2>
-          <p class="text-lg leading-8 text-white mb-8">
-            Experience a culinary journey like no other with our menu, where every dish is crafted to delight your senses. We're dedicated to bringing you flavors that excite, with fresh ingredients and authentic recipes that leave a lasting impression.
-          </p>
-          
-          <!-- 统计数据网格 -->
-          <div class="grid grid-cols-2 gap-6 mb-8">
-            <div class="text-left">
-              <div class="text-3xl font-bold text-purple-600 mb-1">90%</div>
-              <div class="text-sm text-white">Repeat Customer</div>
-            </div>
-            <div class="text-left">
-              <div class="text-3xl font-bold text-purple-600 mb-1">94%</div>
-              <div class="text-sm text-white">Freshness & Quality</div>
-            </div>
-            <div class="text-left">
-              <div class="text-3xl font-bold text-purple-600 mb-1">20 min</div>
-              <div class="text-sm text-white">Min. Delivery Time</div>
-            </div>
-            <div class="text-left">
-              <div class="text-3xl font-bold text-purple-600 mb-1">500+</div>
-              <div class="text-sm text-white">Positive Review</div>
-            </div>
+  <!-- Digital Services Section -->
+  <div class="mt-32">
+    <div class="flex flex-col lg:flex-row gap-12 lg:items-center">
+      <!-- 左侧内容 -->
+      <div class="lg:w-1/2">
+        <p class="text-base font-semibold text-blue-600 mb-4">DIGITAL EXCELLENCE</p>
+        <h2 class="text-4xl font-bold tracking-tight text-white mb-6">
+          Innovative Digital Solutions<br>
+          for Modern Businesses
+        </h2>
+        <p class="text-lg leading-8 text-gray-300 mb-8">
+          We deliver cutting-edge digital solutions that drive growth and transformation. Our expertise spans web development, mobile apps, and cloud services, helping businesses thrive in the digital age.
+        </p>
+        
+        <!-- 统计数据网格 -->
+        <div class="grid grid-cols-2 gap-6 mb-8">
+          <div class="text-left">
+            <div class="text-3xl font-bold text-blue-600 mb-1">95%</div>
+            <div class="text-sm text-gray-300">Client Satisfaction</div>
           </div>
-          
-          <!-- Learn More 按钮 -->
-          <div>
-            <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">
-              Learn More
-              <svg class="ml-3 -mr-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-              </svg>
-            </a>
+          <div class="text-left">
+            <div class="text-3xl font-bold text-blue-600 mb-1">98%</div>
+            <div class="text-sm text-gray-300">Project Success Rate</div>
+          </div>
+          <div class="text-left">
+            <div class="text-3xl font-bold text-blue-600 mb-1">24/7</div>
+            <div class="text-sm text-gray-300">Support Availability</div>
+          </div>
+          <div class="text-left">
+            <div class="text-3xl font-bold text-blue-600 mb-1">500+</div>
+            <div class="text-sm text-gray-300">Projects Delivered</div>
           </div>
         </div>
         
-        <!-- 右侧图片组合 -->
-        <div class="lg:w-1/2 relative h-[500px] group">
-            <img class="absolute top-10 left-0 w-3/5 h-auto rounded-lg shadow-2xl transition-transform duration-500 ease-in-out group-hover:rotate-[-3deg] group-hover:scale-105" src="{scott}" alt="美食制作过程" />
-            <img class="absolute top-0 right-0 w-1/2 h-auto rounded-lg shadow-2xl transition-transform duration-500 ease-in-out group-hover:rotate-[3deg] group-hover:scale-105" src="{service}" alt="精美三明治" />
-            <img class="absolute bottom-10 left-1/4 w-3/5 h-auto rounded-lg shadow-2xl transition-transform duration-500 ease-in-out group-hover:scale-110" src="{aboutus}" alt="美味甜点" />
+        <!-- Learn More 按钮 -->
+        <div>
+          <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+            Learn More
+            <svg class="ml-3 -mr-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l极速模式下的剩余文字: 4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
         </div>
       </div>
+      
+      <!-- 右侧图片组合 -->
+      <div class="lg:w-1/2 relative h-[500px] group">
+          <img class="absolute top-10 left-0 w-3/5 h-auto rounded-lg shadow-2xl transition-transform duration-500 ease-in-out group-hover:rotate-[-3deg] group-hover:scale-105" src="{scott}" alt="Team Collaboration" />
+          <img class="absolute top-0 right-0 w-1/2 h-auto rounded-lg shadow-2xl transition-transform duration-500 ease-in-out group-hover:rotate-[3deg] group-hover:scale-105" src="{service}" alt="Development Process" />
+          <img class="absolute bottom-10 left-1/4 w-3/5 h-auto rounded-lg shadow-2xl transition-transform duration-500 ease-in-out group-hover:scale-110" src="{aboutus}" alt="Project Delivery" />
+      </div>
     </div>
+  </div>
     
   </div>
 </div>
@@ -274,175 +268,5 @@
 <style>
   .animated-img {
     transition: all 0.5s ease;
-  }
-
-  /* Fancy Cards Container */
-  .fancy-cards-container {
-    position: relative;
-    overflow: hidden;
-  }
-
-  /* Floating Background Orbs */
-  .floating-orb {
-    position: absolute;
-    border-radius: 50%;
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(147, 51, 234, 0.1));
-    filter: blur(40px);
-    animation: float 6s ease-in-out infinite;
-    z-index: 0;
-  }
-
-  .floating-orb-1 {
-    width: 120px;
-    height: 120px;
-    top: 10%;
-    left: 20%;
-    animation-delay: 0s;
-  }
-
-  .floating-orb-2 {
-    width: 80px;
-    height: 80px;
-    top: 60%;
-    right: 15%;
-    animation-delay: 2s;
-  }
-
-  .floating-orb-3 {
-    width: 100px;
-    height: 100px;
-    bottom: 20%;
-    left: 60%;
-    animation-delay: 4s;
-  }
-
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0px) rotate(0deg);
-    }
-    33% {
-      transform: translateY(-20px) rotate(120deg);
-    }
-    66% {
-      transform: translateY(10px) rotate(240deg);
-    }
-  }
-
-  /* Fancy Card Base Styles */
-  .fancy-card {
-    position: relative;
-    z-index: 10;
-    cursor: pointer;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .fancy-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: inherit;
-    padding: 1px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: exclude;
-    z-index: -1;
-  }
-
-  /* Individual Card Styles */
-  .fancy-card-main {
-    animation: slideInLeft 0.8s ease-out;
-  }
-
-  .fancy-card-secondary {
-    animation: slideInRight 0.8s ease-out 0.2s both;
-  }
-
-  .fancy-card-accent {
-    animation: slideInUp 0.8s ease-out 0.4s both;
-  }
-
-  .fancy-card-highlight {
-    animation: slideInUp 0.8s ease-out 0.6s both;
-  }
-
-  /* Hover Effects */
-  .fancy-card:hover {
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  }
-
-  .fancy-card-main:hover {
-    box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.4);
-  }
-
-  .fancy-card-highlight:hover {
-    box-shadow: 0 25px 50px -12px rgba(251, 191, 36, 0.4);
-  }
-
-  /* Animation Keyframes */
-  @keyframes slideInLeft {
-    from {
-      opacity: 0;
-      transform: translateX(-50px) rotate(-5deg);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0) rotate(0deg);
-    }
-  }
-
-  @keyframes slideInRight {
-    from {
-      opacity: 0;
-      transform: translateX(50px) rotate(5deg);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0) rotate(0deg);
-    }
-  }
-
-  @keyframes slideInUp {
-    from {
-      opacity: 0;
-      transform: translateY(50px) scale(0.9);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-    }
-  }
-
-  /* Responsive Design */
-  @media (max-width: 1024px) {
-    .fancy-cards-container {
-      height: auto !important;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-    }
-
-    .fancy-card {
-      position: relative !important;
-      top: auto !important;
-      left: auto !important;
-      right: auto !important;
-      bottom: auto !important;
-      width: 100% !important;
-      height: auto !important;
-      min-height: 180px;
-    }
-
-    .floating-orb {
-      display: none;
-    }
-  }
-
-  @media (max-width: 640px) {
-    .fancy-cards-container {
-      grid-template-columns: 1fr;
-    }
   }
 </style>
