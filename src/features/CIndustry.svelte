@@ -118,7 +118,7 @@
       <p class="main-description text-base md:text-lg mb-8" data-aos="fade-up" data-aos-delay="200">
         {industryCategories[currentIndustryIndex].description}
       </p>
-      <button class="action-button bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300" data-aos="fade-up" data-aos-delay="400">
+      <button class="action-button bg-gray-900 hover:bg-gray-800 text-white font-bold py-3 px-8 rounded-full transition duration-300" data-aos="fade-up" data-aos-delay="400">
         了解详情 >
       </button>
     </div>
@@ -129,7 +129,7 @@
     <div class="industry-cards grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 w-full max-w-6xl mx-auto px-4 md:px-0">
             {#each industryCategories as category, i}
                 <div
-                    class="flex flex-col items-center justify-center p-4 rounded-lg cursor-pointer transition-all duration-300 ease-in-out h-32 shadow-lg hover:shadow-xl transform hover:-translate-y-1 backdrop-blur-md border text-white {currentIndustryIndex === i ? 'bg-blue-700/50 border-sky-300' : 'bg-black/20 border-white/10'}"
+                    class="flex flex-col items-center justify-center p-4 rounded-lg cursor-pointer transition-all duration-300 ease-in-out h-32 shadow-lg hover:shadow-xl transform hover:-translate-y-1 backdrop-blur-md border text-white {currentIndustryIndex === i ? 'bg-gray-900/50 border-gray-300' : 'bg-black/20 border-white/10'}"
                     on:click={() => selectIndustry(i)}
                     on:keydown={(e) => { if (e.key === 'Enter' || e.key === ' ') selectIndustry(i); }}
                     role="button"
