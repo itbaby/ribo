@@ -472,16 +472,28 @@
       "button": "View More Cases"
     }
   },
-  "cintro.knowUs": "Get to Know Us",
-  "cintro.transforming": "Transforming Ideas into Digital Reality",
-  "cintro.aboutUs": "About Us",
-  "cintro.title": "Company Introduction",
-  "cintro.services.0.title": "Company Introduction",
-  "cintro.services.0.description": "Founded in 2011, RIBO Consulting is a comprehensive talent ecosystem service provider. With the mission of 'Connecting Global Wisdom, Empowering Talent Value,' we have established three strategic sectors: human resources services, digital transformation solutions, and business process outsourcing. Our dual-core drivers, RIBO Consulting (Dalian, Shenzhen, Shanghai, and Tokyo, Japan) and Ruicheng Technology, have provided professional services to over 60 enterprises in more than 10 countries and regions worldwide, delivering over 10,000 high-end talents.",
-  "cintro.services.1.title": "Technology Drives the Future",
-  "cintro.services.1.description": "The R&D team at Ruicheng Technology is deeply engaged in cutting-edge fields such as cloud computing, AIoT, and blockchain. We hold CMMI Level 3 certification and ISO27001 information security system certification, and have successfully delivered benchmark projects like the intelligent risk control system for the Japanese financial industry and the provincial highway inspection system.",
-  "cintro.services.2.title": "Elite Talent Pool",
-  "cintro.services.2.description": "· Vertical Domain Coverage: Focusing on over 10 strategic emerging industries including fintech, internet technology, and intelligent manufacturing, we have established a dynamic industry talent map.<br>· Precise Matching System: Our original 'Talent Granularity Assessment Model,' supported by an AI intelligent recommendation system, has improved the person-post matching accuracy by 40%.<br>· Senior Consultant Team: Our team members have an average of over 5 years of industry experience, with 85% having more than 8 years of experience in high-end position headhunting. The annual position closing rate reaches 93%.",
-  "cintro.services.3.title": "Full-Chain Service Ecosystem",
-  "cintro.services.3.description": "From high-end headhunting to flexible employment and BPO full-process outsourcing, we have created a full life-cycle solution for talent services. Especially in the field of foreign enterprise services, with our professional service team and deep understanding of the culture and risks of foreign industries, we have become the preferred partner for many outstanding foreign enterprises in China.<br>With Dalian as a strategic fulcrum, we are building a national service grid and weaving a global talent network. In the future, RIBO will continue to deepen the 'Technology + Talent' dual-wheel strategy, committed to becoming a trustworthy global talent partner in the process of enterprise digital transformation."
+  "cintro": {
+    "knowUs": "Get to Know Us",
+    "transforming": "Transforming Ideas into Digital Reality",
+    "aboutUs": "About Us",
+    "title": "Company Introduction",
+    "services": [
+      {
+        "title": "Company Introduction",
+        "description": "Founded in 2011, RIBO Consulting is a comprehensive talent ecosystem service provider. With the mission of 'Connecting Global Wisdom, Empowering Talent Value,' we have established three strategic sectors: human resources services, digital transformation solutions, and business process outsourcing. Our dual-core drivers, RIBO Consulting (Dalian, Shenzhen, Shanghai, and Tokyo, Japan) and Ruicheng Technology, have provided professional services to over 60 enterprises in more than 10 countries and regions worldwide, delivering over 10,000 high-end talents."
+      },
+      {
+        "title": "Technology Drives the Future",
+        "description": "The R&D team at Ruicheng Technology is deeply engaged in cutting-edge fields such as cloud computing, AIoT, and blockchain. We hold CMMI Level 3 certification and ISO27001 information security system certification, and have successfully delivered benchmark projects like the intelligent risk control system for the Japanese financial industry and the provincial highway inspection system."
+      },
+      {
+        "title": "Elite Talent Pool",
+        "description": "· Vertical Domain Coverage: Focusing on over 10 strategic emerging industries including fintech, internet technology, and intelligent manufacturing, we have established a dynamic industry talent map.<br>· Precise Matching System: Our original 'Talent Granularity Assessment Model,' supported by an AI intelligent recommendation system, has improved the person-post matching accuracy by 40%.<br>· Senior Consultant Team: Our team members have an average of over 5 years of industry experience, with 85% having more than 8 years of experience in high-end position headhunting. The annual position closing rate reaches 93%."
+      },
+      {
+        "title": "Full-Chain Service Ecosystem",
+        "description": "From high-end headhunting to flexible employment and BPO full-process outsourcing, we have created a full life-cycle solution for talent services. Especially in the field of foreign enterprise services, with our professional service team and deep understanding of the culture and risks of foreign industries, we have become the preferred partner for many outstanding foreign enterprises in China.<br>With Dalian as a strategic fulcrum, we are building a national service grid and weaving a global talent network. In the future, RIBO will continue to deepen the 'Technology + Talent' dual-wheel strategy, committed to becoming a trustworthy global talent partner in the process of enterprise digital transformation."
+      }
+    ]
+  }
 }
