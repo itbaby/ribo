@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount, onDestroy } from 'svelte';
   import { gsap } from 'gsap';
-  import aboutus from '../assets/aboutus.jpg';
+  import aboutus from '../assets/tech_company.jpg';
   import service from '../assets/service.jpg';
   import scott from '../assets/scott-graham-OQMZwNd3ThU-unsplash.jpg';
   import meetingRoom from '../assets/annie-spratt-QckxruozjRg-unsplash.jpg';
@@ -9,18 +9,19 @@
   import teamWorking from '../assets/riccardo-annandale-7e2pe9wjL9M-unsplash.jpg';
   import womenWorking from '../assets/conny-schneider-pREq0ns_p_E-unsplash.jpg';
   import groupLooking from '../assets/glenn-carstens-peters-npxXWgQ33ZQ-unsplash.jpg';
-  import tech from "../assets/tech-real-1.jpg";
-  import talent from "../assets/tech-real-2.jpg";
-  import eco from "../assets/tech-real-3.jpg";
+  import tech from "../assets/tech_future.jpg";
+  import talent from "../assets/tech_talent.jpg";
+  import eco from "../assets/tech_eco.jpg";
+  import { _, t } from "svelte-i18n";
 
-  let selectedIndex = 0;
+  let selectedIndex = $state(0);
   let intervalId: number | undefined;
 
   const services = [
     {
       title: "公司介绍",
       description:
-        "睿柏咨询成立于2011年,作为综合性人才生态服务商,我们以\"连接全球智慧,赋能人才价值\"为使命,构建了覆盖人力资源服务、数字化转型解决方案及业务流程外包的三大战略板块。旗下睿柏咨询(大连,深圳,上海以及日本东京)与睿程科技双核驱动,已为全球10+国家地区的60余家企业提供专业服务,累计输送高端人才超10,000人次。",
+        "睿柏咨询成立于2011年,作为综合性人才生态服务商,我们以\"连接全球智慧,赋能人才价值\"为使命,构建了覆盖人力资源服务、数字化转型解决方案及业务流程外包的三大战略板块。旗下睿柏咨询(大连,深圳,上海以及日本东京)与睿程科技双核驱动,已为全球10+国家地区的60余enterprise提供专业服务,累计输送高端人才超10,000人次。",
       image: aboutus,
     },
     {
@@ -32,7 +33,7 @@
     {
       title: "精英人才智库",
       description:
-        "·垂直领域覆盖:聚焦金融科技,互联网技术,智能制造等10+战略新兴产业,建立行业动态人才图谱<br>·精准匹配体系:独创”人才颗粒度评估模型”,依托AI智能推荐系统实现人岗匹配度提升40%<br>·资深顾问团队:平均从业年限5年+,85%成员具备8年以上高端岗位猎寻经验,年度职位关闭率达93%",
+        "·垂直领域覆盖:聚焦金融科技,互联网技术,智能制造等10+战略新兴产业,建立行业动态人才图谱<br>·精准匹配体系:独创”人才颗粒度评估模型”,依托AI智能推荐系统实现人岗匹配度提升40%<br>·资深顾问团队:平均从业年限5年+,85%成员具备8年以上高端岗位猎寻经验,年度职位关闭率达到93%",
       image: talent,
     },
     {
@@ -43,7 +44,7 @@
     },
   ];
 
-  let currentImage = services[0].image;
+  let currentImage = $state(services[0].image);
 
   function animateContent(index: number): void {
     gsap.fromTo(".fade-in", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.1 });
@@ -97,8 +98,8 @@
         class="bg-green-200 p-6 rounded-3xl flex flex-col justify-center items-center text-center aspect-[4/3] lg:aspect-auto"
         data-aos="fade-up"
       >
-        <p class="text-lg font-medium text-gray-800">Satisfied Customer</p>
-        <p class="mt-2 text-5xl font-bold text-gray-900">50.2K+</p>
+        <p class="text-lg font-medium text-gray-800">{$t('satisfiedCustomer')}</p>
+        <p class="mt-2 text-5xl font-bold text-gray-900">94+</p>
       </div>
   
       <div
@@ -149,9 +150,9 @@
         class="bg-pink-100 p-6 rounded-3xl col-span-1 sm:col-span-2 lg:col-span-2 aspect-[2/1] lg:aspect-auto"
         data-aos="fade-up-left"
       >
-        <h3 class="text-2xl font-bold text-gray-900">The Journey of Our Digital Evolution and Growth</h3>
+        <h3 class="text-2xl font-bold text-gray-900">{$t('journey.title')}</h3>
         <p class="mt-4 text-gray-700">
-          Our story is one of continuous innovation and transformation, evolving from a small agency into a leader in digital solutions. Through dedication and creativity, we\'ve grown to meet the changing needs of our clients, delivering impactful results.
+          {$t('journey.description')}
         </p>
       </div>
   
@@ -172,140 +173,51 @@
   <!-- Main Content Section -->
   <div class="mt-20">
     <div class="text-left mb-12">
-      <p class="text-base font-semibold text-white mb-4">About Our Company</p>
-      <h2 class="text-4xl font-bold tracking-tight text-blue-400 mb-8">
-        科技驱动，人才引领
-        <br />
-        值得信赖的全球人才伙伴
-      </h2>
-
-      <!-- Statistics -->
-      <div class="flex flex-wrap gap-8 mb-12">
+      <div class="text-center">
+        <p class="text-base font-semibold leading-7 text-white">About Us</p>
         <div class="text-center">
-          <div class="text-3xl font-bold text-blue-400 mb-2">10+</div>
-          <div class="text-sm text-gray-300">服务国家</div>
+          <h2 class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">公司介绍</h2>
         </div>
-        <div class="text-center">
-          <div class="text-3xl font-bold text-blue-400 mb-2">60+</div>
-          <div class="text-sm text-gray-300">合作企业</div>
-        </div>
-        <div class="text-center">
-          <div class="text-3xl font-bold text-blue-400 mb-2">10000+</div>
-          <div class="text-sm text-gray-300">输送人才</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 主要内容区域 -->
-    <div class="flex flex-col lg:flex-row gap-8 lg:items-stretch">
-      <!-- 左侧图片 -->
-      <div class="lg:w-1/2 flex">
-        <img
-          class="w-full h-auto lg:h-full rounded-lg object-cover animated-img"
-          src="{currentImage}"
-          alt="公司业务领域"
-          style="min-height: 400px;"
-        />
-      </div>
-
-      <!-- 右侧服务卡片 -->
-      <div class="lg:w-1/2 flex flex-col gap-6">
-        <!-- Ad Campaign Strategies -->
-        {#each services as service, index}
-          <div
-            class="{selectedIndex === index
-              ? 'bg-blue-100'
-              : 'bg-gray-100'} p-6 rounded-lg flex-1 flex flex-col cursor-pointer fade-in"
-            on:click="{() => handleClick(service.image, index)}"
-          >
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">
-              {service.title}
-            </h3>
-            <p class="text-base text-gray-700 mb-4 flex-1">
-              {@html service.description}
-            </p>
-            <a
-              href="#"
-              class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 mt-auto"
-            >
-              Read More
-              <svg
-                class="ml-2 w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5l7 7-7 7"
-                ></path>
-              </svg>
-            </a>
+        <!-- 主要内容区域 -->
+        <div class="flex flex-col mt-20 lg:flex-row gap-8 lg:items-stretch">
+          <!-- 左侧图片 -->
+          <div class="lg:w-1/2 flex">
+            <img
+              class="w-full h-auto lg:h-full rounded-lg object-cover animated-img"
+              src="{currentImage}"
+              alt="公司业务领域"
+              style="min-height: 400px;"
+            />
           </div>
-        {/each}
-      </div>
-    </div>
-  </div>
-
-  <!-- Digital Services Section -->
-  <div class="mt-32">
-    <div class="flex flex-col lg:flex-row gap-12 lg:items-center">
-      <!-- 左侧内容 -->
-      <div class="lg:w-1/2">
-        <p class="text-base font-semibold text-blue-600 mb-4">DIGITAL EXCELLENCE</p>
-        <h2 class="text-4xl font-bold tracking-tight text-white mb-6">
-          Innovative Digital Solutions<br>
-          for Modern Businesses
-        </h2>
-        <p class="text-lg leading-8 text-gray-300 mb-8">
-          We deliver cutting-edge digital solutions that drive growth and transformation. Our expertise spans web development, mobile apps, and cloud services, helping businesses thrive in the digital age.
-        </p>
-        
-        <!-- 统计数据网格 -->
-        <div class="grid grid-cols-2 gap-6 mb-8">
-          <div class="text-left">
-            <div class="text-3xl font-bold text-blue-600 mb-1">95%</div>
-            <div class="text-sm text-gray-300">Client Satisfaction</div>
-          </div>
-          <div class="text-left">
-            <div class="text-3xl font-bold text-blue-600 mb-1">98%</div>
-            <div class="text-sm text-gray-300">Project Success Rate</div>
-          </div>
-          <div class="text-left">
-            <div class="text-3xl font-bold text-blue-600 mb-1">24/7</div>
-            <div class="text-sm text-gray-300">Support Availability</div>
-          </div>
-          <div class="text-left">
-            <div class="text-3xl font-bold text-blue-600 mb-1">500+</div>
-            <div class="text-sm text-gray-300">Projects Delivered</div>
-          </div>
-        </div>
-        
-        <!-- Learn More 按钮 -->
-        <div>
-          <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-            Learn More
-            <svg class="ml-3 -mr-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l极速模式下的剩余文字: 4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-            </svg>
-          </a>
-        </div>
-      </div>
       
-      <!-- 右侧图片组合 -->
-      <div class="lg:w-1/2 relative h-[500px] group">
-          <img class="absolute top-10 left-0 w-3/5 h-auto rounded-lg shadow-2xl transition-transform duration-500 ease-in-out group-hover:rotate-[-3deg] group-hover:scale-105" src="{scott}" alt="Team Collaboration" />
-          <img class="absolute top-0 right-0 w-1/2 h-auto rounded-lg shadow-2xl transition-transform duration-500 ease-in-out group-hover:rotate-[3deg] group-hover:scale-105" src="{service}" alt="Development Process" />
-          <img class="absolute bottom-10 left-1/4 w-3/5 h-auto rounded-lg shadow-2xl transition-transform duration-500 ease-in-out group-hover:scale-110" src="{aboutus}" alt="Project Delivery" />
+          <!-- 右侧服务卡片 -->
+          <div class="lg:w-1/2 flex flex-col gap-6">
+            <!-- Ad Campaign Strategies -->
+            {#each services as service, index}
+              <div
+                class="{selectedIndex === index
+                  ? 'bg-blue-100'
+                  : 'bg-gray-100'} p-6 rounded-lg flex-1 flex flex-col cursor-pointer fade-in"
+                onclick={() => handleClick(service.image, index)}
+                onkeydown={(e) => e.key === 'Enter' && handleClick(service.image, index)}
+                role="button"
+                tabindex="0"
+              >
+                <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                  {service.title}
+                </h3>
+                <p class="text-base text-gray-700 mb-4 flex-1">
+                  {@html service.description}
+                </p>
+              </div>
+            {/each}
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-    
   </div>
 </div>
-
+</div>
 <style>
   .animated-img {
     transition: all 0.5s ease;
