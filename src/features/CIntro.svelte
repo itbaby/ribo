@@ -225,28 +225,26 @@
           <h2 class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">{$t('cintro.title')}</h2>
         </div>
         <!-- 主要内容区域 - 改进布局 -->
-        <div class="flex flex-col mt-16 lg:flex-row gap-10 lg:items-start">
+        <div class="flex flex-col mt-16 lg:flex-row gap-10 lg:items-start h-[100%]">
           <!-- 左侧图片区域 - 优化布局 -->
-          <div class="lg:w-1/2 flex flex-col gap-6 relative">
-            <div 
-              class="w-full h-64 lg:h-80 rounded-2xl overflow-hidden shadow-2xl transform transition-all duration-700 hover:scale-105 animated-img group"
-              style="animation: floatUp 3s ease-in-out infinite alternate;"
-            >
-              <img
-                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                src={currentImage1}
-                alt="公司业务领域"
-              />
+          <div class="lg:w-1/2 grid grid-cols-3 grid-rows-4 gap-4 ">
+            <div class="group col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105 animated-img">
+                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src={currentImage1} alt="公司业务领域 1" />
             </div>
-            <div 
-              class="w-full h-64 lg:h-80 rounded-2xl overflow-hidden shadow-2xl transform transition-all duration-700 hover:scale-105 animated-img group"
-              style="animation: floatDown 3s ease-in-out infinite alternate 0.5s;"
-            >
-              <img
-                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                src={currentImage2}
-                alt="公司业务领域"
-              />
+            <div class="group col-span-1 row-span-1 rounded-2xl overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105">
+                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src={presentation} alt="Presentation" />
+            </div>
+            <div class="group col-span-1 row-span-2 rounded-2xl overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105">
+                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src={teamWorking} alt="Team Working" />
+            </div>
+            <div class="group col-span-1 row-span-2 rounded-2xl overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105 animated-img">
+                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src={currentImage2} alt="公司业务领域 2" />
+            </div>
+            <div class="group col-span-1 row-span-1 rounded-2xl overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105">
+                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src={womenWorking} alt="Women Working" />
+            </div>
+            <div class="group col-span-2 row-span-1 rounded-2xl overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105">
+                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src={groupLooking} alt="Group Looking" />
             </div>
           </div>
       

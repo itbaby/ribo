@@ -28,11 +28,15 @@
 
             let state;
             if (index === 0) {
-                state = { x: 0, scale: 1, opacity: 1, zIndex: 10 };
+                state = { x: 0, scale: 1, opacity: 1, zIndex: 10, rotation: 0 };
             } else if (index === 1) {
-                state = { x: "100%", scale: 0.8, opacity: 0.8, zIndex: 5 };
+                state = { x: "100%", scale: 0.8, opacity: 0.8, zIndex: 5, rotation: 5 };
+            } else if (index === 2) {
+                state = { x: "-100%", scale: 0.8, opacity: 0.8, zIndex: 5, rotation: -5 };
+            } else if (index === 3) {
+                state = { x: "200%", scale: 0.6, opacity: 0.6, zIndex: 1, rotation: 10 };
             } else {
-                state = { x: "-100%", scale: 0.6, opacity: 0.6, zIndex: 1 };
+                state = { x: "-200%", scale: 0.6, opacity: 0.6, zIndex: 1, rotation: -10 };
             }
 
             gsap.set(slide, state);
@@ -67,24 +71,31 @@
             // 根据位置设置动画
             let animation;
             if (diff === 0) {
-                // 当前激活的slide
-                animation = { x: 0, scale: 1, opacity: 1, zIndex: 10 };
+                // Current active slide
+                animation = { x: 0, scale: 1, opacity: 1, zIndex: 10, rotation: 0 };
             } else if (diff === 1) {
-                // 下一个slide
-                animation = { x: "100%", scale: 0.8, opacity: 0.8, zIndex: 5 };
+                // Next slide
+                animation = { x: "120%", scale: 0.8, opacity: 0.8, zIndex: 5, rotation: 10 }; // More exaggerated x and rotation
             } else if (diff === -1) {
-                // 上一个slide
-                animation = { x: "-100%", scale: 0.8, opacity: 0.8, zIndex: 5 };
+                // Previous slide
+                animation = { x: "-120%", scale: 0.8, opacity: 0.8, zIndex: 5, rotation: -10 }; // More exaggerated x and rotation
+            } else if (diff === 2) {
+                // Second next slide
+                animation = { x: "240%", scale: 0.6, opacity: 0.6, zIndex: 1, rotation: 15 };
+            } else if (diff === -2) {
+                // Second previous slide
+                animation = { x: "-240%", scale: 0.6, opacity: 0.6, zIndex: 1, rotation: -15 };
             } else {
-                // 其他slide
-                animation = { x: diff > 0 ? "100%" : "-100%", scale: 0.6, opacity: 0.6, zIndex: 1 };
+                // Other slides
+                animation = { x: diff > 0 ? "300%" : "-300%", scale: 0.4, opacity: 0.4, zIndex: 0, rotation: diff > 0 ? 20 : -20 };
             }
 
             // 执行动画
             gsap.to(slide, {
                 ...animation,
-                duration: 0.5,
-                ease: "power2.out",
+                duration: 0.8, // 增加动画时长
+                ease: "back.out(1.7)", // 使用更弹性的缓动函数
+                rotation: diff === 0 ? 0 : (diff > 0 ? 5 : -5), // 增加轻微旋转
                 onComplete: () => updateShadow(slide, diff)
             });
         });
