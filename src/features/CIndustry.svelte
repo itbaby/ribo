@@ -122,11 +122,7 @@
             { opacity: 0, y: 50 },
             { opacity: 1, y: 0, duration: 1, delay: 0.8 },
         );
-        gsap.fromTo(
-            ".action-button",
-            { opacity: 0, y: 50 },
-            { opacity: 1, y: 0, duration: 1, delay: 1.1 },
-        );
+
         gsap.fromTo(
             ".industry-cards",
             { opacity: 0, y: 50 },

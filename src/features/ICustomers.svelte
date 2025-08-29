@@ -363,7 +363,6 @@
     bind:this={canvas}
     class="gallery-canvas"
     aria-label="Interactive image gallery"
-    role="img"
     on:mousemove={handleMouseMove}
     on:wheel={handleWheel}
     on:click={handleClick}
@@ -436,7 +435,5 @@
     transition: width 0.3s ease;
   }
 
-  .line.loaded {
-    width: 100%;
-  }
+  
 </style>

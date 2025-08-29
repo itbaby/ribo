@@ -45,6 +45,12 @@
     }
   }
 
+  function handleNavClick(event: MouseEvent) {
+    if (event.target === event.currentTarget) {
+      closeAllDropdowns();
+    }
+  }
+
   function closeAllDropdowns() {
     isServeDropdownOpen = false;
     isCreativeDropdownOpen = false;
@@ -84,7 +90,7 @@
 <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 <nav
   class="bg-gray-900 w-[100vw] text-white border-none dark:bg-gray-900 fixed top-0 left-0 right-0 z-999"
-  on:click|self={closeAllDropdowns}
+  onclick={handleNavClick}
 >
   <div
     class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
@@ -111,7 +117,7 @@
       <div class="relative">
         <button
           type="button"
-          on:click={toggleLanguageDropdown}
+          onclick={toggleLanguageDropdown}
           class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm bg-gray-900 text-white cursor-pointer"
           aria-expanded={isLanguageDropdownOpen}
           aria-haspopup="true"
@@ -134,7 +140,7 @@
                   href="#"
                   class="block px-4 py-2 text-sm bg-gray-900 text-white hover:bg-gray-800 whitespace-nowrap"
                   role="menuitem"
-                  on:click={() => selectLanguage("English", "fi-us")}
+                  onclick={() => selectLanguage("English", "fi-us")}
                 >
                   <div class="inline-flex items-center">
                     <span class="fi fi-us fis me-2"></span>
@@ -149,7 +155,7 @@
                   href="#"
                   class="block px-4 py-2 text-sm bg-gray-900 text-white hover:bg-gray-800 whitespace-nowrap"
                   role="menuitem"
-                  on:click={() => selectLanguage("にほんご", "fi-jp")}
+                  onclick={() => selectLanguage("にほんご", "fi-jp")}
                 >
                   <div class="inline-flex items-center">
                     <span class="fi fi-jp fis me-2"></span>
@@ -163,7 +169,7 @@
                   href="#"
                   class="block px-4 py-2 text-sm bg-gray-900 text-white hover:bg-gray-800 whitespace-nowrap"
                   role="menuitem"
-                  on:click={() => selectLanguage("中文 (CN)", "fi-cn")}
+                  onclick={() => selectLanguage("中文 (CN)", "fi-cn")}
                 >
                   <div class="inline-flex items-center">
                     <span class="fi fi-cn fis me-2"></span>
@@ -179,7 +185,7 @@
       <!-- Mobile Menu Button -->
       <button
         type="button"
-        on:click={toggleMobileMenu}
+        onclick={toggleMobileMenu}
         class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
         aria-controls="navbar-language"
         aria-expanded={isMobileMenuOpen}
@@ -240,7 +246,7 @@
         </li>
         <li class="relative">
           <button
-            on:click={toggleServeDropdown}
+            onclick={toggleServeDropdown}
             class="flex items-center justify-between w-full py-2 px-5 text-white bg-gray-900 hover:bg-gray-800"
             aria-expanded={isServeDropdownOpen}
           >
@@ -288,7 +294,7 @@
         </li>
         <li class="relative">
           <button
-            on:click={toggleCreativeDropdown}
+            onclick={toggleCreativeDropdown}
             class="flex items-center justify-between w-full py-2 px-5 text-white bg-gray-900 hover:bg-gray-800"
             aria-expanded={isCreativeDropdownOpen}
           >
@@ -316,12 +322,12 @@
           >
             <ul class="py-2 text-sm md:py-2 whitespace-nowrap">
               <li>
-                <a href="#" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
+                <a href="/" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
                   >{$_("menu.marketAnalysis")}</a
                 >
               </li>
               <li>
-                <a href="#" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
+                <a href="/" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
                   >{$_("menu.industryNews")}</a
                 >
               </li>
@@ -331,7 +337,7 @@
         <li class="relative">
           <button
             id="aboutus-dropdown-button"
-            on:click={toggleAboutusDropdown}
+            onclick={toggleAboutusDropdown}
             class="flex items-center justify-between w-full py-2 px-5 text-white bg-gray-900 hover:bg-gray-800"
             aria-expanded={isAboutusDropdownOpen}
           >
@@ -369,17 +375,17 @@
                 >
               </li>
               <li>
-                <a href="#" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
+                <a href="/" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
                   >{$_("menu.history")}</a
                 >
               </li>
               <li>
-                <a href="#" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
+                <a href="/" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
                   >{$_("menu.honors")}</a
                 >
               </li>
               <li>
-                <a href="#" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
+                <a href="/" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
                   >{$_("menu.contact")}</a
                 >
               </li>

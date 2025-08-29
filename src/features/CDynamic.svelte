@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { onMount, onDestroy } from 'svelte';
 
   const chars = '!<>-_\\/[]{}—=+*^?#________';
@@ -12,15 +12,22 @@
     'and walking the path'
   ];
 
+  interface QueueItem {
+    from: string;
+    to: string;
+    start: number;
+    end: number;
+  }
+
   let frame = 0;
-  let frameRequest;
+  let frameRequest: number;
   let counter = 0;
   let output = '';
-  let queue = [];
+  let queue: QueueItem[] = [];
 
   const randomChar = () => chars[Math.floor(Math.random() * chars.length)];
 
-  const setText = (newText) => {
+  const setText = (newText: string) => {
     const oldText = output;
     const length = Math.max(oldText.length, newText.length);
     queue = [];
@@ -43,7 +50,7 @@
     let complete = 0;
 
     for (let i = 0; i < queue.length; i++) {
-      let { from, to, start, end } = queue[i];
+      let { from, to, start, end }: QueueItem = queue[i];
       if (frame >= end) {
         complete++;
         newOutput += to;
@@ -78,12 +85,11 @@
   });
 </script>
 
+
 <div class="container mt-20 text-white">
   <div class="text">{@html output}</div>
 </div>
 
 <style>
-  .dud {
-    opacity: 0.5;
-  }
+  
 </style>

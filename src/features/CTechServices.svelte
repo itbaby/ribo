@@ -141,8 +141,8 @@
         <a href="#process" class="text-gray-300 hover:text-white transition-colors">服务流程</a>
         <a href="#contact" class="text-gray-300 hover:text-white transition-colors">联系我们</a>
       </div>
-      <button class="md:hidden text-gray-300 hover:text-white">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <button class="md:hidden text-gray-300 hover:text-white" aria-label="切换导航菜单">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
         </svg>
       </button>
@@ -263,7 +263,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {#each advantages as advantage, index}
-          <div class={`rounded-xl p-6 overflow-hidden group animate-on-scroll ${index === 2 ? 'md:col-span-2 lg:col-span-1' : ''}"}>
+          <div class={`rounded-xl p-6 overflow-hidden group animate-on-scroll ${index === 2 ? 'md:col-span-2 lg:col-span-1' : ''}`}>
             <div class="absolute inset-0 bg-gradient-to-br {advantage.color} opacity-10 group-hover:opacity-20 transition-opacity"></div>
             <div class="relative z-10">
               <h3 class="text-xl font-semibold mb-3">{advantage.title}</h3>
@@ -291,7 +291,7 @@
         <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-gray-700 transform -translate-x-1/2"></div>
 
         {#each processSteps as step, index}
-          <div class={`flex flex-col md:flex-row items-center mb-12 animate-on-scroll ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}"}>
+          <div class="flex flex-col md:flex-row items-center mb-12 animate-on-scroll {index % 2 === 0 ? 'md:flex-row-reverse' : ''}">
             <!-- Timeline Dot -->
             <div class="hidden md:flex absolute left-1/2 w-6 h-6 rounded-full bg-blue-500 transform -translate-x-1/2 z-10"></div>
 
@@ -380,20 +380,20 @@
         <div>
           <h4 class="text-lg font-semibold mb-4">服务</h4>
           <ul class="space-y-2 text-gray-400">
-            <li><a href="#" class="hover:text-white transition-colors">人才派遣</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">数字化技术</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">系统开发</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">测试运维</a></li>
+            <li><button class="hover:text-white transition-colors text-left">人才派遣</button></li>
+            <li><button class="hover:text-white transition-colors text-left">数字化技术</button></li>
+            <li><button class="hover:text-white transition-colors text-left">系统开发</button></li>
+            <li><button class="hover:text-white transition-colors text-left">测试运维</button></li>
           </ul>
         </div>
 
         <div>
           <h4 class="text-lg font-semibold mb-4">关于我们</h4>
           <ul class="space-y-2 text-gray-400">
-            <li><a href="#" class="hover:text-white transition-colors">公司简介</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">核心团队</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">发展历程</a></li>
-            <li><a href="#" class="hover:text-white transition-colors">企业文化</a></li>
+            <li><button class="hover:text-white transition-colors text-left">公司简介</button></li>
+            <li><button class="hover:text-white transition-colors text-left">核心团队</button></li>
+            <li><button class="hover:text-white transition-colors text-left">发展历程</button></li>
+            <li><button class="hover:text-white transition-colors text-left">企业文化</button></li>
           </ul>
         </div>
 
@@ -437,6 +437,5 @@
     font-family: 'Inter', sans-serif;
   }
 
-  .animate-on-scroll {
-  }
+  
 </style>

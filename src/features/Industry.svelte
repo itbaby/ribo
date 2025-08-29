@@ -67,7 +67,7 @@
         <h1>Slide <br> One</h1>
       
         <!-- svelte-ignore a11y_click_events_have_key_events -->
-        <a class="go-to-next" on:click={nextSlide}>next</a>
+        <button class="go-to-next" on:click={nextSlide}>next</button>
       </div>
     </div>
   </div>
@@ -80,7 +80,7 @@
       <div class="slider__content">
         <h1>Slide <br> Two</h1>
       
-        <a class="go-to-next" on:click={nextSlide}>next</a>
+        <button class="go-to-next" on:click={nextSlide}>next</button>
       </div>
     </div>
   </div>
@@ -91,7 +91,7 @@
     <div class="slider__inner">
       <div class="slider__content">
         <h1>Slide <br> Three</h1>
-        <a class="go-to-next" on:click={nextSlide}>next</a>
+        <button class="go-to-next" on:click={nextSlide}>next</button>
       </div>
     </div>
   </div>
@@ -119,9 +119,7 @@
   transition-delay: 450ms;
   opacity: 0;
 }
-.slider__wrap--hacked {
-  opacity: 1;
-}
+/* Removed unused CSS selector */
 .slider__back {
   position: absolute;
   width: 100%;
@@ -165,14 +163,18 @@
   pointer-events: none;
   text-shadow: 0 0.375vh 0.75vh rgba(0, 0, 0, 0.1);
 }
-.slider__content a {
+.slider__content .go-to-next {
   cursor: pointer;
   font-size: 2.4vh;
   letter-spacing: 0.3vh;
   font-weight: 100;
   position: relative;
+  background: transparent;
+  border: none;
+  color: white;
+  text-decoration: none;
 }
-.slider__content a:after {
+.slider__content .go-to-next:after {
   content: "";
   display: block;
   width: 9vh;
@@ -185,7 +187,7 @@
   transform-origin: 0% 50%;
   transition: transform 900ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
-.slider__content a:before {
+.slider__content .go-to-next:before {
   content: "";
   border-top: 1px solid white;
   border-right: 1px solid white;
@@ -200,11 +202,11 @@
   left: 15vh;
   transition: transform 900ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
-.slider__content a:hover:after {
+.slider__content .go-to-next:hover:after {
   transform: scaleX(1.5);
   transition: transform 1200ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
-.slider__content a:hover:before {
+.slider__content .go-to-next:hover:before {
   transform: translateX(6vh) translateY(-50%) rotate(45deg);
   transition: transform 1200ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
@@ -320,33 +322,5 @@
   z-index: 10;
 }
 
-.slider__indicator {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.slider__indicator:hover {
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
-.slider__indicator--active {
-  background-color: white;
-}
-
-.sig {
-  position: fixed;
-  bottom: 8px;
-  right: 8px;
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: 100;
-  font-family: sans-serif;
-  color: rgba(255, 255, 255, 0.4);
-  letter-spacing: 2px;
-  z-index: 9999;
-}
+/* Removed unused CSS selectors */
 </style>

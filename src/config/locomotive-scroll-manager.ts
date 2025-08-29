@@ -38,12 +38,14 @@ export class LocomotiveScrollManager {
       ScrollTrigger.update();
     });
 
+    const locoScroll = this.locoScroll;
+
     // 同步ScrollTrigger与locomotive
     ScrollTrigger.scrollerProxy("[data-scroll-container]", {
       scrollTop(value) {
         return arguments.length
-          ? this.locoScroll!.scrollTo(value, { duration: 0, disableLerp: true })
-          : this.locoScroll!.scroll.y;
+          ? locoScroll!.scrollTo(value, { duration: 0, disableLerp: true })
+          : locoScroll!.scroll.y;
       },
       getBoundingClientRect() {
         return {

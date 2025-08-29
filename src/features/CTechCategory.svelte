@@ -137,7 +137,7 @@
 							class:dark:bg-neutral-700={activeTab === tab.id}
 							class:hover:bg-gray-900={activeTab !== tab.id}
 							class:dark:hover:bg-neutral-700={activeTab !== tab.id}
-							on:click={() => switchTab(tab.id)}
+							onclick={() => switchTab(tab.id)}
 						>
 							<span class="flex gap-x-6">
 								<svg
@@ -196,7 +196,7 @@
 								<img
 									class="shadow-xl hover:bg-gray-900 rounded-xl dark:shadow-gray-900/20"
 									src={tab.image}
-									alt="Features Image"
+									alt={tab.title}
 								/>
 							</div>
 						{/each}

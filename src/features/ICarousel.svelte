@@ -115,7 +115,7 @@
 
       <!-- Second Row with 3 Columns -->
       <div class="w-full px-4">
-        <Gallery items={images} class="grid-cols-6 gap-4 md:grid-cols-6" />
+        <Gallery items={images as any} class="grid-cols-6 gap-4 md:grid-cols-6" />
       </div>
     </div>
   </div>

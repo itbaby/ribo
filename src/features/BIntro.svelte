@@ -193,10 +193,10 @@
           <div class="lg:w-1/2 flex flex-col gap-6">
            <!-- Ad Campaign Strategies -->
            {#each services as service, index}
-           <div class="{selectedIndex === index ? 'bg-blue-100' : 'bg-gray-100'} p-6 rounded-lg flex-1 flex flex-col cursor-pointer fade-in" on:click="{() => handleClick(service.image, index)}">
+           <div class="{selectedIndex === index ? 'bg-blue-100' : 'bg-gray-100'} p-6 rounded-lg flex-1 flex flex-col cursor-pointer fade-in" on:click="{() => handleClick(service.image, index)}" on:keydown={(e) => e.key === 'Enter' && handleClick(service.image, index)} role="button" tabindex="0">
              <h3 class="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
              <p class="text-base text-gray-700 mb-4 flex-1">{service.description}</p>
-             <a href="#" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 mt-auto">
+             <a href="/" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 mt-auto">
                Read More
                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -244,7 +244,7 @@
         
         <!-- Learn More 按钮 -->
         <div>
-          <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+          <a href="/" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
             Learn More
             <svg class="ml-3 -mr-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
               <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l极速模式下的剩余文字: 4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />

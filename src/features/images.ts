@@ -26,6 +26,7 @@ import zj from '../assets/icons/zj.png';
 interface Image {
   alt: string;
   src: string;
+  [key: string]: any;
 }
 
 export const images: Image[] = [
