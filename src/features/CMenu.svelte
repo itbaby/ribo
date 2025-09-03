@@ -380,7 +380,7 @@
                 >
               </li>
               <li>
-                <a href="/" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
+                <a href="/honors" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
                   >{$_("menu.honors")}</a
                 >
               </li>

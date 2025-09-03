@@ -14,6 +14,7 @@
   import COutSourcing from "./features/COutSourcing.svelte";
   import CTechCategory from "./features/CTechCategory.svelte";
   import CCulture from "./features/CCulture.svelte";
+    import CHonors from "./features/CHonors.svelte";
 </script>
 
 <Router>
@@ -68,6 +69,12 @@
   <Route path="/resources" let:params>
     <div class="pt-16">
       <CResources />
+    </div>
+    <CFooter />
+  </Route>
+  <Route path="/honors" let:params>
+    <div class="pt-16">
+      <CHonors />
     </div>
     <CFooter />
   </Route>
