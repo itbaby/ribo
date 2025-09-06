@@ -6,31 +6,38 @@
   let awards = [
     {
       date: "2023",
-      title: "Excellence in Innovation Award",
+      title: "大连市稳岗企业",
       description:
-        "Awarded for pioneering new technologies in the software industry.",
-      icon: "https://picsum.photos/seed/award1/200",
+        "表彰公司在稳定就业和促进经济发展方面的贡献。",
+      icon: "/src/assets/award_01.png",
     },
     {
       date: "2022",
-      title: "Best UI/UX Design",
+      title: "联想新锐合作伙伴",
       description:
-        "Recognized for creating an outstanding user experience in our flagship application.",
-      icon: "https://picsum.photos/seed/award2/200",
+        "被联想集团评为年度新锐合作伙伴，表彰在技术创新和业务合作方面的突出表现。",
+      icon: "/src/assets/award_02.png",
+    },
+    {
+      date: "2022",
+      title: "联想优秀合作团队",
+      description:
+        "被联想集团评为优秀合作团队，表彰在项目协作和团队协同方面的卓越表现。",
+      icon: "/src/assets/award_03.png",
     },
     {
       date: "2021",
-      title: "Top Workplace for Diversity",
+      title: "字节跳动优秀合作伙伴",
       description:
-        "Honored for fostering an inclusive and diverse work environment.",
-      icon: "https://picsum.photos/seed/award3/200",
+        "被字节跳动评为年度优秀合作伙伴，表彰在技术服务和业务支持方面的杰出贡献。",
+      icon: "/src/assets/award_04.png",
     },
     {
       date: "2020",
-      title: "Community Choice Award",
+      title: "字节跳动优秀合作伙伴",
       description:
-        "Voted by the community as the most impactful software solution of the year.",
-      icon: "https://picsum.photos/seed/award4/200",
+        "被字节跳动评为年度优秀合作伙伴，表彰在技术创新和服务质量方面的持续表现。",
+      icon: "/src/assets/award_01.png",
     },
   ];
 
@@ -73,13 +80,9 @@
           </div>
           <div class="w-1/2 flex justify-center">
             <div
-              class="bg-gray-800 rounded-full w-32 h-32 flex items-center justify-center shadow-lg"
+              class="bg-gray-800 rounded-lg w-32 h-32 flex items-center justify-center shadow-lg"
             >
-              <img
-                src={award.icon}
-                alt={award.title}
-                class="w-20 h-20 object-contain"
-              />
+            <img src={award.icon} alt={award.title} class="w-48 h-48 object-contain mb-4 transition-transform duration-300 hover:scale-200">
             </div>
           </div>
         </div>
