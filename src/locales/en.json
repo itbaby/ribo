@@ -191,6 +191,37 @@
     "title": "Our Journey of Digital Evolution and Growth",
     "description": "Ours is a story of continuous innovation and change, evolving from a small firm to a leader in digital solutions. Through dedication and creativity, we have grown to meet the ever-changing needs of our clients, delivering impactful results."
   },
+  "chonors": {
+    "title": "Our Accolades",
+    "subtitle": "A testament to our commitment to excellence and innovation.",
+    "awards": [
+      {
+        "date": "2023",
+        "title": "Dalian Stable Employment Enterprise",
+        "description": "Recognizing the company's contributions to stabilizing employment and promoting economic development."
+      },
+      {
+        "date": "2022",
+        "title": "Lenovo Emerging Partner",
+        "description": "Awarded as Lenovo's Emerging Partner of the Year, recognizing outstanding performance in technological innovation and business cooperation."
+      },
+      {
+        "date": "2022",
+        "title": "Lenovo Excellent Cooperation Team",
+        "description": "Awarded as Lenovo's Excellent Cooperation Team, recognizing exceptional performance in project collaboration and team synergy."
+      },
+      {
+        "date": "2021",
+        "title": "ByteDance Excellent Partner",
+        "description": "Awarded as ByteDance's Excellent Partner of the Year, recognizing outstanding contributions in technical services and business support."
+      },
+      {
+        "date": "2020",
+        "title": "ByteDance Excellent Partner",
+        "description": "Awarded as ByteDance's Excellent Partner of the Year, recognizing consistent performance in technological innovation and service quality."
+      }
+    ]
+  },
   "footer": {
     "brand": {
       "name": "Ribo Consulting Services"

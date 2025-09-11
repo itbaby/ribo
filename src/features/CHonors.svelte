@@ -2,44 +2,40 @@
   import { onMount } from "svelte";
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
+  import { _, t } from "svelte-i18n";
 
-  let awards = [
+  let awards = $derived([
     {
-      date: "2023",
-      title: "大连市稳岗企业",
-      description:
-        "表彰公司在稳定就业和促进经济发展方面的贡献。",
+      date: $_('chonors.awards.0.date'),
+      title: $_('chonors.awards.0.title'),
+      description: $_('chonors.awards.0.description'),
       icon: "/src/assets/award_01.png",
     },
     {
-      date: "2022",
-      title: "联想新锐合作伙伴",
-      description:
-        "被联想集团评为年度新锐合作伙伴，表彰在技术创新和业务合作方面的突出表现。",
+      date: $_('chonors.awards.1.date'),
+      title: $_('chonors.awards.1.title'),
+      description: $_('chonors.awards.1.description'),
       icon: "/src/assets/award_02.png",
     },
     {
-      date: "2022",
-      title: "联想优秀合作团队",
-      description:
-        "被联想集团评为优秀合作团队，表彰在项目协作和团队协同方面的卓越表现。",
+      date: $_('chonors.awards.2.date'),
+      title: $_('chonors.awards.2.title'),
+      description: $_('chonors.awards.2.description'),
       icon: "/src/assets/award_03.png",
     },
     {
-      date: "2021",
-      title: "字节跳动优秀合作伙伴",
-      description:
-        "被字节跳动评为年度优秀合作伙伴，表彰在技术服务和业务支持方面的杰出贡献。",
+      date: $_('chonors.awards.3.date'),
+      title: $_('chonors.awards.3.title'),
+      description: $_('chonors.awards.3.description'),
       icon: "/src/assets/award_04.png",
     },
     {
-      date: "2020",
-      title: "字节跳动优秀合作伙伴",
-      description:
-        "被字节跳动评为年度优秀合作伙伴，表彰在技术创新和服务质量方面的持续表现。",
+      date: $_('chonors.awards.4.date'),
+      title: $_('chonors.awards.4.title'),
+      description: $_('chonors.awards.4.description'),
       icon: "/src/assets/award_01.png",
     },
-  ];
+  ]);
 
   onMount(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -56,9 +52,9 @@
 <div class="bg-gray-900 text-white min-h-screen p-8">
   <div class="max-w-4xl mx-auto">
     <header class="text-center mb-16 header">
-      <h1 class="text-5xl font-bold mb-4">Our Accolades</h1>
+      <h1 class="text-5xl font-bold mb-4">{$t('chonors.title')}</h1>
       <p class="text-lg text-gray-400">
-        A testament to our commitment to excellence and innovation.
+        {$t('chonors.subtitle')}
       </p>
     </header>
 
