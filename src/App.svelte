@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Router, Route } from "svelte-routing";
+  import { onMount } from "svelte";
   import CMenu from "./features/CMenu.svelte";
   import CDefault from "./features/CDefault.svelte";
   import CIndustry from "./features/CIndustry.svelte";
@@ -14,93 +14,49 @@
   import COutSourcing from "./features/COutSourcing.svelte";
   import CTechCategory from "./features/CTechCategory.svelte";
   import CCulture from "./features/CCulture.svelte";
-    import CHonors from "./features/CHonors.svelte";
-    import CInfo from "./features/CInfo.svelte";
+  import CHonors from "./features/CHonors.svelte";
+  import CInfo from "./features/CInfo.svelte";
+
+  let currentRoute = $state("/");
+
+  const routes = {
+    "/": { component: CDefault, bgClass: "" },
+    "/hiring": { component: CHiring, bgClass: "", footer: { bgClass: "bg-gray-800" } },
+    "/industry": { component: CIndustry, bgClass: "", footer: { bgClass: "bg-gray-800"} },
+    "/innovation": { component: CInnovation, bgClass: "", footer: {bgClass: "bg-gray-800"} },
+    "/serve": { component: CServe, bgClass: "", footer: {bgClass: "bg-gray-800"} },
+    "/aboutus": { component: CAboutUs, bgClass: "", footer: {bgClass: "bg-gray-800"} },
+    "/contact": { component: CContact, bgClass: "", footer: {bgClass: "bg-gray-800"} },
+    "/intro": { component: CIntro, bgClass: "", footer: {bgClass: "bg-gray-800"} },
+    "/resources": { component: CResources, bgClass: "", footer: {bgClass: "bg-gray-800"} },
+    "/honors": { component: CHonors, bgClass: "", footer: {bgClass: "bg-gray-800"} },
+    "/outsourcing": { component: COutSourcing, bgClass: "bg-gray-900", footer: { bgClass: "bg-gray-800" } },
+    "/tech-category": { component: CTechCategory, bgClass: "bg-gray-800", footer: {} },
+    "/culture": { component: CCulture, bgClass: "bg-gray-900", footer: {} },
+    "/info": { component: CInfo, bgClass: "bg-gray-50", footer: {} }
+  };
+
+  function handleHashChange() {
+    const hash = window.location.hash.slice(1) || "/";
+    currentRoute = hash;
+  }
+
+  onMount(() => {
+    handleHashChange();
+    window.addEventListener("hashchange", handleHashChange);
+    
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  });
+
+  const route = $derived(routes[currentRoute as keyof typeof routes] || routes["/"]);
 </script>
 
-<Router>
-  <CMenu />
-  <Route path="/" let:params>
-    <div class="pt-16">
-      <CDefault />
-    </div>
-  </Route>
-  <Route path="/hiring" let:params>
-    <div class="pt-16">
-      <CHiring />
-    </div>
-    <CFooter bgClass="bg-gray-800" />
-  </Route>
-  <Route path="/industry" let:params>
-    <div class="pt-16">
-      <CIndustry />
-    </div>
-    <CFooter />
-  </Route>
-  <Route path="/innovation" let:params>
-    <div class="pt-16">
-      <CInnovation />
-    </div>
-    <CFooter />
-  </Route>
-  <Route path="/serve" let:params>
-    <div class="pt-16">
-      <CServe />
-    </div>
-    <CFooter />
-  </Route>
-  <Route path="/aboutus" let:params>
-    <div class="pt-16">
-      <CAboutUs />
-    </div>
-    <CFooter />
-  </Route>
-  <Route path="/contact" let:params>
-    <div class="pt-16">
-      <CContact />
-    </div>
-    <CFooter />
-  </Route>
-  <Route path="/intro" let:params>
-    <div class="pt-16">
-      <CIntro />
-    </div>
-    <CFooter />
-  </Route>
-  <Route path="/resources" let:params>
-    <div class="pt-16">
-      <CResources />
-    </div>
-    <CFooter />
-  </Route>
-  <Route path="/honors" let:params>
-    <div class="pt-16">
-      <CHonors />
-    </div>
-    <CFooter />
-  </Route>
-  <Route path="/outsourcing" let:params>
-    <div class="pt-16 bg-gray-900">
-      <COutSourcing />
-    </div>
-    <CFooter bgClass="bg-gray-800" />
-  </Route>
-  <Route path="/tech-category" let:params>
-    <div class="pt-16 bg-gray-800">
-      <CTechCategory />
-    </div>
-    <CFooter />
-  </Route>
-  <Route path="/culture" let:params>
-    <div class="pt-16 bg-gray-900">
-      <CCulture />
-    </div>
-    <CFooter />
-  </Route>
-   <Route path="/info" let:params>
-    <div class="pt-16 bg-gray-50">
-      <CInfo />
-    </div>
-    <CFooter />
-  </Route>
-</Router>
+<CMenu />
+<div class="pt-16 {route.bgClass}">
+  <route.component />
+</div>
+{#if currentRoute !== "/"}
+  <CFooter bgClass={(route as any).footer?.bgClass || ""} />
+{/if}

@@ -239,7 +239,7 @@
       >
         <li>
           <a
-            href="/industry"
+            href="#/industry"
             class="block py-2 px-5 text-white bg-gray-900"
             aria-current="page">{$_("menu.industry")}</a
           >
@@ -275,17 +275,17 @@
           >
             <ul class="py-2 text-sm md:py-2 whitespace-nowrap">
               <li>
-                <a href="/hiring" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
+                <a href="#/hiring" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
                   >{$_("menu.headhunting")}</a
                 >
               </li>
               <li>
-                <a href="/resources" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
+                <a href="#/resources" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
                   >{$_("menu.staffing")}</a
                 >
               </li>
               <li>
-                <a href="/outsourcing" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
+                <a href="#/outsourcing" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
                   >{$_("menu.itOutsourcing")}</a
                 >
               </li>
@@ -322,12 +322,12 @@
           >
             <ul class="py-2 text-sm md:py-2 whitespace-nowrap">
               <li>
-                <a href="/" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
+                <a href="#/" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
                   >{$_("menu.marketAnalysis")}</a
                 >
               </li>
               <li>
-                <a href="/" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
+                <a href="#/" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
                   >{$_("menu.industryNews")}</a
                 >
               </li>
@@ -365,27 +365,27 @@
           >
             <ul class="py-2 text-sm md:py-2 whitespace-nowrap">
               <li>
-                <a href="/info" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
+                <a href="#/info" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
                   >{$_("menu.companyIntroduction")}</a
                 >
               </li>
               <li>
-                <a href="/culture" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
+                <a href="#/culture" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
                   >{$_("menu.companyCulture")}</a
                 >
               </li>
               <li>
-                <a href="/" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
+                <a href="#/" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
                   >{$_("menu.history")}</a
                 >
               </li>
               <li>
-                <a href="/honors" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
+                <a href="#/honors" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
                   >{$_("menu.honors")}</a
                 >
               </li>
               <li>
-                <a href="/" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
+                <a href="#/" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
                   >{$_("menu.contact")}</a
                 >
               </li>
@@ -393,7 +393,7 @@
           </div>
         </li>
         <li>
-          <a href="/contact" class="block py-2 px-5 text-white bg-gray-900"
+          <a href="#/contact" class="block py-2 px-5 text-white bg-gray-900"
             >{$_("menu.contact")}</a
           >
         </li>
