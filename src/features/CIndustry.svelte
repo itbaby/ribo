@@ -4,6 +4,13 @@
     import AOS from "aos";
     import "aos/dist/aos.css";
     import { _ } from "svelte-i18n";
+    import automotiveImg from "../assets/automotive-new.jpg";
+    import internetImg from "../assets/internet.jpg";
+    import financeImg from "../assets/finance.jpg";
+    import communicationImg from "../assets/communication.jpg";
+    import ecommerceImg from "../assets/ecommerce-new.jpg";
+    import newenergyImg from "../assets/newenergy-pro.jpg";
+    import semiconductorImg from "../assets/semiconductor-pro.jpg";
 
     let currentIndustryIndex = 0;
     let intervalId: number | undefined;
@@ -12,49 +19,49 @@
         {
             name: $_("industry.automotive.name"),
             icon: "ri-car-fill",
-            bg: "/src/assets/automotive-new.jpg",
+            bg: automotiveImg,
             title: $_("industry.automotive.title"),
             description: $_("industry.automotive.description"),
         },
         {
             name: $_("industry.internet.name"),
             icon: "ri-global-fill",
-            bg: "/src/assets/internet.jpg",
+            bg: internetImg,
             title: $_("industry.internet.title"),
             description: $_("industry.internet.description"),
         },
         {
             name: $_("industry.finance.name"),
             icon: "ri-bank-fill",
-            bg: "/src/assets/finance.jpg",
+            bg: financeImg,
             title: $_("industry.finance.title"),
             description: $_("industry.finance.description"),
         },
         {
             name: $_("industry.communication.name"),
             icon: "ri-wireless-charging-fill",
-            bg: "/src/assets/communication.jpg",
+            bg: communicationImg,
             title: $_("industry.communication.title"),
             description: $_("industry.communication.description"),
         },
         {
             name: $_("industry.ecommerce.name"),
             icon: "ri-shopping-cart-fill",
-            bg: "/src/assets/ecommerce-new.jpg",
+            bg: ecommerceImg,
             title: $_("industry.ecommerce.title"),
             description: $_("industry.ecommerce.description"),
         },
         {
             name: $_("industry.newenergy.name"),
             icon: "ri-flashlight-fill",
-            bg: "/src/assets/newenergy-pro.jpg",
+            bg: newenergyImg,
             title: $_("industry.newenergy.title"),
             description: $_("industry.newenergy.description"),
         },
         {
             name: $_("industry.semiconductor.name"),
             icon: "ri-cpu-fill",
-            bg: "/src/assets/semiconductor-pro.jpg",
+            bg: semiconductorImg,
             title: $_("industry.semiconductor.title"),
             description: $_("industry.semiconductor.description"),
         },

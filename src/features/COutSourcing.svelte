@@ -6,6 +6,9 @@
   import { ScrollTrigger } from 'gsap/ScrollTrigger';
   import { initAOS } from '../config/aos-config';
   import { _ } from 'svelte-i18n';
+  import serviceImg from '../assets/service.jpg';
+  import sponsorsImg from '../assets/sponsors.jpg';
+  import outputImg from '../assets/output.jpg';
 
   // Register ScrollTrigger plugin
   gsap.registerPlugin(ScrollTrigger);
@@ -664,15 +667,15 @@
           <div>
             <div id="tabs-with-card-1" role="tabpanel">
               
-              <img class="shadow-xl shadow-gray-900/30 dark:shadow-black/30 rounded-xl h-[600px] w-full object-cover" src="/src/assets/output.jpg" alt="Features Image">
+              <img class="shadow-xl shadow-gray-900/30 dark:shadow-black/30 rounded-xl h-[600px] w-full object-cover" src={outputImg} alt="Features Image">
             </div>
 
             <div id="tabs-with-card-2" role="tabpanel">
-              <img class="shadow-xl shadow-gray-900/30 dark:shadow-black/30 rounded-xl h-[600px] w-full object-cover" src="/src/assets/service.jpg" alt="Features Image">
+              <img class="shadow-xl shadow-gray-900/30 dark:shadow-black/30 rounded-xl h-[600px] w-full object-cover" src={serviceImg} alt="Features Image">
             </div>
 
             <div id="tabs-with-card-3" role="tabpanel">
-              <img class="shadow-xl shadow-gray-900/30 dark:shadow-black/30 rounded-xl h-[600px] w-full object-cover" src="/src/assets/sponsors.jpg" alt="Features Image">
+              <img class="shadow-xl shadow-gray-900/30 dark:shadow-black/30 rounded-xl h-[600px] w-full object-cover" src={sponsorsImg} alt="Features Image">
             </div>
           </div>
           <!-- End Tab Content -->

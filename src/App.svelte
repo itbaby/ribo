@@ -31,9 +31,9 @@
     "/resources": { component: CResources, bgClass: "", footer: {bgClass: "bg-gray-800"} },
     "/honors": { component: CHonors, bgClass: "", footer: {bgClass: "bg-gray-800"} },
     "/outsourcing": { component: COutSourcing, bgClass: "bg-gray-900", footer: { bgClass: "bg-gray-800" } },
-    "/tech-category": { component: CTechCategory, bgClass: "bg-gray-800", footer: {} },
-    "/culture": { component: CCulture, bgClass: "bg-gray-900", footer: {} },
-    "/info": { component: CInfo, bgClass: "bg-gray-50", footer: {} }
+    "/tech-category": { component: CTechCategory, bgClass: "bg-gray-800", footer: {bgClass: "bg-gray-800"} },
+    "/culture": { component: CCulture, bgClass: "bg-gray-900", footer: {bgClass: "bg-gray-800"} },
+    "/info": { component: CInfo, bgClass: "bg-gray-50", footer: {bgClass: "bg-gray-800"} }
   };
 
   function handleHashChange() {
