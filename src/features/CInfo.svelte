@@ -14,100 +14,100 @@
   let teamSection: HTMLElement;
 
   // Company stats data
-  const stats = [
-    { number: '60+', label: '全球客户', icon: '🌍' },
-    { number: '13+', label: '行业经验', icon: '⏰' },
-    { number: '10000+', label: '人才输送', icon: '🚀' },
-    { number: '15+', label: '资深顾问', icon: '👥' }
+  $: stats = [
+    { number: $_('info.stats.items.0.number'), label: $_('info.stats.items.0.label'), icon: $_('info.stats.items.0.icon') },
+    { number: $_('info.stats.items.1.number'), label: $_('info.stats.items.1.label'), icon: $_('info.stats.items.1.icon') },
+    { number: $_('info.stats.items.2.number'), label: $_('info.stats.items.2.label'), icon: $_('info.stats.items.2.icon') },
+    { number: $_('info.stats.items.3.number'), label: $_('info.stats.items.3.label'), icon: $_('info.stats.items.3.icon') }
   ];
 
   // Core values data
-  const values = [
+  $: values = [
     {
-      title: '技术驱动未来',
-      description: '旗下睿程科技的研发团队，深耕云计算、AIoT、区块链等前沿领域。持有CMMI 3级认证与ISO27001信息安全体系认证。',
-      icon: '💡',
+      title: $_('info.values.items.0.title'),
+      description: $_('info.values.items.0.description'),
+      icon: $_('info.values.items.0.icon'),
       gradient: 'from-blue-500 to-cyan-500'
     },
     {
-      title: '精英人才智库',
-      description: '垂直领域覆盖：聚焦金融科技，互联网技术，智能制造等10+战略新兴产业，建立行业动态人才图谱。',
-      icon: '⭐',
+      title: $_('info.values.items.1.title'),
+      description: $_('info.values.items.1.description'),
+      icon: $_('info.values.items.1.icon'),
       gradient: 'from-purple-500 to-pink-500'
     },
     {
-      title: '全链条服务生态',
-      description: '从高端猎头到灵活用工，再到BPO全流程外包，我们打造了人才服务的全生命周期解决方案。',
-      icon: '🤝',
+      title: $_('info.values.items.2.title'),
+      description: $_('info.values.items.2.description'),
+      icon: $_('info.values.items.2.icon'),
       gradient: 'from-green-500 to-emerald-500'
     },
     {
-      title: '全球服务网络',
-      description: '以大连为战略支点，构建全国服务网格，织就全球人才网络，已为全球10+国家地区提供专业服务。',
-      icon: '🌍',
+      title: $_('info.values.items.3.title'),
+      description: $_('info.values.items.3.description'),
+      icon: $_('info.values.items.3.icon'),
       gradient: 'from-orange-500 to-red-500'
     }
   ];
 
   // Timeline data
-  const timeline = [
+  $: timeline = [
     {
-      year: '2011',
-      title: '公司成立',
-      description: '睿柏咨询成立，专注于为企业提供综合性人才生态服务，以"连接全球智慧，赋能人才价值"为使命。',
+      year: $_('info.timeline.items.0.year'),
+      title: $_('info.timeline.items.0.title'),
+      description: $_('info.timeline.items.0.description'),
       position: 'right'
     },
     {
-      year: '2012',
-      title: '国际化扩张',
-      description: '业务拓展至全球市场，在大连、深圳、上海以及日本东京设立分支机构，为亚洲、欧洲及北美客户提供专业服务。',
+      year: $_('info.timeline.items.1.year'),
+      title: $_('info.timeline.items.1.title'),
+      description: $_('info.timeline.items.1.description'),
       position: 'right'
     },
     {
-      year: '2016',
-      title: '技术创新突破',
-      description: '推出AI智能人才匹配平台，独创"人才颗粒度评估模型"，实现人岗匹配度提升40%，革新招聘流程。',
+      year: $_('info.timeline.items.2.year'),
+      title: $_('info.timeline.items.2.title'),
+      description: $_('info.timeline.items.2.description'),
       position: 'left'
     },
     {
-      year: '2020',
-      title: '数字化转型',
-      description: '全面转向数字化服务模式，构建远程协作和虚拟咨询平台，获得字节跳动年度优秀合作伙伴荣誉。',
+      year: $_('info.timeline.items.3.year'),
+      title: $_('info.timeline.items.3.title'),
+      description: $_('info.timeline.items.3.description'),
       position: 'right'
     },
     {
-      year: '2024',
-      title: '未来愿景',
-      description: '以"科技+人才"双轮驱动战略引领行业发展，致力于成为企业数字化转型进程中值得信赖的全球人才伙伴。',
+      year: $_('info.timeline.items.4.year'),
+      title: $_('info.timeline.items.4.title'),
+      description: $_('info.timeline.items.4.description'),
       position: 'left'
     }
   ];
 
   // Team members data
-  const team = [
+  $: team = [
     {
-      name: '垂直领域覆盖',
-      position: '聚焦10+战略新兴产业',
+      name: $_('info.team.members.0.name'),
+      position: $_('info.team.members.0.position'),
       image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=400&h=400&fit=crop&crop=face',
-      bio: '建立行业动态人才图谱，覆盖金融科技、互联网技术、智能制造等多个垂直领域。'
+      bio: $_('info.team.members.0.bio')
     },
     {
-      name: '精准匹配体系',
-      position: 'AI智能推荐',
+      name: $_('info.team.members.1.name'),
+      position: $_('info.team.members.1.position'),
       image: 'https://images.unsplash.com/photo-1519389950473-47ba0c766d19?w=400&h=400&fit=crop&crop=face',
-      bio: '独创"人才颗粒度评估模型"，依托AI智能推荐系统实现人岗匹配度提升40%。'
+      bio: $_('info.team.members.1.bio')
     },
     {
-      name: '资深顾问团队',
-      position: '平均从业年限5年+',
+      name: $_('info.team.members.2.name'),
+      position: $_('info.team.members.2.position'),
       image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=400&fit=crop&crop=face',
-      bio: '85%成员具备8年以上高端岗位猎寻经验，年度职位关闭率达93%。'
+      bio: $_('info.team.members.2.bio')
     },
     {
-      name: '全链条服务生态',
-      position: '人才服务全生命周期解决方案',
+      name: $_('info.team.members.3.name'),
+      position: $_('info.team.members.3.position'),
       image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=400&h=400&fit=crop&crop=face',
-      bio: '从高端猎头到灵活用工，再到BPO全流程外包，我们打造了人才服务的全生命周期解决方案。'
+      bio: $_('info.team.members.3.bio')
     }
   ];
 
@@ -130,7 +130,7 @@
     gsap.fromTo('.stat-number', 
       { textContent: 0 },
       {
-        textContent: (i, target) => target.getAttribute('data-number'),
+        textContent: (i: number, target: Element) => target.getAttribute('data-number'),
         duration: 2,
         ease: 'power2.out',
         snap: { textContent: 1 },
@@ -223,27 +223,27 @@
       <div class="mb-8" data-aos="fade-up">
         <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 backdrop-blur-sm">
           <span class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
-          赋能企业转型 始于2011
+          {$_('info.hero.badge')}
         </span>
       </div>
       
       <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent leading-tight" data-aos="fade-up" data-aos-delay="200">
-        关于睿柏
+        {$_('info.hero.title')}
         <span class="block text-4xl sm:text-5xl lg:text-6xl bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-          咨询服务
+          {$_('info.hero.subtitle')}
         </span>
       </h1>
       
       <p class="text-xl sm:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="400">
-        我们是领先的综合性人才生态服务商，以"连接全球智慧，赋能人才价值"为使命，致力于通过创新解决方案、战略洞察和卓越的人才获取服务为企业赋能。
+        {$_('info.hero.description')}
       </p>
       
       <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="600">
         <button class="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-          了解我们的故事
+          {$_('info.hero.buttons.story')}
         </button>
         <button class="px-8 py-4 border-2 border-white/20 hover:border-white/40 rounded-full font-semibold transition-all duration-300 backdrop-blur-sm hover:bg-white/10">
-          认识我们的团队
+          {$_('info.hero.buttons.team')}
         </button>
       </div>
     </div>
@@ -271,11 +271,11 @@
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-16">
         <h2 class="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent" data-aos="fade-up">
-          我们的核心价值观
+          {$_('info.values.title')}
         </h2>
         <p class="text-xl text-slate-400 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-          睿柏咨询成立于2011年,作为综合性人才生态服务商,我们以"连接全球智慧,赋能人才价值"为使命,构建了覆盖人力资源服务、数字化转型解决方案及业务流程外包的三大战略板块。旗下睿柏咨询(大连,深圳,上海以及日本东京)与睿程科技双核驱动,已为全球10+国家地区的60余enterprise提供专业服务,累计输送高端人才超10,000人次。
-        </p>
+           {$_('info.values.description')}
+         </p>
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -298,10 +298,10 @@
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-16">
         <h2 class="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent" data-aos="fade-up">
-          我们的发展历程
+          {$_('info.timeline.title')}
         </h2>
         <p class="text-xl text-slate-400 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-          从初创到行业领先，见证睿柏咨询在人才生态服务领域的成长足迹与重要里程碑。
+          {$_('info.timeline.description')}
         </p>
       </div>
       
@@ -333,10 +333,10 @@
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-16">
         <h2 class="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent" data-aos="fade-up">
-          我们的精英团队
+          {$_('info.team.title')}
         </h2>
         <p class="text-xl text-slate-400 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-          汇聚行业精英，构建全方位人才生态服务体系，为企业提供从战略咨询到人才落地的一站式解决方案。
+          {$_('info.team.description')}
         </p>
       </div>
       
@@ -363,17 +363,17 @@
     <div class="max-w-4xl mx-auto text-center">
       <div class="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 border border-blue-500/30" data-aos="fade-up">
         <h2 class="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
-          准备好开启人才赋能之旅？
+          {$_('info.cta.title')}
         </h2>
         <p class="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-          加入众多已经通过我们专业人才生态服务实现业务转型的企业行列，让我们共同连接全球智慧，赋能人才价值。
+          {$_('info.cta.description')}
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <button class="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-            立即开始合作
+            {$_('info.cta.buttons.start')}
           </button>
           <button class="px-8 py-4 border-2 border-white/20 hover:border-white/40 rounded-full font-semibold transition-all duration-300 backdrop-blur-sm hover:bg-white/10">
-            预约咨询服务
+            {$_('info.cta.buttons.consult')}
           </button>
         </div>
       </div>
