@@ -9,6 +9,8 @@
   import CSponsor from "./CSponsor.svelte";
   import CFooter from "./CFooter.svelte";
   import CLastNews from "./CLastNews.svelte";
+  import aboutusImg from '../assets/aboutus.jpg';
+  import earthImg from '../assets/earth.png';
 
   let languages = {
     "fi-us": "en",
@@ -26,6 +28,13 @@
       "[data-scroll-container]"
     ) as HTMLElement;
     const sections = document.querySelectorAll("[data-section]");
+
+    // Initialize transform properties for all sections to prevent LocomotiveScroll errors
+    sections.forEach((section) => {
+      if (!section.style.transform) {
+        section.style.transform = 'translate3d(0, 0, 0)';
+      }
+    });
 
     const locoScroll = new LocomotiveScroll({
       el: scrollContainer,
@@ -55,9 +64,6 @@
       }),
     });
 
-    // 刷新并设置动画
-    ScrollTrigger.refresh();
-
     // 为每个部分添加动画
     sections.forEach((sec) => {
       // 使用GSAP实现类似AOS zoom-in的效果
@@ -74,6 +80,7 @@
           ease: "power2.out",
           scrollTrigger: {
             trigger: sec,
+            scroller: "[data-scroll-container]",
             start: "top 90%",
             end: "bottom 10%",
             toggleActions: "play reverse play reverse",
@@ -83,6 +90,9 @@
       );
     });
 
+    // 在设置完所有动画后刷新ScrollTrigger
+    ScrollTrigger.refresh();
+
     return () => {
       locoScroll.destroy();
       ScrollTrigger.getAll().forEach((t) => t.kill());
@@ -90,13 +100,13 @@
   });
 </script>
 
-<div class="bg-gray-700 w-[100vw] overflow-hidden">
-  <div data-scroll-container class="bg-gray-900 flex flex-col justify-around">
+<div class="bg-gray-700 w-[100vw]">
+  <div data-scroll-container class="bg-gray-900 flex flex-col">
     <section
       data-section
       data-scroll-section
-      class="flex items-center justify-center h-screen bg-cover bg-center md:w-full 0"
-      style="background-image: url('/src/assets/aboutus.jpg')"
+      class="flex items-center justify-center min-h-screen bg-cover bg-center w-full"
+      style="background-image: url({aboutusImg})"
     >
       <CText />
     </section>
@@ -104,8 +114,8 @@
     <section
       data-section
       data-scroll-section
-      class="w-full mx-auto bg-cover bg-center flex flex-col items-center justify-center h-[80vh] py-40"
-      style="background-image: url('/src/assets/earth.png')"
+      class="w-full mx-auto bg-cover bg-center flex flex-col items-center justify-center min-h-[80vh] py-10 md:py-40"
+      style="background-image: url({earthImg})"
     >
       <div
         class="text-white w-10/12 mx-auto text-2xl animate-pulse md:text-4xl text-center"
@@ -113,7 +123,7 @@
         {$_("cserve.headline")}
       </div>
       <h2
-        class="text-white w-10/12 mx-auto lg:text-2xl animate-pulsemd:text-3xl mt-20 text-center mb-40"
+        class="text-white w-10/12 mx-auto lg:text-2xl animate-pulse md:text-3xl mt-20 text-center mb-40"
       >
         {$_("cserve.subhead")}
       </h2>
@@ -135,16 +145,18 @@
     <section
       data-section
       data-scroll-section
-      class="flex flex-col items-center justify-center h-[75vh]"
+      class="flex flex-col items-center justify-center min-h-[50vh] py-10 md:py-20"
     >
       <h1 class="mb-[4vh] text-2xl md:text-4xl text-white">
         {$_("carousel.latestNews")}
       </h1>
       <CLastNews />
     </section>
+    
+    <footer data-scroll-section>
+      <CFooter bgClass="bg-gray-800" />
+    </footer>
   </div>
-
-  <CFooter bgClass="bg-gray-800" />
 </div>
 
 <style>

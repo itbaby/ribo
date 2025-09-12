@@ -4,6 +4,11 @@
   import { onMount } from 'svelte';
   import { initAOS } from '../config/aos-config';
   import { _ } from 'svelte-i18n';
+  import serviceImg from '../assets/service.jpg';
+  import secondaryImg from '../assets/secondary.jpg';
+  import thirdImg from '../assets/third.jpg';
+  import ideaImg from '../assets/idea-2.jpg';
+  import topImg from '../assets/top.jpg';
 
   onMount(() => {
     // 初始化AOS动画
@@ -30,10 +35,10 @@
 
   // 本地图片（非文本，不做 i18n）与服务项按顺序对应
   const serviceImages = [
-    '/src/assets/service.jpg',
-    '/src/assets/secondary.jpg',
-    '/src/assets/third.jpg',
-    '/src/assets/idea-2.jpg'
+    serviceImg,
+    secondaryImg,
+    thirdImg,
+    ideaImg
   ];
 
   // 根据分类标题返回对应的 Remix Icon 类名
@@ -113,7 +118,7 @@
   <section class="relative h-screen flex items-center justify-center overflow-hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-out-back">
     <div class="absolute inset-0 z-0">
       <img
-        src="/src/assets/top.jpg"
+        src={topImg}
         alt={$_('resources.hero.title')}
         class="w-full h-full object-cover opacity-40"
       />
