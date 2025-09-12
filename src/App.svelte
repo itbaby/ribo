@@ -15,6 +15,7 @@
   import CTechCategory from "./features/CTechCategory.svelte";
   import CCulture from "./features/CCulture.svelte";
     import CHonors from "./features/CHonors.svelte";
+    import CInfo from "./features/CInfo.svelte";
 </script>
 
 <Router>
@@ -93,6 +94,12 @@
   <Route path="/culture" let:params>
     <div class="pt-16 bg-gray-900">
       <CCulture />
+    </div>
+    <CFooter />
+  </Route>
+   <Route path="/info" let:params>
+    <div class="pt-16 bg-gray-50">
+      <CInfo />
     </div>
     <CFooter />
   </Route>
