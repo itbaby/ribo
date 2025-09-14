@@ -55,31 +55,73 @@
       year: $_('info.timeline.items.0.year'),
       title: $_('info.timeline.items.0.title'),
       description: $_('info.timeline.items.0.description'),
-      position: 'right'
+      position: 'right',
+      icon: 'ri-building-2-fill',
+      gradient: 'from-blue-500/80 to-cyan-500/80'
     },
     {
       year: $_('info.timeline.items.1.year'),
       title: $_('info.timeline.items.1.title'),
       description: $_('info.timeline.items.1.description'),
-      position: 'right'
+      position: 'left',
+      icon: 'ri-group-fill',
+      gradient: 'from-purple-500/80 to-pink-500/80'
     },
     {
       year: $_('info.timeline.items.2.year'),
       title: $_('info.timeline.items.2.title'),
       description: $_('info.timeline.items.2.description'),
-      position: 'left'
+      position: 'right',
+      icon: 'ri-award-fill',
+      gradient: 'from-amber-500/80 to-yellow-500/80'
     },
     {
       year: $_('info.timeline.items.3.year'),
       title: $_('info.timeline.items.3.title'),
       description: $_('info.timeline.items.3.description'),
-      position: 'right'
+      position: 'left',
+      icon: 'ri-global-fill',
+      gradient: 'from-emerald-500/80 to-green-500/80'
     },
     {
       year: $_('info.timeline.items.4.year'),
       title: $_('info.timeline.items.4.title'),
       description: $_('info.timeline.items.4.description'),
-      position: 'left'
+      position: 'right',
+      icon: 'ri-building-2-fill',
+      gradient: 'from-rose-500/80 to-red-500/80'
+    },
+    {
+      year: $_('info.timeline.items.5.year'),
+      title: $_('info.timeline.items.5.title'),
+      description: $_('info.timeline.items.5.description'),
+      position: 'left',
+      icon: 'ri-bar-chart-fill',
+      gradient: 'from-indigo-500/80 to-blue-500/80'
+    },
+    {
+      year: $_('info.timeline.items.6.year'),
+      title: $_('info.timeline.items.6.title'),
+      description: $_('info.timeline.items.6.description'),
+      position: 'right',
+      icon: 'ri-group-fill',
+      gradient: 'from-cyan-500/80 to-teal-500/80'
+    },
+    {
+      year: $_('info.timeline.items.7.year'),
+      title: $_('info.timeline.items.7.title'),
+      description: $_('info.timeline.items.7.description'),
+      position: 'left',
+      icon: 'ri-money-cny-circle-fill',
+      gradient: 'from-lime-500/80 to-green-500/80'
+    },
+    {
+      year: $_('info.timeline.items.8.year'),
+      title: $_('info.timeline.items.8.title'),
+      description: $_('info.timeline.items.8.description'),
+      position: 'right',
+      icon: 'ri-building-2-fill',
+      gradient: 'from-violet-500/80 to-purple-500/80'
     }
   ];
 
@@ -294,9 +336,9 @@
   </section>
 
   <!-- Timeline Section -->
-  <section bind:this={timelineSection} class="py-20 px-4 sm:px-6 lg:px-8 relative">
+  <section bind:this={timelineSection} class="py-12 px-4 sm:px-6 lg:px-8 relative">
     <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
+      <div class="text-center mb-12">
         <h2 class="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent" data-aos="fade-up">
           {$_('info.timeline.title')}
         </h2>
@@ -305,21 +347,40 @@
         </p>
       </div>
       
-      <div class="relative">
+      <div class="relative top-6">
         <!-- Timeline Line -->
-        <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-purple-500 rounded-full"></div>
+        <div class="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-blue-500 to-purple-500 rounded-full"></div>
         
         {#each timeline as item, index}
-          <div class="timeline-item relative flex items-center mb-16 {item.position === 'left' ? 'flex-row-reverse' : ''}">
+          <div class="timeline-item relative flex items-center {item.position === 'left' ? 'flex-row-reverse' : ''}">
             <!-- Timeline Dot -->
-            <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full border-4 border-slate-900 z-10"></div>
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full border-2 border-slate-900 z-10"></div>
             
             <!-- Content -->
-            <div class="w-5/12 {item.position === 'left' ? 'text-right pr-8' : 'pl-8'}">
-              <div class="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300">
-                <div class="text-2xl font-bold text-blue-400 mb-2">{item.year}</div>
-                <h3 class="text-xl font-bold text-white mb-3">{item.title}</h3>
-                <p class="text-slate-400 leading-relaxed">{item.description}</p>
+            <div class="w-5/12 {item.position === 'left' ? 'text-right pr-4' : 'pl-4'}">
+              <div class="relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/40 hover:border-slate-600/60 transition-all duration-300 group">
+                <!-- Gradient accent -->
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r {item.gradient} rounded-t-xl"></div>
+                
+                <!-- Date badge at the top -->
+                <div class="flex justify-end mb-3">
+                  <div class="text-xs font-medium text-slate-300 whitespace-nowrap px-2 py-1 rounded-full bg-slate-700/50 border border-slate-600/30">
+                    {item.year}
+                  </div>
+                </div>
+                
+                <div class="flex items-start mb-3">
+                  <!-- Icon with gradient background -->
+                  <div class="flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r {item.gradient} mr-4 transform group-hover:scale-105 transition-transform duration-300 flex-shrink-0">
+                    <i class="{item.icon} text-xl text-white"></i>
+                  </div>
+                  
+                  <!-- Title and description -->
+                  <div class="flex-1">
+                    <h3 class="text-lg font-bold text-white mb-2">{item.title}</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">{item.description}</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -406,24 +467,103 @@
     transform-style: preserve-3d;
   }
   
+  /* Timeline zigzag pattern */
+  .timeline-item {
+    margin-bottom: 0;
+  }
+  
   .timeline-item:nth-child(even) {
     flex-direction: row;
+    margin-top: -3rem;
   }
   
   .timeline-item:nth-child(odd) {
     flex-direction: row-reverse;
+    margin-top: 0.5rem;
+  }
+  
+  /* First item should not have negative margin */
+  .timeline-item:first-child {
+    margin-top: 0 !important;
+  }
+  
+  /* Reduce spacing for more compact layout */
+  .timeline-item:nth-child(even):not(:first-child) {
+    margin-top: -3.5rem;
+  }
+  
+  /* Alternate positions for left/right alignment */
+  .timeline-item:nth-child(even) .text-right {
+    text-align: right !important;
+    padding-right: 2rem !important;
+    padding-left: 0 !important;
+  }
+  
+  .timeline-item:nth-child(odd) .pl-4 {
+    padding-left: 2rem !important;
+    padding-right: 0 !important;
+  }
+  
+  /* Timeline item hover effects */
+  .timeline-item .group:hover {
+    transform: translateY(-2px);
+    border-color: rgba(192, 192, 192, 0.4);
   }
   
   @media (max-width: 768px) {
     .timeline-item {
       flex-direction: column !important;
       text-align: center !important;
+      margin-top: 0 !important;
+      margin-bottom: 1rem !important;
     }
     
     .timeline-item > div:last-child {
       width: 100% !important;
       padding: 0 !important;
-      margin-top: 2rem;
+      margin-top: 1rem !important;
+    }
+    
+    .timeline-item:nth-child(even),
+    .timeline-item:nth-child(odd) {
+      margin-top: 1rem !important;
+      margin-bottom: 1rem !important;
+    }
+    
+    /* Remove zigzag pattern on mobile */
+    .timeline-item:first-child {
+      margin-top: 0 !important;
+    }
+    
+    /* Mobile card adjustments */
+    .timeline-item > div:last-child > div {
+      padding: 1.5rem !important;
+    }
+    
+    /* Mobile center alignment */
+    .timeline-item > div:last-child .flex.items-start {
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+    }
+    
+    .timeline-item > div:last-child .flex.justify-end {
+      justify-content: center !important;
+    }
+    
+    .timeline-item > div:last-child .text-right {
+      text-align: center !important;
+      padding-right: 0 !important;
+    }
+    
+    .timeline-item > div:last-child .pl-4 {
+      padding-left: 0 !important;
+    }
+    
+    /* Mobile icon adjustments */
+    .timeline-item > div:last-child .flex.items-start > div:first-child {
+      margin-right: 0 !important;
+      margin-bottom: 1rem !important;
     }
   }
 </style>

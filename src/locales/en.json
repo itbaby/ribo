@@ -593,29 +593,49 @@
       "description": "From startup to industry leadership, witness RIBO Consulting's growth trajectory and important milestones in the talent ecosystem service field.",
       "items": [
         {
-          "year": "2011",
-          "title": "Company Founded",
+          "year": "May 2011",
+          "title": "RIBO Corporation Established",
           "description": "RIBO Consulting was established, focusing on providing comprehensive talent ecosystem services for enterprises, with the mission of 'Connecting Global Wisdom, Empowering Talent Value.'"
         },
         {
-          "year": "2012",
-          "title": "International Expansion",
-          "description": "Business expanded to global markets, establishing branches in Dalian, Shenzhen, Shanghai, and Tokyo, Japan, providing professional services to clients in Asia, Europe, and North America."
+          "year": "March 2013",
+          "title": "Added Staffing Services to Executive Search",
+          "description": "Expanded services to include staffing solutions built upon the success of executive search business, providing comprehensive HR solutions to enterprises."
         },
         {
-          "year": "2016",
-          "title": "Technological Innovation Breakthrough",
-          "description": "Launched AI intelligent talent matching platform, created the original 'Talent Granularity Assessment Model,' achieving a 40% improvement in person-post matching accuracy and revolutionizing recruitment processes."
+          "year": "August 2015",
+          "title": "Recognized as Dalian's Outstanding HR Company",
+          "description": "Awarded the title of Outstanding Human Resources Company in Dalian, recognizing exceptional service quality and industry influence."
         },
         {
-          "year": "2020",
-          "title": "Digital Transformation",
-          "description": "Fully transitioned to digital service model, built remote collaboration and virtual consulting platforms, received ByteDance Annual Outstanding Partner honor."
+          "year": "September 2019",
+          "title": "Executive Search Coverage Nationwide and Japan",
+          "description": "Successfully expanded executive search business to nationwide coverage and Japanese market, further extending service network."
         },
         {
-          "year": "2024",
-          "title": "Future Vision",
-          "description": "Leading industry development with 'Technology + Talent' dual-wheel strategy, committed to becoming a trustworthy global talent partner in enterprise digital transformation processes."
+          "year": "September 2020",
+          "title": "RICHENG Branch Established, Focused on ITO",
+          "description": "Established RICHENG branch focusing on ITO (Information Technology Outsourcing) business, deepening technology talent services."
+        },
+        {
+          "year": "October 2021",
+          "title": "Internet IT Executive Search Top 3 in Industry",
+          "description": "Ranked Top 3 in Internet IT executive search business, with technical talent acquisition capabilities recognized by the industry."
+        },
+        {
+          "year": "June 2022",
+          "title": "Staffing Business Exceeds 200 Employees",
+          "description": "Continued expansion of staffing business with employee count surpassing 200, marking a significant milestone."
+        },
+        {
+          "year": "March 2024",
+          "title": "Revenue Exceeds 350 Million Yen for Three Consecutive Years",
+          "description": "Sustained business growth with revenue exceeding 350 million yen for three consecutive years, demonstrating strong momentum."
+        },
+        {
+          "year": "May 2025",
+          "title": "Shenzhen Branch Established",
+          "description": "Established Shenzhen branch to further expand South China market presence and complete nationwide service network layout."
         }
       ]
     },

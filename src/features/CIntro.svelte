@@ -134,11 +134,11 @@
 
 <div class="bg-gray-900 py-24 sm:py-32">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <!-- 主容器 -->
     <div class="text-center">
       <p class="text-base font-semibold leading-7 text-white">{$t('cintro.knowUs')}</p>
       <h2 class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">{$t('cintro.transforming')}</h2>
-    </div>
+    </div> <!-- End of 主容器 -->
     <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
       <div
         class="bg-green-200 p-6 rounded-3xl flex flex-col justify-center items-center text-center aspect-[4/3] lg:aspect-auto text-card"
@@ -208,13 +208,10 @@
       >
         <img
           src={groupLooking}
-          alt="Group Looking at Laptop" class="w-full h-full object-cover">
+          alt="Group Looking at Laptop" class="w-full h-full object-cover" />
       </div>
-      
-
-
-    </div>
-  </div>
+    </div> <!-- End of grid container -->
+  </div> <!-- End of max-w-7xl container -->
 
   <!-- Main Content Section -->
   <div class="mt-20">
@@ -224,61 +221,103 @@
         <div class="text-center">
           <h2 class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">{$t('cintro.title')}</h2>
         </div>
-        <!-- 主要内容区域 - 改进布局 -->
-        <div class="flex flex-col mt-16 lg:flex-row gap-10 lg:items-start h-[100%]">
-          <!-- 左侧图片区域 - 优化布局 -->
-          <div class="lg:w-1/2 grid grid-cols-3 grid-rows-4 gap-4 ">
-            <div class="group col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105 animated-img">
-                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src={currentImage1} alt="公司业务领域 1" />
-            </div>
-            <div class="group col-span-1 row-span-1 rounded-2xl overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105">
-                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src={presentation} alt="Presentation" />
-            </div>
-            <div class="group col-span-1 row-span-2 rounded-2xl overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105">
-                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src={teamWorking} alt="Team Working" />
-            </div>
-            <div class="group col-span-1 row-span-2 rounded-2xl overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105 animated-img">
-                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src={currentImage2} alt="公司业务领域 2" />
-            </div>
-            <div class="group col-span-1 row-span-1 rounded-2xl overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105">
-                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src={womenWorking} alt="Women Working" />
-            </div>
-            <div class="group col-span-2 row-span-1 rounded-2xl overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105">
-                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src={groupLooking} alt="Group Looking" />
-            </div>
-          </div>
+      </div>
       
-          <!-- 右侧服务卡片 - 优化布局 -->
-          <div class="lg:w-1/2 flex flex-col gap-6">
-            {#each services as service, index}
-              <div
-                class="{selectedIndex === index
-                  ? 'bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-500 shadow-lg'
-                  : 'bg-white border-l-4 border-transparent'} p-6 rounded-xl flex-1 flex flex-col cursor-pointer fade-in text-card transition-all duration-300 hover:shadow-md hover:scale-[1.02]"
-                onclick={() => handleClick(service.image, service.image2, index)}
-                onkeydown={(e) => e.key === 'Enter' && handleClick(service.image, service.image2, index)}
-                role="button"
-                tabindex="0"
-              >
-                <h3 class="text-xl font-semibold text-gray-900 mb-3">
-                  {service.title}
-                </h3>
-                <p class="text-base text-gray-700 mb-4 flex-1 leading-relaxed">
-                  {@html service.description}
-                </p>
-                <div class="flex items-center text-sm text-blue-600 font-medium">
-                  <span class="mr-2">→</span>
-                  <span>{selectedIndex === index ? '当前选中' : '了解更多'}</span>
-                </div>
-              </div>
-            {/each}
+      <!-- 主要内容区域 - 改进布局 -->
+      <div class="flex flex-col mt-16 lg:flex-row gap-10 lg:items-start h-[100%]">
+        <!-- 左侧图片区域 - 优化布局 -->
+        <div class="lg:w-1/2 grid grid-cols-3 grid-rows-4 gap-4">
+          <div class="group col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105 animated-img">
+              <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src={currentImage1} alt="公司业务领域 1" />
           </div>
+          <div class="group col-span-1 row-span-1 rounded-2xl overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105">
+              <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src={presentation} alt="Presentation" />
+          </div>
+          <div class="group col-span-1 row-span-2 rounded-2xl overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105">
+              <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src={teamWorking} alt="Team Working" />
+          </div>
+          <div class="group col-span-1 row-span-2 rounded-2xl overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105 animated-img">
+              <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src={currentImage2} alt="公司业务领域 2" />
+          </div>
+          <div class="group col-span-1 row-span-1 rounded-2xl overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105">
+              <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src={womenWorking} alt="Women Working" />
+          </div>
+          <div class="group col-span-2 row-span-1 rounded-2xl overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105">
+              <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src={groupLooking} alt="Group Looking" />
+          </div>
+        </div>
+    
+        <!-- 右侧服务卡片 - 优化布局 -->
+        <div class="lg:w-1/2 flex flex-col gap-6">
+          {#each services as service, index}
+            <div
+              class="{selectedIndex === index
+                ? 'bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-500 shadow-lg'
+                : 'bg-white border-l-4 border-transparent'} p-6 rounded-xl flex-1 flex flex-col cursor-pointer fade-in text-card transition-all duration-300 hover:shadow-md hover:scale-[1.02]"
+              onclick={() => handleClick(service.image, service.image2, index)}
+              onkeydown={(e) => e.key === 'Enter' && handleClick(service.image, service.image2, index)}
+              role="button"
+              tabindex="0"
+            >
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                {service.title}
+              </h3>
+              <p class="text-base text-gray-700 mb-4 flex-1 leading-relaxed">
+                {@html service.description}
+              </p>
+              <div class="flex items-center text-sm text-blue-600 font-medium">
+                <span class="mr-2">→</span>
+                <span>{selectedIndex === index ? '当前选中' : '了解更多'}</span>
+              </div>
+            </div>
+          {/each}
         </div>
       </div>
     </div>
-  </div>
-</div>
-</div>
+    
+    <!-- 发展历程时间线 -->
+    <div class="mt-20">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-white mb-4">History 沿革</h2>
+        <div class="h-1 w-24 bg-blue-500 mx-auto"></div>
+      </div>
+      
+      <div class="relative max-w-3xl mx-auto">
+        <!-- 中心线 -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-500 rounded"></div>
+        
+        <!-- 时间线事件 -->
+        {#each [
+          { year: "2011年05月", event: "RIBO株式会社を設立", eventCn: "RIBO公司设立", position: "right" },
+          { year: "2013年03月", event: "", eventCn: "猎头业务的基础上，追加派遣业务", position: "left" },
+          { year: "2015年08月", event: "", eventCn: "被评选大连市优秀人力资源企业", position: "right" },
+          { year: "2019年09月", event: "", eventCn: "猎头业务覆盖全国和日本", position: "left" },
+          { year: "2020年09月", event: "", eventCn: "分公司设立【睿程】，以ITO业务为中心", position: "right" },
+          { year: "2021年10月", event: "", eventCn: "互联网IT猎头业务业界TOP3", position: "left" },
+          { year: "2022年06月", event: "", eventCn: "派遣业务突破200名员工", position: "right" },
+          { year: "2024年03月", event: "", eventCn: "营业额连续三年突破3.5亿日元", position: "left" },
+          { year: "2025年05月", event: "", eventCn: "深圳分公司成立", position: "right" }
+        ] as item, index}
+          <div class={`relative flex items-center mb-6 ${item.position === 'left' ? 'justify-start flex-row' : 'justify-end flex-row-reverse'}`} data-aos="fade-up" data-aos-delay={index * 100}>
+            <div class={`w-5/12 ${item.position === 'left' ? 'text-right pr-8' : 'text-left pl-8'}`}>
+              <div class="bg-blue-600 text-white font-bold py-2 px-4 inline-block rounded-lg mb-2">
+                {item.year}
+              </div>
+              {#if item.event}
+                <p class="text-white mb-1">{item.event}</p>
+              {/if}
+              <p class="text-red-400 font-medium">{item.eventCn}</p>
+            </div>
+            
+            <!-- 中心圆点 -->
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-white border-4 border-blue-600 z-10"></div>
+            
+            <!-- 空白占位 -->
+            <div class="w-5/12"></div>
+          </div>
+        {/each}
+      </div>
+    </div> <!-- End of timeline section -->
 <style>
   .animated-img {
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -308,6 +347,7 @@
       box-shadow: 0 30px 50px -12px rgba(16, 185, 129, 0.25);
     }
   }
-  
-  
 </style>
+</div> <!-- End of timeline section -->
+</div> <!-- End of max-w-7xl container -->
+
