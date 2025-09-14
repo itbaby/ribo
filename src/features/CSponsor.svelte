@@ -60,4 +60,43 @@
   .sponsor-logo:nth-child(4n):hover {
     transform: scale(1.28) translateY(3px);
   }
+
+  /* Responsive breakpoints */
+  @media (max-width: 1600px) {
+    .gallery {
+      grid-template-columns: repeat(5, 242px);
+    }
+  }
+
+  @media (max-width: 1300px) {
+    .gallery {
+      grid-template-columns: repeat(4, 242px);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .gallery {
+      grid-template-columns: repeat(3, 242px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .gallery {
+      grid-template-columns: repeat(2, 200px);
+    }
+    .sponsor-logo {
+      width: 200px;
+      height: 164px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .gallery {
+      grid-template-columns: repeat(1, 180px);
+    }
+    .sponsor-logo {
+      width: 180px;
+      height: 148px;
+    }
+  }
 </style>
