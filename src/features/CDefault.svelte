@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
   import CScroller from "./CScroller.svelte";
   import { _, locale } from "svelte-i18n";
   import CText from "./CText.svelte";
@@ -20,22 +21,74 @@
       "zh"
   );
 
+  gsap.registerPlugin(ScrollTrigger);
   onMount(() => {
-    // Simple fade-in animations for each section with delays
-    const sections = document.querySelectorAll("section[data-section]");
-    
-    sections.forEach((section, index) => {
-      // Set initial state
-      gsap.set(section, { opacity: 0 });
+    // Small delay to ensure DOM is ready
+    setTimeout(() => {
+      // Set up scroll-triggered zoom animations for each section
+      const sections = document.querySelectorAll("section[data-section]");
       
-      // Fade in with delay based on section index
-      gsap.to(section, {
-        opacity: 1,
-        duration: 1,
-        delay: index * 0.3,
-        ease: "power2.out"
+      sections.forEach((section, index) => {
+        // Set initial state - very dramatically zoomed out
+        gsap.set(section, { 
+          scale: 0.7,
+          opacity: 0.3,
+          transformOrigin: "center center"
+        });
+        
+        // Create scroll trigger for zoom in/out
+        ScrollTrigger.create({
+          trigger: section,
+          start: "top 80%", // Trigger when section top reaches 80% of viewport
+          end: "bottom 20%", // End when section bottom reaches 20% of viewport
+          markers: true, // Enable for debugging
+          onEnter: () => {
+            // Zoom in when section enters viewport
+            gsap.to(section, {
+              scale: 1,
+              opacity: 1,
+              duration: 0.8,
+              ease: "power2.out"
+            });
+          },
+          onLeave: () => {
+            // Zoom out when section leaves viewport
+            gsap.to(section, {
+              scale: 0.7,
+              opacity: 0.3,
+              duration: 0.8,
+              ease: "power2.out"
+            });
+          },
+          onEnterBack: () => {
+            // Zoom in when scrolling back to section
+            gsap.to(section, {
+              scale: 1,
+              opacity: 1,
+              duration: 0.8,
+              ease: "power2.out"
+            });
+          },
+          onLeaveBack: () => {
+            // Zoom out when scrolling back and section leaves viewport
+            gsap.to(section, {
+              scale: 0.7,
+              opacity: 0.3,
+              duration: 0.8,
+              ease: "power2.out"
+            });
+          }
+        });
       });
-    });
+      
+      // Refresh ScrollTrigger
+      ScrollTrigger.refresh();
+    }, 100);
+    
+    // Cleanup function
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
   });
 </script>
 
@@ -93,14 +146,15 @@
 </div>
 
 <style>
-  /* Sections should be visible by default */
+  /* Sections should start very dramatically zoomed out */
   section[data-section] {
-    opacity: 1;
-    transition: opacity 1s ease;
+    scale: 0.7;
+    opacity: 0.3;
+    transform-origin: center center;
   }
   
-  /* Add smooth transitions */
-  * {
-    transition-timing-function: ease;
+  /* Ensure smooth animations */
+  section[data-section] {
+    will-change: transform, opacity;
   }
 </style>
