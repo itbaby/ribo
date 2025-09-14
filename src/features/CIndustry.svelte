@@ -19,49 +19,49 @@
         {
             name: $_("industry.automotive.name"),
             icon: "ri-car-fill",
-            bg: automotiveImg,
+            bg: automotiveImg?.default || automotiveImg || '',
             title: $_("industry.automotive.title"),
             description: $_("industry.automotive.description"),
         },
         {
             name: $_("industry.internet.name"),
             icon: "ri-global-fill",
-            bg: internetImg,
+            bg: internetImg?.default || internetImg || '',
             title: $_("industry.internet.title"),
             description: $_("industry.internet.description"),
         },
         {
             name: $_("industry.finance.name"),
             icon: "ri-bank-fill",
-            bg: financeImg,
+            bg: financeImg?.default || financeImg || '',
             title: $_("industry.finance.title"),
             description: $_("industry.finance.description"),
         },
         {
             name: $_("industry.communication.name"),
             icon: "ri-wireless-charging-fill",
-            bg: communicationImg,
+            bg: communicationImg?.default || communicationImg || '',
             title: $_("industry.communication.title"),
             description: $_("industry.communication.description"),
         },
         {
             name: $_("industry.ecommerce.name"),
             icon: "ri-shopping-cart-fill",
-            bg: ecommerceImg,
+            bg: ecommerceImg?.default || ecommerceImg || '',
             title: $_("industry.ecommerce.title"),
             description: $_("industry.ecommerce.description"),
         },
         {
             name: $_("industry.newenergy.name"),
             icon: "ri-flashlight-fill",
-            bg: newenergyImg,
+            bg: newenergyImg?.default || newenergyImg || '',
             title: $_("industry.newenergy.title"),
             description: $_("industry.newenergy.description"),
         },
         {
             name: $_("industry.semiconductor.name"),
             icon: "ri-cpu-fill",
-            bg: semiconductorImg,
+            bg: semiconductorImg?.default || semiconductorImg || '',
             title: $_("industry.semiconductor.title"),
             description: $_("industry.semiconductor.description"),
         },
@@ -78,9 +78,16 @@
             onComplete: () => {
                 currentIndustryIndex = index;
 
+                // Update background image directly
+                const bgImageElement = document.querySelector("img[alt='Industry background']");
+                if (bgImageElement && industryCategories[currentIndustryIndex]?.bg) {
+                    console.log("Changing background to:", industryCategories[currentIndustryIndex].bg);
+                    bgImageElement.src = industryCategories[currentIndustryIndex].bg;
+                }
+
                 // 淡入新背景图片
                 gsap.fromTo(
-                    ".bg-image",
+                    "img[alt='Industry background']",
                     { opacity: 0 },
                     { opacity: 1, duration: 0.8 },
                 );
@@ -119,6 +126,17 @@
             once: true,
         });
 
+        // Log what we have
+        console.log("Current industry index:", currentIndustryIndex);
+        console.log("Industry categories:", industryCategories);
+        console.log("Current bg value:", industryCategories[currentIndustryIndex]?.bg);
+        console.log("Type of bg value:", typeof industryCategories[currentIndustryIndex]?.bg);
+
+        gsap.fromTo(
+            "img[alt='Industry background']",
+            { opacity: 0 },
+            { opacity: 1, duration: 1, delay: 0.5 },
+        );
         gsap.fromTo(
             ".main-title",
             { opacity: 0, y: 50 },
@@ -148,11 +166,14 @@
 
 <div class="relative h-[90vh] overflow-hidden">
     <!-- Background Image -->
-    <div
-        class="bg-image absolute inset-0 bg-cover bg-center"
-        style="background-image: url('{industryCategories[currentIndustryIndex]
-            .bg}');"
-    ></div>
+    <div class="absolute inset-0 bg-fallback"></div>
+    <img 
+        src={industryCategories[currentIndustryIndex].bg} 
+        alt="Industry background" 
+        class="absolute inset-0 w-full h-full object-cover"
+        on:load={() => console.log("Background image loaded successfully")}
+        on:error={() => console.error("Background image failed to load")}
+    />
 
     <!-- Overlay -->
     <div class="absolute inset-0 bg-black opacity-50"></div>
@@ -209,4 +230,7 @@
 
 <style>
     /* Add any specific styles here if needed, though Tailwind should handle most. */
+    .bg-fallback {
+        background-color: #333; /* Fallback background color */
+    }
 </style>

@@ -16,6 +16,7 @@
   import CCulture from "./features/CCulture.svelte";
   import CHonors from "./features/CHonors.svelte";
   import CInfo from "./features/CInfo.svelte";
+  import TestImage from "./features/TestImage.svelte";
 
   let currentRoute = $state("/");
 
@@ -33,7 +34,8 @@
     "/outsourcing": { component: COutSourcing, bgClass: "bg-gray-900", footer: { bgClass: "bg-gray-800" } },
     "/tech-category": { component: CTechCategory, bgClass: "bg-gray-800", footer: {bgClass: "bg-gray-800"} },
     "/culture": { component: CCulture, bgClass: "bg-gray-900", footer: {bgClass: "bg-gray-800"} },
-    "/info": { component: CInfo, bgClass: "bg-gray-50", footer: {bgClass: "bg-gray-800"} }
+    "/info": { component: CInfo, bgClass: "bg-gray-50", footer: {bgClass: "bg-gray-800"} },
+    "/testimage": { component: TestImage, bgClass: "", footer: {bgClass: "bg-gray-800"} }
   };
 
   function handleHashChange() {
