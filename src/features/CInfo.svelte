@@ -320,14 +320,14 @@
          </p>
       </div>
       
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 h-full">
         {#each values as value, index}
-          <div class="value-card group relative">
+          <div class="value-card group relative flex flex-col h-full">
             <div class="absolute inset-0 bg-gradient-to-r {value.gradient} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-300"></div>
-            <div class="relative p-8 bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300 hover:transform hover:scale-105">
+            <div class="relative p-8 bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300 hover:transform hover:scale-105 flex flex-col h-full">
               <div class="text-4xl mb-4">{value.icon}</div>
               <h3 class="text-2xl font-bold mb-4 text-white">{value.title}</h3>
-              <p class="text-slate-400 leading-relaxed">{value.description}</p>
+              <p class="text-slate-400 leading-relaxed flex-grow">{value.description}</p>
             </div>
           </div>
         {/each}
@@ -401,17 +401,17 @@
         </p>
       </div>
       
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 h-full">
         {#each team as member, index}
-          <div class="team-card group">
-            <div class="relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300 hover:transform hover:scale-105">
+          <div class="team-card group flex flex-col h-full">
+            <div class="relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300 hover:transform hover:scale-105 flex flex-col h-full">
               <div class="relative mb-6">
                 <img src={member.image} alt={member.name} class="w-24 h-24 rounded-full mx-auto object-cover border-4 border-slate-700 group-hover:border-blue-500 transition-colors duration-300">
                 <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <h3 class="text-xl font-bold text-white mb-2 text-center">{member.name}</h3>
               <p class="text-blue-400 font-medium mb-4 text-center">{member.position}</p>
-              <p class="text-slate-400 text-sm leading-relaxed text-center">{member.bio}</p>
+              <p class="text-slate-400 text-sm leading-relaxed text-center flex-grow">{member.bio}</p>
             </div>
           </div>
         {/each}
@@ -461,10 +461,34 @@
   
   .value-card {
     perspective: 1000px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .value-card > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .value-card > div > p {
+    flex-grow: 1;
   }
   
   .team-card {
     transform-style: preserve-3d;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .team-card > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .team-card > div > p:last-child {
+    flex-grow: 1;
   }
   
   /* Timeline zigzag pattern */
