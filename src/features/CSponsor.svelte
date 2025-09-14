@@ -1,54 +1,63 @@
 <script lang="ts">
-  import { images } from './images';
+  import { sponsors, spriteSheet } from './images';
 </script>
 
 <div class="gallery w-full mx-auto">
-  {#each images.slice(0, 24) as image}
-    <img class="shadow-xl/30" src={image.src} alt={image.alt} />
+  {#each sponsors as sponsor}
+    <div
+      class="sponsor-logo shadow-xl/30"
+      style="background-image: url({spriteSheet}); background-position: {sponsor.x}px {sponsor.y}px;"
+      role="img"
+      aria-label={sponsor.alt}
+    ></div>
   {/each}
 </div>
 
 <style>
   .gallery {
-    --s: calc((100vw - 3*var(--g)) / 4); /* 4 columns on mobile */
-    --g: 12px;  /* gap */
-    --f: 1.2;  /* scale factor */
-    
+    --g: 16px;
     display: grid;
     gap: var(--g);
-    width: 100vw;
-    max-height: 90vh;
-    aspect-ratio: 1/1; /* Even further increased height on mobile */
-    grid-template-columns: repeat(4, auto);
-    padding: 0 calc(var(--g) / 2);
-    box-sizing: border-box;
+    grid-template-columns: repeat(auto-fill, 242px);
+    justify-content: center;
+    width: 80vw;
+    max-width: 1400px;
+    margin: 0 auto;
   }
 
-  @media (min-width: 768px) {
-    .gallery {
-      --s: calc((60vw - 7*var(--g)) / 8); /* 8 columns on desktop */
-      --g: 16px;  /* increased gap for full screen layout */
-      width: 70vw;
-      aspect-ratio: 3/2; /* Original aspect ratio on desktop */
-      grid-template-columns: repeat(8, auto);
-    }
-  }
-
-  .gallery > img {
-    width: 0;
-    height: 0;
-    min-height: 100%;
-    min-width: 100%;
-    object-fit: cover;
+  .sponsor-logo {
+    width: 242px;
+    height: 198px;
+    background-repeat: no-repeat;
     cursor: pointer;
     filter: grayscale(80%);
-    transition: 0.35s linear;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     border-radius: 0.5rem;
+    transform: scale(0.9);
   }
 
-  .gallery img:hover {
+  .sponsor-logo:hover {
     filter: grayscale(0);
-    width: calc(var(--s) * var(--f));
-    height: calc(var(--s) * var(--f));
+    transform: scale(1.25);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    position: relative;
+  }
+
+  /* Varied hover effects for different positions */
+  .sponsor-logo:nth-child(odd):hover {
+    transform: scale(1.3);
+  }
+
+  .sponsor-logo:nth-child(even):hover {
+    transform: scale(1.2);
+  }
+
+  .sponsor-logo:nth-child(3n):hover {
+    transform: scale(1.35) translateY(-5px);
+  }
+
+  .sponsor-logo:nth-child(4n):hover {
+    transform: scale(1.28) translateY(3px);
   }
 </style>

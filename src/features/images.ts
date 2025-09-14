@@ -1,57 +1,50 @@
-import alibaba from '../assets/icons/alibaba.png';
-import alo from '../assets/icons/alo.png';
-import boya from '../assets/icons/boya.png';
-import cisco from '../assets/icons/cisco.png';
-import colt from '../assets/icons/colt.png';
-import css from '../assets/icons/css.png';
-import ds from '../assets/icons/ds.png';
-import fcn from '../assets/icons/fcn.png';
-import fend from '../assets/icons/fend.png';
-import fil from '../assets/icons/fil.png';
-import gen from '../assets/icons/gen.png';
-import hitachi from '../assets/icons/hitachi.png';
-import infosys from '../assets/icons/infosys.png';
-import lenovo from '../assets/icons/lenovo.png';
-import nissan from '../assets/icons/nissan.png';
-import ns from '../assets/icons/ns.png';
-import ntt from '../assets/icons/ntt.png';
-import qs from '../assets/icons/qs.png';
-import redbook from '../assets/icons/redbook.png';
-import tcl from '../assets/icons/tcl.png';
-import trsassion from '../assets/icons/trsassion.png';
-import www from '../assets/icons/www.png';
-import yd from '../assets/icons/yd.png';
-import zj from '../assets/icons/zj.png';
+import css_sprites from '../assets/icons/css_sprites.png';
 
-interface Image {
+export const spriteSheet = css_sprites;
+
+export interface Sponsor {
   alt: string;
-  src: string;
-  [key: string]: any;
+  x: number;
+  y: number;
 }
 
-export const images: Image[] = [
-  { alt: "Alibaba", src: alibaba },
-  { alt: "Alo", src: alo },
-  { alt: "Boya", src: boya },
-  { alt: "Cisco", src: cisco },
-  { alt: "Colt", src: colt },
-  { alt: "Css", src: css },
-  { alt: "Ds", src: ds },
-  { alt: "Fcn", src: fcn },
-  { alt: "Fend", src: fend },
-  { alt: "Fil", src: fil },
-  { alt: "Gen", src: gen },
-  { alt: "Hitachi", src: hitachi },
-  { alt: "Infosys", src: infosys },
-  { alt: "Lenovo", src: lenovo },
-  { alt: "Nissan", src: nissan },
-  { alt: "Ns", src: ns },
-  { alt: "Ntt", src: ntt },
-  { alt: "Qs", src: qs },
-  { alt: "Redbook", src: redbook },
-  { alt: "Tcl", src: tcl },
-  { alt: "Trsassion", src: trsassion },
-  { alt: "Www", src: www },
-  { alt: "YD", src: yd },
-  { alt: "ZJ", src: zj },
+const sponsorCoordinates: { [key:string]: {x: number, y: number} } = {
+    'alibaba': { x: -10, y: -10 },
+    'alo': { x: -272, y: -10 },
+    'boya': { x: -10, y: -228 },
+    'cisco': { x: -272, y: -228 },
+    'colt': { x: -796, y: -664 },
+    'css': { x: -534, y: -10 },
+    'ds': { x: -534, y: -228 },
+    'fcn': { x: -534, y: -446 },
+    'fend': { x: -10, y: -446 },
+    'fil': { x: -272, y: -446 },
+    'gen': { x: -1058, y: -10 },
+    'hitachi': { x: -272, y: -664 },
+    'infosys': { x: -796, y: -446 },
+    'lenovo': { x: -10, y: -664 },
+    'nissan': { x: -796, y: -10 },
+    'ns': { x: -796, y: -228 },
+    'ntt': { x: -534, y: -664 },
+    'qs': { x: -1058, y: -228 },
+    'redbook': { x: -1058, y: -446 },
+    'tcl': { x: -10, y: -882 },
+    'trsassion': { x: -1058, y: -664 },
+    'www': { x: -272, y: -882 },
+    'yd': { x: -534, y: -882 },
+    'zj': { x: -796, y: -882 },
+};
+
+// This is the original order from the old images.ts
+const sponsorNames = [
+  "Alibaba", "Alo", "Boya", "Cisco", "Colt", "Css", "Ds", "Fcn", "Fend", "Fil", "Gen", "Hitachi", "Infosys", "Lenovo", "Nissan", "Ns", "Ntt", "Qs", "Redbook", "Tcl", "Trsassion", "Www", "YD", "ZJ"
 ];
+
+export const sponsors: Sponsor[] = sponsorNames.map(name => {
+    const coords = sponsorCoordinates[name.toLowerCase()];
+    return {
+        alt: name,
+        x: coords.x,
+        y: coords.y,
+    };
+});

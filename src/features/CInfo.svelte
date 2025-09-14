@@ -4,6 +4,10 @@
   import { ScrollTrigger } from 'gsap/ScrollTrigger';
   import AOS from 'aos';
   import { _, locale } from "svelte-i18n";
+  import tech_real_2 from '../assets/tech-real-2.jpg';
+  import services from '../assets/services.jpg';
+  import tech_company from '../assets/tech_company.jpg';
+  import talent_new from '../assets/talent_new.jpg';
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -130,25 +134,25 @@
     {
       name: $_('info.team.members.0.name'),
       position: $_('info.team.members.0.position'),
-      image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=400&h=400&fit=crop&crop=face',
+      image: tech_company,
       bio: $_('info.team.members.0.bio')
     },
     {
       name: $_('info.team.members.1.name'),
       position: $_('info.team.members.1.position'),
-      image: 'https://images.unsplash.com/photo-1519389950473-47ba0c766d19?w=400&h=400&fit=crop&crop=face',
+      image: tech_real_2,
       bio: $_('info.team.members.1.bio')
     },
     {
       name: $_('info.team.members.2.name'),
       position: $_('info.team.members.2.position'),
-      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=400&fit=crop&crop=face',
+      image: talent_new,
       bio: $_('info.team.members.2.bio')
     },
     {
       name: $_('info.team.members.3.name'),
       position: $_('info.team.members.3.position'),
-      image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=400&h=400&fit=crop&crop=face',
+      image: services,
       bio: $_('info.team.members.3.bio')
     }
   ];
