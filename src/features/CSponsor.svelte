@@ -18,7 +18,7 @@
     --g: 16px;
     display: grid;
     gap: var(--g);
-    grid-template-columns: repeat(auto-fill, 242px);
+    grid-template-columns: repeat(6, 242px);
     justify-content: center;
     width: 80vw;
     max-width: 1400px;
