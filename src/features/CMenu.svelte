@@ -61,6 +61,17 @@
     isLanguageDropdownOpen = false;
   }
 
+  function closeMobileMenu() {
+    isMobileMenuOpen = false;
+  }
+
+  function handleDropdownItemClick() {
+    // Close all dropdowns when an item is clicked
+    closeAllDropdowns();
+    // Also close mobile menu on item click
+    closeMobileMenu();
+  }
+
   function loadSavedLanguage() {
     const savedLanguage = localStorage.getItem("selectedLanguage");
     const savedFlag = localStorage.getItem("selectedFlag");
@@ -275,17 +286,17 @@
           >
             <ul class="py-2 text-sm md:py-2 whitespace-nowrap">
               <li>
-                <a href="#/hiring" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
+                <a href="#/hiring" class="block px-8 py-2 hover:bg-gray-800 md:px-4" onclick={handleDropdownItemClick}
                   >{$_("menu.headhunting")}</a
                 >
               </li>
               <li>
-                <a href="#/resources" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
+                <a href="#/resources" class="block px-8 py-2 hover:bg-gray-800 md:px-4" onclick={handleDropdownItemClick}
                   >{$_("menu.staffing")}</a
                 >
               </li>
               <li>
-                <a href="#/outsourcing" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
+                <a href="#/outsourcing" class="block px-8 py-2 hover:bg-gray-800 md:px-4" onclick={handleDropdownItemClick}
                   >{$_("menu.itOutsourcing")}</a
                 >
               </li>
@@ -322,12 +333,12 @@
           >
             <ul class="py-2 text-sm md:py-2 whitespace-nowrap">
               <li>
-                <a href="#/" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
+                <a href="#/" class="block px-8 py-2 hover:bg-gray-800 md:px-4" onclick={handleDropdownItemClick}
                   >{$_("menu.marketAnalysis")}</a
                 >
               </li>
               <li>
-                <a href="#/" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
+                <a href="#/" class="block px-8 py-2 hover:bg-gray-800 md:px-4" onclick={handleDropdownItemClick}
                   >{$_("menu.industryNews")}</a
                 >
               </li>
@@ -365,27 +376,27 @@
           >
             <ul class="py-2 text-sm md:py-2 whitespace-nowrap">
               <li>
-                <a href="#/info" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
+                <a href="#/info" class="block px-8 py-2 hover:bg-gray-800 md:px-4" onclick={handleDropdownItemClick}
                   >{$_("menu.companyIntroduction")}</a
                 >
               </li>
               <li>
-                <a href="#/culture" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
+                <a href="#/culture" class="block px-8 py-2 hover:bg-gray-800 md:px-4" onclick={handleDropdownItemClick}
                   >{$_("menu.companyCulture")}</a
                 >
               </li>
               <li>
-                <a href="#/" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
+                <a href="#/" class="block px-8 py-2 hover:bg-gray-800 md:px-4" onclick={handleDropdownItemClick}
                   >{$_("menu.history")}</a
                 >
               </li>
               <li>
-                <a href="#/honors" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
+                <a href="#/honors" class="block px-8 py-2 hover:bg-gray-800 md:px-4" onclick={handleDropdownItemClick}
                   >{$_("menu.honors")}</a
                 >
               </li>
               <li>
-                <a href="#/" class="block px-8 py-2 hover:bg-gray-800 md:px-4"
+                <a href="#/" class="block px-8 py-2 hover:bg-gray-800 md:px-4" onclick={handleDropdownItemClick}
                   >{$_("menu.contact")}</a
                 >
               </li>
@@ -393,7 +404,7 @@
           </div>
         </li>
         <li>
-          <a href="#/contact" class="block py-2 px-5 text-white bg-gray-900"
+          <a href="#/contact" class="block py-2 px-5 text-white bg-gray-900" onclick={closeMobileMenu}
             >{$_("menu.contact")}</a
           >
         </li>
