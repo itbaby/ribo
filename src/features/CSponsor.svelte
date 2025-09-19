@@ -92,11 +92,17 @@
 
   @media (max-width: 480px) {
     .gallery {
-      grid-template-columns: repeat(1, 180px);
+      --g: 4px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      width: 95vw;
+      max-width: 95vw;
+      padding: 0 4px;
+      margin: 0 auto;
     }
     .sponsor-logo {
-      width: 180px;
-      height: 148px;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 242/198;
     }
   }
 </style>

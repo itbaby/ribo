@@ -124,9 +124,9 @@
 
     <section
       data-section
-      class="flex flex-col text-white bg-gray-700 items-center justify-center h-auto pb-20 pt-20"
+      class="flex flex-col text-white bg-gray-700 items-center justify-center h-auto pb-10 pt-10"
     >
-      <h1 class="mb-[4vh] text-2xl md:text-4xl">
+      <h1 class="mb-[2vh] text-2xl md:text-4xl">
         {$_("menu.serviceGlobalClients")}
       </h1>
       <CSponsor />
@@ -156,5 +156,17 @@
   /* Ensure smooth animations */
   section[data-section] {
     will-change: transform, opacity;
+  }
+  
+  /* Mobile-specific adjustments for sponsor section */
+  @media (max-width: 480px) {
+    section[data-section]:nth-child(3) {
+      padding: 10px 0;
+    }
+    
+    section[data-section]:nth-child(3) h1 {
+      margin-bottom: 1vh;
+      font-size: 1.5rem;
+    }
   }
 </style>
