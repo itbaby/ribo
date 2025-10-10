@@ -118,7 +118,7 @@
         <div class="mt-20 grid grid-cols-1 lg:grid-cols-3 gap-x-8 gap-y-16 items-center">
             <!-- Left Column -->
             <div class="flex flex-col gap-y-12">
-                {#each $_('cadvantages.left') as item, i}
+                {#each $_('cadvantages.left').json() as item, i}
                     <div class="text-right" data-aos="fade-right" data-aos-delay={i * 100}>
                         <div class="flex justify-end items-center gap-x-4">
                             <div>
@@ -147,7 +147,7 @@
 
             <!-- Right Column -->
             <div class="flex flex-col gap-y-12">
-                {#each $_('cadvantages.right') as item, i}
+                {#each $_('cadvantages.right').json() as item, i}
                     <div class="text-left" data-aos="fade-left" data-aos-delay={i * 100}>
                         <div class="flex items-center gap-x-4">
                             <div class="flex h-12 w-18 items-center justify-center rounded-lg bg-indigo-500">

@@ -59,14 +59,23 @@
     },
   };
 
-  // Service options
-  const serviceOptions = [
+  // Service options (reactive to language changes)
+  $: serviceOptions = [
     { value: "headhunting", label: $_("menu.headhunting") },
     { value: "staffing", label: $_("menu.staffing") },
     { value: "itOutsourcing", label: $_("menu.itOutsourcing") },
-    { value: "consulting", label: "咨询服务" },
-    { value: "other", label: "其他" },
+    { value: "consulting", label: $_("menu.consulting") },
+    { value: "other", label: $_("menu.other") },
   ];
+  
+  // Form placeholders (reactive to language changes)
+  $: formPlaceholders = {
+    email: $_("contact.form.emailPlaceholder"),
+    company: $_("contact.form.companyPlaceholder"),
+    phone: $_("contact.form.phonePlaceholder"),
+    requirements: $_("contact.form.requirementsPlaceholder"),
+    selectServiceType: $_("contact.form.selectServiceType"),
+  };
 
   onMount(() => {
     // Initialize AOS
@@ -123,9 +132,12 @@
       scrub: true,
       onUpdate: (self) => {
         const progress = self.progress;
-        gsap.set(mapSection.querySelector(".map-bg"), {
-          y: progress * 100,
-        });
+        const mapBg = mapSection?.querySelector(".map-bg");
+        if (mapBg) {
+          gsap.set(mapBg, {
+            y: progress * 100,
+          });
+        }
       },
     });
   });
@@ -1720,7 +1732,7 @@
                       bind:value={formData.email}
                       required
                       class="w-full pl-12 pr-4 py-3 border-2 border-gray-700 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none transition-all duration-300 bg-gray-800/50 dark:bg-gray-700/50 text-white placeholder-gray-400 dark:placeholder-gray-400 backdrop-blur-sm"
-                      placeholder={$_('contact.form.emailPlaceholder')}
+                      placeholder={formPlaceholders.email}
                     />
                   </div>
                 </div>
@@ -1755,7 +1767,7 @@
                       id="company"
                       bind:value={formData.company}
                       class="w-full pl-12 pr-4 py-3 border-2 border-gray-700 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none transition-all duration-300 bg-gray-800/50 dark:bg-gray-700/50 text-white placeholder-gray-400 dark:placeholder-gray-400 backdrop-blur-sm"
-                      placeholder={$_('contact.form.companyPlaceholder')}
+                      placeholder={formPlaceholders.company}
                     />
                   </div>
                 </div>
@@ -1790,7 +1802,7 @@
                       id="phone"
                       bind:value={formData.phone}
                       class="w-full pl-12 pr-4 py-3 border-2 border-gray-700 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none transition-all duration-300 bg-gray-800/50 dark:bg-gray-700/50 text-white placeholder-gray-400 dark:placeholder-gray-400 backdrop-blur-sm"
-                      placeholder={$_('contact.form.phonePlaceholder')}
+                      placeholder={formPlaceholders.phone}
                     />
                   </div>
                 </div>
@@ -1841,7 +1853,7 @@
                     <option
                       value=""
                       class="text-gray-900 dark:text-white bg-gray-800 dark:bg-gray-700"
-                      >{$_('contact.form.selectServiceType')}</option
+                      >{formPlaceholders.selectServiceType}</option
                     >
                     {#each serviceOptions as option}
                       <option
@@ -1902,7 +1914,7 @@
                     required
                     rows="6"
                     class="w-full pl-12 pr-4 py-3 border-2 border-gray-700 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none transition-all duration-300 resize-none bg-gray-800/50 dark:bg-gray-700/50 text-white placeholder-gray-400 dark:placeholder-gray-400 backdrop-blur-sm"
-                    placeholder={$_('contact.form.requirementsPlaceholder')}
+                    placeholder={formPlaceholders.requirements}
                   ></textarea>
                 </div>
               </div>
