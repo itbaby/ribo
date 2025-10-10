@@ -326,7 +326,7 @@
       data-aos="fade-up"
       data-aos-delay="100"
     >
-      <span class="block">企业服务中心</span>
+      <span class="block">{$_('contact.title')}</span>
     </h1>
 
     <!-- Corporate tagline -->
@@ -335,9 +335,9 @@
       data-aos="fade-up"
       data-aos-delay="200"
     >
-      <span class="font-semibold text-white">连接全球智慧，赋能企业发展</span
+      <span class="font-semibold text-white">{$_('contact.subtitle')}</span
       ><br />
-      专业团队为您提供全方位的企业解决方案，助力您的业务腾飞
+      {$_('contact.description')}
     </p>
 
     <!-- Corporate stats -->
@@ -350,25 +350,25 @@
         class="bg-white/5 dark:bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10"
       >
         <div class="text-3xl font-bold text-white mb-1">15+</div>
-        <div class="text-sm text-gray-300">年行业经验</div>
+        <div class="text-sm text-gray-300">{$_('contact.stats.experience')}</div>
       </div>
       <div
         class="bg-white/5 dark:bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10"
       >
         <div class="text-3xl font-bold text-white mb-1">500+</div>
-        <div class="text-sm text-gray-300">合作伙伴</div>
+        <div class="text-sm text-gray-300">{$_('contact.stats.partners')}</div>
       </div>
       <div
         class="bg-white/5 dark:bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10"
       >
         <div class="text-3xl font-bold text-white mb-1">50+</div>
-        <div class="text-sm text-gray-300">专业顾问</div>
+        <div class="text-sm text-gray-300">{$_('contact.stats.advisors')}</div>
       </div>
       <div
         class="bg-white/5 dark:bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10"
       >
         <div class="text-3xl font-bold text-white mb-1">24/7</div>
-        <div class="text-sm text-gray-300">全天候服务</div>
+        <div class="text-sm text-gray-300">{$_('contact.stats.service')}</div>
       </div>
     </div>
 
@@ -394,7 +394,7 @@
             d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
           />
         </svg>
-        立即咨询
+        {$_('contact.cta.consultNow')}
       </button>
       <button
         class="px-8 py-4 border-2 border-white/30 hover:border-white/50 dark:border-white/40 dark:hover:border-white/60 rounded-lg font-semibold transition-all duration-300 backdrop-blur-sm hover:bg-white/10 dark:hover:bg-white/20 flex items-center justify-center"
@@ -412,7 +412,7 @@
             d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
           />
         </svg>
-        预约会面
+        {$_('contact.cta.scheduleMeeting')}
       </button>
     </div>
   </div>
@@ -428,7 +428,7 @@
         class="w-1.5 h-3 bg-white/50 dark:bg-white/60 rounded-full mt-2 animate-pulse"
       ></div>
     </div>
-    <div class="text-xs text-white/50 mt-2 text-center">向下滚动</div>
+    <div class="text-xs text-white/50 mt-2 text-center">{$_('contact.scrollDown')}</div>
   </div>
 </section>
 
@@ -478,13 +478,13 @@
     <div class="text-center mb-16" data-aos="fade-up">
       <span
         class="inline-block px-5 py-2 bg-indigo-600/20 dark:bg-indigo-600/30 backdrop-blur-sm rounded-full text-sm font-medium text-white border border-indigo-400/30 dark:border-indigo-400/50 mb-4"
-        >企业服务</span
+        >{$_('contact.serviceSection.badge')}</span
       >
       <h2 class="text-4xl font-bold text-white mb-4">
-        专业团队 · 全球服务网络
+        {$_('contact.serviceSection.title')}
       </h2>
       <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-        我们致力于为客户提供高效、专业的一站式解决方案，无论您身在何处
+        {$_('contact.serviceSection.description')}
       </p>
     </div>
 
@@ -513,8 +513,8 @@
           </svg>
         </div>
         <div>
-          <h3 class="text-xl font-bold text-white mb-1">安全可靠</h3>
-          <p class="text-gray-300">企业级安全保障，数据加密传输</p>
+          <h3 class="text-xl font-bold text-white mb-1">{$_('contact.values.safety.title')}</h3>
+          <p class="text-gray-300">{$_('contact.values.safety.description')}</p>
         </div>
       </div>
       <div
@@ -540,8 +540,8 @@
           </svg>
         </div>
         <div>
-          <h3 class="text-xl font-bold text-white mb-1">高效响应</h3>
-          <p class="text-gray-300">24小时专业团队快速响应服务</p>
+          <h3 class="text-xl font-bold text-white mb-1">{$_('contact.values.efficiency.title')}</h3>
+          <p class="text-gray-300">{$_('contact.values.efficiency.description')}</p>
         </div>
       </div>
       <div
@@ -567,8 +567,8 @@
           </svg>
         </div>
         <div>
-          <h3 class="text-xl font-bold text-white mb-1">全球覆盖</h3>
-          <p class="text-gray-300">服务网络覆盖全球主要市场</p>
+          <h3 class="text-xl font-bold text-white mb-1">{$_('contact.values.global.title')}</h3>
+          <p class="text-gray-300">{$_('contact.values.global.description')}</p>
         </div>
       </div>
     </div>
@@ -612,7 +612,7 @@
             {$_("footer.contactInfo.businessConsulting")}
           </h3>
           <p class="text-gray-300 mb-6 text-sm">
-            为您的企业提供专业咨询服务，助力业务增长和战略发展
+            {$_('contact.businessConsulting.description')}
           </p>
 
           <div class="space-y-4">
@@ -694,7 +694,7 @@
                   d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
                 />
               </svg>
-              立即咨询
+              {$_('contact.cta.consultNow')}
             </button>
           </div>
         </div>
@@ -738,7 +738,7 @@
             {$_("footer.contactInfo.joinUs")}
           </h3>
           <p class="text-gray-300 mb-6 text-sm">
-            加入我们的精英团队，共同创造未来，实现职业发展与个人价值
+            {$_('contact.joinUs.description')}
           </p>
 
           <div class="space-y-4">
@@ -816,7 +816,7 @@
                   d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2V6"
                 />
               </svg>
-              加入我们
+              {$_('contact.joinUs.cta')}
             </button>
           </div>
         </div>
@@ -856,9 +856,9 @@
             </svg>
           </div>
 
-          <h3 class="text-xl font-bold text-white mb-4">公司总机</h3>
+          <h3 class="text-xl font-bold text-white mb-4">{$_('contact.companyPhone.title')}</h3>
           <p class="text-gray-300 mb-6 text-sm">
-            全天候客户服务中心，为您提供专业、高效的企业服务支持
+            {$_('contact.companyPhone.description')}
           </p>
 
           <div
@@ -908,7 +908,7 @@
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                 />
               </svg>
-              立即拨打
+              {$_('contact.companyPhone.cta')}
             </button>
           </div>
         </div>
@@ -959,12 +959,12 @@
         class="inline-block mb-3 px-4 py-1 bg-blue-500/20 backdrop-blur-sm rounded-full"
       >
         <span class="text-blue-300 text-sm font-semibold tracking-wider"
-          >全球网络</span
+          >{$_('contact.locations.badge')}</span
         >
       </div>
-      <h2 class="text-4xl font-bold text-white mb-4">办公地点</h2>
+      <h2 class="text-4xl font-bold text-white mb-4">{$_('contact.locations.title')}</h2>
       <p class="text-xl text-gray-300 dark:text-gray-200 max-w-2xl mx-auto">
-        我们在全国多个城市设有办公室，为您提供就近服务与支持
+        {$_('contact.locations.description')}
       </p>
     </div>
 
@@ -1040,7 +1040,7 @@
           <div
             class="absolute mt-2 ml-6 bg-gray-800/80 backdrop-blur-sm px-3 py-1 rounded-lg text-xs text-white whitespace-nowrap"
           >
-            大连总部
+            {$_('contact.locations.dalian.name')}
           </div>
         </div>
 
@@ -1056,7 +1056,7 @@
           <div
             class="absolute mt-2 ml-6 bg-gray-800/80 backdrop-blur-sm px-3 py-1 rounded-lg text-xs text-white whitespace-nowrap"
           >
-            深圳分公司
+            {$_('contact.locations.shenzhen.name')}
           </div>
         </div>
       </div>
@@ -1064,7 +1064,7 @@
       <!-- 地图控制按钮 -->
       <div class="absolute bottom-4 right-4 flex space-x-2">
         <button
-          aria-label="放大地图"
+          aria-label={$_('contact.locations.mapZoomIn')}
           class="w-8 h-8 bg-gray-800/80 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-gray-700/80 transition-colors"
         >
           <svg
@@ -1082,7 +1082,7 @@
           </svg>
         </button>
         <button
-          aria-label="缩小地图"
+          aria-label={$_('contact.locations.mapZoomOut')}
           class="w-8 h-8 bg-gray-800/80 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-gray-700/80 transition-colors"
         >
           <svg
@@ -1172,8 +1172,8 @@
               </svg>
             </div>
             <div>
-              <h3 class="text-2xl font-bold text-white">大连总部</h3>
-              <p class="text-blue-300 text-sm">全球研发中心</p>
+              <h3 class="text-2xl font-bold text-white">{$_('contact.locations.dalian.name')}</h3>
+              <p class="text-blue-300 text-sm">{$_('contact.locations.dalian.type')}</p>
             </div>
           </div>
 
@@ -1188,12 +1188,12 @@
           >
             <span
               class="inline-block px-4 py-2 bg-blue-500/20 text-blue-200 rounded-lg text-sm font-medium"
-              >总部办公室</span
+              >{$_('contact.locations.dalian.tag')}</span
             >
             <button
               class="px-4 py-2 bg-blue-500/20 hover:bg-blue-500/30 text-blue-200 rounded-lg text-sm font-medium flex items-center gap-2 transform transition-all duration-300 hover:translate-x-1"
             >
-              <span>查看详情</span>
+              <span>{$_('contact.locations.viewDetails')}</span>
               <svg
                 class="w-4 h-4"
                 fill="none"
@@ -1281,8 +1281,8 @@
               </svg>
             </div>
             <div>
-              <h3 class="text-2xl font-bold text-white">深圳分公司</h3>
-              <p class="text-purple-300 text-sm">华南业务中心</p>
+              <h3 class="text-2xl font-bold text-white">{$_('contact.locations.shenzhen.name')}</h3>
+              <p class="text-purple-300 text-sm">{$_('contact.locations.shenzhen.type')}</p>
             </div>
           </div>
 
@@ -1297,12 +1297,12 @@
           >
             <span
               class="inline-block px-4 py-2 bg-purple-500/20 text-purple-200 rounded-lg text-sm font-medium"
-              >华南分部</span
+              >{$_('contact.locations.shenzhen.tag')}</span
             >
             <button
               class="px-4 py-2 bg-purple-500/20 hover:bg-purple-500/30 text-purple-200 rounded-lg text-sm font-medium flex items-center gap-2 transform transition-all duration-300 hover:translate-x-1"
             >
-              <span>查看详情</span>
+              <span>{$_('contact.locations.viewDetails')}</span>
               <svg
                 class="w-4 h-4"
                 fill="none"
@@ -1460,17 +1460,15 @@
       <div
         class="inline-block mb-3 px-4 py-1 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 backdrop-blur-sm rounded-full text-blue-300 text-sm font-medium border border-blue-500/20 shadow-lg shadow-blue-500/5"
       >
-        企业咨询
+        {$_('contact.form.badge')}
       </div>
       <h2
         class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-200 mb-4"
       >
-        联系我们的专业团队
+        {$_('contact.form.title')}
       </h2>
       <p class="text-xl text-blue-200/80 max-w-2xl mx-auto">
-        填写下方表单，我们将在<span class="text-blue-300 font-semibold"
-          >24小时内</span
-        >为您提供专业解决方案
+        {$_('contact.form.description')}
       </p>
     </div>
 
@@ -1522,9 +1520,9 @@
                   ></path>
                 </svg>
               </div>
-              <h3 class="text-2xl font-bold text-white">业务咨询表单</h3>
+              <h3 class="text-2xl font-bold text-white">{$_('contact.form.subtitle')}</h3>
             </div>
-            <p class="text-blue-200/90 text-lg ml-16">我们将尽快与您联系</p>
+            <p class="text-blue-200/90 text-lg ml-16">{$_('contact.form.prompt')}</p>
           </div>
 
           <!-- 企业服务承诺 - 垂直排列 -->
@@ -1550,8 +1548,8 @@
                 </svg>
               </div>
               <div>
-                <h4 class="text-white font-semibold">安全保障</h4>
-                <p class="text-blue-300/80 text-sm">企业级数据加密与隐私保护</p>
+                <h4 class="text-white font-semibold">{$_('contact.form.security.title')}</h4>
+                <p class="text-blue-300/80 text-sm">{$_('contact.form.security.description')}</p>
               </div>
             </div>
 
@@ -1576,8 +1574,8 @@
                 </svg>
               </div>
               <div>
-                <h4 class="text-white font-semibold">24小时响应</h4>
-                <p class="text-blue-300/80 text-sm">专业团队快速处理您的需求</p>
+                <h4 class="text-white font-semibold">{$_('contact.form.response.title')}</h4>
+                <p class="text-blue-300/80 text-sm">{$_('contact.form.response.description')}</p>
               </div>
             </div>
 
@@ -1602,9 +1600,9 @@
                 </svg>
               </div>
               <div>
-                <h4 class="text-white font-semibold">专业服务</h4>
+                <h4 class="text-white font-semibold">{$_('contact.form.service.title')}</h4>
                 <p class="text-blue-300/80 text-sm">
-                  定制化解决方案满足企业需求
+                  {$_('contact.form.service.description')}
                 </p>
               </div>
             </div>
@@ -1651,7 +1649,7 @@
                 >
                   <span class="text-blue-400 font-semibold">1</span>
                 </div>
-                <h4 class="text-lg font-semibold text-white">个人信息</h4>
+                <h4 class="text-lg font-semibold text-white">{$_('contact.form.personalInfo')}</h4>
               </div>
 
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -1660,7 +1658,7 @@
                   <label
                     for="name"
                     class="block text-sm font-semibold text-gray-300 mb-2 group-focus-within:text-blue-400 transition-colors duration-300"
-                    >姓名 <span class="text-blue-400">*</span></label
+                    >{$_('contact.form.name')} <span class="text-blue-400">*</span></label
                   >
                   <div class="relative">
                     <div
@@ -1686,7 +1684,7 @@
                       bind:value={formData.name}
                       required
                       class="w-full pl-12 pr-4 py-3 border-2 border-gray-700 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none transition-all duration-300 bg-gray-800/50 dark:bg-gray-700/50 text-white placeholder-gray-400 dark:placeholder-gray-400 backdrop-blur-sm"
-                      placeholder="请输入您的姓名"
+                      placeholder={$_('contact.form.namePlaceholder')}
                     />
                   </div>
                 </div>
@@ -1696,7 +1694,7 @@
                   <label
                     for="email"
                     class="block text-sm font-semibold text-gray-300 mb-2 group-focus-within:text-blue-400 transition-colors duration-300"
-                    >邮箱 <span class="text-blue-400">*</span></label
+                    >{$_('contact.form.email')} <span class="text-blue-400">*</span></label
                   >
                   <div class="relative">
                     <div
@@ -1722,7 +1720,7 @@
                       bind:value={formData.email}
                       required
                       class="w-full pl-12 pr-4 py-3 border-2 border-gray-700 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none transition-all duration-300 bg-gray-800/50 dark:bg-gray-700/50 text-white placeholder-gray-400 dark:placeholder-gray-400 backdrop-blur-sm"
-                      placeholder="请输入您的邮箱"
+                      placeholder={$_('contact.form.emailPlaceholder')}
                     />
                   </div>
                 </div>
@@ -1732,7 +1730,7 @@
                   <label
                     for="company"
                     class="block text-sm font-semibold text-gray-300 mb-2 group-focus-within:text-blue-400 transition-colors duration-300"
-                    >公司名称</label
+                    >{$_('contact.form.company')}</label
                   >
                   <div class="relative">
                     <div
@@ -1757,7 +1755,7 @@
                       id="company"
                       bind:value={formData.company}
                       class="w-full pl-12 pr-4 py-3 border-2 border-gray-700 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none transition-all duration-300 bg-gray-800/50 dark:bg-gray-700/50 text-white placeholder-gray-400 dark:placeholder-gray-400 backdrop-blur-sm"
-                      placeholder="请输入您的公司名称"
+                      placeholder={$_('contact.form.companyPlaceholder')}
                     />
                   </div>
                 </div>
@@ -1767,7 +1765,7 @@
                   <label
                     for="phone"
                     class="block text-sm font-semibold text-gray-300 mb-2 group-focus-within:text-blue-400 transition-colors duration-300"
-                    >联系电话</label
+                    >{$_('contact.form.phone')}</label
                   >
                   <div class="relative">
                     <div
@@ -1792,7 +1790,7 @@
                       id="phone"
                       bind:value={formData.phone}
                       class="w-full pl-12 pr-4 py-3 border-2 border-gray-700 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none transition-all duration-300 bg-gray-800/50 dark:bg-gray-700/50 text-white placeholder-gray-400 dark:placeholder-gray-400 backdrop-blur-sm"
-                      placeholder="请输入您的联系电话"
+                      placeholder={$_('contact.form.phonePlaceholder')}
                     />
                   </div>
                 </div>
@@ -1807,7 +1805,7 @@
                 >
                   <span class="text-blue-400 font-semibold">2</span>
                 </div>
-                <h4 class="text-lg font-semibold text-white">服务需求</h4>
+                <h4 class="text-lg font-semibold text-white">{$_('contact.form.serviceRequirements')}</h4>
               </div>
 
               <!-- Service -->
@@ -1815,7 +1813,7 @@
                 <label
                   for="service"
                   class="block text-sm font-semibold text-gray-300 mb-2 group-focus-within:text-blue-400 transition-colors duration-300"
-                  >感兴趣的服务</label
+                    >{$_('contact.form.interestedService')}</label
                 >
                 <div class="relative">
                   <div
@@ -1843,7 +1841,7 @@
                     <option
                       value=""
                       class="text-gray-900 dark:text-white bg-gray-800 dark:bg-gray-700"
-                      >请选择服务类型</option
+                      >{$_('contact.form.selectServiceType')}</option
                     >
                     {#each serviceOptions as option}
                       <option
@@ -1878,7 +1876,7 @@
                 <label
                   for="message"
                   class="block text-sm font-semibold text-gray-300 mb-2 group-focus-within:text-blue-400 transition-colors duration-300"
-                  >详细需求 <span class="text-blue-400">*</span></label
+                    >{$_('contact.form.detailedRequirements')} <span class="text-blue-400">*</span></label
                 >
                 <div class="relative">
                   <div
@@ -1904,7 +1902,7 @@
                     required
                     rows="6"
                     class="w-full pl-12 pr-4 py-3 border-2 border-gray-700 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none transition-all duration-300 resize-none bg-gray-800/50 dark:bg-gray-700/50 text-white placeholder-gray-400 dark:placeholder-gray-400 backdrop-blur-sm"
-                    placeholder="请详细描述您的需求，我们将为您提供专业的解决方案..."
+                    placeholder={$_('contact.form.requirementsPlaceholder')}
                   ></textarea>
                 </div>
               </div>
@@ -1923,12 +1921,12 @@
                   />
                 </div>
                 <label for="privacy" class="text-sm text-gray-300">
-                  我已阅读并同意<span
+                  {$_('contact.form.privacyAgreement')}<span
                     class="text-blue-400 hover:text-blue-300 cursor-pointer transition-colors duration-300"
-                    >隐私政策</span
-                  >和<span
+                    >{$_('contact.form.privacyPolicy')}</span
+                  >{$_('contact.form.and')}<span
                     class="text-blue-400 hover:text-blue-300 cursor-pointer transition-colors duration-300"
-                    >服务条款</span
+                    >{$_('contact.form.termsOfService')}</span
                   >
                 </label>
               </div>
@@ -1972,7 +1970,7 @@
                         d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                       ></path>
                     </svg>
-                    <span>处理中...</span>
+                    <span>{$_('contact.form.processing')}</span>
                   {:else}
                     <svg
                       class="w-5 h-5"
@@ -1987,7 +1985,7 @@
                         d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
                       ></path>
                     </svg>
-                    <span>提交咨询</span>
+                    <span>{$_('contact.form.submitConsultation')}</span>
                   {/if}
                 </div>
               </button>
@@ -2011,7 +2009,7 @@
                     d="M5 13l4 4L19 7"
                   ></path>
                 </svg>
-                消息发送成功！我们将在24小时内回复您。
+                {$_('contact.form.successMessage')}
               </div>
             {/if}
 
@@ -2032,7 +2030,7 @@
                     d="M6 18L18 6M6 6l12 12"
                   ></path>
                 </svg>
-                发送失败，请稍后重试或直接联系我们。
+                {$_('contact.form.errorMessage')}
               </div>
             {/if}
           </form>

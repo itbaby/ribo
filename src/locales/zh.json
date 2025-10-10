@@ -1,4 +1,111 @@
 {
+  "contact": {
+    "title": "企业服务中心",
+    "subtitle": "连接全球智慧，赋能企业发展",
+    "description": "专业团队为您提供全方位的企业解决方案，助力您的业务腾飞",
+    "stats": {
+      "experience": "年行业经验",
+      "partners": "合作伙伴",
+      "advisors": "专业顾问",
+      "service": "全天候服务"
+    },
+    "cta": {
+      "consultNow": "立即咨询",
+      "scheduleMeeting": "预约会面"
+    },
+    "scrollDown": "向下滚动",
+    "serviceSection": {
+      "badge": "企业服务",
+      "title": "专业团队 · 全球服务网络",
+      "description": "我们致力于为客户提供高效、专业的一站式解决方案，无论您身在何处"
+    },
+    "values": {
+      "safety": {
+        "title": "安全可靠",
+        "description": "企业级安全保障，数据加密传输"
+      },
+      "efficiency": {
+        "title": "高效响应",
+        "description": "24小时专业团队快速响应服务"
+      },
+      "global": {
+        "title": "全球覆盖",
+        "description": "服务网络覆盖全球主要市场"
+      }
+    },
+    "businessConsulting": {
+      "description": "为您的企业提供专业咨询服务，助力业务增长和战略发展"
+    },
+    "joinUs": {
+      "description": "加入我们的精英团队，共同创造未来，实现职业发展与个人价值",
+      "cta": "立即咨询"
+    },
+    "companyPhone": {
+      "title": "公司总机",
+      "description": "全天候客户服务中心，为您提供专业、高效的企业服务支持",
+      "cta": "立即拨打"
+    },
+    "locations": {
+      "badge": "全球网络",
+      "title": "办公地点",
+      "description": "我们在全国多个城市设有办公室，为您提供就近服务与支持",
+      "mapZoomIn": "放大地图",
+      "mapZoomOut": "缩小地图",
+      "viewDetails": "查看详情",
+      "dalian": {
+        "name": "大连总部",
+        "type": "全球研发中心",
+        "tag": "总部办公室"
+      },
+      "shenzhen": {
+        "name": "深圳分公司",
+        "type": "华南业务中心",
+        "tag": "华南分部"
+      }
+    },
+    "form": {
+      "badge": "企业咨询",
+      "title": "联系我们的专业团队",
+      "description": "填写下方表单，我们将在24小时内为您提供专业解决方案",
+      "subtitle": "业务咨询表单",
+      "prompt": "我们将尽快与您联系",
+      "security": {
+        "title": "安全保障",
+        "description": "企业级数据加密与隐私保护"
+      },
+      "response": {
+        "title": "快速响应",
+        "description": "专业团队快速处理您的需求"
+      },
+      "service": {
+        "title": "专业服务",
+        "description": "定制化解决方案满足企业需求"
+      },
+      "personalInfo": "个人信息",
+      "name": "姓名",
+      "namePlaceholder": "请输入您的姓名",
+      "email": "邮箱",
+      "emailPlaceholder": "请输入您的邮箱",
+      "company": "公司名称",
+      "companyName": "公司名称",
+      "companyPlaceholder": "请输入您的公司名称",
+      "phone": "联系电话",
+      "phonePlaceholder": "请输入您的联系电话",
+      "serviceRequirements": "服务需求",
+      "interestedService": "感兴趣的服务",
+      "selectServiceType": "请选择服务类型",
+      "detailedRequirements": "详细需求",
+      "requirementsPlaceholder": "请详细描述您的需求...",
+      "privacyAgreement": "我已阅读并同意",
+      "privacyPolicy": "隐私政策",
+      "and": "和",
+      "termsOfService": "服务条款",
+      "processing": "处理中...",
+      "submitConsultation": "提交咨询",
+      "successMessage": "消息发送成功！我们将在24小时内回复您",
+      "errorMessage": "发送失败，请稍后重试或直接联系我们"
+    }
+  },
   "button": {
     "toggle": "切换为英文",
     "confirm": "确认",

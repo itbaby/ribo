@@ -1,4 +1,111 @@
 {
+  "contact": {
+    "title": "エンタープライズサービスセンター",
+    "subtitle": "グローバルな知恵をつなぎ、ビジネス発展を後押し",
+    "description": "専門チームがあらゆる面での企業ソリューションを提供し、ビジネスの飛躍的発展を支援します",
+    "stats": {
+      "experience": "年間の業界経験",
+      "partners": "パートナー",
+      "advisors": "専門コンサルタント",
+      "service": "24時間体制のサービス"
+    },
+    "cta": {
+      "consultNow": "すぐに相談する",
+      "scheduleMeeting": "面会予約"
+    },
+    "scrollDown": "下にスクロール",
+    "serviceSection": {
+      "badge": "エンタープライズサービス",
+      "title": "専門チーム・グローバルサービスネットワーク",
+      "description": "私たちは、お客様に効率的で専門的なワンストップソリューションを提供することに専念しており、お客様がどこにいても"
+    },
+    "values": {
+      "safety": {
+        "title": "セキュリティと信頼性",
+        "description": "エンタープライズレベルのセキュリティ保障、データ暗号化伝送"
+      },
+      "efficiency": {
+        "title": "効率的なレスポンス",
+        "description": "24時間専門チームによる迅速なレスポンスサービス"
+      },
+      "global": {
+        "title": "グローバルカバレッジ",
+        "description": "サービスネットワークは世界の主要市場をカバー"
+      }
+    },
+    "businessConsulting": {
+      "description": "お客様の企業のために専門的なコンサルティングサービスを提供し、ビジネスの成長と戦略的発展を支援"
+    },
+    "joinUs": {
+      "description": "私たちのエリートチームに参加して、一緒に未来を創造し、キャリアの発展と個人的な価値を実現しましょう",
+      "cta": "すぐに相談する"
+    },
+    "companyPhone": {
+      "title": "会社の代表電話",
+      "description": "24時間対応のカスタマーサービスセンター、専門的で効率的な企業サービスサポートを提供",
+      "cta": "今すぐ電話する"
+    },
+    "locations": {
+      "badge": "グローバルネットワーク",
+      "title": "オフィス所在地",
+      "description": "全国の複数都市にオフィスを設置しており、近隣のサービスとサポートを提供します",
+      "mapZoomIn": "地図を拡大",
+      "mapZoomOut": "地図を縮小",
+      "viewDetails": "詳細を表示",
+      "dalian": {
+        "name": "大連本社",
+        "type": "グローバル研究開発センター",
+        "tag": "本社オフィス"
+      },
+      "shenzhen": {
+        "name": "深セン支社",
+        "type": "華南ビジネスセンター",
+        "tag": "華南支社"
+      }
+    },
+    "form": {
+      "badge": "ビジネスコンサルティング",
+      "title": "専門チームにお問い合わせください",
+      "description": "以下のフォームに記入してください。24時間以内に専門的なソリューションを提供します",
+      "subtitle": "ビジネス相談フォーム",
+      "prompt": "近くにお問い合わせいたします",
+      "security": {
+        "title": "セキュリティ保障",
+        "description": "エンタープライズレベルのデータ暗号化とプライバシー保護"
+      },
+      "response": {
+        "title": "24時間対応",
+        "description": "専門チームが迅速にご要望に対応"
+      },
+      "service": {
+        "title": "専門サービス",
+        "description": "企業のニーズに合わせたカスタマイズソリューション"
+      },
+      "personalInfo": "個人情報",
+      "name": "名前",
+      "namePlaceholder": "お名前を入力してください",
+      "email": "メール",
+      "emailPlaceholder": "メールアドレスを入力してください",
+      "company": "会社名",
+      "companyName": "会社名",
+      "companyPlaceholder": "会社名を入力してください",
+      "phone": "連絡先電話",
+      "phonePlaceholder": "連絡先の電話番号を入力してください",
+      "serviceRequirements": "サービス需要",
+      "interestedService": "興味のあるサービス",
+      "selectServiceType": "サービスの種類を選択してください",
+      "detailedRequirements": "詳細なニーズ",
+      "requirementsPlaceholder": "ご要望を詳細にお知らせください。専門的なソリューションを提供いたします...",
+      "privacyAgreement": "私は読んで同意しました",
+      "privacyPolicy": "プライバシーポリシー",
+      "and": "と",
+      "termsOfService": "サービス利用規約",
+      "processing": "処理中...",
+      "submitConsultation": "相談を送信",
+      "successMessage": "メッセージが正常に送信されました！24時間以内にお返事いたします。",
+      "errorMessage": "送信に失敗しました。後でもう一度お試しいただくか、直接お問い合わせください"
+    }
+  },
   "button": {
     "toggle": "英語に切り替え",
     "confirm": "確認",

@@ -1,4 +1,111 @@
 {
+  "contact": {
+    "title": "Enterprise Service Center",
+    "subtitle": "Connecting Global Wisdom, Empowering Business Development",
+    "description": "Our professional team provides comprehensive enterprise solutions to help your business thrive",
+    "stats": {
+      "experience": "Years of Industry Experience",
+      "partners": "Partners",
+      "advisors": "Professional Consultants",
+      "service": "24/7 Service"
+    },
+    "cta": {
+      "consultNow": "Consult Now",
+      "scheduleMeeting": "Make an Appointment"
+    },
+    "scrollDown": "Scroll Down",
+    "serviceSection": {
+      "badge": "Enterprise Services",
+      "title": "Professional Team · Global Service Network",
+      "description": "We are committed to providing efficient, professional one-stop solutions for customers, no matter where you are"
+    },
+    "values": {
+      "safety": {
+        "title": "Security & Reliability",
+        "description": "Enterprise-level security guarantee, data encrypted transmission"
+      },
+      "efficiency": {
+        "title": "Efficient Response",
+        "description": "24-hour professional team rapid response service"
+      },
+      "global": {
+        "title": "Global Coverage",
+        "description": "Service network covers major global markets"
+      }
+    },
+    "businessConsulting": {
+      "description": "Providing professional consulting services for your enterprise to help business growth and strategic development"
+    },
+    "joinUs": {
+      "description": "Join our elite team to create the future together, and achieve career development and personal value",
+      "cta": "Consult Now"
+    },
+    "companyPhone": {
+      "title": "Company Switchboard",
+      "description": "24-hour customer service center, providing professional and efficient enterprise service support for you",
+      "cta": "Call Now"
+    },
+    "locations": {
+      "badge": "Global Network",
+      "title": "Office Locations",
+      "description": "We have offices in multiple cities across the country to provide you with nearby services and support",
+      "mapZoomIn": "Enlarge Map",
+      "mapZoomOut": "Reduce Map",
+      "viewDetails": "View Details",
+      "dalian": {
+        "name": "Dalian Headquarters",
+        "type": "Global R&D Center",
+        "tag": "Headquarters Office"
+      },
+      "shenzhen": {
+        "name": "Shenzhen Branch",
+        "type": "South China Business Center",
+        "tag": "South China Branch"
+      }
+    },
+    "form": {
+      "badge": "Business Consulting",
+      "title": "Contact Our Professional Team",
+      "description": "Fill out the form below, and we will provide you with professional solutions within 24 hours",
+      "subtitle": "Business Consulting Form",
+      "prompt": "We will contact you soon",
+      "security": {
+        "title": "Security Guarantee",
+        "description": "Enterprise-level data encryption and privacy protection"
+      },
+      "response": {
+        "title": "24-hour Response",
+        "description": "Professional team quickly handles your needs"
+      },
+      "service": {
+        "title": "Professional Services",
+        "description": "Customized solutions to meet enterprise needs"
+      },
+      "personalInfo": "Personal Information",
+      "name": "Name",
+      "namePlaceholder": "Please enter your name",
+      "email": "Email",
+      "emailPlaceholder": "Please enter your email",
+      "company": "Company Name",
+      "companyName": "Company Name",
+      "companyPlaceholder": "Please enter your company name",
+      "phone": "Contact Phone",
+      "phonePlaceholder": "Please enter your contact phone",
+      "serviceRequirements": "Service Demand",
+      "interestedService": "Interested Services",
+      "selectServiceType": "Please select service type",
+      "detailedRequirements": "Detailed Demand",
+      "requirementsPlaceholder": "Please describe your needs in detail, and we will provide you with professional solutions...",
+      "privacyAgreement": "I have read and agree to the",
+      "privacyPolicy": "Privacy Policy",
+      "and": "and",
+      "termsOfService": "Service Terms",
+      "processing": "Processing...",
+      "submitConsultation": "Submit Consultation",
+      "successMessage": "Message sent successfully! We will reply to you within 24 hours.",
+      "errorMessage": "Failed to send, please try again later or contact us directly"
+    }
+  },
   "button": {
     "toggle": "Switch to Chinese",
     "confirm": "Confirm",
