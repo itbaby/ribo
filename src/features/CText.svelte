@@ -67,7 +67,7 @@
         0% {
             transform: scale3d(0, 0, 1) rotate(0.02deg);
             opacity: 0;
-            filter: blur(10px);
+            filter: blur(5px);
         }
         25% {
             transform: scale3d(1, 1, 1) rotate(0.02deg);
@@ -85,7 +85,8 @@
 
         100% {
             transform: scale3d(4, 4, 1) rotate(0.02deg);
-            filter: blur(10px);
+            opacity: 0;
+            filter: blur(5px);
         }
     }
 </style>
