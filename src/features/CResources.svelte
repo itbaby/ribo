@@ -23,15 +23,15 @@
   let caseStudy = {};
 
   // @ts-ignore
-  $: categories = $_('resources.categories.items').json() || [];
+  $: categories = $_('resources.categories.items') || [];
   // @ts-ignore
-  $: services = $_('resources.services.items').json() || [];
+  $: services = $_('resources.services.items') || [];
   // @ts-ignore
-  $: processSteps = $_('resources.process.steps').json() || [];
+  $: processSteps = $_('resources.process.steps') || [];
   // @ts-ignore
-  $: trainingLevels = $_('resources.training.levels').json() || [];
+  $: trainingLevels = $_('resources.training.levels') || [];
   // @ts-ignore
-  $: caseStudy = $_('resources.caseStudy.case').json() || {};
+  $: caseStudy = $_('resources.caseStudy.case') || {};
 
   // 本地图片（非文本，不做 i18n）与服务项按顺序对应
   const serviceImages = [
