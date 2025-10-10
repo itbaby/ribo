@@ -5,7 +5,6 @@
   import LocomotiveScroll from "locomotive-scroll";
   import CScroller from "./CScroller.svelte";
   import { _, locale } from "svelte-i18n";
-  import earthImg from "../assets/earth.png";
 
   let languages = {
     "fi-us": "en",
@@ -87,7 +86,7 @@
 <div
   data-scroll-container
   class="bg-gray-900 bg-cover bg-center flex flex-col justify-center "
-  style="background-image: url({earthImg})"
+  style="background-image: url('/src/assets/earth.png')"
 >
   <section
     data-section

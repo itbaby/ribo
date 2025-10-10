@@ -3,41 +3,37 @@
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   import { _, t } from "svelte-i18n";
-  import award01Img from "../assets/award_01.png";
-  import award02Img from "../assets/award_02.png";
-  import award03Img from "../assets/award_03.png";
-  import award04Img from "../assets/award_04.png";
 
   let awards = $derived([
     {
       date: $_('chonors.awards.0.date'),
       title: $_('chonors.awards.0.title'),
       description: $_('chonors.awards.0.description'),
-      icon: award01Img,
+      icon: "/src/assets/award_01.png",
     },
     {
       date: $_('chonors.awards.1.date'),
       title: $_('chonors.awards.1.title'),
       description: $_('chonors.awards.1.description'),
-      icon: award02Img,
+      icon: "/src/assets/award_02.png",
     },
     {
       date: $_('chonors.awards.2.date'),
       title: $_('chonors.awards.2.title'),
       description: $_('chonors.awards.2.description'),
-      icon: award03Img,
+      icon: "/src/assets/award_03.png",
     },
     {
       date: $_('chonors.awards.3.date'),
       title: $_('chonors.awards.3.title'),
       description: $_('chonors.awards.3.description'),
-      icon: award04Img,
+      icon: "/src/assets/award_04.png",
     },
     {
       date: $_('chonors.awards.4.date'),
       title: $_('chonors.awards.4.title'),
       description: $_('chonors.awards.4.description'),
-      icon: award01Img,
+      icon: "/src/assets/award_01.png",
     },
   ]);
 
