@@ -303,7 +303,7 @@
             </ul>
           </div>
         </li>
-        <li class="relative">
+        <!-- <li class="relative">
           <button
             onclick={toggleCreativeDropdown}
             class="flex items-center justify-between w-full py-2 px-5 text-white bg-gray-900 hover:bg-gray-800"
@@ -344,7 +344,7 @@
               </li>
             </ul>
           </div>
-        </li>
+        </li> -->
         <li class="relative">
           <button
             id="aboutus-dropdown-button"
@@ -385,21 +385,21 @@
                   >{$_("menu.companyCulture")}</a
                 >
               </li>
-              <li>
+              <!-- <li>
                 <a href="#/" class="block px-8 py-2 hover:bg-gray-800 md:px-4" onclick={handleDropdownItemClick}
                   >{$_("menu.history")}</a
                 >
-              </li>
+              </li> -->
               <li>
                 <a href="#/honors" class="block px-8 py-2 hover:bg-gray-800 md:px-4" onclick={handleDropdownItemClick}
                   >{$_("menu.honors")}</a
                 >
               </li>
-              <li>
+              <!-- <li>
                 <a href="#/" class="block px-8 py-2 hover:bg-gray-800 md:px-4" onclick={handleDropdownItemClick}
                   >{$_("menu.contact")}</a
                 >
-              </li>
+              </li> -->
             </ul>
           </div>
         </li>
