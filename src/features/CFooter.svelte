@@ -84,10 +84,10 @@
 
         <div class="flex">
           <p class="mr-1 text-gray-300">
-            {$_("footer.contactInfo.marketingMedia")}
+            {$_("footer.contactInfo.marketingResearch")}
           </p>
           <a
-            href="mailto:info@lorem.mail"
+            href="mailto:davidguan@dlribo.com"
             aria-label="Our email"
             title="Our email"
             class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"

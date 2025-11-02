@@ -1189,37 +1189,16 @@
             </div>
           </div>
 
-          <div class="mb-6 pl-4 border-l-2 border-blue-500/30">
-            <p class="text-gray-300 dark:text-gray-200 text-lg leading-relaxed">
+          <div class="flex flex-col space-y-2 mt-6 pt-6 border-t border-white/10">
+            <div class="flex items-center">
+              <span
+                class="inline-block px-4 py-2 bg-blue-500/20 text-blue-200 rounded-lg text-sm font-medium"
+                >{$_('contact.locations.dalian.tag')}</span
+              >
+            </div>
+            <p class="text-gray-300 dark:text-gray-200 text-lg leading-relaxed pl-4">
               {contactInfo.addresses.dalian}
             </p>
-          </div>
-
-          <div
-            class="flex justify-between items-center mt-6 pt-6 border-t border-white/10"
-          >
-            <span
-              class="inline-block px-4 py-2 bg-blue-500/20 text-blue-200 rounded-lg text-sm font-medium"
-              >{$_('contact.locations.dalian.tag')}</span
-            >
-            <button
-              class="px-4 py-2 bg-blue-500/20 hover:bg-blue-500/30 text-blue-200 rounded-lg text-sm font-medium flex items-center gap-2 transform transition-all duration-300 hover:translate-x-1"
-            >
-              <span>{$_('contact.locations.viewDetails')}</span>
-              <svg
-                class="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5l7 7-7 7"
-                ></path>
-              </svg>
-            </button>
           </div>
         </div>
       </div>
@@ -1298,37 +1277,16 @@
             </div>
           </div>
 
-          <div class="mb-6 pl-4 border-l-2 border-purple-500/30">
-            <p class="text-gray-300 dark:text-gray-200 text-lg leading-relaxed">
+          <div class="flex flex-col space-y-2 mt-6 pt-6 border-t border-white/10">
+            <div class="flex items-center">
+              <span
+                class="inline-block px-4 py-2 bg-purple-500/20 text-purple-200 rounded-lg text-sm font-medium"
+                >{$_('contact.locations.shenzhen.tag')}</span
+              >
+            </div>
+            <p class="text-gray-300 dark:text-gray-200 text-lg leading-relaxed pl-4">
               {contactInfo.addresses.shenzhen}
             </p>
-          </div>
-
-          <div
-            class="flex justify-between items-center mt-6 pt-6 border-t border-white/10"
-          >
-            <span
-              class="inline-block px-4 py-2 bg-purple-500/20 text-purple-200 rounded-lg text-sm font-medium"
-              >{$_('contact.locations.shenzhen.tag')}</span
-            >
-            <button
-              class="px-4 py-2 bg-purple-500/20 hover:bg-purple-500/30 text-purple-200 rounded-lg text-sm font-medium flex items-center gap-2 transform transition-all duration-300 hover:translate-x-1"
-            >
-              <span>{$_('contact.locations.viewDetails')}</span>
-              <svg
-                class="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5l7 7-7 7"
-                ></path>
-              </svg>
-            </button>
           </div>
         </div>
       </div>
