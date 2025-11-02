@@ -1803,23 +1803,23 @@
                       ></path>
                     </svg>
                   </div>
-                  <select
-                    id="service"
-                    bind:value={formData.service}
-                    class="w-full pl-12 pr-4 py-3 border-2 border-gray-700 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none transition-all duration-300 bg-gray-800/50 dark:bg-gray-700/50 text-white placeholder-gray-400 dark:placeholder-gray-400 appearance-none backdrop-blur-sm"
-                  >
-                    <option
-                      value=""
-                      class="text-gray-900 dark:text-white bg-gray-800 dark:bg-gray-700"
-                      >{formPlaceholders.selectServiceType}</option
-                    >
-                    {#each serviceOptions as option}
-                      <option
-                        value={option.value}
-                        class="text-gray-900 dark:text-white bg-gray-800 dark:bg-gray-700"
-                        >{option.label}</option
-                      >
-                    {/each}
+                  <select
+                    id="service"
+                    bind:value={formData.service}
+                    class="w-full pl-12 pr-4 py-3 border-2 border-gray-700 dark:border-gray-600 rounded-xl focus:border-blue-500 focus:outline-none transition-all duration-300 bg-gray-800/50 dark:bg-gray-700/50 text-gray-200 placeholder-gray-400 dark:placeholder-gray-400 appearance-none backdrop-blur-sm"
+                  >
+                    <option
+                      value=""
+                      class="text-gray-200 dark:text-gray-200 bg-gray-800 dark:bg-gray-700"
+                      >{formPlaceholders.selectServiceType}</option
+                    >
+                    {#each serviceOptions as option}
+                      <option
+                        value={option.value}
+                        class="text-gray-200 dark:text-gray-200 bg-gray-800 dark:bg-gray-700"
+                        >{option.label}</option
+                      >
+                    {/each}
                   </select>
                   <div
                     class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none"

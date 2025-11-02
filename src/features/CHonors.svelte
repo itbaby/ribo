@@ -8,38 +8,39 @@
   import award01 from "../assets/award_01.png";
   import award02 from "../assets/award_02.png";
   import award03 from "../assets/award_03.png";
-  import award04 from "../assets/award_04.png";
+  import award05 from "../assets/award_05.png";
+  import award06 from "../assets/award_06.png";
 
   let awards = $derived([
     {
-      date: $_('chonors.awards.0.date'),
-      title: $_('chonors.awards.0.title'),
-      description: $_('chonors.awards.0.description'),
+      date: "2023",
+      title: "飞猪优秀个人奖",
+      description: "表彰在飞猪平台服务中的杰出个人贡献。",
       icon: award01,
     },
     {
-      date: $_('chonors.awards.1.date'),
-      title: $_('chonors.awards.1.title'),
-      description: $_('chonors.awards.1.description'),
+      date: "2023",
+      title: "飞猪优秀团队奖",
+      description: "表彰在飞猪平台服务中的卓越团队表现。",
       icon: award02,
     },
     {
-      date: $_('chonors.awards.2.date'),
-      title: $_('chonors.awards.2.title'),
-      description: $_('chonors.awards.2.description'),
+      date: "2022-2023",
+      title: "菜鸟优秀合作奖",
+      description: "表彰在菜鸟网络合作中的优秀表现。",
       icon: award03,
     },
     {
-      date: $_('chonors.awards.3.date'),
-      title: $_('chonors.awards.3.title'),
-      description: $_('chonors.awards.3.description'),
-      icon: award04,
+      date: "2020年-2021年",
+      title: "字节跳动优秀合作伙伴",
+      description: "2020年和2021年连续被字节跳动评为优秀合作伙伴。",
+      icon: award05,
     },
     {
-      date: $_('chonors.awards.4.date'),
-      title: $_('chonors.awards.4.title'),
-      description: $_('chonors.awards.4.description'),
-      icon: award01,
+      date: "2022年",
+      title: "联想新锐合作伙伴 & 联想优秀合作团队",
+      description: "2022年被联想集团评为新锐合作伙伴和优秀合作团队。",
+      icon: award06,
     },
   ]);
 
