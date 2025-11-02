@@ -26,7 +26,7 @@
   onMount(() => {
     const interval = setInterval(() => {
       activeIndex = (activeIndex + 1) % 3;
-    }, 4000);
+    }, 6000); // 增加到6秒，给用户更多时间阅读内容
     return () => clearInterval(interval);
   });
 </script>
@@ -38,39 +38,39 @@
   >
     <div class="marquee-container relative h-[60vh] w-full py-8">
       <!-- 第一个区块 -->
-      {#if activeIndex === 0}
-        <div
-          class="marquee-item absolute inset-0 flex flex-col gap-8 items-center justify-center text-center p-6 w-full"
-          in:fade={{ duration: 2000 }}
-          out:fade={{ duration: 2000 }}
-        >
-          <h1
-            class="split text-4xl md:text-5xl font-medium text-uppercase tracking-wider"
-          >
-            {$_("carousel.techDrivenFuture")}
-          </h1>
-          <h2 class="split text-xl md:text-2xl">
-            {$_("carousel.techDescription")}
-          </h2>
-        </div>
+      {#if activeIndex === 0}
+        <div
+          class="marquee-item absolute inset-0 flex flex-col gap-8 items-center justify-center text-center p-6 w-full border-none"
+          in:fade={{ duration: 1500 }}
+          out:fade={{ duration: 1500 }}
+        >
+          <h1
+            class="split text-4xl md:text-5xl font-medium text-uppercase tracking-wider border-none"
+          >
+            {$_("carousel.techDrivenFuture")}
+          </h1>
+          <h2 class="split text-xl md:text-2xl border-none">
+            {$_("carousel.techDescription")}
+          </h2>
+        </div>
       {/if}
 
       <!-- 第二个区块 -->
       {#if activeIndex === 1}
         <div
-          class="marquee-item absolute inset-0 flex flex-col gap-8 items-center justify-center text-center p-6 w-full"
-          in:fade={{ duration: 2000 }}
-          out:fade={{ duration: 2000 }}
+          class="marquee-item absolute inset-0 flex flex-col gap-8 items-center justify-center text-center p-6 w-full border-none"
+          in:fade={{ duration: 1500 }}
+          out:fade={{ duration: 1500 }}
         >
           <h1
-            class="split text-4xl md:text-5xl font-medium text-uppercase tracking-wider"
+            class="split text-4xl md:text-5xl font-medium text-uppercase tracking-wider border-none"
           >
             {$_("carousel.talentPool")}
           </h1>
-          <ul class="split text-xl md:text-2xl space-y-4">
-            <li>• {$_("carousel.verticalCoverage")}</li>
-            <li>• {$_("carousel.preciseMatching")}</li>
-            <li>• {$_("carousel.expertTeam")}</li>
+          <ul class="split text-xl md:text-2xl space-y-4 border-none">
+            <li class="border-none">• {$_("carousel.verticalCoverage")}</li>
+            <li class="border-none">• {$_("carousel.preciseMatching")}</li>
+            <li class="border-none">• {$_("carousel.expertTeam")}</li>
           </ul>
         </div>
       {/if}
@@ -78,19 +78,19 @@
       <!-- 第三个区块 -->
       {#if activeIndex === 2}
         <div
-          class="marquee-item absolute inset-0 flex flex-col gap-8 items-center justify-center text-center p-6 w-full"
-          in:fade={{ duration: 2000 }}
-          out:fade={{ duration: 2000 }}
+          class="marquee-item absolute inset-0 flex flex-col gap-8 items-center justify-center text-center p-6 w-full border-none"
+          in:fade={{ duration: 1500 }}
+          out:fade={{ duration: 1500 }}
         >
           <h1
-            class="split text-4xl md:text-5xl font-medium text-uppercase tracking-wider"
+            class="split text-4xl md:text-5xl font-medium text-uppercase tracking-wider border-none"
           >
             {$_("carousel.fullService")}
           </h1>
-          <ul class="split text-xl md:text-2xl space-y-2">
-            <li>• {$_("carousel.executiveSearch")}</li>
-            <li>• {$_("carousel.staffing")}</li>
-            <li>• {$_("carousel.itoService")}</li>
+          <ul class="split text-xl md:text-2xl space-y-2 border-none">
+            <li class="border-none">• {$_("carousel.executiveSearch")}</li>
+            <li class="border-none">• {$_("carousel.staffing")}</li>
+            <li class="border-none">• {$_("carousel.itoService")}</li>
           </ul>
         </div>
       {/if}
