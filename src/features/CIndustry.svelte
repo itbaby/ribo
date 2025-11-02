@@ -104,20 +104,26 @@
 
     function selectIndustry(index: number) {
         changeIndustry(index);
-        resetAutoPlay();
+        resetAutoPlay(); // 停止自动播放
     }
 
+    let isAutoPlaying = true;
+
     function startAutoPlay() {
+        // 只在需要自动播放时启动
+        if (!isAutoPlaying) return;
+        
         intervalId = setInterval(() => {
             const nextIndex =
                 (currentIndustryIndex + 1) % industryCategories.length;
             changeIndustry(nextIndex);
-        }, 5000);
+        }, 8000); // 增加到8秒，给用户更多阅读时间
     }
 
     function resetAutoPlay() {
+        // 停止自动播放
+        isAutoPlaying = false;
         clearInterval(intervalId);
-        startAutoPlay();
     }
 
     onMount(() => {
@@ -154,6 +160,8 @@
             { opacity: 1, y: 0, duration: 1, delay: 1.4 },
         );
 
+        // 初始化自动播放
+        isAutoPlaying = true;
         startAutoPlay();
 
         return () => {

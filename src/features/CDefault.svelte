@@ -41,7 +41,7 @@
           trigger: section,
           start: "top 80%", // Trigger when section top reaches 80% of viewport
           end: "bottom 20%", // End when section bottom reaches 20% of viewport
-          markers: true, // Enable for debugging
+          markers: false, // Enable for debugging
           onEnter: () => {
             // Zoom in when section enters viewport
             gsap.to(section, {
