@@ -19,49 +19,49 @@
         {
             name: $_("industry.automotive.name"),
             icon: "ri-car-fill",
-            bg: automotiveImg?.default || automotiveImg || '',
+            bg: automotiveImg,
             title: $_("industry.automotive.title"),
             description: $_("industry.automotive.description"),
         },
         {
             name: $_("industry.internet.name"),
             icon: "ri-global-fill",
-            bg: internetImg?.default || internetImg || '',
+            bg: internetImg,
             title: $_("industry.internet.title"),
             description: $_("industry.internet.description"),
         },
         {
             name: $_("industry.finance.name"),
             icon: "ri-bank-fill",
-            bg: financeImg?.default || financeImg || '',
+            bg: financeImg,
             title: $_("industry.finance.title"),
             description: $_("industry.finance.description"),
         },
         {
             name: $_("industry.communication.name"),
             icon: "ri-wireless-charging-fill",
-            bg: communicationImg?.default || communicationImg || '',
+            bg: communicationImg,
             title: $_("industry.communication.title"),
             description: $_("industry.communication.description"),
         },
         {
             name: $_("industry.ecommerce.name"),
             icon: "ri-shopping-cart-fill",
-            bg: ecommerceImg?.default || ecommerceImg || '',
+            bg: ecommerceImg,
             title: $_("industry.ecommerce.title"),
             description: $_("industry.ecommerce.description"),
         },
         {
             name: $_("industry.newenergy.name"),
             icon: "ri-flashlight-fill",
-            bg: newenergyImg?.default || newenergyImg || '',
+            bg: newenergyImg,
             title: $_("industry.newenergy.title"),
             description: $_("industry.newenergy.description"),
         },
         {
             name: $_("industry.semiconductor.name"),
             icon: "ri-cpu-fill",
-            bg: semiconductorImg?.default || semiconductorImg || '',
+            bg: semiconductorImg,
             title: $_("industry.semiconductor.title"),
             description: $_("industry.semiconductor.description"),
         },
@@ -79,7 +79,7 @@
                 currentIndustryIndex = index;
 
                 // Update background image directly
-                const bgImageElement = document.querySelector("img[alt='Industry background']");
+                const bgImageElement = document.querySelector("img[alt='Industry background']") as HTMLImageElement;
                 if (bgImageElement && industryCategories[currentIndustryIndex]?.bg) {
                     console.log("Changing background to:", industryCategories[currentIndustryIndex].bg);
                     bgImageElement.src = industryCategories[currentIndustryIndex].bg;

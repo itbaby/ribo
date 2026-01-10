@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount, onDestroy } from 'svelte';
   import { images } from './images';
-  const imagePaths = images.map(img => img.src);
+  const imagePaths = images.map((img: { src: string }) => img.src);
 
   let canvas: HTMLCanvasElement;
   let ctx: CanvasRenderingContext2D;
@@ -329,7 +329,7 @@
       
       // Preload images
       let loadedCount = 0;
-      imagePaths.forEach(src => {
+      imagePaths.forEach((src: string) => {
         const img = new Image();
         img.crossOrigin = "anonymous";
         img.onload = () => {

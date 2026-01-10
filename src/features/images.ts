@@ -8,6 +8,11 @@ export interface Sponsor {
   y: number;
 }
 
+export interface ImageItem {
+  src: string;
+  alt: string;
+}
+
 const sponsorCoordinates: { [key:string]: {x: number, y: number} } = {
     'alibaba': { x: -10, y: -10 },
     'alo': { x: -272, y: -10 },
@@ -48,3 +53,8 @@ export const sponsors: Sponsor[] = sponsorNames.map(name => {
         y: coords.y,
     };
 });
+
+export const images: ImageItem[] = sponsors.map(sponsor => ({
+    src: spriteSheet,
+    alt: sponsor.alt,
+}));
